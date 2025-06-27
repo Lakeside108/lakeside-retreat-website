@@ -92,11 +92,12 @@
             transform: translateY(-2px);
             color: white !important;
         }
-
         
-        background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), 
-            linear-gradient(180deg, #87CEEB 0%, #4682B4 30%, #2F4F4F 60%, #228B22 90%, #006400 100%);
-        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                        linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -451,7 +452,43 @@
             }
         }
         
-        /* Uplisting Widget Styles */
+        /* Booking Options */
+        .booking-options {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+        }
+        
+        .booking-options .btn-primary {
+            width: 100%;
+            max-width: 300px;
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+        
+        .secondary-options {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .booking-options .btn-secondary {
+            background: transparent;
+            color: #2c5530;
+            border: 2px solid #2c5530;
+            padding: 0.75rem 1.5rem;
+            font-size: 0.9rem;
+            min-width: 120px;
+            text-align: center;
+        }
+        
+        .booking-options .btn-secondary:hover {
+            background: #2c5530;
+            color: white;
+        }
         .uplisting-widget {
             margin: 2rem 0;
             padding: 2rem;
@@ -478,7 +515,7 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#accommodations">Domes</a></li>
                 <li><a href="#benefits">Book Direct</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li>                        <a href="#reviews">Reviews</a></li>
                 <li><a href="#book" class="book-now-nav">Book Now</a></li>
             </ul>
         </nav>
@@ -585,7 +622,13 @@
                             <span class="amenity">📶 WiFi</span>
                             <span class="amenity">🌊 Lake Views</span>
                         </div>
-                        <button class="btn-primary" onclick="alert('This will open Uplisting booking widget in live version')">Book Dome Pinot</button>
+                        <div class="booking-options">
+                            <button class="btn-primary" onclick="alert('This will open Uplisting booking widget in live version')">Book Direct & Save 15%</button>
+                            <div class="secondary-options">
+                                <a href="https://www.airbnb.co.nz/rooms/53799125" target="_blank" class="btn-secondary">Airbnb</a>
+                                <a href="https://www.booking.com/hotel/nz/glamping-dome-pinot.en-gb.html" target="_blank" class="btn-secondary">Booking.com</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 
@@ -604,7 +647,13 @@
                             <span class="amenity">📶 WiFi</span>
                             <span class="amenity">🏔️ Mountain Views</span>
                         </div>
-                        <button class="btn-primary" onclick="alert('This will open Uplisting booking widget in live version')">Book Dome Rosé</button>
+                        <div class="booking-options">
+                            <button class="btn-primary" onclick="alert('This will open Uplisting booking widget in live version')">Book Direct & Save 15%</button>
+                            <div class="secondary-options">
+                                <a href="https://www.airbnb.co.nz/rooms/1045916078326425415" target="_blank" class="btn-secondary">Airbnb</a>
+                                <a href="https://www.booking.com/hotel/nz/glamping-dome-rose.en-gb.html" target="_blank" class="btn-secondary">Booking.com</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 
@@ -623,7 +672,13 @@
                             <span class="amenity">📶 WiFi</span>
                             <span class="amenity">🏖️ Lake Access</span>
                         </div>
-                        <button class="btn-primary" onclick="alert('This will open Uplisting booking widget in live version')">Book Cottage</button>
+                        <div class="booking-options">
+                            <button class="btn-primary" onclick="alert('This will open Uplisting booking widget in live version')">Book Direct & Save 15%</button>
+                            <div class="secondary-options">
+                                <a href="https://www.airbnb.co.nz/rooms/53799125" target="_blank" class="btn-secondary">Airbnb</a>
+                                <a href="https://www.booking.com/hotel/nz/lakeside-retreat.en-gb.html" target="_blank" class="btn-secondary">Booking.com</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -640,26 +695,28 @@
             <h2 class="section-title">Book Your Stay</h2>
             <p class="section-subtitle">Powered by Uplisting - Real-time availability across all platforms</p>
             
+            <!-- Uplisting Search Widget Container -->
             <div class="uplisting-widget">
-                <div class="widget-placeholder">
-                    <h3>🏔️ Uplisting Booking Widget Goes Here</h3>
-                    <p>Once you connect your Uplisting account, your real-time booking calendar will appear here.</p>
-                    <p><strong>Setup Instructions:</strong></p>
-                    <p>1. Get your Uplisting property ID from your dashboard</p>
-                    <p>2. Replace the widget code below</p>
-                    <p>3. Real-time bookings will sync with Airbnb & Booking.com</p>
-                </div>
+                <!-- This div will contain the Uplisting widget -->
             </div>
             
-            <!-- This is where the real Uplisting widget will go -->
-            <!-- 
-            <script src="https://widget.uplisting.io/widget.js"></script>
-            <div id="uplisting-widget" 
-                 data-property-id="YOUR_UPLISTING_PROPERTY_ID"
-                 data-currency="NZD"
-                 data-theme="custom">
-            </div>
-            -->
+            <!-- Uplisting Widget JavaScript -->
+            <script type="text/javascript" src="https://d2n64sniz4ei2k.cloudfront.net/property-search-795f5869.js"></script>
+            <script type="text/javascript">
+              window.uplistingSearchWidget.init({
+                baseUrl: 'YOUR_UPLISTING_DIRECT_BOOKING_WEBSITE_URL',
+                showLocation: true,
+                locationText: 'Central Otago',
+                locations: ['Cromwell', 'Mount Pisa'],
+                color: '#2c5530',
+                insertAt: '.uplisting-widget',
+                guestsMin: 1,
+                guestsMax: 4,
+                textColor: '#fff',
+                backgroundColor: '#2c5530',
+                buttonText: 'Check Availability',
+              });
+            </script>
         </div>
     </section>
 
@@ -710,10 +767,13 @@
                 </div>
                 <div class="footer-section">
                     <h3>Booking Channels</h3>
-                    <a href="#book">Book Direct (Best Rate)</a>
-                    <a href="#">Airbnb</a>
-                    <a href="#">Booking.com</a>
-                    <a href="#">Expedia</a>
+                    <a href="#book">📱 Book Direct (Best Rate)</a>
+                    <a href="https://www.airbnb.co.nz/rooms/53799125" target="_blank">🏠 Dome Pinot - Airbnb</a>
+                    <a href="https://www.airbnb.co.nz/rooms/1045916078326425415" target="_blank">🏠 Dome Rosé - Airbnb</a>
+                    <a href="https://www.airbnb.co.nz/rooms/53799125" target="_blank">🏡 Lakeside Cottage - Airbnb</a>
+                    <a href="https://www.booking.com/hotel/nz/glamping-dome-pinot.en-gb.html" target="_blank">🌐 Dome Pinot - Booking.com</a>
+                    <a href="https://www.booking.com/hotel/nz/glamping-dome-rose.en-gb.html" target="_blank">🌐 Dome Rosé - Booking.com</a>
+                    <a href="https://www.booking.com/hotel/nz/lakeside-retreat.en-gb.html" target="_blank">🌐 Lakeside Cottage - Booking.com</a>
                 </div>
                 <div class="footer-section">
                     <h3>Experience</h3>
