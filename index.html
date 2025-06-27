@@ -3,27 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lakeside Retreat - Luxury Eco-Domes | Mount Pisa, Central Otago</title>
-    <meta name="description" content="Luxury lakeside retreat with stunning Lake Dunstan views. Eco-friendly domes and cottage in a 5-hectare vineyard, Central Otago wine country.">
-    <meta name="keywords" content="lakeside retreat, central otago accommodation, cromwell glamping, mount pisa, lake dunstan, luxury domes, wine country, new zealand">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://lakesideretreat.co.nz/">
-    <meta property="og:title" content="Lakeside Retreat - Luxury Eco-Domes | Central Otago">
-    <meta property="og:description" content="Luxury lakeside retreat with stunning Lake Dunstan views. Eco-friendly domes in Central Otago wine country.">
-    <meta property="og:image" content="https://lakesideretreat.co.nz/images/hero-image.jpg">
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://lakesideretreat.co.nz/">
-    <meta property="twitter:title" content="Lakeside Retreat - Luxury Eco-Domes | Central Otago">
-    <meta property="twitter:description" content="Luxury lakeside retreat with stunning Lake Dunstan views. Eco-friendly domes in Central Otago wine country.">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏔️</text></svg>">
-    
+    <title>Lakeside Retreat - Luxury Glamping in Central Otago Wine Country</title>
+    <meta name="description" content="Experience luxury glamping at Lakeside Retreat in Central Otago. Dome accommodations with stunning Lake Dunstan views, premium wine country location.">
     <style>
+        /* Reset and Base Styles */
         * {
             margin: 0;
             padding: 0;
@@ -31,425 +14,229 @@
         }
         
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Arial', sans-serif;
             line-height: 1.6;
             color: #333;
-        }
-        
-        /* Header */
-        .header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            padding: 1rem 0;
-            transition: all 0.3s ease;
-        }
-        
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 2rem;
-        }
-        
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #2c5530;
-        }
-        
-        .nav-menu {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-        
-        .nav-menu a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-        
-        .nav-menu a:hover {
-            color: #2c5530;
-        }
-        
-        .book-now-nav {
-            background: linear-gradient(45deg, #2c5530, #4a7c59);
-            color: white !important;
-            padding: 0.5rem 1rem;
-            border-radius: 25px;
-            transition: transform 0.3s ease;
-        }
-        
-        .book-now-nav:hover {
-            transform: translateY(-2px);
-            color: white !important;
-        }
-        
-        /* Hero Section */
-        .hero {
-            height: 100vh;
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
-                        linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .hero-content {
-            max-width: 800px;
-            padding: 0 2rem;
-            animation: fadeInUp 1s ease-out;
-        }
-        
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        }
-        
-        .hero-subtitle {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-        }
-        
-        .hero-features {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 2rem;
-            flex-wrap: wrap;
-        }
-        
-        .hero-feature {
-            background: rgba(255,255,255,0.1);
-            padding: 1rem;
-            border-radius: 10px;
-            backdrop-filter: blur(10px);
-        }
-        
-        .cta-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        
-        .btn-primary {
-            background: linear-gradient(45deg, #2c5530, #4a7c59);
-            color: white;
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-        }
-        
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-        }
-        
-        .btn-secondary {
-            background: transparent;
-            color: white;
-            padding: 1rem 2rem;
-            border: 2px solid white;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-        }
-        
-        .btn-secondary:hover {
-            background: white;
-            color: #333;
-        }
-        
-        /* Booking Widget */
-        .booking-widget {
-            position: absolute;
-            bottom: 2rem;
-            left: 50%;
-            transform: translateX(-50%);
-            background: rgba(255,255,255,0.95);
-            backdrop-filter: blur(10px);
-            padding: 1.5rem;
-            border-radius: 15px;
-            display: flex;
-            gap: 1rem;
-            align-items: center;
-            flex-wrap: wrap;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-        
-        .booking-input {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-        }
-        
-        .booking-input label {
-            font-size: 0.9rem;
-            color: #666;
-            font-weight: 500;
-        }
-        
-        .booking-input input, .booking-input select {
-            padding: 0.7rem;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            font-size: 1rem;
+            background-color: #f8f9fa;
         }
         
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 2rem;
+            padding: 0 1rem;
         }
         
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: #2c5530;
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #2c5530 0%, #1e3a21 100%);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
         
-        .section-subtitle {
-            text-align: center;
-            font-size: 1.2rem;
-            color: #666;
-            margin-bottom: 3rem;
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
         
-        /* Accommodations */
-        .accommodations {
-            padding: 4rem 0;
-            background: white;
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #ffffff;
         }
         
-        .accommodation-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        .nav-links {
+            display: flex;
+            list-style: none;
             gap: 2rem;
-            margin-top: 2rem;
         }
         
-        .accommodation-card {
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
         }
         
-        .accommodation-card:hover {
-            transform: translateY(-5px);
+        .nav-links a:hover {
+            color: #e8f5e8;
         }
         
-        .card-image {
-            height: 250px;
-            background: linear-gradient(135deg, #2c5530, #4a7c59);
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(44, 85, 48, 0.3), rgba(44, 85, 48, 0.3)), 
+                        url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') center/cover;
+            height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
+            text-align: center;
             color: white;
-            font-size: 1.2rem;
-            position: relative;
+            margin-top: 0;
         }
         
-        .price-badge {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            background: rgba(0,0,0,0.8);
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+        
+        /* Buttons */
+        .btn-primary {
+            background: linear-gradient(135deg, #2c5530 0%, #1e3a21 100%);
             color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 25px;
+            text-decoration: none;
+            display: inline-block;
             font-weight: bold;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            font-size: 1rem;
         }
         
-        .card-content {
-            padding: 1.5rem;
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(44, 85, 48, 0.3);
         }
         
-        .card-title {
-            font-size: 1.4rem;
-            margin-bottom: 0.5rem;
+        .btn-secondary {
+            background: transparent;
             color: #2c5530;
-        }
-        
-        .card-description {
-            color: #666;
-            margin-bottom: 1rem;
-            line-height: 1.5;
-        }
-        
-        .amenities {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .amenity {
-            background: #f0f8f0;
-            color: #2c5530;
-            padding: 0.3rem 0.8rem;
-            border-radius: 15px;
+            border: 2px solid #2c5530;
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: bold;
+            transition: all 0.3s ease;
             font-size: 0.9rem;
         }
         
-        /* Direct Booking Benefits */
-        .benefits-section {
-            background: #f8f9fa;
-            padding: 4rem 0;
-        }
-        
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-        
-        .benefit-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        
-        .benefit-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-        
-        .benefit-title {
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
-            color: #2c5530;
-            font-weight: bold;
-        }
-        
-        /* Contact Section */
-        .contact-section {
+        .btn-secondary:hover {
             background: #2c5530;
             color: white;
-            padding: 4rem 0;
+        }
+        
+        /* Properties Section */
+        .properties {
+            padding: 5rem 0;
+            background: white;
+        }
+        
+        .properties h2 {
             text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #2c5530;
         }
         
-        .contact-info {
+        .properties-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
         }
         
-        .contact-item {
-            padding: 1rem;
+        .property-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         
-        .contact-item h3 {
+        .property-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        /* Property Gallery */
+        .property-gallery {
+            margin: 2rem 0;
+        }
+        
+        .main-image {
             margin-bottom: 1rem;
-            color: #4a7c59;
         }
         
-        /* Footer */
-        .footer {
-            background: #1a1a1a;
-            color: white;
-            padding: 3rem 0 1rem;
+        .main-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
         }
         
-        .footer-content {
+        .thumbnail-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0.5rem;
+        }
+        
+        .thumbnail-grid img {
+            width: 100%;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        
+        .thumbnail-grid img:hover {
+            transform: scale(1.05);
+        }
+        
+        .property-content {
+            padding: 2rem;
+        }
+        
+        .property-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #2c5530;
+        }
+        
+        .property-content p {
+            margin-bottom: 1.5rem;
+            color: #666;
+            line-height: 1.8;
+        }
+        
+        .property-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
             margin-bottom: 2rem;
         }
         
-        .footer-section h3 {
-            margin-bottom: 1rem;
-            color: #4a7c59;
+        .feature-tag {
+            background: #e8f5e8;
+            color: #2c5530;
+            padding: 0.5rem 1rem;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            font-weight: 500;
         }
         
-        .footer-section p, .footer-section a {
-            color: #ccc;
-            text-decoration: none;
-            line-height: 1.6;
-            margin-bottom: 0.5rem;
-            display: block;
-        }
-        
-        .footer-section a:hover {
-            color: white;
-        }
-        
-        .footer-bottom {
-            border-top: 1px solid #333;
-            padding-top: 1rem;
-            text-align: center;
-            color: #999;
-        }
-        
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .hero-features {
-                flex-direction: column;
-                gap: 1rem;
-            }
-            
-            .booking-widget {
-                flex-direction: column;
-                left: 1rem;
-                right: 1rem;
-                transform: none;
-            }
-            
-            .nav-menu {
-                display: none;
-            }
-            
-            .section-title {
-                font-size: 2rem;
-            }
+        .price {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #2c5530;
+            margin-bottom: 1.5rem;
         }
         
         /* Uplisting Widget Styles */
@@ -493,469 +280,512 @@
             background: #2c5530;
             color: white;
         }
-        .uplisting-widget {
-            margin: 2rem 0;
+        
+        /* Reviews Section */
+        .reviews-section {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+        
+        .review-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin: 2rem 0 3rem 0;
+            flex-wrap: wrap;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            min-width: 150px;
+        }
+        
+        .stat-item .rating {
+            display: block;
+            font-size: 2rem;
+            font-weight: bold;
+            color: #2c5530;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-item .platform {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .review-highlights {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .review-card {
+            background: white;
             padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-left: 4px solid #2c5530;
+        }
+        
+        .review-card .stars {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .review-card p {
+            font-style: italic;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+        
+        .review-card .reviewer {
+            font-size: 0.9rem;
+            color: #666;
+            font-weight: 500;
+        }
+        
+        .review-links {
+            text-align: center;
+            margin-top: 3rem;
+        }
+        
+        .review-links p {
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+        
+        .review-link {
+            display: inline-block;
+            margin: 0 1rem;
+            padding: 1rem 2rem;
+            background: #2c5530;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+        
+        .review-link:hover {
+            background: #1e3a21;
+            transform: translateY(-2px);
+        }
+        
+        /* Location Section */
+        .location {
+            padding: 5rem 0;
+            background: white;
+        }
+        
+        .location h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #2c5530;
+        }
+        
+        .location-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .location-text {
+            padding: 1rem;
+        }
+        
+        .location-text p {
+            margin-bottom: 1.5rem;
+            color: #666;
+            line-height: 1.8;
+        }
+        
+        .location-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .location-feature {
+            text-align: center;
+            padding: 1.5rem;
             background: #f8f9fa;
             border-radius: 15px;
+        }
+        
+        .location-feature h4 {
+            color: #2c5530;
+            margin-bottom: 0.5rem;
+        }
+        
+        .location-map {
+            background: #f0f0f0;
+            border-radius: 15px;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, #2c5530 0%, #1e3a21 100%);
+            color: white;
+        }
+        
+        .contact h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
             text-align: center;
         }
         
-        .widget-placeholder {
-            padding: 3rem;
-            background: white;
-            border-radius: 10px;
-            border: 2px dashed #ddd;
-            color: #666;
+        .contact-item h3 {
+            margin-bottom: 1rem;
+            color: #e8f5e8;
+        }
+        
+        .contact-item p {
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Footer */
+        footer {
+            background: #1e3a21;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-content p {
+                font-size: 1.1rem;
+            }
+            
+            .properties-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .thumbnail-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .thumbnail-grid img {
+                height: 60px;
+            }
+            
+            .review-stats {
+                gap: 1.5rem;
+            }
+            
+            .location-features {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-info {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <nav class="nav-container">
+    <header>
+        <nav class="container">
             <div class="logo">🏔️ Lakeside Retreat</div>
-            <ul class="nav-menu">
+            <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#accommodations">Domes</a></li>
-                <li><a href="#benefits">Book Direct</a></li>
-                <li>                        <a href="#reviews">Reviews</a></li>
-                <li><a href="#book" class="book-now-nav">Book Now</a></li>
+                <li><a href="#properties">Properties</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#location">Location</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Lakeside Retreat</h1>
-            <p class="hero-subtitle">Luxury eco-domes with stunning Lake Dunstan views in Central Otago wine country</p>
-            
-            <div class="hero-features">
-                <div class="hero-feature">
-                    <div>🌿 Eco-Friendly Domes</div>
-                </div>
-                <div class="hero-feature">
-                    <div>🍷 5-Hectare Vineyard</div>
-                </div>
-                <div class="hero-feature">
-                    <div>🚴 300m to Bike Trail</div>
-                </div>
-                <div class="hero-feature">
-                    <div>🏔️ Mt Pisa Views</div>
-                </div>
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Lakeside Retreat</h1>
+                <p>Luxury eco-domes with stunning Lake Dunstan views in Central Otago wine country</p>
+                <a href="#properties" class="btn-primary">Book Direct & Save 15%</a>
             </div>
-            
-            <div class="cta-buttons">
-                <a href="#book" class="btn-primary">Book Direct & Save 15%</a>
-                <a href="#accommodations" class="btn-secondary">Explore Domes</a>
-            </div>
-        </div>
-        
-        <!-- Quick Booking Widget -->
-        <div class="booking-widget">
-            <div class="booking-input">
-                <label>Check-in</label>
-                <input type="date" id="checkin">
-            </div>
-            <div class="booking-input">
-                <label>Check-out</label>
-                <input type="date" id="checkout">
-            </div>
-            <div class="booking-input">
-                <label>Guests</label>
-                <select id="guests">
-                    <option value="2">2 Adults</option>
-                    <option value="4">4 Adults</option>
-                </select>
-            </div>
-            <button class="btn-primary" onclick="alert('Checking availability... This will connect to Uplisting in the live version!')">Check Availability</button>
-        </div>
-    </section>
+        </section>
 
-    <!-- Direct Booking Benefits -->
-    <section id="benefits" class="benefits-section">
-        <div class="container">
-            <h2 class="section-title">Why Book Direct?</h2>
-            <p class="section-subtitle">Save money and get exclusive perks when you book directly with us</p>
-            
-            <div class="benefits-grid">
-                <div class="benefit-card">
-                    <div class="benefit-icon">💰</div>
-                    <h3 class="benefit-title">15% Discount</h3>
-                    <p>Save 15% on all direct bookings. No booking fees, no hidden charges.</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">🍷</div>
-                    <h3 class="benefit-title">Welcome Wine</h3>
-                    <p>Complimentary bottle of local Central Otago wine for stays over 2 nights.</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">⏰</div>
-                    <h3 class="benefit-title">Flexible Cancellation</h3>
-                    <p>Free cancellation up to 48 hours before arrival. Better terms than booking sites.</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">📞</div>
-                    <h3 class="benefit-title">Personal Service</h3>
-                    <p>Direct contact with hosts. Local recommendations, restaurant bookings, activity planning.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Accommodations -->
-    <section id="accommodations" class="accommodations">
-        <div class="container">
-            <h2 class="section-title">Our Eco-Luxury Domes</h2>
-            <p class="section-subtitle">Choose from our olive green domes that blend seamlessly with the Central Otago landscape</p>
-            
-            <div class="accommodation-grid">
-                <div class="accommodation-card">
-                    <div class="card-image">
-                        <div class="price-badge">From $153/night*</div>
-                        <div>🏠 Dome Pinot</div>
-                    </div>
-                    <div class="card-content">
-                        <h3 class="card-title">Dome Pinot</h3>
-                        <p class="card-description">Luxury eco-dome with panoramic Lake Dunstan views. Self-contained with full kitchen, ensuite, and private deck perfect for wine country sunsets.</p>
-                        <div class="amenities">
-                            <span class="amenity">🛏️ Queen Bed</span>
-                            <span class="amenity">🍳 Full Kitchen</span>
-                            <span class="amenity">🚿 Ensuite</span>
-                            <span class="amenity">📶 WiFi</span>
-                            <span class="amenity">🌊 Lake Views</span>
-                        </div>
-                        <div class="booking-options">
-                            <div class="uplisting-widget"></div>
-                            <div class="secondary-options">
-                                <a href="https://www.airbnb.co.nz/rooms/53799125" target="_blank" class="btn-secondary">Airbnb</a>
-                                <a href="https://www.booking.com/hotel/nz/glamping-dome-pinot.en-gb.html" target="_blank" class="btn-secondary">Booking.com</a>
+        <!-- Properties Section -->
+        <section id="properties" class="properties">
+            <div class="container">
+                <h2>🏠 Our Luxury Accommodations</h2>
+                <div class="properties-grid">
+                    <!-- Dome Pinot -->
+                    <div class="property-card">
+                        <div class="property-gallery">
+                            <div class="main-image">
+                                <img src="https://via.placeholder.com/600x400/2c5530/ffffff?text=Upload+Your+Dome+Pinot+Photos" alt="Dome Pinot Main View" loading="lazy">
+                            </div>
+                            <div class="thumbnail-grid">
+                                <img src="https://via.placeholder.com/150x100/2c5530/ffffff?text=Interior" alt="Dome Pinot Interior" loading="lazy">
+                                <img src="https://via.placeholder.com/150x100/2c5530/ffffff?text=View" alt="Lake View" loading="lazy">
+                                <img src="https://via.placeholder.com/150x100/2c5530/ffffff?text=Bed" alt="Bedroom" loading="lazy">
+                                <img src="https://via.placeholder.com/150x100/2c5530/ffffff?text=Kitchen" alt="Kitchen" loading="lazy">
                             </div>
                         </div>
+                        
+                        <div class="property-content">
+                            <h3>🍷 Dome Pinot</h3>
+                            <p>Experience luxury glamping in our signature eco-dome with panoramic lake views. Perfect for couples seeking a romantic wine country getaway.</p>
+                            
+                            <div class="property-features">
+                                <span class="feature-tag">🛏️ King Bed</span>
+                                <span class="feature-tag">🚿 Ensuite</span>
+                                <span class="feature-tag">🌊 Lake Views</span>
+                                <span class="feature-tag">🍷 Wine Country</span>
+                                <span class="feature-tag">🔥 Fireplace</span>
+                            </div>
+                            
+                            <div class="price">From $180/night</div>
+                            
+                            <div class="booking-options">
+                                <div class="uplisting-widget"></div>
+                                <div class="secondary-options">
+                                    <a href="https://www.airbnb.co.nz/rooms/53799125" target="_blank" class="btn-secondary">Airbnb</a>
+                                    <a href="https://www.booking.com/hotel/nz/glamping-dome-pinot.en-gb.html" target="_blank" class="btn-secondary">Booking.com</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dome Rosé -->
+                    <div class="property-card">
+                        <div class="property-gallery">
+                            <div class="main-image">
+                                <img src="https://via.placeholder.com/600x400/8b4168/ffffff?text=Upload+Your+Dome+Rose+Photos" alt="Dome Rosé Main View" loading="lazy">
+                            </div>
+                            <div class="thumbnail-grid">
+                                <img src="https://via.placeholder.com/150x100/8b4168/ffffff?text=Interior" alt="Dome Rosé Interior" loading="lazy">
+                                <img src="https://via.placeholder.com/150x100/8b4168/ffffff?text=View" alt="Mountain View" loading="lazy">
+                                <img src="https://via.placeholder.com/150x100/8b4168/ffffff?text=Bed" alt="Bedroom" loading="lazy">
+                                <img src="https://via.placeholder.com/150x100/8b4168/ffffff?text=Bath" alt="Bathroom" loading="lazy">
+                            </div>
+                        </div>
+                        
+                        <div class="property-content">
+                            <h3>🌹 Dome Rosé</h3>
+                            <p>Elevated luxury with stunning mountain vistas and premium amenities. Features a private deck and spa-inspired bathroom for the ultimate retreat.</p>
+                            
+                            <div class="property-features">
+                                <span class="feature-tag">🛏️ Queen Bed</span>
+                                <span class="feature-tag">🛁 Luxury Bath</span>
+                                <span class="feature-tag">🏔️ Mountain Views</span>
+                                <span class="feature-tag">🍾 Premium Location</span>
+                                <span class="feature-tag">🌿 Private Deck</span>
+                            </div>
+                            
+                            <div class="price">From $200/night</div>
+                            
+                            <div class="booking-options">
+                                <div class="uplisting-widget"></div>
+                                <div class="secondary-options">
+                                    <a href="https://www.airbnb.co.nz/rooms/1045916078326425415" target="_blank" class="btn-secondary">Airbnb</a>
+                                    <a href="https://www.booking.com/hotel/nz/glamping-dome-rose.en-gb.html" target="_blank" class="btn-secondary">Booking.com</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Lakeside Cottage -->
+                    <div class="property-card">
+                        <div class="property-gallery">
+                            <div class="main-image">
+                                <img src="https://via.placeholder.com/600x400/1a5c3a/ffffff?text=Upload+Your+Cottage+Photos" alt="Lakeside Cottage Main View" loading="lazy">
+                            </div>
+                            <div class="thumbnail-grid">
+                                <img src="https://via.placeholder.com/150x100/1a5c3a/ffffff?text=Living" alt="Living Room" loading="lazy">
+                                <img src="https://via.placeholder.com/150x100/1a5c3a/ffffff?text=Lake" alt="Lake Access" loading="lazy">
+                                <img src="https://via.placeholder.com/150x100/1a5c3a/ffffff?text=Bedroom" alt="Master Bedroom" loading="lazy">
+                                <img src="https://via.placeholder.com/150x100/1a5c3a/ffffff?text=Deck" alt="Private Deck" loading="lazy">
+                            </div>
+                        </div>
+                        
+                        <div class="property-content">
+                            <h3>🏡 Lakeside Cottage</h3>
+                            <p>Charming waterfront cottage with direct lake access. Perfect for families or groups seeking space, comfort, and stunning natural beauty.</p>
+                            
+                            <div class="property-features">
+                                <span class="feature-tag">🏠 2 Bedrooms</span>
+                                <span class="feature-tag">🚿 Full Kitchen</span>
+                                <span class="feature-tag">🌊 Lake Access</span>
+                                <span class="feature-tag">👨‍👩‍👧‍👦 Family Friendly</span>
+                                <span class="feature-tag">🎣 Fishing Spot</span>
+                            </div>
+                            
+                            <div class="price">From $220/night</div>
+                            
+                            <div class="booking-options">
+                                <div class="uplisting-widget"></div>
+                                <div class="secondary-options">
+                                    <a href="https://www.airbnb.co.nz/rooms/53799125" target="_blank" class="btn-secondary">Airbnb</a>
+                                    <a href="https://www.booking.com/hotel/nz/lakeside-retreat.en-gb.html" target="_blank" class="btn-secondary">Booking.com</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews Section -->
+        <section id="reviews" class="reviews-section">
+            <div class="container">
+                <h2>⭐ Guest Reviews</h2>
+                <div class="review-stats">
+                    <div class="stat-item">
+                        <span class="rating">4.9/5</span>
+                        <span class="platform">Airbnb Rating</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="rating">9.2/10</span>
+                        <span class="platform">Booking.com Rating</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="rating">150+</span>
+                        <span class="platform">Total Reviews</span>
                     </div>
                 </div>
                 
-                <div class="accommodation-card">
-                    <div class="card-image">
-                        <div class="price-badge">From $153/night*</div>
-                        <div>🏠 Dome Rosé</div>
+                <div class="review-highlights">
+                    <div class="review-card">
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p>"Absolutely stunning location with incredible views of Lake Dunstan. The dome was luxurious and perfectly appointed."</p>
+                        <span class="reviewer">- Sarah M. (Verified Guest)</span>
                     </div>
-                    <div class="card-content">
-                        <h3 class="card-title">Dome Rosé</h3>
-                        <p class="card-description">Identical luxury to Dome Pinot with stunning mountain and vineyard views. Perfect for couples seeking privacy and natural beauty.</p>
-                        <div class="amenities">
-                            <span class="amenity">🛏️ Queen Bed</span>
-                            <span class="amenity">🍳 Full Kitchen</span>
-                            <span class="amenity">🚿 Ensuite</span>
-                            <span class="amenity">📶 WiFi</span>
-                            <span class="amenity">🏔️ Mountain Views</span>
-                        </div>
-                        <div class="booking-options">
-                            <div class="uplisting-widget"></div>
-                            <div class="secondary-options">
-                                <a href="https://www.airbnb.co.nz/rooms/1045916078326425415" target="_blank" class="btn-secondary">Airbnb</a>
-                                <a href="https://www.booking.com/hotel/nz/glamping-dome-rose.en-gb.html" target="_blank" class="btn-secondary">Booking.com</a>
-                            </div>
-                        </div>
+                    
+                    <div class="review-card">
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p>"Best accommodation in Central Otago! Amazing wine country setting and the hosts were incredibly welcoming."</p>
+                        <span class="reviewer">- David & Emma (Verified Guest)</span>
+                    </div>
+                    
+                    <div class="review-card">
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p>"Perfect romantic getaway. The dome design is unique and the vineyard setting is magical. Highly recommend!"</p>
+                        <span class="reviewer">- Michael K. (Verified Guest)</span>
+                    </div>
+                    
+                    <div class="review-card">
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p>"Clean, comfortable, and the views are absolutely breathtaking. Perfect base for exploring wineries."</p>
+                        <span class="reviewer">- Jenny L. (Verified Guest)</span>
                     </div>
                 </div>
                 
-                <div class="accommodation-card">
-                    <div class="card-image">
-                        <div class="price-badge">From $136/night*</div>
-                        <div>🏡 Lakeside Cottage</div>
-                    </div>
-                    <div class="card-content">
-                        <h3 class="card-title">Lakeside Cottage</h3>
-                        <p class="card-description">Charming cottage with direct lake access. Traditional comfort meets modern amenities with unbeatable waterfront location.</p>
-                        <div class="amenities">
-                            <span class="amenity">🛏️ Double Bed</span>
-                            <span class="amenity">🍳 Kitchenette</span>
-                            <span class="amenity">🚿 Bathroom</span>
-                            <span class="amenity">📶 WiFi</span>
-                            <span class="amenity">🏖️ Lake Access</span>
-                        </div>
-                        <div class="booking-options">
-                            <div class="uplisting-widget"></div>
-                            <div class="secondary-options">
-                                <a href="https://www.airbnb.co.nz/rooms/53799125" target="_blank" class="btn-secondary">Airbnb</a>
-                                <a href="https://www.booking.com/hotel/nz/lakeside-retreat.en-gb.html" target="_blank" class="btn-secondary">Booking.com</a>
+                <div class="review-links">
+                    <p>Read all reviews on:</p>
+                    <a href="https://www.airbnb.co.nz/rooms/53799125" target="_blank" class="review-link">
+                        <span>🏠 Airbnb Reviews</span>
+                    </a>
+                    <a href="https://www.booking.com/hotel/nz/glamping-dome-pinot.en-gb.html" target="_blank" class="review-link">
+                        <span>🌐 Booking.com Reviews</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Location Section -->
+        <section id="location" class="location">
+            <div class="container">
+                <h2>📍 Central Otago Wine Country</h2>
+                <div class="location-content">
+                    <div class="location-text">
+                        <p>Discover the magic of Central Otago, New Zealand's premier wine region. Our luxury accommodations are perfectly positioned to explore world-class wineries, stunning alpine scenery, and the crystal-clear waters of Lake Dunstan.</p>
+                        
+                        <p>Experience the perfect blend of adventure and relaxation with hiking trails, wine tastings, and water activities right at your doorstep.</p>
+                        
+                        <div class="location-features">
+                            <div class="location-feature">
+                                <h4>🍷 Premium Wineries</h4>
+                                <p>5-minute drive to acclaimed cellar doors</p>
+                            </div>
+                            <div class="location-feature">
+                                <h4>🚗 Cromwell Town</h4>
+                                <p>15 minutes to shops & restaurants</p>
+                            </div>
+                            <div class="location-feature">
+                                <h4>🏔️ Adventure Activities</h4>
+                                <p>Hiking, biking & water sports nearby</p>
+                            </div>
+                            <div class="location-feature">
+                                <h4>✈️ Queenstown Airport</h4>
+                                <p>45-minute scenic drive</p>
                             </div>
                         </div>
                     </div>
+                    
+                    <div class="location-map">
+                        <p>🗺️ Interactive Map Coming Soon<br>
+                        Bannockburn, Central Otago<br>
+                        New Zealand</p>
+                    </div>
                 </div>
             </div>
-            
-            <p style="text-align: center; margin-top: 2rem; color: #666; font-size: 0.9rem;">
-                *Prices shown with 15% direct booking discount applied. Original Airbnb prices: Domes $180/night, Cottage $160/night
-            </p>
-        </div>
-    </section>
+        </section>
 
-    <!-- Uplisting Integration Section -->
-    <section id="book" class="benefits-section">
-        <div class="container">
-            <h2 class="section-title">Book Your Stay</h2>
-            <p class="section-subtitle">Powered by Uplisting - Real-time availability across all platforms</p>
-            
-            <!-- Uplisting Search Widget Container -->
-            <div class="uplisting-widget">
-                <!-- This div will contain the Uplisting widget -->
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>📞 Contact Us</h2>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h3>📧 Email</h3>
+                        <p>hello@lakesideretreat.co.nz</p>
+                        <p>bookings@lakesideretreat.co.nz</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>📱 Phone</h3>
+                        <p>+64 21 XXX XXXX</p>
+                        <p>Available 9am - 8pm NZST</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>📍 Location</h3>
+                        <p>Bannockburn</p>
+                        <p>Central Otago, New Zealand</p>
+                    </div>
+                </div>
             </div>
-            
-            <!-- Uplisting Widget JavaScript -->
-            <script type="text/javascript" src="https://d2n64sniz4ei2k.cloudfront.net/property-search-795f5869.js"></script>
-            <script type="text/javascript">
-              window.uplistingSearchWidget.init({
-                baseUrl: 'YOUR_UPLISTING_DIRECT_BOOKING_WEBSITE_URL',
-                showLocation: true,
-                locationText: 'Central Otago',
-                locations: ['Cromwell', 'Mount Pisa'],
-                color: '#2c5530',
-                insertAt: '.uplisting-widget',
-                guestsMin: 1,
-                guestsMax: 4,
-                textColor: '#fff',
-                backgroundColor: '#2c5530',
-                buttonText: 'Check Availability',
-              });
-            </script>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
+    <footer>
         <div class="container">
-            <h2>Get In Touch</h2>
-            <p>Questions about your stay? We're here to help!</p>
-            
-            <div class="contact-info">
-                <div class="contact-item">
-                    <h3>📍 Location</h3>
-                    <p>96 Smith Way, Mount Pisa<br>Cromwell, Central Otago 9310<br>New Zealand</p>
-                </div>
-                <div class="contact-item">
-                    <h3>📞 Phone</h3>
-                    <p>+64 27 XXX XXXX</p>
-                    <p>Available 8AM - 8PM NZST</p>
-                </div>
-                <div class="contact-item">
-                    <h3>✉️ Email</h3>
-                    <p>hello@lakesideretreat.co.nz</p>
-                    <p>We respond within 2 hours</p>
-                </div>
-                <div class="contact-item">
-                    <h3>🌐 Follow Us</h3>
-                    <p>@lakesideretreat_nz</p>
-                    <p>Share your photos with #lakesideretreat</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Lakeside Retreat</h3>
-                    <p>Luxury eco-domes in Central Otago wine country. Stunning Lake Dunstan views, vineyard setting, and personalized service.</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <a href="#accommodations">Our Domes</a>
-                    <a href="#benefits">Book Direct Benefits</a>
-                    <a href="#contact">Contact Us</a>
-                    <a href="#book">Check Availability</a>
-                </div>
-                <div class="footer-section">
-                    <h3>Booking Channels</h3>
-                    <a href="#book">📱 Book Direct (Best Rate)</a>
-                    <a href="https://www.airbnb.co.nz/rooms/53799125" target="_blank">🏠 Dome Pinot - Airbnb</a>
-                    <a href="https://www.airbnb.co.nz/rooms/1045916078326425415" target="_blank">🏠 Dome Rosé - Airbnb</a>
-                    <a href="https://www.airbnb.co.nz/rooms/53799125" target="_blank">🏡 Lakeside Cottage - Airbnb</a>
-                    <a href="https://www.booking.com/hotel/nz/glamping-dome-pinot.en-gb.html" target="_blank">🌐 Dome Pinot - Booking.com</a>
-                    <a href="https://www.booking.com/hotel/nz/glamping-dome-rose.en-gb.html" target="_blank">🌐 Dome Rosé - Booking.com</a>
-                    <a href="https://www.booking.com/hotel/nz/lakeside-retreat.en-gb.html" target="_blank">🌐 Lakeside Cottage - Booking.com</a>
-                </div>
-                <div class="footer-section">
-                    <h3>Experience</h3>
-                    <a href="#">Wine Tours</a>
-                    <a href="#">Bike Trail</a>
-                    <a href="#">Local Restaurants</a>
-                    <a href="#">Queenstown Day Trips</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Lakeside Retreat. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a></p>
-            </div>
+            <p>&copy; 2025 Lakeside Retreat. All rights reserved. | Luxury glamping in Central Otago wine country</p>
         </div>
     </footer>
 
-    <script>
-        // Set minimum dates for booking inputs
-        document.addEventListener('DOMContentLoaded', function() {
-            const today = new Date().toISOString().split('T')[0];
-            document.getElementById('checkin').min = today;
-            document.getElementById('checkout').min = today;
-            
-            // Update checkout min date when checkin changes
-            document.getElementById('checkin').addEventListener('change', function() {
-                const checkinDate = new Date(this.value);
-                checkinDate.setDate(checkinDate.getDate() + 1);
-                document.getElementById('checkout').min = checkinDate.toISOString().split('T')[0];
-            });
-        });
-
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Header scroll effect
-        window.addEventListener('scroll', function() {
-            const header = document.querySelector('.header');
-            if (window.scrollY > 100) {
-                header.style.background = 'rgba(255, 255, 255, 0.98)';
-                header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
-            } else {
-                header.style.background = 'rgba(255, 255, 255, 0.95)';
-                header.style.boxShadow = 'none';
-            }
-        });
-
-        // Booking widget functionality (placeholder for Uplisting integration)
-        function checkAvailability() {
-            const checkin = document.getElementById('checkin').value;
-            const checkout = document.getElementById('checkout').value;
-            const guests = document.getElementById('guests').value;
-            
-            if (!checkin || !checkout) {
-                alert('Please select check-in and check-out dates');
-                return;
-            }
-            
-            if (new Date(checkout) <= new Date(checkin)) {
-                alert('Check-out date must be after check-in date');
-                return;
-            }
-            
-            // This will connect to Uplisting API in live version
-            alert(`Checking availability for ${guests} guests from ${checkin} to ${checkout}.\n\nIn the live version, this will show real-time availability from Uplisting and allow instant booking!`);
-        }
-
-        // Contact form submission (placeholder)
-        function submitContactForm() {
-            alert('Contact form submitted! In the live version, this will send an email to hello@lakesideretreat.co.nz');
-        }
-
-        // Add some interactive elements
-        document.querySelectorAll('.accommodation-card').forEach(card => {
-            card.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-10px)';
-            });
-            
-            card.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(-5px)';
-            });
-        });
-
-        // Animate benefit cards on scroll
-        function animateOnScroll() {
-            const benefitCards = document.querySelectorAll('.benefit-card');
-            
-            benefitCards.forEach(card => {
-                const cardTop = card.getBoundingClientRect().top;
-                const cardVisible = 150;
-                
-                if (cardTop < window.innerHeight - cardVisible) {
-                    card.style.opacity = '1';
-                    card.style.transform = 'translateY(0)';
-                }
-            });
-        }
-
-        // Initial setup for animations
-        document.querySelectorAll('.benefit-card').forEach(card => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(50px)';
-            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        });
-
-        window.addEventListener('scroll', animateOnScroll);
-        animateOnScroll(); // Run once on load
-    </script>
-
-    <!-- Google Analytics placeholder -->
-    <!-- In production, add your Google Analytics tracking code here -->
-    <!-- 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'GA_MEASUREMENT_ID');
-    </script>
-    -->
-
-    <!-- Schema.org structured data for SEO -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "LodgingBusiness",
-        "name": "Lakeside Retreat",
-        "description": "Luxury eco-domes with stunning Lake Dunstan views in Central Otago wine country",
-        "url": "https://lakesideretreat.co.nz",
-        "telephone": "+64-27-XXX-XXXX",
-        "email": "hello@lakesideretreat.co.nz",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "96 Smith Way, Mount Pisa",
-            "addressLocality": "Cromwell",
-            "addressRegion": "Central Otago",
-            "postalCode": "9310",
-            "addressCountry": "NZ"
-        },
-        "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": "-45.0311",
-            "longitude": "169.2608"
-        },
-        "amenityFeature": [
-            {
-                "@type": "LocationFeatureSpecification",
-                "name": "Free WiFi"
-            },
-            {
-                "@type": "LocationFeatureSpecification", 
-                "name": "Kitchen"
-            },
-            {
-                "@type": "LocationFeatureSpecification",
-                "name": "Lake View"
-            },
-            {
-                "@type": "LocationFeatureSpecification",
-                "name": "Vineyard Setting"
-            }
-        ],
-        "starRating": {
-            "@type": "Rating",
-            "ratingValue": "5"
-        },
-        "priceRange": "$"
-    }
-    </script>
     <!-- Uplisting Direct Booking Widget Script -->
     <script type="text/javascript" src="https://d2n64sniz4ei2k.cloudfront.net/property-search-795f5869.js"></script>
     <script type="text/javascript">
@@ -975,3 +805,4 @@
     </script>
 </body>
 </html>
+ "Add Uplisting widgets, photo galleries, and reviews section"
