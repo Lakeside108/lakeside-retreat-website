@@ -788,9 +788,17 @@
 
     <!-- Uplisting Direct Booking Widget Script -->
     <script type="text/javascript" src="https://d2n64sniz4ei2k.cloudfront.net/property-search-795f5869.js"></script>
-    <script type="text/javascript">
+<script type="text/javascript">
+  // Wait for the page to load completely
+  document.addEventListener('DOMContentLoaded', function() {
+    
+    // Check if the script loaded
+    if (typeof window.uplistingSearchWidget !== 'undefined') {
+      console.log('Uplisting script loaded successfully');
+      
+      // Initialize the widget
       window.uplistingSearchWidget.init({
-        baseUrl: 'YOUR_UPLISTING_DIRECT_BOOKING_WEBSITE_URL',
+        baseUrl: 'https://your-site.uplisting.io', // You'll need to replace this with your real URL
         showLocation: true,
         locationText: 'Central Otago',
         locations: ['Cromwell', 'Bannockburn', 'Central Otago'],
@@ -802,7 +810,17 @@
         backgroundColor: '#2c5530',
         buttonText: 'Book Direct & Save 15%',
       });
-    </script>
-</body>
-</html>
+      
+      console.log('Uplisting widget initialized');
+    } else {
+      console.error('Uplisting script failed to load');
+      
+      // Show a fallback button
+      const widgets = document.querySelectorAll('.uplisting-widget');
+      widgets.forEach(function(widget) {
+        widget.innerHTML = '<button class="btn-primary" style="width: 100%; padding: 1rem; background: #2c5530; color: white; border: none; border-radius: 15px; font-size: 1.1rem; cursor: pointer;" onclick="alert(\'Please set up your Uplisting account first!\')">Book Direct & Save 15%</button>';
+      });
+    }
+  });
+</script>
  "Add Uplisting widgets, photo galleries, and reviews section"
