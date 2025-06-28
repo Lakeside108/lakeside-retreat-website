@@ -195,6 +195,96 @@
             font-weight: 500;
         }
 
+        .about-us {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, #F5F3F0 0%, #EAE5DC 100%);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+            margin-top: 3rem;
+            align-items: start;
+        }
+
+        .about-text h3 {
+            color: #5D4E37;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+
+        .about-text p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            color: #2C3E50;
+        }
+
+        .host-promise {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 4px solid #D4B5A0;
+            margin-top: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .host-promise h4 {
+            color: #5D4E37;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        .host-promise p {
+            color: #2C3E50;
+            font-size: 1rem;
+            margin-bottom: 0;
+            font-style: italic;
+        }
+
+        .about-highlights {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .highlight-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border: 2px solid #D4B5A0;
+            transition: transform 0.3s ease;
+        }
+
+        .highlight-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .highlight-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight-card h4 {
+            color: #5D4E37;
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        .highlight-card p {
+            color: #2C3E50;
+            font-size: 0.9rem;
+            line-height: 1.4;
+            margin-bottom: 0;
+        }
+
         .sustainability {
             padding: 5rem 0;
             background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);
@@ -459,6 +549,27 @@
                 font-size: 1.1rem !important;
             }
 
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .about-text h3 {
+                font-size: 1.5rem;
+            }
+
+            .about-text p {
+                font-size: 1rem;
+            }
+
+            .host-promise {
+                padding: 1.5rem;
+            }
+
+            .host-promise h4 {
+                font-size: 1.1rem;
+            }
+
             .sustainability-content {
                 grid-template-columns: 1fr;
                 gap: 2rem;
@@ -552,6 +663,69 @@
                         <div class="stat">
                             <div class="stat-number">SOLAR</div>
                             <div class="stat-label">Powered self-contained luxury domes</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-us">
+            <div class="container">
+                <h2 class="section-title">ABOUT US</h2>
+                <p class="section-subtitle">Your hosts, passionate guardians of Central Otago's natural beauty</p>
+                
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3>Welcome to Our Lakeside Dream</h3>
+                        <p>We're more than just hosts—we're passionate advocates for Central Otago's extraordinary landscape and devoted guardians of its pristine environment. When we first discovered this breathtaking spot above Lake Dunstan, we knew we'd found something truly special.</p>
+                        
+                        <p>As long-time residents of Central Otago, we've watched this region transform into one of the world's most celebrated wine destinations. Yet through all the growth and recognition, the raw beauty of schist mountains reflecting in crystal-clear lake waters has remained timeless and inspiring.</p>
+                        
+                        <p>Our vision for Lakeside Retreat was born from a simple belief: that luxury travel should enhance, not exploit, the natural world. Every solar panel we installed, every sustainable feature we incorporated, and every detail we carefully considered reflects our commitment to preserving this magical place for future generations.</p>
+                        
+                        <p>We take immense pride in sharing our corner of paradise with travelers who appreciate both luxury and responsibility. Whether you're here for the world-class wines, the stunning landscapes, or simply to disconnect and recharge, we're here to ensure your experience exceeds every expectation.</p>
+                        
+                        <div class="host-promise">
+                            <h4>Our Promise to You</h4>
+                            <p>From the moment you arrive to your reluctant departure, we're committed to providing personalized service that makes your Central Otago experience truly unforgettable. This is our home, our passion, and our privilege to share with you.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="about-highlights">
+                        <div class="highlight-card">
+                            <div class="highlight-icon">🏡</div>
+                            <h4>Local Expertise</h4>
+                            <p>Long-time Central Otago residents with insider knowledge of the best wineries, restaurants, and hidden gems</p>
+                        </div>
+                        
+                        <div class="highlight-card">
+                            <div class="highlight-icon">💚</div>
+                            <h4>Sustainability Champions</h4>
+                            <p>Committed to eco-tourism leadership and environmental stewardship in everything we do</p>
+                        </div>
+                        
+                        <div class="highlight-card">
+                            <div class="highlight-icon">🍷</div>
+                            <h4>Wine Country Insiders</h4>
+                            <p>Personal relationships with local winemakers and unique access to exclusive experiences</p>
+                        </div>
+                        
+                        <div class="highlight-card">
+                            <div class="highlight-icon">⭐</div>
+                            <h4>Personalized Service</h4>
+                            <p>Dedicated to creating bespoke experiences tailored to your interests and preferences</p>
+                        </div>
+                        
+                        <div class="highlight-card">
+                            <div class="highlight-icon">🌄</div>
+                            <h4>Landscape Guardians</h4>
+                            <p>Passionate protectors of Central Otago's natural beauty and cultural heritage</p>
+                        </div>
+                        
+                        <div class="highlight-card">
+                            <div class="highlight-icon">🤝</div>
+                            <h4>Community Connected</h4>
+                            <p>Strong ties to local businesses, ensuring authentic Central Otago experiences</p>
                         </div>
                     </div>
                 </div>
@@ -675,6 +849,7 @@
         console.log("🏔️ Using enhanced Lake Dunstan landscape: lakeside-hero.jpg");
         console.log("🏠 Using authentic Lakeside Retreat logo: lakeside-logo.png");
         console.log("📖 Featuring compelling Our Story section!");
+        console.log("👥 Featuring personal About Us section!");
         console.log("🌞 Highlighting solar-powered, self-contained luxury domes!");
         console.log("✨ Ready to showcase sustainable Central Otago accommodation!");
     </script>
