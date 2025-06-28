@@ -130,6 +130,71 @@
             letter-spacing: 2px;
         }
 
+        .story {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, #F8F6F3 0%, #F0EBE3 100%);
+        }
+
+        .story-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+            margin-top: 3rem;
+            align-items: start;
+        }
+
+        .story-text h3 {
+            color: #5D4E37;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+
+        .story-text p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            color: #2C3E50;
+        }
+
+        .story-highlight {
+            font-size: 1.3rem !important;
+            font-weight: bold;
+            color: #5D4E37 !important;
+            font-style: italic;
+            border-left: 4px solid #D4B5A0;
+            padding-left: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .story-stats {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .stat {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            border: 2px solid #D4B5A0;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #5D4E37;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: #2C3E50;
+            font-weight: 500;
+        }
+
         .features {
             padding: 4rem 0;
             background: #F5F3F0;
@@ -276,6 +341,23 @@
                 font-size: 1rem;
             }
 
+            .story-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .story-text h3 {
+                font-size: 1.5rem;
+            }
+
+            .story-text p {
+                font-size: 1rem;
+            }
+
+            .story-highlight {
+                font-size: 1.1rem !important;
+            }
+
             .booking-buttons {
                 flex-direction: column;
                 align-items: center;
@@ -308,11 +390,45 @@
         <section class="hero">
             <img src="https://lakesideretreat.co.nz/images/lakeside-hero.jpg" 
                  alt="Lake Dunstan Landscape" 
-                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1;">
+                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1; 
+                        filter: brightness(1.1) contrast(1.15) saturate(1.2) hue-rotate(2deg);
+                        transform: scale(1.02);">
             <div class="hero-content">
                 <h1>A HAVEN OF SERENITY IN CROMWELL, QUEENSTOWN</h1>
                 <p>TRANQUIL. AUTHENTIC. TIMELESS</p>
                 <button class="cta-button">BOOK NOW</button>
+            </div>
+        </section>
+
+        <section class="story">
+            <div class="container">
+                <h2 class="section-title">OUR STORY</h2>
+                <div class="story-content">
+                    <div class="story-text">
+                        <h3>Where Lake Dunstan Meets Wine Country Magic</h3>
+                        <p>High above the pristine waters of Lake Dunstan, where ancient schist mountains meet rolling vineyard hills, lies a sanctuary that captures the very essence of Central Otago. Lakeside Retreat was born from a simple dream: to create a place where luxury meets sustainability, where modern comfort embraces timeless landscape.</p>
+                        
+                        <p>Our eco-luxury domes, painted in the soft olive of native tussock grass, seem to emerge naturally from the hillside. Each morning, you'll wake to mist rising from the lake below, while golden light dances across the surrounding peaks. This is more than accommodation—it's your gateway to one of New Zealand's most celebrated wine regions.</p>
+                        
+                        <p>Just minutes from your door, world-renowned wineries invite you to taste the terroir that makes Central Otago Pinot Noir legendary. Yet at day's end, you'll return to your private haven, where the only sounds are lapping lake waters and the whisper of mountain winds through tussock land.</p>
+                        
+                        <p class="story-highlight">This is where your Central Otago story begins—authentic, sustainable, unforgettable.</p>
+                    </div>
+                    <div class="story-stats">
+                        <div class="stat">
+                            <div class="stat-number">15+</div>
+                            <div class="stat-label">World-class wineries within 20 minutes</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">360°</div>
+                            <div class="stat-label">Panoramic mountain & lake views</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Sustainable eco-luxury design</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -364,8 +480,9 @@
 
     <script>
         console.log("🎉 Lakeside Retreat website loaded successfully!");
-        console.log("🏔️ Using real Lake Dunstan landscape: lakeside-hero.jpg");
+        console.log("🏔️ Using enhanced Lake Dunstan landscape: lakeside-hero.jpg");
         console.log("🏠 Using authentic Lakeside Retreat logo: lakeside-logo.png");
+        console.log("📖 Featuring compelling Our Story section!");
         console.log("✨ Ready to showcase Central Otago luxury accommodation!");
     </script>
 </body>
