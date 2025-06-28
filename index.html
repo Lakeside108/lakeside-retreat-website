@@ -543,6 +543,108 @@
             margin-bottom: 0;
         }
 
+        /* Enjoy Section */
+        .enjoy {
+            padding: 6rem 0;
+            background: white;
+        }
+
+        .explore-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+            margin-top: 4rem;
+        }
+
+        .explore-category {
+            background: var(--gradient-warm);
+            border-radius: 24px;
+            padding: 2.5rem;
+            box-shadow: var(--shadow-medium);
+            border: 1px solid rgba(30, 58, 138, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .explore-category:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-large);
+        }
+
+        .category-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px solid rgba(30, 58, 138, 0.1);
+        }
+
+        .category-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .category-header h3 {
+            color: var(--primary-blue);
+            font-size: 1.375rem;
+            font-weight: 600;
+            margin-bottom: 0;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .experience-list {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .experience {
+            padding: 1.5rem;
+            background: white;
+            border-radius: 16px;
+            border-left: 4px solid var(--accent-gold);
+            position: relative;
+            box-shadow: var(--shadow-soft);
+            transition: all 0.3s ease;
+        }
+
+        .experience:hover {
+            transform: translateX(8px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .experience h4 {
+            color: var(--primary-teal);
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+
+        .experience p {
+            color: var(--dark-slate);
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .see-more {
+            display: inline-block;
+            color: #047857;
+            font-size: 0.875rem;
+            font-style: italic;
+            font-weight: 500;
+            background: linear-gradient(135deg, #ecfdf5 0%, #f0fdf4 100%);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            margin-top: 0.5rem;
+            border: 1px solid #10b981;
+            transition: all 0.3s ease;
+        }
+
+        .see-more:hover {
+            background: #10b981;
+            color: white;
+            transform: translateY(-2px);
+        }
+
         /* Responsive Design */
         @media (max-width: 1024px) {
             .header-content {
@@ -610,6 +712,31 @@
             .service-clarification {
                 padding: 2rem;
                 margin: 3rem auto;
+            }
+
+            .explore-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .explore-category {
+                padding: 2rem;
+            }
+
+            .category-header h3 {
+                font-size: 1.25rem;
+            }
+
+            .experience {
+                padding: 1.25rem;
+            }
+
+            .experience h4 {
+                font-size: 1.125rem;
+            }
+
+            .experience p {
+                font-size: 0.9375rem;
             }
         }
     </style>
@@ -763,6 +890,118 @@
                     <p><strong>As Your Local Knowledge Experts:</strong> We share insider recommendations and offer timing tips based on years of Central Otago experience.</p>
                     <p><strong>Direct Booking Benefits:</strong> You book activities directly with operators for the best rates, flexible scheduling, and direct communication about your specific needs.</p>
                     <p><strong>Our Expertise + Your Control:</strong> The perfect combination of local knowledge and booking flexibility.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="enjoy section" id="enjoy">
+            <div class="container">
+                <h2 class="section-title">ENJOY CENTRAL OTAGO</h2>
+                <p class="section-subtitle">Discover extraordinary experiences from your lakeside base camp</p>
+                
+                <div class="explore-grid">
+                    <div class="explore-category wine-experiences">
+                        <div class="category-header">
+                            <div class="category-icon">🍷</div>
+                            <h3>WINE COUNTRY EXPERIENCES</h3>
+                        </div>
+                        <div class="experience-list">
+                            <div class="experience">
+                                <h4>Central Otago Wine Tours</h4>
+                                <p>Exclusive tastings at Gibbston Valley, Chard Farm, Peregrine, and hidden gem boutique wineries. Discover why Central Otago Pinot Noir is world-renowned.</p>
+                                <span class="see-more">Contact details provided</span>
+                            </div>
+                            <div class="experience">
+                                <h4>Cardrona Distillery</h4>
+                                <p>Award-winning single malt whisky tastings and distillery tours in the stunning Cardrona Valley, just 45 minutes away.</p>
+                                <span class="see-more">Book directly online</span>
+                            </div>
+                            <div class="experience">
+                                <h4>Vineyard Experiences</h4>
+                                <p>Harvest participation, wine blending masterclasses, and private cellar door experiences with Central Otago's finest winemakers.</p>
+                                <span class="see-more">Seasonal availability - contacts provided</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="explore-category adventure-experiences">
+                        <div class="category-header">
+                            <div class="category-icon">🚁</div>
+                            <h3>HELICOPTER ADVENTURES</h3>
+                        </div>
+                        <div class="experience-list">
+                            <div class="experience">
+                                <h4>Milford Sound by Helicopter</h4>
+                                <p>Ultimate day trip combining helicopter flight over the Southern Alps with Milford Sound cruise. Unforgettable wilderness experience.</p>
+                                <span class="see-more">Advance booking essential - operators provided</span>
+                            </div>
+                            <div class="experience">
+                                <h4>Backcountry Helicopter Tours</h4>
+                                <p>Land on remote peaks, glaciers, and hidden valleys. Access pristine wilderness areas impossible to reach any other way.</p>
+                                <span class="see-more">Weather dependent - multiple operators available</span>
+                            </div>
+                            <div class="experience">
+                                <h4>West Coast Wilderness</h4>
+                                <p>Helicopter adventure over the Southern Alps to the wild West Coast. Experience dramatic coastlines and pristine rainforest.</p>
+                                <span class="see-more">Recommendations & contacts provided</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="explore-category lake-activities">
+                        <div class="category-header">
+                            <div class="category-icon">🏔️</div>
+                            <h3>LAKE & MOUNTAIN ADVENTURES</h3>
+                        </div>
+                        <div class="experience-list">
+                            <div class="experience">
+                                <h4>Lake Dunstan Activities</h4>
+                                <p>Kayaking, paddleboarding, fishing, and scenic cruises on pristine Lake Dunstan, literally at your doorstep from Lakeside Retreat.</p>
+                                <span class="see-more">Equipment rental info provided</span>
+                            </div>
+                            <div class="experience">
+                                <h4>Cardrona & Treble Cone</h4>
+                                <p>World-class skiing in winter, stunning alpine hiking and mountain biking in summer. Two of New Zealand's premier mountain destinations.</p>
+                                <span class="see-more">Lift pass info & seasonal advice</span>
+                            </div>
+                            <div class="experience">
+                                <h4>Central Otago Rail Trail</h4>
+                                <p>Iconic cycling trail through gold mining heritage, vineyard country, and dramatic schist landscapes. Historic bridges and stunning vistas.</p>
+                                <span class="see-more">Self-guided info & tour operator contacts</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="explore-category queenstown-wanaka">
+                        <div class="category-header">
+                            <div class="category-icon">🎯</div>
+                            <h3>QUEENSTOWN & WANAKA ACCESS</h3>
+                        </div>
+                        <div class="experience-list">
+                            <div class="experience">
+                                <h4>Queenstown Adventures</h4>
+                                <p>45 minutes to the adventure capital - bungy jumping, skydiving, jet boating, and world-class dining. Day trips or evening adventures.</p>
+                                <span class="see-more">Easy day trips - activity contacts provided</span>
+                            </div>
+                            <div class="experience">
+                                <h4>Wanaka Alpine Beauty</h4>
+                                <p>Pristine alpine lake, hiking trails, #ThatWanakaTree, and peaceful mountain atmosphere. Perfect contrast to Queenstown's energy.</p>
+                                <span class="see-more">Free attractions + accommodation recommendations</span>
+                            </div>
+                            <div class="experience">
+                                <h4>Highlands Motorsport Park</h4>
+                                <p>Drive supercars, go-karts, or experience the Museum of Classic Cars. Adrenaline and automotive history combined.</p>
+                                <span class="see-more">Online booking available - website provided</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-clarification">
+                    <h4>📞 Planning Your Central Otago Adventures</h4>
+                    <p><strong>Before Your Stay:</strong> Contact us with your interests and we'll provide personalized recommendations and operator contact details.</p>
+                    <p><strong>During Your Stay:</strong> We're here to answer questions, provide additional suggestions, and share insider tips based on current conditions.</p>
+                    <p><strong>Local Knowledge Advantage:</strong> Our recommendations are based on personal experience, guest feedback, and ongoing relationships with local operators.</p>
                 </div>
             </div>
         </section>
