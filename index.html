@@ -160,7 +160,7 @@
         /* Hero Section */
         .hero {
             background: linear-gradient(rgba(30, 58, 138, 0.4), rgba(15, 118, 110, 0.4)), 
-                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style="stop-color:%2393c5fd;stop-opacity:1" /><stop offset="100%" style="stop-color:%23ddd6fe;stop-opacity:1" /></linearGradient></defs><rect width="1200" height="500" fill="url(%23sky)"/><path d="M0,500 Q200,420 400,450 T800,430 T1200,450 L1200,800 L0,800 Z" fill="%23065f46"/><path d="M0,550 Q300,480 600,510 T1200,500 L1200,800 L0,800 Z" fill="%23047857"/><path d="M100,600 Q400,580 700,600 T1200,590 L1200,800 L0,800 Z" fill="%23059669"/><ellipse cx="300" cy="650" rx="200" ry="40" fill="%230891b2" opacity="0.8"/><ellipse cx="800" cy="670" rx="250" ry="35" fill="%230891b2" opacity="0.8"/></svg>') center/cover no-repeat;
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><defs><linearGradient id="sunset" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style="stop-color:%23ff6b6b;stop-opacity:1" /><stop offset="30%" style="stop-color:%23ff8e53;stop-opacity:1" /><stop offset="60%" style="stop-color:%23ffa726;stop-opacity:1" /><stop offset="100%" style="stop-color:%23ffb74d;stop-opacity:1" /></linearGradient></defs><rect width="1200" height="300" fill="url(%23sunset)"/><path d="M0,300 Q200,250 400,280 T800,260 T1200,280 L1200,450 Q900,400 600,420 T0,400 Z" fill="%23433a36"/><path d="M0,450 Q300,380 600,410 T1200,400 L1200,600 Q800,580 400,590 T0,580 Z" fill="%235d4e37"/><ellipse cx="300" cy="520" rx="150" ry="20" fill="%234a90e2" opacity="0.7"/><ellipse cx="800" cy="530" rx="200" ry="15" fill="%234a90e2" opacity="0.7"/></svg>') center/cover no-repeat;
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -686,18 +686,60 @@
             border-radius: 16px;
             backdrop-filter: blur(10px);
             border-left: 4px solid var(--accent-gold);
+            transition: all 0.3s ease;
+        }
+
+        .accommodation-option:hover {
+            transform: translateY(-3px);
+            background: rgba(255,255,255,0.15);
+        }
+
+        .accommodation-option.featured {
+            border-left: 4px solid #10b981;
+            background: rgba(16, 185, 129, 0.1);
         }
 
         .accommodation-option h4 {
             font-size: 1.25rem;
-            margin-bottom: 0.75rem;
+            margin-bottom: 1rem;
             font-weight: 600;
+        }
+
+        .property-details {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .property-specs {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: rgba(255,255,255,0.8);
+            font-style: italic;
         }
 
         .accommodation-option p {
             font-size: 1rem;
             margin-bottom: 0;
             opacity: 0.9;
+            line-height: 1.5;
+        }
+
+        .key-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .feature-tag {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            backdrop-filter: blur(5px);
         }
 
         .booking-feature span:last-child {
@@ -1273,6 +1315,151 @@
             </div>
         </section>
 
+        <section class="accommodations section" id="stay">
+            <div class="container">
+                <h2 class="section-title">LUXURY VINEYARD ACCOMMODATIONS</h2>
+                <p class="section-subtitle">Three distinct experiences nestled in our boutique vineyard above Lake Dunstan</p>
+                
+                <div class="accommodations-grid">
+                    <div class="accommodation-showcase featured">
+                        <div class="accommodation-header">
+                            <div class="accommodation-badge">PREMIUM GLAMPING</div>
+                            <h3>Dome Pinot</h3>
+                            <p class="accommodation-tagline">Luxury vineyard glamping with stargazing skylight</p>
+                        </div>
+                        
+                        <div class="accommodation-details">
+                            <div class="details-grid">
+                                <div class="detail-item">
+                                    <span class="detail-icon">🏠</span>
+                                    <span>50sqm luxury dome</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-icon">🛏️</span>
+                                    <span>Super King bed</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-icon">👥</span>
+                                    <span>2 guests (couples only)</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-icon">🛁</span>
+                                    <span>Ensuite + saltwater spa</span>
+                                </div>
+                            </div>
+                            
+                            <div class="accommodation-description">
+                                <p>Experience luxury glamping in our 50sqm dome featuring a unique stargazing skylight above your super king bed. Enjoy modern amenities including a full kitchen with Nespresso machine, 65" OLED TV, and a relaxing swing chair overlooking the vineyard.</p>
+                                
+                                <p>Step outside to your private deck with BBQ facilities and unwind in your very own fresh saltwater spa with jet lounge. Continental breakfast for two is included in your stay.</p>
+                            </div>
+                            
+                            <div class="premium-features">
+                                <h4>Premium Inclusions</h4>
+                                <div class="features-grid">
+                                    <div class="feature-item">
+                                        <span class="feature-icon">🌟</span>
+                                        <span>Stargazing skylight above bed</span>
+                                    </div>
+                                    <div class="feature-item">
+                                        <span class="feature-icon">🛀</span>
+                                        <span>Private saltwater spa with jets</span>
+                                    </div>
+                                    <div class="feature-item">
+                                        <span class="feature-icon">🍳</span>
+                                        <span>Full kitchen & Nespresso machine</span>
+                                    </div>
+                                    <div class="feature-item">
+                                        <span class="feature-icon">🥐</span>
+                                        <span>Continental breakfast for two</span>
+                                    </div>
+                                    <div class="feature-item">
+                                        <span class="feature-icon">📺</span>
+                                        <span>65" OLED TV & free WiFi</span>
+                                    </div>
+                                    <div class="feature-item">
+                                        <span class="feature-icon">🪑</span>
+                                        <span>Comfortable swing chair</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accommodation-showcase">
+                        <div class="accommodation-header">
+                            <div class="accommodation-badge">ROMANTIC</div>
+                            <h3>Dome Rosé</h3>
+                            <p class="accommodation-tagline">Intimate eco-dome with stunning lake views</p>
+                        </div>
+                        
+                        <div class="accommodation-details">
+                            <div class="accommodation-description">
+                                <p>Our second glamping dome designed specifically for romantic getaways. Featuring sustainable eco-luxury with panoramic views of Lake Dunstan and the surrounding Central Otago landscape.</p>
+                                
+                                <p>Perfect for couples seeking tranquility and an authentic connection with nature while enjoying modern comforts in our boutique vineyard setting.</p>
+                            </div>
+                            
+                            <div class="key-highlights">
+                                <div class="highlight-item">
+                                    <span class="highlight-icon">💕</span>
+                                    <span>Adults-only romantic retreat</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <span class="highlight-icon">🌿</span>
+                                    <span>Sustainable eco-luxury design</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <span class="highlight-icon">🏔️</span>
+                                    <span>Panoramic lake & mountain views</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accommodation-showcase">
+                        <div class="accommodation-header">
+                            <div class="accommodation-badge">FAMILY FRIENDLY</div>
+                            <h3>Lakeside Cottage</h3>
+                            <p class="accommodation-tagline">Pet-friendly vineyard cottage with hot tub</p>
+                        </div>
+                        
+                        <div class="accommodation-details">
+                            <div class="accommodation-description">
+                                <p>Charming cottage accommodation perfect for intimate family getaways. Located directly on the vineyard with stunning lake access and a private hot tub for relaxation after days exploring Central Otago.</p>
+                                
+                                <p>Pet-friendly and designed for up to 3 guests, this cottage combines comfort with the authentic vineyard experience, complete with modern amenities and outdoor entertaining areas.</p>
+                            </div>
+                            
+                            <div class="key-highlights">
+                                <div class="highlight-item">
+                                    <span class="highlight-icon">🐕</span>
+                                    <span>Pet-friendly accommodation</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <span class="highlight-icon">🛁</span>
+                                    <span>Private hot tub for 6 people</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <span class="highlight-icon">🌊</span>
+                                    <span>Direct lake access</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <span class="highlight-icon">👨‍👩‍👧</span>
+                                    <span>Maximum 3 guests</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="vineyard-location">
+                    <h3>🍇 Boutique Vineyard Setting</h3>
+                    <p>All accommodations are nestled within our working boutique vineyard, offering unrivaled privacy and tranquility. Located at 96 Smiths Way, Mount Pisa, you're perfectly positioned in the heart of Central Otago's award-winning wine region with the Cromwell to Clyde cycle trail right at your doorstep.</p>
+                </div>
+            </div>
+        </section>
+
         <section class="booking section" id="contact">
             <div class="container">
                 <h2 class="section-title" style="color: white;">BOOK YOUR LAKESIDE ESCAPE</h2>
@@ -1280,21 +1467,36 @@
                 
                 <div class="booking-content">
                     <div class="booking-info">
-                        <h3>Three Unique Accommodation Options</h3>
-                        <p>Choose from our carefully curated selection of luxury accommodations, each offering a unique perspective on Central Otago's stunning landscape and wine country experience.</p>
+                        <h3>Three Luxury Vineyard Experiences</h3>
+                        <p>Choose from our carefully curated selection of luxury glamping domes and lakeside cottage, each nestled in our boutique vineyard with breathtaking views of Lake Dunstan and the surrounding mountains.</p>
                         
                         <div class="accommodation-options">
-                            <div class="accommodation-option">
-                                <h4>🍷 Dome Pinot</h4>
-                                <p>Adults-only eco-dome perfect for wine lovers, featuring sustainable luxury and vineyard views.</p>
+                            <div class="accommodation-option featured">
+                                <h4>🍷 Dome Pinot - Premium Glamping</h4>
+                                <div class="property-details">
+                                    <span class="property-specs">50sqm • Super King Bed • 2 Guests • Couples Only</span>
+                                    <p>Luxury glamping dome with stargazing skylight, full kitchen, 65" OLED TV, swing chair, and private saltwater spa. Includes continental breakfast for two. The ultimate romantic vineyard getaway.</p>
+                                    <div class="key-features">
+                                        <span class="feature-tag">🌟 Stargazing Skylight</span>
+                                        <span class="feature-tag">🛀 Private Saltwater Spa</span>
+                                        <span class="feature-tag">🍳 Full Kitchen</span>
+                                        <span class="feature-tag">🥐 Breakfast Included</span>
+                                    </div>
+                                </div>
                             </div>
                             <div class="accommodation-option">
-                                <h4>🌹 Dome Rosé</h4>
-                                <p>Romantic eco-dome designed for couples seeking tranquility and stunning lake vistas.</p>
+                                <h4>🌹 Dome Rosé - Romantic Retreat</h4>
+                                <div class="property-details">
+                                    <span class="property-specs">Adults Only • Eco-Dome • Lake Views</span>
+                                    <p>Romantic eco-dome designed for couples seeking tranquility and stunning lake vistas in our sustainable glamping experience.</p>
+                                </div>
                             </div>
                             <div class="accommodation-option">
-                                <h4>🏡 Lakeside Cottage</h4>
-                                <p>Pet-friendly vineyard cottage (max 3 guests) with hot tub and direct lake access.</p>
+                                <h4>🏡 Lakeside Cottage - Family Friendly</h4>
+                                <div class="property-details">
+                                    <span class="property-specs">Max 3 Guests • Pet-Friendly • Hot Tub • Lake Access</span>
+                                    <p>Charming vineyard cottage with private hot tub, direct lake access, and modern amenities. Perfect for intimate family getaways with your furry friends welcome.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
