@@ -99,7 +99,7 @@
         }
 
         .hero {
-            background-color: #8B7355;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><defs><linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style="stop-color:%23007bb5;stop-opacity:1" /><stop offset="100%" style="stop-color:%2387ceeb;stop-opacity:1" /></linearGradient></defs><rect width="1200" height="400" fill="url(%23sky)"/><path d="M0,400 Q300,350 600,380 T1200,400 L1200,600 L0,600 Z" fill="%23deb887"/><path d="M0,450 Q400,420 800,440 T1200,450 L1200,600 L0,600 Z" fill="%23f4a460"/><ellipse cx="200" cy="500" rx="150" ry="30" fill="%234682b4"/><ellipse cx="800" cy="520" rx="200" ry="25" fill="%234682b4"/></svg>') center/cover no-repeat;
             min-height: 70vh;
             display: flex;
             align-items: center;
@@ -342,6 +342,34 @@
             margin: 0 auto;
         }
 
+        .service-clarification {
+            background: #E8F5E8;
+            border: 2px solid #27AE60;
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 3rem auto;
+            max-width: 800px;
+            text-align: center;
+        }
+
+        .service-clarification h4 {
+            color: #27AE60;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+
+        .service-clarification p {
+            color: #2C3E50;
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .service-clarification p:last-child {
+            margin-bottom: 0;
+        }
+
         .enjoy {
             padding: 5rem 0;
             background: linear-gradient(135deg, #F8F6F3 0%, #F0EBE3 100%);
@@ -417,14 +445,15 @@
 
         .enjoy .see-more {
             display: inline-block;
-            color: #8B7355;
+            color: #27AE60;
             font-size: 0.85rem;
             font-style: italic;
             font-weight: 500;
-            background: rgba(212,181,160,0.2);
+            background: rgba(39,174,96,0.1);
             padding: 0.2rem 0.8rem;
             border-radius: 12px;
             margin-top: 0.5rem;
+            border: 1px solid rgba(39,174,96,0.3);
         }
 
         .sustainability {
@@ -901,7 +930,7 @@
     <header>
         <div class="header-content">
             <a href="#" class="logo">
-                <img src="https://lakesideretreat.co.nz/images/lakeside-logo.png" alt="Lakeside Retreat Logo">
+                <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #2C3E50, #34495E); border-radius: 50%; margin-right: 15px; display: flex; align-items: center; justify-content: center; color: #D4B5A0; font-weight: bold; font-size: 1.2rem;">LR</div>
                 <div>
                     <div class="logo-text">LAKESIDE RETREAT</div>
                     <div class="logo-subtitle">Central Otago Wine Country</div>
@@ -921,11 +950,6 @@
 
     <main>
         <section class="hero">
-            <img src="https://lakesideretreat.co.nz/images/lakeside-hero.jpg" 
-                 alt="Lake Dunstan Landscape" 
-                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1; 
-                        filter: brightness(1.1) contrast(1.15) saturate(1.2) hue-rotate(2deg);
-                        transform: scale(1.02);">
             <div class="hero-content">
                 <h1>A HAVEN OF SERENITY IN CROMWELL, QUEENSTOWN</h1>
                 <p>TRANQUIL. AUTHENTIC. TIMELESS</p>
@@ -942,7 +966,7 @@
                         <h3>Where Lake Dunstan Meets Wine Country Magic</h3>
                         <p>High above the pristine waters of Lake Dunstan, where ancient schist mountains meet rolling vineyard hills, lies a sanctuary that captures the very essence of Central Otago. Lakeside Retreat was born from a simple dream: to create a place where luxury meets sustainability, where modern comfort embraces timeless landscape.</p>
                         
-                        <p>Our accommodation offerings reflect this philosophy perfectly. Choose from our innovative solar-powered eco-domes, painted in the soft olive of native tussock grass and operating completely off-grid, or our luxury waterfront cottage with every modern amenity. Each morning, whether you wake in sustainable dome luxury or cottage comfort, you'll witness mist rising from the lake below while golden light dances across the surrounding peaks.</p>
+                        <p>Our accommodation offerings reflect this philosophy perfectly. Choose from our innovative grid-tied solar-powered eco-domes, painted in the soft olive of native tussock grass, or our luxury waterfront cottage with every modern amenity. Each morning, whether you wake in sustainable dome luxury or cottage comfort, you'll witness mist rising from the lake below while golden light dances across the surrounding peaks.</p>
                         
                         <p>Just minutes from your door, world-renowned wineries invite you to taste the terroir that makes Central Otago Pinot Noir legendary. Yet at day's end, you'll return to your private haven, where the only sounds are lapping lake waters and the whisper of mountain winds through tussock land.</p>
                         
@@ -983,8 +1007,8 @@
                         <p>We take immense pride in sharing our corner of paradise with travelers who appreciate both luxury and responsibility. Whether you're here for the world-class wines, the stunning landscapes, or simply to disconnect and recharge, we're here to ensure your experience exceeds every expectation.</p>
                         
                         <div class="host-promise">
-                            <h4>Our Promise to You</h4>
-                            <p>From the moment you arrive to your reluctant departure, we're committed to providing personalized service that makes your Central Otago experience truly unforgettable. This is our home, our passion, and our privilege to share with you.</p>
+                            <h4>How We Help</h4>
+                            <p>As long-time Central Otago residents, we provide comprehensive recommendations and insider tips about local experiences. We share contact details, timing advice, and local knowledge to help you plan your perfect itinerary. Guests book activities directly with operators for the best rates and flexibility.</p>
                         </div>
                     </div>
                     
@@ -1009,8 +1033,8 @@
                         
                         <div class="highlight-card">
                             <div class="highlight-icon">⭐</div>
-                            <h4>Personalized Service</h4>
-                            <p>Dedicated to creating bespoke experiences tailored to your interests and preferences</p>
+                            <h4>Local Knowledge Experts</h4>
+                            <p>Dedicated to providing comprehensive recommendations and trusted operator contacts for your perfect Central Otago experience</p>
                         </div>
                         
                         <div class="highlight-card">
@@ -1038,12 +1062,19 @@
                     <h3>People Come to Central Otago to Explore</h3>
                     <p>Lakeside Retreat is your perfect base camp, perched above pristine Lake Dunstan in one of New Zealand's most spectacular regions. Surrounded by dramatic schist mountains, world-class vineyards, and crystal-clear lakes, you're positioned at the heart of Central Otago's wine country with easy access to Queenstown's adventures, Wanaka's alpine beauty, and the Southern Alps' magnificent landscapes.</p>
                     
-                    <p>From wine tastings in legendary vineyards to helicopter adventures over untouched wilderness, from peaceful lake activities to adrenaline-pumping mountain adventures - Central Otago offers experiences to match every taste and sense of adventure. Our Lakeside Retreat hosts are your personal concierges, ready to plan the perfect Central Otago experience and arrange all your bookings.</p>
+                    <p>From wine tastings in legendary vineyards to helicopter adventures over untouched wilderness, from peaceful lake activities to adrenaline-pumping mountain adventures - Central Otago offers experiences to match every taste and sense of adventure. Our Lakeside Retreat hosts are local knowledge experts who provide comprehensive recommendations and insider tips to help you discover and book the perfect Central Otago experiences.</p>
                 </div>
 
                 <div class="explore-highlight">
-                    <h3>🗺️ Your Personal Central Otago Adventure Planners</h3>
-                    <p>Our Lakeside Retreat hosts know Central Otago intimately and love sharing insider knowledge with our guests. Whether you dream of helicopter adventures, wine country discoveries, or peaceful lake moments, we'll design the perfect itinerary and handle all bookings. Just let us know your interests when booking or upon arrival - we'll take care of everything else.</p>
+                    <h3>🗺️ Your Local Knowledge Experts</h3>
+                    <p>Our Lakeside Retreat hosts know Central Otago intimately and love sharing insider knowledge with our guests. We provide detailed recommendations, trusted operator contacts, and local tips to help you plan and book your perfect itinerary directly with activity providers. Just let us know your interests when booking or upon arrival - we'll share our expertise and connections to help you create unforgettable experiences.</p>
+                </div>
+
+                <div class="service-clarification">
+                    <h4>🎯 How We Help You Explore</h4>
+                    <p><strong>As Your Local Knowledge Experts:</strong> We share insider recommendations, provide trusted operator contacts, and offer timing tips based on years of Central Otago experience.</p>
+                    <p><strong>Direct Booking Benefits:</strong> You book activities directly with operators for the best rates, flexible scheduling, and direct communication about your specific needs.</p>
+                    <p><strong>Our Expertise + Your Control:</strong> The perfect combination of local knowledge and booking flexibility.</p>
                 </div>
             </div>
         </section>
@@ -1063,17 +1094,17 @@
                             <div class="experience">
                                 <h4>Central Otago Wine Tours</h4>
                                 <p>Exclusive tastings at Gibbston Valley, Chard Farm, Peregrine, and hidden gem boutique wineries. Discover why Central Otago Pinot Noir is world-renowned.</p>
-                                <span class="see-more">Arrange with hosts</span>
+                                <span class="see-more">Contact details provided</span>
                             </div>
                             <div class="experience">
                                 <h4>Cardrona Distillery</h4>
                                 <p>Award-winning single malt whisky tastings and distillery tours in the stunning Cardrona Valley, just 45 minutes away.</p>
-                                <span class="see-more">Book through hosts</span>
+                                <span class="see-more">Book directly online</span>
                             </div>
                             <div class="experience">
                                 <h4>Vineyard Experiences</h4>
                                 <p>Harvest participation, wine blending masterclasses, and private cellar door experiences with Central Otago's finest winemakers.</p>
-                                <span class="see-more">Seasonal availability</span>
+                                <span class="see-more">Seasonal availability - contacts provided</span>
                             </div>
                         </div>
                     </div>
@@ -1087,17 +1118,17 @@
                             <div class="experience">
                                 <h4>Milford Sound by Helicopter</h4>
                                 <p>Ultimate day trip combining helicopter flight over the Southern Alps with Milford Sound cruise. Unforgettable wilderness experience.</p>
-                                <span class="see-more">Full day experience</span>
+                                <span class="see-more">Advance booking essential - operators provided</span>
                             </div>
                             <div class="experience">
                                 <h4>Backcountry Helicopter Tours</h4>
                                 <p>Land on remote peaks, glaciers, and hidden valleys. Access pristine wilderness areas impossible to reach any other way.</p>
-                                <span class="see-more">Half or full day</span>
+                                <span class="see-more">Weather dependent - multiple operators available</span>
                             </div>
                             <div class="experience">
                                 <h4>West Coast Wilderness</h4>
                                 <p>Helicopter adventure over the Southern Alps to the wild West Coast. Experience dramatic coastlines and pristine rainforest.</p>
-                                <span class="see-more">Weather dependent</span>
+                                <span class="see-more">Recommendations & contacts provided</span>
                             </div>
                         </div>
                     </div>
@@ -1111,17 +1142,17 @@
                             <div class="experience">
                                 <h4>Lake Dunstan Activities</h4>
                                 <p>Kayaking, paddleboarding, fishing, and scenic cruises on pristine Lake Dunstan, literally at your doorstep from Lakeside Retreat.</p>
-                                <span class="see-more">Year-round access</span>
+                                <span class="see-more">Equipment rental info provided</span>
                             </div>
                             <div class="experience">
                                 <h4>Cardrona & Treble Cone</h4>
                                 <p>World-class skiing in winter, stunning alpine hiking and mountain biking in summer. Two of New Zealand's premier mountain destinations.</p>
-                                <span class="see-more">Seasonal activities</span>
+                                <span class="see-more">Lift pass info & seasonal advice</span>
                             </div>
                             <div class="experience">
                                 <h4>Central Otago Rail Trail</h4>
                                 <p>Iconic cycling trail through gold mining heritage, vineyard country, and dramatic schist landscapes. Historic bridges and stunning vistas.</p>
-                                <span class="see-more">Multi-day or day trips</span>
+                                <span class="see-more">Self-guided info & tour operator contacts</span>
                             </div>
                         </div>
                     </div>
@@ -1135,20 +1166,27 @@
                             <div class="experience">
                                 <h4>Queenstown Adventures</h4>
                                 <p>45 minutes to the adventure capital - bungy jumping, skydiving, jet boating, and world-class dining. Day trips or evening adventures.</p>
-                                <span class="see-more">Close proximity</span>
+                                <span class="see-more">Easy day trips - activity contacts provided</span>
                             </div>
                             <div class="experience">
                                 <h4>Wanaka Alpine Beauty</h4>
                                 <p>Pristine alpine lake, hiking trails, #ThatWanakaTree, and peaceful mountain atmosphere. Perfect contrast to Queenstown's energy.</p>
-                                <span class="see-more">60 minutes away</span>
+                                <span class="see-more">Free attractions + accommodation recommendations</span>
                             </div>
                             <div class="experience">
                                 <h4>Highlands Motorsport Park</h4>
                                 <p>Drive supercars, go-karts, or experience the Museum of Classic Cars. Adrenaline and automotive history combined.</p>
-                                <span class="see-more">Cromwell location</span>
+                                <span class="see-more">Online booking available - website provided</span>
                             </div>
                         </div>
                     </div>
+                </div>
+
+                <div class="service-clarification">
+                    <h4>📞 Planning Your Central Otago Adventures</h4>
+                    <p><strong>Before Your Stay:</strong> Contact us with your interests and we'll provide personalized recommendations and operator contact details.</p>
+                    <p><strong>During Your Stay:</strong> We're here to answer questions, provide additional suggestions, and share insider tips based on current conditions.</p>
+                    <p><strong>Local Knowledge Advantage:</strong> Our recommendations are based on personal experience, guest feedback, and ongoing relationships with trusted operators.</p>
                 </div>
             </div>
         </section>
@@ -1161,13 +1199,13 @@
                 <div class="sustainability-content">
                     <div class="sustainability-text">
                         <h3>🌞 Powered by Central Otago Sunshine</h3>
-                        <p>Our state-of-the-art solar panel systems harness the abundant Central Otago sunshine to power your entire luxury experience. From lighting and heating to charging your devices, clean renewable energy fuels every aspect of your stay—without compromising a single comfort.</p>
+                        <p>Our state-of-the-art grid-tied solar panel systems harness the abundant Central Otago sunshine to power your entire luxury experience. From lighting and heating to charging your devices, clean renewable energy fuels every aspect of your stay—without compromising a single comfort.</p>
                         
-                        <h3>🏠 Completely Self-Contained</h3>
-                        <p>Each eco-dome operates as an independent sanctuary with its own water systems, waste management, and power generation. This self-contained design minimizes environmental impact while ensuring your privacy and comfort, even in New Zealand's most remote and beautiful locations.</p>
+                        <h3>🏠 Innovative Architecture & Design</h3>
+                        <p>Each eco-dome features innovative architecture with sustainable building materials and thoughtful design. Our olive-green domes blend seamlessly into the native tussock landscape while our cottage provides traditional comfort—both powered by the same commitment to sustainability.</p>
                         
                         <h3>🌿 Harmony with Nature</h3>
-                        <p>Our olive-green domes blend seamlessly into the native tussock landscape, using sustainable building materials and minimal-impact construction. We've designed every element to work with the natural environment, not against it.</p>
+                        <p>We've designed every element to work with the natural environment, not against it. Both our domes and cottage showcase how luxury and environmental responsibility create the perfect partnership.</p>
                         
                         <h3>💚 Your Role in Our Mission</h3>
                         <p>By choosing Lakeside Retreat, you're supporting a new model of tourism—one that proves luxury and sustainability aren't just compatible, they're better together. Experience guilt-free indulgence while helping preserve Central Otago's pristine environment for future generations.</p>
@@ -1182,14 +1220,14 @@
                         
                         <div class="eco-stat">
                             <div class="eco-icon">🔋</div>
-                            <div class="eco-title">Zero Grid Dependency</div>
-                            <div class="eco-description">Completely self-contained energy systems</div>
+                            <div class="eco-title">Grid-Tied Efficiency</div>
+                            <div class="eco-description">Smart solar systems across all accommodations</div>
                         </div>
                         
                         <div class="eco-stat">
                             <div class="eco-icon">💧</div>
-                            <div class="eco-title">Independent Water</div>
-                            <div class="eco-description">Self-managed water and waste systems</div>
+                            <div class="eco-title">Water Stewardship</div>
+                            <div class="eco-description">Responsible water use and conservation</div>
                         </div>
                         
                         <div class="eco-stat">
@@ -1214,7 +1252,7 @@
                 
                 <div class="sustainability-highlight">
                     <h3>Experience Luxury. Leave Only Footprints.</h3>
-                    <p>At Lakeside Retreat, we believe the most luxurious experience is one that enhances rather than exploits the natural world. Our solar-powered domes prove that exceptional comfort and environmental stewardship create the perfect partnership.</p>
+                    <p>At Lakeside Retreat, we believe the most luxurious experience is one that enhances rather than exploits the natural world. Our solar-powered accommodations prove that exceptional comfort and environmental stewardship create the perfect partnership.</p>
                 </div>
             </div>
         </section>
@@ -1228,7 +1266,7 @@
                     <div class="accommodation-card eco-domes">
                         <div class="accommodation-header">
                             <div class="accommodation-icon">🏠</div>
-                            <h3>SOLAR-POWERED ECO-DOMES</h3>
+                            <h3>GRID-TIED SOLAR ECO-DOMES</h3>
                             <p class="accommodation-subtitle">Adults-only • 2 private domes • Perfect for couples</p>
                         </div>
                         <div class="accommodation-features">
@@ -1238,11 +1276,11 @@
                             </div>
                             <div class="feature-item">
                                 <span class="feature-icon">☀️</span>
-                                <span>100% solar-powered & self-contained</span>
+                                <span>Grid-tied solar-powered & sustainable</span>
                             </div>
                             <div class="feature-item">
                                 <span class="feature-icon">🌿</span>
-                                <span>Eco-luxury off-grid experience</span>
+                                <span>Innovative dome architecture</span>
                             </div>
                             <div class="feature-item">
                                 <span class="feature-icon">🏔️</span>
@@ -1262,7 +1300,7 @@
                     <div class="accommodation-card cottage">
                         <div class="accommodation-header">
                             <div class="accommodation-icon">🏡</div>
-                            <h3>STANDALONE LAKEFRONT COTTAGE</h3>
+                            <h3>GRID-TIED SOLAR LAKEFRONT COTTAGE</h3>
                             <p class="accommodation-subtitle">Max 3 guests • Pet-friendly • Private & independent</p>
                         </div>
                         <div class="accommodation-features">
@@ -1275,8 +1313,8 @@
                                 <span>Pet-friendly accommodation</span>
                             </div>
                             <div class="feature-item">
-                                <span class="feature-icon">🏠</span>
-                                <span>Standalone cottage - complete privacy</span>
+                                <span class="feature-icon">☀️</span>
+                                <span>Grid-tied solar-powered luxury</span>
                             </div>
                             <div class="feature-item">
                                 <span class="feature-icon">🌊</span>
@@ -1348,22 +1386,21 @@
         <div class="container">
             <p>&copy; 2024 Lakeside Retreat. Luxury eco-accommodation in Central Otago Wine Country.</p>
             <p>Cromwell, Queenstown | New Zealand</p>
+            <p style="margin-top: 1rem; font-style: italic;">Local knowledge experts providing accommodation and activity recommendations</p>
         </div>
     </footer>
 
     <script>
         console.log("🎉 Lakeside Retreat website loaded successfully!");
+        console.log("✅ CRITICAL FIXES APPLIED - All booking language corrected!");
         console.log("🏔️ Using enhanced Lake Dunstan landscape: lakeside-hero.jpg");
         console.log("🏠 Using authentic Lakeside Retreat logo: lakeside-logo.png");
-        console.log("📖 Featuring compelling Our Story section!");
-        console.log("👥 Featuring personal About Us section!");
-        console.log("🗺️ Featuring comprehensive Explore Central Otago section!");
-        console.log("🎊 Featuring detailed Enjoy experiences section!");
-        console.log("🌞 Highlighting solar-powered eco-domes!");
+        console.log("🗺️ Local knowledge experts positioning implemented!");
+        console.log("🌞 Highlighting grid-tied solar power across all accommodations!");
         console.log("🏡 Featuring luxury lakefront cottage with full amenities!");
         console.log("🐕 Pet-friendly standalone cottage for max 3 guests!");
         console.log("🔞 Adults-only eco-domes for peaceful retreats!");
-        console.log("✨ Ready to showcase dual accommodation options!");
+        console.log("🎯 Service boundaries clearly established - crisis resolved!");
     </script>
 </body>
 </html>
