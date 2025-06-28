@@ -285,6 +285,143 @@
             margin-bottom: 0;
         }
 
+        .explore {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, #F8F6F3 0%, #F0EBE3 100%);
+        }
+
+        .explore-intro {
+            max-width: 900px;
+            margin: 3rem auto;
+            text-align: center;
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            border: 2px solid #D4B5A0;
+        }
+
+        .explore-intro h3 {
+            color: #5D4E37;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+
+        .explore-intro p {
+            color: #2C3E50;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .explore-intro p:last-child {
+            margin-bottom: 0;
+        }
+
+        .explore-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .explore-category {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            border: 2px solid #D4B5A0;
+            transition: transform 0.3s ease;
+        }
+
+        .explore-category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+        }
+
+        .category-header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #F0EBE3;
+        }
+
+        .category-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .category-header h3 {
+            color: #5D4E37;
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 0;
+        }
+
+        .experience-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .experience {
+            padding: 1rem;
+            background: #F8F6F3;
+            border-radius: 10px;
+            border-left: 4px solid #D4B5A0;
+            position: relative;
+        }
+
+        .experience h4 {
+            color: #5D4E37;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        .experience p {
+            color: #2C3E50;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin-bottom: 0.5rem;
+        }
+
+        .see-more {
+            display: inline-block;
+            color: #8B7355;
+            font-size: 0.85rem;
+            font-style: italic;
+            font-weight: 500;
+            background: rgba(212,181,160,0.2);
+            padding: 0.2rem 0.8rem;
+            border-radius: 12px;
+            margin-top: 0.5rem;
+        }
+
+        .explore-highlight {
+            background: linear-gradient(135deg, #5D4E37 0%, #4A3D2A 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: 20px;
+            text-align: center;
+            margin-top: 4rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .explore-highlight h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        .explore-highlight p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
         .sustainability {
             padding: 5rem 0;
             background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);
@@ -570,6 +707,52 @@
                 font-size: 1.1rem;
             }
 
+            .explore-intro {
+                padding: 2rem;
+                margin: 2rem auto;
+            }
+
+            .explore-intro h3 {
+                font-size: 1.4rem;
+            }
+
+            .explore-intro p {
+                font-size: 1rem;
+            }
+
+            .explore-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .explore-category {
+                padding: 1.5rem;
+            }
+
+            .category-header h3 {
+                font-size: 1.1rem;
+            }
+
+            .experience h4 {
+                font-size: 1rem;
+            }
+
+            .experience p {
+                font-size: 0.9rem;
+            }
+
+            .explore-highlight {
+                padding: 2rem;
+            }
+
+            .explore-highlight h3 {
+                font-size: 1.4rem;
+            }
+
+            .explore-highlight p {
+                font-size: 1rem;
+            }
+
             .sustainability-content {
                 grid-template-columns: 1fr;
                 gap: 2rem;
@@ -615,6 +798,7 @@
             <nav>
                 <ul>
                     <li><a href="#stay">STAY</a></li>
+                    <li><a href="#explore">EXPLORE</a></li>
                     <li><a href="#enjoy">ENJOY</a></li>
                     <li><a href="#contact">CONTACT</a></li>
                     <li><button class="cta-button">BOOK NOW</button></li>
@@ -728,6 +912,123 @@
                             <p>Strong ties to local businesses, ensuring authentic Central Otago experiences</p>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="explore" id="explore">
+            <div class="container">
+                <h2 class="section-title">EXPLORE CENTRAL OTAGO</h2>
+                <p class="section-subtitle">Your perfect base camp for discovering New Zealand's most iconic wine and adventure region</p>
+                
+                <div class="explore-intro">
+                    <h3>People Come to Central Otago to Explore</h3>
+                    <p>Lakeside Retreat is your perfect base camp, perched above pristine Lake Dunstan in one of New Zealand's most spectacular regions. Surrounded by dramatic schist mountains, world-class vineyards, and crystal-clear lakes, you're positioned at the heart of Central Otago's wine country with easy access to Queenstown's adventures, Wanaka's alpine beauty, and the Southern Alps' magnificent landscapes.</p>
+                    
+                    <p>From wine tastings in legendary vineyards to helicopter adventures over untouched wilderness, from peaceful lake activities to adrenaline-pumping mountain adventures - Central Otago offers experiences to match every taste and sense of adventure. Our Lakeside Retreat hosts are your personal concierges, ready to plan the perfect Central Otago experience and arrange all your bookings.</p>
+                </div>
+
+                <div class="explore-grid">
+                    <div class="explore-category wine-experiences">
+                        <div class="category-header">
+                            <div class="category-icon">🍷</div>
+                            <h3>WINE COUNTRY EXPERIENCES</h3>
+                        </div>
+                        <div class="experience-list">
+                            <div class="experience">
+                                <h4>Central Otago Wine Tours</h4>
+                                <p>Exclusive tastings at Gibbston Valley, Chard Farm, Peregrine, and hidden gem boutique wineries. Discover why Central Otago Pinot Noir is world-renowned.</p>
+                                <span class="see-more">Arrange with hosts</span>
+                            </div>
+                            <div class="experience">
+                                <h4>Cardrona Distillery</h4>
+                                <p>Award-winning single malt whisky tastings and distillery tours in the stunning Cardrona Valley, just 45 minutes away.</p>
+                                <span class="see-more">Book through hosts</span>
+                            </div>
+                            <div class="experience">
+                                <h4>Vineyard Experiences</h4>
+                                <p>Harvest participation, wine blending masterclasses, and private cellar door experiences with Central Otago's finest winemakers.</p>
+                                <span class="see-more">Seasonal availability</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="explore-category adventure-experiences">
+                        <div class="category-header">
+                            <div class="category-icon">🚁</div>
+                            <h3>HELICOPTER ADVENTURES</h3>
+                        </div>
+                        <div class="experience-list">
+                            <div class="experience">
+                                <h4>Milford Sound by Helicopter</h4>
+                                <p>Ultimate day trip combining helicopter flight over the Southern Alps with Milford Sound cruise. Unforgettable wilderness experience.</p>
+                                <span class="see-more">Full day experience</span>
+                            </div>
+                            <div class="experience">
+                                <h4>Backcountry Helicopter Tours</h4>
+                                <p>Land on remote peaks, glaciers, and hidden valleys. Access pristine wilderness areas impossible to reach any other way.</p>
+                                <span class="see-more">Half or full day</span>
+                            </div>
+                            <div class="experience">
+                                <h4>West Coast Wilderness</h4>
+                                <p>Helicopter adventure over the Southern Alps to the wild West Coast. Experience dramatic coastlines and pristine rainforest.</p>
+                                <span class="see-more">Weather dependent</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="explore-category lake-activities">
+                        <div class="category-header">
+                            <div class="category-icon">🏔️</div>
+                            <h3>LAKE & MOUNTAIN ADVENTURES</h3>
+                        </div>
+                        <div class="experience-list">
+                            <div class="experience">
+                                <h4>Lake Dunstan Activities</h4>
+                                <p>Kayaking, paddleboarding, fishing, and scenic cruises on pristine Lake Dunstan, literally at your doorstep from Lakeside Retreat.</p>
+                                <span class="see-more">Year-round access</span>
+                            </div>
+                            <div class="experience">
+                                <h4>Cardrona & Treble Cone</h4>
+                                <p>World-class skiing in winter, stunning alpine hiking and mountain biking in summer. Two of New Zealand's premier mountain destinations.</p>
+                                <span class="see-more">Seasonal activities</span>
+                            </div>
+                            <div class="experience">
+                                <h4>Central Otago Rail Trail</h4>
+                                <p>Iconic cycling trail through gold mining heritage, vineyard country, and dramatic schist landscapes. Historic bridges and stunning vistas.</p>
+                                <span class="see-more">Multi-day or day trips</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="explore-category queenstown-wanaka">
+                        <div class="category-header">
+                            <div class="category-icon">🎯</div>
+                            <h3>QUEENSTOWN & WANAKA ACCESS</h3>
+                        </div>
+                        <div class="experience-list">
+                            <div class="experience">
+                                <h4>Queenstown Adventures</h4>
+                                <p>45 minutes to the adventure capital - bungy jumping, skydiving, jet boating, and world-class dining. Day trips or evening adventures.</p>
+                                <span class="see-more">Close proximity</span>
+                            </div>
+                            <div class="experience">
+                                <h4>Wanaka Alpine Beauty</h4>
+                                <p>Pristine alpine lake, hiking trails, #ThatWanakaTree, and peaceful mountain atmosphere. Perfect contrast to Queenstown's energy.</p>
+                                <span class="see-more">60 minutes away</span>
+                            </div>
+                            <div class="experience">
+                                <h4>Highlands Motorsport Park</h4>
+                                <p>Drive supercars, go-karts, or experience the Museum of Classic Cars. Adrenaline and automotive history combined.</p>
+                                <span class="see-more">Cromwell location</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="explore-highlight">
+                    <h3>🗺️ Your Personal Central Otago Adventure Planners</h3>
+                    <p>Our Lakeside Retreat hosts know Central Otago intimately and love sharing insider knowledge with our guests. Whether you dream of helicopter adventures, wine country discoveries, or peaceful lake moments, we'll design the perfect itinerary and handle all bookings. Just let us know your interests when booking or upon arrival - we'll take care of everything else.</p>
                 </div>
             </div>
         </section>
@@ -850,6 +1151,7 @@
         console.log("🏠 Using authentic Lakeside Retreat logo: lakeside-logo.png");
         console.log("📖 Featuring compelling Our Story section!");
         console.log("👥 Featuring personal About Us section!");
+        console.log("🗺️ Featuring comprehensive Explore Central Otago section!");
         console.log("🌞 Highlighting solar-powered, self-contained luxury domes!");
         console.log("✨ Ready to showcase sustainable Central Otago accommodation!");
     </script>
