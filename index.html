@@ -195,6 +195,107 @@
             font-weight: 500;
         }
 
+        .sustainability {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);
+            color: white;
+        }
+
+        .sustainability .section-title {
+            color: white;
+        }
+
+        .sustainability .section-subtitle {
+            color: #D4B5A0;
+        }
+
+        .sustainability-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+            margin-top: 3rem;
+            align-items: start;
+        }
+
+        .sustainability-text h3 {
+            color: #D4B5A0;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            margin-top: 2rem;
+        }
+
+        .sustainability-text h3:first-child {
+            margin-top: 0;
+        }
+
+        .sustainability-text p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            color: #ECF0F1;
+        }
+
+        .sustainability-stats {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .eco-stat {
+            background: rgba(255,255,255,0.1);
+            padding: 1.5rem;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid rgba(212,181,160,0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .eco-stat:hover {
+            transform: translateY(-3px);
+            background: rgba(255,255,255,0.15);
+        }
+
+        .eco-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .eco-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #D4B5A0;
+            margin-bottom: 0.5rem;
+        }
+
+        .eco-description {
+            font-size: 0.9rem;
+            color: #BDC3C7;
+            line-height: 1.4;
+        }
+
+        .sustainability-highlight {
+            background: linear-gradient(135deg, #D4B5A0 0%, #C8A990 100%);
+            color: #2C3E50;
+            padding: 3rem;
+            border-radius: 20px;
+            text-align: center;
+            margin-top: 4rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .sustainability-highlight h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        .sustainability-highlight p {
+            font-size: 1.2rem;
+            line-height: 1.7;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
         .features {
             padding: 4rem 0;
             background: #F5F3F0;
@@ -358,6 +459,31 @@
                 font-size: 1.1rem !important;
             }
 
+            .sustainability-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .sustainability-text h3 {
+                font-size: 1.3rem;
+            }
+
+            .sustainability-text p {
+                font-size: 1rem;
+            }
+
+            .sustainability-highlight {
+                padding: 2rem;
+            }
+
+            .sustainability-highlight h3 {
+                font-size: 1.5rem;
+            }
+
+            .sustainability-highlight p {
+                font-size: 1rem;
+            }
+
             .booking-buttons {
                 flex-direction: column;
                 align-items: center;
@@ -408,11 +534,11 @@
                         <h3>Where Lake Dunstan Meets Wine Country Magic</h3>
                         <p>High above the pristine waters of Lake Dunstan, where ancient schist mountains meet rolling vineyard hills, lies a sanctuary that captures the very essence of Central Otago. Lakeside Retreat was born from a simple dream: to create a place where luxury meets sustainability, where modern comfort embraces timeless landscape.</p>
                         
-                        <p>Our eco-luxury domes, painted in the soft olive of native tussock grass, seem to emerge naturally from the hillside. Each morning, you'll wake to mist rising from the lake below, while golden light dances across the surrounding peaks. This is more than accommodation—it's your gateway to one of New Zealand's most celebrated wine regions.</p>
+                        <p>Our solar-powered eco-luxury domes, painted in the soft olive of native tussock grass, seem to emerge naturally from the hillside. Each completely self-contained unit operates primarily on clean solar energy, offering you the rare luxury of off-grid comfort without compromise. Each morning, you'll wake to mist rising from the lake below, while golden light dances across both the surrounding peaks and your private solar panels quietly powering your sustainable sanctuary.</p>
                         
                         <p>Just minutes from your door, world-renowned wineries invite you to taste the terroir that makes Central Otago Pinot Noir legendary. Yet at day's end, you'll return to your private haven, where the only sounds are lapping lake waters and the whisper of mountain winds through tussock land.</p>
                         
-                        <p class="story-highlight">This is where your Central Otago story begins—authentic, sustainable, unforgettable.</p>
+                        <p class="story-highlight">This is where your Central Otago story begins—solar-powered, self-contained luxury that's authentic, sustainable, unforgettable.</p>
                     </div>
                     <div class="story-stats">
                         <div class="stat">
@@ -424,10 +550,76 @@
                             <div class="stat-label">Panoramic mountain & lake views</div>
                         </div>
                         <div class="stat">
-                            <div class="stat-number">100%</div>
-                            <div class="stat-label">Sustainable eco-luxury design</div>
+                            <div class="stat-number">SOLAR</div>
+                            <div class="stat-label">Powered self-contained luxury domes</div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sustainability">
+            <div class="container">
+                <h2 class="section-title">SUSTAINABLE LUXURY</h2>
+                <p class="section-subtitle">Leading Central Otago's eco-tourism revolution with solar-powered innovation</p>
+                
+                <div class="sustainability-content">
+                    <div class="sustainability-text">
+                        <h3>🌞 Powered by Central Otago Sunshine</h3>
+                        <p>Our state-of-the-art solar panel systems harness the abundant Central Otago sunshine to power your entire luxury experience. From lighting and heating to charging your devices, clean renewable energy fuels every aspect of your stay—without compromising a single comfort.</p>
+                        
+                        <h3>🏠 Completely Self-Contained</h3>
+                        <p>Each eco-dome operates as an independent sanctuary with its own water systems, waste management, and power generation. This self-contained design minimizes environmental impact while ensuring your privacy and comfort, even in New Zealand's most remote and beautiful locations.</p>
+                        
+                        <h3>🌿 Harmony with Nature</h3>
+                        <p>Our olive-green domes blend seamlessly into the native tussock landscape, using sustainable building materials and minimal-impact construction. We've designed every element to work with the natural environment, not against it.</p>
+                        
+                        <h3>💚 Your Role in Our Mission</h3>
+                        <p>By choosing Lakeside Retreat, you're supporting a new model of tourism—one that proves luxury and sustainability aren't just compatible, they're better together. Experience guilt-free indulgence while helping preserve Central Otago's pristine environment for future generations.</p>
+                    </div>
+                    
+                    <div class="sustainability-stats">
+                        <div class="eco-stat">
+                            <div class="eco-icon">☀️</div>
+                            <div class="eco-title">100% Solar Powered</div>
+                            <div class="eco-description">Clean energy from Central Otago sunshine</div>
+                        </div>
+                        
+                        <div class="eco-stat">
+                            <div class="eco-icon">🔋</div>
+                            <div class="eco-title">Zero Grid Dependency</div>
+                            <div class="eco-description">Completely self-contained energy systems</div>
+                        </div>
+                        
+                        <div class="eco-stat">
+                            <div class="eco-icon">💧</div>
+                            <div class="eco-title">Independent Water</div>
+                            <div class="eco-description">Self-managed water and waste systems</div>
+                        </div>
+                        
+                        <div class="eco-stat">
+                            <div class="eco-icon">🌱</div>
+                            <div class="eco-title">Minimal Footprint</div>
+                            <div class="eco-description">Low-impact design preserves landscape</div>
+                        </div>
+                        
+                        <div class="eco-stat">
+                            <div class="eco-icon">♻️</div>
+                            <div class="eco-title">Sustainable Materials</div>
+                            <div class="eco-description">Eco-friendly building and furnishings</div>
+                        </div>
+                        
+                        <div class="eco-stat">
+                            <div class="eco-icon">🦋</div>
+                            <div class="eco-title">Wildlife Friendly</div>
+                            <div class="eco-description">Designed to protect native ecosystems</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="sustainability-highlight">
+                    <h3>Experience Luxury. Leave Only Footprints.</h3>
+                    <p>At Lakeside Retreat, we believe the most luxurious experience is one that enhances rather than exploits the natural world. Our solar-powered domes prove that exceptional comfort and environmental stewardship create the perfect partnership.</p>
                 </div>
             </div>
         </section>
@@ -435,7 +627,7 @@
         <section class="features" id="stay">
             <div class="container">
                 <h2 class="section-title">LUXURY ECO-ACCOMMODATION</h2>
-                <p class="section-subtitle">Experience Central Otago's wine country in sustainable comfort</p>
+                <p class="section-subtitle">Solar-powered, self-contained luxury in Central Otago's wine country</p>
                 
                 <div class="features-grid">
                     <div class="feature">
@@ -446,8 +638,8 @@
                     
                     <div class="feature">
                         <div class="feature-icon">🏠</div>
-                        <h3>ECO-LUXURY DOMES</h3>
-                        <p>Unique olive-green eco-domes featuring modern amenities, private bathrooms, and sustainable design in harmony with nature.</p>
+                        <h3>SOLAR-POWERED ECO-DOMES</h3>
+                        <p>Completely self-contained olive-green eco-domes powered primarily by solar energy. Experience luxury off-grid living with modern amenities, private facilities, and sustainable design in perfect harmony with nature.</p>
                     </div>
                     
                     <div class="feature">
@@ -462,7 +654,7 @@
         <section class="booking" id="enjoy">
             <div class="container">
                 <h2>BOOK YOUR ESCAPE</h2>
-                <p>Experience the tranquility of Central Otago wine country. Our eco-luxury domes offer the perfect base for exploring the region's renowned wineries and stunning landscapes.</p>
+                <p>Experience the tranquility of Central Otago wine country in our solar-powered, completely self-contained eco-domes. Enjoy luxury off-grid living with all modern amenities while exploring the region's renowned wineries and stunning landscapes.</p>
                 <div class="booking-buttons">
                     <a href="#" class="btn-primary">CHECK AVAILABILITY</a>
                     <a href="#" class="btn-secondary">VIEW GALLERY</a>
@@ -483,7 +675,8 @@
         console.log("🏔️ Using enhanced Lake Dunstan landscape: lakeside-hero.jpg");
         console.log("🏠 Using authentic Lakeside Retreat logo: lakeside-logo.png");
         console.log("📖 Featuring compelling Our Story section!");
-        console.log("✨ Ready to showcase Central Otago luxury accommodation!");
+        console.log("🌞 Highlighting solar-powered, self-contained luxury domes!");
+        console.log("✨ Ready to showcase sustainable Central Otago accommodation!");
     </script>
 </body>
 </html>
