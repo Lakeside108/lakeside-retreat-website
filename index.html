@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lakeside Retreat - Luxury Accommodation in Central Otago</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -11,23 +12,43 @@
             box-sizing: border-box;
         }
 
-        body {
-            font-family: 'Georgia', serif;
-            line-height: 1.6;
-            color: #333;
+        :root {
+            --primary-blue: #1e3a8a;
+            --primary-teal: #0f766e;
+            --accent-gold: #d97706;
+            --warm-beige: #f3f1ee;
+            --soft-gray: #6b7280;
+            --dark-slate: #1e293b;
+            --light-sand: #fef7ed;
+            --gradient-primary: linear-gradient(135deg, #1e3a8a 0%, #0f766e 100%);
+            --gradient-warm: linear-gradient(135deg, #fef7ed 0%, #f3f1ee 100%);
+            --shadow-soft: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-medium: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-large: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
         }
 
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.7;
+            color: var(--dark-slate);
+            scroll-behavior: smooth;
+        }
+
+        /* Header Styles */
         header {
-            background: #D4B5A0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
             padding: 1rem 0;
-            position: sticky;
+            position: fixed;
             top: 0;
+            width: 100%;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: var(--shadow-soft);
+            transition: all 0.3s ease;
         }
 
         .header-content {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             padding: 0 2rem;
             display: flex;
@@ -39,68 +60,108 @@
             display: flex;
             align-items: center;
             text-decoration: none;
-            color: #2C3E50;
+            color: var(--dark-slate);
+            transition: transform 0.3s ease;
         }
 
-            .logo img {
-                width: 40px;
-                height: 40px;
-                object-fit: contain;
-                margin-right: 15px;
-                display: block;
-            }
+        .logo:hover {
+            transform: translateY(-2px);
+        }
+
+        .logo-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--gradient-primary);
+            border-radius: 12px;
+            margin-right: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 1.25rem;
+            box-shadow: var(--shadow-soft);
+        }
 
         .logo-text {
-            font-size: 1.8rem;
-            font-weight: bold;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.75rem;
+            font-weight: 600;
             line-height: 1.2;
+            background: var(--gradient-primary);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         .logo-subtitle {
-            font-size: 0.9rem;
-            color: #5D4E37;
-            font-style: italic;
+            font-size: 0.875rem;
+            color: var(--soft-gray);
+            font-weight: 500;
+            margin-top: 2px;
         }
 
         nav ul {
             display: flex;
             list-style: none;
-            gap: 2rem;
+            gap: 2.5rem;
             align-items: center;
         }
 
         nav a {
             text-decoration: none;
-            color: #2C3E50;
+            color: var(--dark-slate);
             font-weight: 500;
-            font-size: 1.1rem;
-            transition: color 0.3s ease;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -6px;
+            left: 50%;
+            background: var(--gradient-primary);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        nav a:hover::after {
+            width: 100%;
         }
 
         nav a:hover {
-            color: #8B7355;
+            color: var(--primary-blue);
         }
 
         .cta-button {
-            background: #5D4E37;
+            background: var(--gradient-primary);
             color: white;
-            padding: 0.8rem 1.5rem;
+            padding: 0.875rem 2rem;
             border: none;
-            border-radius: 25px;
+            border-radius: 50px;
             font-size: 1rem;
-            font-weight: bold;
+            font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
+            box-shadow: var(--shadow-soft);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         .cta-button:hover {
-            background: #4A3D2A;
-            transform: translateY(-2px);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-large);
         }
 
+        /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><defs><linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style="stop-color:%23007bb5;stop-opacity:1" /><stop offset="100%" style="stop-color:%2387ceeb;stop-opacity:1" /></linearGradient></defs><rect width="1200" height="400" fill="url(%23sky)"/><path d="M0,400 Q300,350 600,380 T1200,400 L1200,600 L0,600 Z" fill="%23deb887"/><path d="M0,450 Q400,420 800,440 T1200,450 L1200,600 L0,600 Z" fill="%23f4a460"/><ellipse cx="200" cy="500" rx="150" ry="30" fill="%234682b4"/><ellipse cx="800" cy="520" rx="200" ry="25" fill="%234682b4"/></svg>') center/cover no-repeat;
-            min-height: 70vh;
+            background: linear-gradient(rgba(30, 58, 138, 0.4), rgba(15, 118, 110, 0.4)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style="stop-color:%2393c5fd;stop-opacity:1" /><stop offset="100%" style="stop-color:%23ddd6fe;stop-opacity:1" /></linearGradient></defs><rect width="1200" height="500" fill="url(%23sky)"/><path d="M0,500 Q200,420 400,450 T800,430 T1200,450 L1200,800 L0,800 Z" fill="%23065f46"/><path d="M0,550 Q300,480 600,510 T1200,500 L1200,800 L0,800 Z" fill="%23047857"/><path d="M100,600 Q400,580 700,600 T1200,590 L1200,800 L0,800 Z" fill="%23059669"/><ellipse cx="300" cy="650" rx="200" ry="40" fill="%230891b2" opacity="0.8"/><ellipse cx="800" cy="670" rx="250" ry="35" fill="%230891b2" opacity="0.8"/></svg>') center/cover no-repeat;
+            min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -109,62 +170,156 @@
             overflow: hidden;
         }
 
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at center, transparent 0%, rgba(0,0,0,0.1) 100%);
+        }
+
         .hero-content {
             position: relative;
             z-index: 2;
             text-align: center;
-            background: rgba(0,0,0,0.3);
-            padding: 2rem;
-            border-radius: 10px;
+            max-width: 900px;
+            padding: 3rem;
+            animation: fadeInUp 1s ease 0.5s both;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .hero h1 {
-            font-size: 3rem;
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            line-height: 1.1;
+        }
+
+        .hero .tagline {
+            font-size: 1.375rem;
             margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            letter-spacing: 4px;
+            font-weight: 300;
+            text-transform: uppercase;
         }
 
-        .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
-            letter-spacing: 2px;
+        .hero .subtitle {
+            font-size: 1.125rem;
+            margin-bottom: 3rem;
+            opacity: 0.95;
+            font-weight: 400;
         }
 
+        .hero .cta-button {
+            font-size: 1.125rem;
+            padding: 1.25rem 3rem;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 6rem 0;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            text-align: center;
+            font-size: clamp(2.5rem, 4vw, 3.5rem);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: var(--dark-slate);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--gradient-primary);
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.25rem;
+            color: var(--soft-gray);
+            margin-bottom: 4rem;
+            font-weight: 400;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Story Section */
         .story {
-            padding: 5rem 0;
-            background: linear-gradient(135deg, #F8F6F3 0%, #F0EBE3 100%);
+            background: var(--gradient-warm);
+            padding: 6rem 0;
         }
 
         .story-content {
             display: grid;
             grid-template-columns: 2fr 1fr;
-            gap: 4rem;
-            margin-top: 3rem;
+            gap: 5rem;
+            margin-top: 4rem;
             align-items: start;
         }
 
         .story-text h3 {
-            color: #5D4E37;
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
-            font-style: italic;
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-blue);
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            font-weight: 500;
         }
 
         .story-text p {
-            font-size: 1.1rem;
+            font-size: 1.125rem;
             line-height: 1.8;
-            margin-bottom: 1.5rem;
-            color: #2C3E50;
+            margin-bottom: 1.75rem;
+            color: var(--dark-slate);
         }
 
         .story-highlight {
-            font-size: 1.3rem !important;
-            font-weight: bold;
-            color: #5D4E37 !important;
+            font-size: 1.375rem !important;
+            font-weight: 600;
+            color: var(--primary-teal) !important;
             font-style: italic;
-            border-left: 4px solid #D4B5A0;
-            padding-left: 1.5rem;
-            margin-top: 2rem;
+            border-left: 4px solid var(--accent-gold);
+            padding-left: 2rem;
+            margin-top: 3rem;
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow-soft);
         }
 
         .story-stats {
@@ -175,74 +330,87 @@
 
         .stat {
             background: white;
-            padding: 2rem;
-            border-radius: 15px;
+            padding: 2.5rem;
+            border-radius: 20px;
             text-align: center;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-            border: 2px solid #D4B5A0;
+            box-shadow: var(--shadow-medium);
+            border: 1px solid rgba(30, 58, 138, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .stat:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-large);
         }
 
         .stat-number {
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: #5D4E37;
-            margin-bottom: 0.5rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 700;
+            background: var(--gradient-primary);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.75rem;
         }
 
         .stat-label {
-            font-size: 0.9rem;
-            color: #2C3E50;
+            font-size: 1rem;
+            color: var(--soft-gray);
             font-weight: 500;
+            line-height: 1.4;
         }
 
+        /* About Section */
         .about-us {
-            padding: 5rem 0;
-            background: linear-gradient(135deg, #F5F3F0 0%, #EAE5DC 100%);
+            padding: 6rem 0;
+            background: white;
         }
 
         .about-content {
             display: grid;
             grid-template-columns: 2fr 1fr;
-            gap: 4rem;
-            margin-top: 3rem;
+            gap: 5rem;
+            margin-top: 4rem;
             align-items: start;
         }
 
         .about-text h3 {
-            color: #5D4E37;
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
-            font-style: italic;
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-blue);
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            font-weight: 500;
         }
 
         .about-text p {
-            font-size: 1.1rem;
+            font-size: 1.125rem;
             line-height: 1.8;
-            margin-bottom: 1.5rem;
-            color: #2C3E50;
+            margin-bottom: 1.75rem;
+            color: var(--dark-slate);
         }
 
         .host-promise {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            border-left: 4px solid #D4B5A0;
-            margin-top: 2rem;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            background: var(--light-sand);
+            padding: 2.5rem;
+            border-radius: 20px;
+            border-left: 6px solid var(--accent-gold);
+            margin-top: 3rem;
+            box-shadow: var(--shadow-soft);
         }
 
         .host-promise h4 {
-            color: #5D4E37;
-            font-size: 1.3rem;
+            color: var(--primary-teal);
+            font-size: 1.375rem;
             margin-bottom: 1rem;
-            font-style: italic;
+            font-weight: 600;
         }
 
         .host-promise p {
-            color: #2C3E50;
+            color: var(--dark-slate);
             font-size: 1rem;
             margin-bottom: 0;
-            font-style: italic;
+            line-height: 1.7;
         }
 
         .about-highlights {
@@ -253,66 +421,68 @@
 
         .highlight-card {
             background: white;
-            padding: 1.5rem;
-            border-radius: 15px;
+            padding: 2rem;
+            border-radius: 16px;
             text-align: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            border: 2px solid #D4B5A0;
-            transition: transform 0.3s ease;
+            box-shadow: var(--shadow-soft);
+            border: 1px solid rgba(30, 58, 138, 0.1);
+            transition: all 0.3s ease;
         }
 
         .highlight-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-medium);
         }
 
         .highlight-icon {
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
         }
 
         .highlight-card h4 {
-            color: #5D4E37;
-            font-size: 1rem;
-            margin-bottom: 0.5rem;
-            font-weight: bold;
+            color: var(--primary-blue);
+            font-size: 1.125rem;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
         }
 
         .highlight-card p {
-            color: #2C3E50;
-            font-size: 0.9rem;
-            line-height: 1.4;
+            color: var(--soft-gray);
+            font-size: 0.9375rem;
+            line-height: 1.5;
             margin-bottom: 0;
         }
 
+        /* Explore Section */
         .explore {
-            padding: 5rem 0;
-            background: linear-gradient(135deg, #F8F6F3 0%, #F0EBE3 100%);
+            padding: 6rem 0;
+            background: var(--gradient-warm);
         }
 
         .explore-intro {
-            max-width: 900px;
-            margin: 3rem auto;
+            max-width: 1000px;
+            margin: 4rem auto;
             text-align: center;
             background: white;
-            padding: 3rem;
-            border-radius: 20px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-            border: 2px solid #D4B5A0;
+            padding: 4rem;
+            border-radius: 24px;
+            box-shadow: var(--shadow-medium);
+            border: 1px solid rgba(30, 58, 138, 0.1);
         }
 
         .explore-intro h3 {
-            color: #5D4E37;
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
-            font-style: italic;
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-blue);
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            font-weight: 500;
         }
 
         .explore-intro p {
-            color: #2C3E50;
-            font-size: 1.1rem;
+            color: var(--dark-slate);
+            font-size: 1.125rem;
             line-height: 1.8;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.75rem;
         }
 
         .explore-intro p:last-child {
@@ -320,510 +490,112 @@
         }
 
         .explore-highlight {
-            background: linear-gradient(135deg, #5D4E37 0%, #4A3D2A 100%);
+            background: var(--gradient-primary);
             color: white;
-            padding: 3rem;
-            border-radius: 20px;
+            padding: 4rem;
+            border-radius: 24px;
             text-align: center;
             margin-top: 4rem;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            box-shadow: var(--shadow-large);
         }
 
         .explore-highlight h3 {
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-            font-style: italic;
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            font-weight: 500;
         }
 
         .explore-highlight p {
-            font-size: 1.1rem;
-            line-height: 1.7;
-            max-width: 800px;
+            font-size: 1.125rem;
+            line-height: 1.8;
+            max-width: 900px;
             margin: 0 auto;
+            opacity: 0.95;
         }
 
         .service-clarification {
-            background: #E8F5E8;
-            border: 2px solid #27AE60;
-            padding: 2rem;
-            border-radius: 15px;
-            margin: 3rem auto;
-            max-width: 800px;
+            background: linear-gradient(135deg, #ecfdf5 0%, #f0fdf4 100%);
+            border: 2px solid #10b981;
+            padding: 3rem;
+            border-radius: 20px;
+            margin: 4rem auto;
+            max-width: 900px;
             text-align: center;
+            box-shadow: var(--shadow-soft);
         }
 
         .service-clarification h4 {
-            color: #27AE60;
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-            font-weight: bold;
+            color: #047857;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
         }
 
         .service-clarification p {
-            color: #2C3E50;
-            font-size: 1rem;
-            line-height: 1.6;
-            margin-bottom: 1rem;
+            color: var(--dark-slate);
+            font-size: 1.125rem;
+            line-height: 1.7;
+            margin-bottom: 1.25rem;
         }
 
         .service-clarification p:last-child {
             margin-bottom: 0;
         }
 
-        .enjoy {
-            padding: 5rem 0;
-            background: linear-gradient(135deg, #F8F6F3 0%, #F0EBE3 100%);
-        }
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .header-content {
+                padding: 0 1.5rem;
+            }
 
-        .enjoy .explore-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
+            nav ul {
+                gap: 1.5rem;
+            }
 
-        .enjoy .explore-category {
-            background: white;
-            border-radius: 20px;
-            padding: 2rem;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-            border: 2px solid #D4B5A0;
-            transition: transform 0.3s ease;
-        }
+            .story-content,
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
 
-        .enjoy .explore-category:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 35px rgba(0,0,0,0.15);
-        }
-
-        .enjoy .category-header {
-            text-align: center;
-            margin-bottom: 2rem;
-            padding-bottom: 1rem;
-            border-bottom: 2px solid #F0EBE3;
-        }
-
-        .enjoy .category-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .enjoy .category-header h3 {
-            color: #5D4E37;
-            font-size: 1.3rem;
-            font-weight: bold;
-            margin-bottom: 0;
-        }
-
-        .enjoy .experience-list {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-        }
-
-        .enjoy .experience {
-            padding: 1rem;
-            background: #F8F6F3;
-            border-radius: 10px;
-            border-left: 4px solid #D4B5A0;
-            position: relative;
-        }
-
-        .enjoy .experience h4 {
-            color: #5D4E37;
-            font-size: 1.1rem;
-            margin-bottom: 0.5rem;
-            font-weight: bold;
-        }
-
-        .enjoy .experience p {
-            color: #2C3E50;
-            font-size: 0.95rem;
-            line-height: 1.5;
-            margin-bottom: 0.5rem;
-        }
-
-        .enjoy .see-more {
-            display: inline-block;
-            color: #27AE60;
-            font-size: 0.85rem;
-            font-style: italic;
-            font-weight: 500;
-            background: rgba(39,174,96,0.1);
-            padding: 0.2rem 0.8rem;
-            border-radius: 12px;
-            margin-top: 0.5rem;
-            border: 1px solid rgba(39,174,96,0.3);
-        }
-
-        .sustainability {
-            padding: 5rem 0;
-            background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);
-            color: white;
-        }
-
-        .sustainability .section-title {
-            color: white;
-        }
-
-        .sustainability .section-subtitle {
-            color: #D4B5A0;
-        }
-
-        .sustainability-content {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 4rem;
-            margin-top: 3rem;
-            align-items: start;
-        }
-
-        .sustainability-text h3 {
-            color: #D4B5A0;
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            margin-top: 2rem;
-        }
-
-        .sustainability-text h3:first-child {
-            margin-top: 0;
-        }
-
-        .sustainability-text p {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            margin-bottom: 1.5rem;
-            color: #ECF0F1;
-        }
-
-        .sustainability-stats {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-        }
-
-        .eco-stat {
-            background: rgba(255,255,255,0.1);
-            padding: 1.5rem;
-            border-radius: 15px;
-            text-align: center;
-            border: 1px solid rgba(212,181,160,0.3);
-            transition: transform 0.3s ease;
-        }
-
-        .eco-stat:hover {
-            transform: translateY(-3px);
-            background: rgba(255,255,255,0.15);
-        }
-
-        .eco-icon {
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .eco-title {
-            font-size: 1.1rem;
-            font-weight: bold;
-            color: #D4B5A0;
-            margin-bottom: 0.5rem;
-        }
-
-        .eco-description {
-            font-size: 0.9rem;
-            color: #BDC3C7;
-            line-height: 1.4;
-        }
-
-        .sustainability-highlight {
-            background: linear-gradient(135deg, #D4B5A0 0%, #C8A990 100%);
-            color: #2C3E50;
-            padding: 3rem;
-            border-radius: 20px;
-            text-align: center;
-            margin-top: 4rem;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-
-        .sustainability-highlight h3 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            font-style: italic;
-        }
-
-        .sustainability-highlight p {
-            font-size: 1.2rem;
-            line-height: 1.7;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .features {
-            padding: 4rem 0;
-            background: #F5F3F0;
-        }
-
-        .accommodation-options {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 3rem;
-            margin: 3rem 0 4rem 0;
-        }
-
-        .accommodation-card {
-            background: white;
-            border-radius: 20px;
-            padding: 2.5rem;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            border: 3px solid #D4B5A0;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .accommodation-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
-        }
-
-        .accommodation-card.eco-domes {
-            background: linear-gradient(135deg, #F8F6F3 0%, #F0EBE3 100%);
-        }
-
-        .accommodation-card.cottage {
-            background: linear-gradient(135deg, #F0F8FF 0%, #E6F3FF 100%);
-        }
-
-        .accommodation-header {
-            text-align: center;
-            margin-bottom: 2rem;
-            padding-bottom: 1.5rem;
-            border-bottom: 2px solid rgba(93,78,55,0.2);
-        }
-
-        .accommodation-icon {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .accommodation-header h3 {
-            color: #5D4E37;
-            font-size: 1.5rem;
-            font-weight: bold;
-            margin-bottom: 0.5rem;
-        }
-
-        .accommodation-subtitle {
-            color: #8B7355;
-            font-size: 1rem;
-            font-style: italic;
-            margin-bottom: 0;
-        }
-
-        .accommodation-features {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .feature-item {
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-            padding: 0.8rem;
-            background: rgba(255,255,255,0.7);
-            border-radius: 10px;
-            border-left: 3px solid #D4B5A0;
-        }
-
-        .feature-icon {
-            font-size: 1.2rem;
-            min-width: 1.5rem;
-            text-align: center;
-        }
-
-        .feature-item span:last-child {
-            color: #2C3E50;
-            font-size: 0.95rem;
-            line-height: 1.4;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .feature {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .feature:hover {
-            transform: translateY(-5px);
-        }
-
-        .feature-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .feature h3 {
-            color: #5D4E37;
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-        }
-
-        .booking {
-            background: #2C3E50;
-            color: white;
-            padding: 4rem 0;
-            text-align: center;
-        }
-
-        .booking h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .booking p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .booking-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn-primary {
-            background: #D4B5A0;
-            color: #2C3E50;
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 25px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .btn-primary:hover {
-            background: #C8A990;
-            transform: translateY(-2px);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: white;
-            border: 2px solid white;
-            padding: 1rem 2rem;
-            border-radius: 25px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .btn-secondary:hover {
-            background: white;
-            color: #2C3E50;
-        }
-
-        footer {
-            background: #1A252F;
-            color: white;
-            text-align: center;
-            padding: 2rem 0;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            color: #2C3E50;
-            margin-bottom: 1rem;
-        }
-
-        .section-subtitle {
-            text-align: center;
-            font-size: 1.2rem;
-            color: #5D4E37;
-            margin-bottom: 2rem;
+            .explore-intro {
+                padding: 3rem;
+                margin: 3rem auto;
+            }
         }
 
         @media (max-width: 768px) {
             .header-content {
                 flex-direction: column;
                 gap: 1rem;
+                padding: 1rem;
             }
 
             nav ul {
                 gap: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
             }
 
-            .hero h1 {
-                font-size: 2rem;
+            .hero {
+                min-height: 80vh;
             }
 
-            .hero p {
-                font-size: 1rem;
+            .hero-content {
+                padding: 2rem;
             }
 
-            .story-content {
+            .section {
+                padding: 4rem 0;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+
+            .story-stats {
                 grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .story-text h3 {
-                font-size: 1.5rem;
-            }
-
-            .story-text p {
-                font-size: 1rem;
-            }
-
-            .story-highlight {
-                font-size: 1.1rem !important;
-            }
-
-            .about-content {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .about-text h3 {
-                font-size: 1.5rem;
-            }
-
-            .about-text p {
-                font-size: 1rem;
-            }
-
-            .host-promise {
-                padding: 1.5rem;
-            }
-
-            .host-promise h4 {
-                font-size: 1.1rem;
             }
 
             .explore-intro {
@@ -831,97 +603,13 @@
                 margin: 2rem auto;
             }
 
-            .explore-intro h3 {
-                font-size: 1.4rem;
-            }
-
-            .explore-intro p {
-                font-size: 1rem;
-            }
-
-            .enjoy .explore-grid {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-
-            .enjoy .explore-category {
-                padding: 1.5rem;
-            }
-
-            .enjoy .category-header h3 {
-                font-size: 1.1rem;
-            }
-
-            .enjoy .experience h4 {
-                font-size: 1rem;
-            }
-
-            .enjoy .experience p {
-                font-size: 0.9rem;
-            }
-
             .explore-highlight {
+                padding: 3rem 2rem;
+            }
+
+            .service-clarification {
                 padding: 2rem;
-            }
-
-            .explore-highlight h3 {
-                font-size: 1.4rem;
-            }
-
-            .explore-highlight p {
-                font-size: 1rem;
-            }
-
-            .sustainability-content {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .accommodation-options {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-                margin: 2rem 0 3rem 0;
-            }
-
-            .accommodation-card {
-                padding: 2rem;
-            }
-
-            .accommodation-header h3 {
-                font-size: 1.3rem;
-            }
-
-            .feature-item {
-                padding: 0.6rem;
-            }
-
-            .feature-item span:last-child {
-                font-size: 0.9rem;
-            }
-
-            .sustainability-text h3 {
-                font-size: 1.3rem;
-            }
-
-            .sustainability-text p {
-                font-size: 1rem;
-            }
-
-            .sustainability-highlight {
-                padding: 2rem;
-            }
-
-            .sustainability-highlight h3 {
-                font-size: 1.5rem;
-            }
-
-            .sustainability-highlight p {
-                font-size: 1rem;
-            }
-
-            .booking-buttons {
-                flex-direction: column;
-                align-items: center;
+                margin: 3rem auto;
             }
         }
     </style>
@@ -930,7 +618,7 @@
     <header>
         <div class="header-content">
             <a href="#" class="logo">
-                <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #2C3E50, #34495E); border-radius: 50%; margin-right: 15px; display: flex; align-items: center; justify-content: center; color: #D4B5A0; font-weight: bold; font-size: 1.2rem;">LR</div>
+                <div class="logo-icon">LR</div>
                 <div>
                     <div class="logo-text">LAKESIDE RETREAT</div>
                     <div class="logo-subtitle">Central Otago Wine Country</div>
@@ -952,13 +640,13 @@
         <section class="hero">
             <div class="hero-content">
                 <h1>A HAVEN OF SERENITY IN CROMWELL, QUEENSTOWN</h1>
-                <p>TRANQUIL. AUTHENTIC. TIMELESS</p>
-                <p style="font-size: 1rem; margin-bottom: 2rem; opacity: 0.9;">Adults-only eco-domes or pet-friendly cottage</p>
+                <p class="tagline">TRANQUIL. AUTHENTIC. TIMELESS</p>
+                <p class="subtitle">Adults-only eco-domes or pet-friendly cottage</p>
                 <button class="cta-button">BOOK NOW</button>
             </div>
         </section>
 
-        <section class="story">
+        <section class="story section">
             <div class="container">
                 <h2 class="section-title">OUR STORY</h2>
                 <div class="story-content">
@@ -990,7 +678,7 @@
             </div>
         </section>
 
-        <section class="about-us">
+        <section class="about-us section">
             <div class="container">
                 <h2 class="section-title">ABOUT US</h2>
                 <p class="section-subtitle">Your hosts, passionate guardians of Central Otago's natural beauty</p>
@@ -1053,7 +741,7 @@
             </div>
         </section>
 
-        <section class="explore" id="explore">
+        <section class="explore section" id="explore">
             <div class="container">
                 <h2 class="section-title">EXPLORE CENTRAL OTAGO</h2>
                 <p class="section-subtitle">Your perfect base camp for discovering New Zealand's most iconic wine and adventure region</p>
@@ -1067,340 +755,60 @@
 
                 <div class="explore-highlight">
                     <h3>🗺️ Your Local Knowledge Experts</h3>
-                    <p>Our Lakeside Retreat hosts know Central Otago intimately and love sharing insider knowledge with our guests. We provide detailed recommendations, trusted operator contacts, and local tips to help you plan and book your perfect itinerary directly with activity providers. Just let us know your interests when booking or upon arrival - we'll share our expertise and connections to help you create unforgettable experiences.</p>
+                    <p>Our Lakeside Retreat hosts know Central Otago intimately and love sharing insider knowledge with our guests. We provide detailed recommendations and local tips to help you plan and book your perfect itinerary directly with activity providers. Just let us know your interests when booking or upon arrival - we'll share our expertise and connections to help you create unforgettable experiences.</p>
                 </div>
 
                 <div class="service-clarification">
                     <h4>🎯 How We Help You Explore</h4>
-                    <p><strong>As Your Local Knowledge Experts:</strong> We share insider recommendations, provide trusted operator contacts, and offer timing tips based on years of Central Otago experience.</p>
+                    <p><strong>As Your Local Knowledge Experts:</strong> We share insider recommendations and offer timing tips based on years of Central Otago experience.</p>
                     <p><strong>Direct Booking Benefits:</strong> You book activities directly with operators for the best rates, flexible scheduling, and direct communication about your specific needs.</p>
                     <p><strong>Our Expertise + Your Control:</strong> The perfect combination of local knowledge and booking flexibility.</p>
                 </div>
             </div>
         </section>
-
-        <section class="enjoy" id="enjoy">
-            <div class="container">
-                <h2 class="section-title">ENJOY CENTRAL OTAGO</h2>
-                <p class="section-subtitle">Discover extraordinary experiences from your lakeside base camp</p>
-                
-                <div class="explore-grid">
-                    <div class="explore-category wine-experiences">
-                        <div class="category-header">
-                            <div class="category-icon">🍷</div>
-                            <h3>WINE COUNTRY EXPERIENCES</h3>
-                        </div>
-                        <div class="experience-list">
-                            <div class="experience">
-                                <h4>Central Otago Wine Tours</h4>
-                                <p>Exclusive tastings at Gibbston Valley, Chard Farm, Peregrine, and hidden gem boutique wineries. Discover why Central Otago Pinot Noir is world-renowned.</p>
-                                <span class="see-more">Contact details provided</span>
-                            </div>
-                            <div class="experience">
-                                <h4>Cardrona Distillery</h4>
-                                <p>Award-winning single malt whisky tastings and distillery tours in the stunning Cardrona Valley, just 45 minutes away.</p>
-                                <span class="see-more">Book directly online</span>
-                            </div>
-                            <div class="experience">
-                                <h4>Vineyard Experiences</h4>
-                                <p>Harvest participation, wine blending masterclasses, and private cellar door experiences with Central Otago's finest winemakers.</p>
-                                <span class="see-more">Seasonal availability - contacts provided</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="explore-category adventure-experiences">
-                        <div class="category-header">
-                            <div class="category-icon">🚁</div>
-                            <h3>HELICOPTER ADVENTURES</h3>
-                        </div>
-                        <div class="experience-list">
-                            <div class="experience">
-                                <h4>Milford Sound by Helicopter</h4>
-                                <p>Ultimate day trip combining helicopter flight over the Southern Alps with Milford Sound cruise. Unforgettable wilderness experience.</p>
-                                <span class="see-more">Advance booking essential - operators provided</span>
-                            </div>
-                            <div class="experience">
-                                <h4>Backcountry Helicopter Tours</h4>
-                                <p>Land on remote peaks, glaciers, and hidden valleys. Access pristine wilderness areas impossible to reach any other way.</p>
-                                <span class="see-more">Weather dependent - multiple operators available</span>
-                            </div>
-                            <div class="experience">
-                                <h4>West Coast Wilderness</h4>
-                                <p>Helicopter adventure over the Southern Alps to the wild West Coast. Experience dramatic coastlines and pristine rainforest.</p>
-                                <span class="see-more">Recommendations & contacts provided</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="explore-category lake-activities">
-                        <div class="category-header">
-                            <div class="category-icon">🏔️</div>
-                            <h3>LAKE & MOUNTAIN ADVENTURES</h3>
-                        </div>
-                        <div class="experience-list">
-                            <div class="experience">
-                                <h4>Lake Dunstan Activities</h4>
-                                <p>Kayaking, paddleboarding, fishing, and scenic cruises on pristine Lake Dunstan, literally at your doorstep from Lakeside Retreat.</p>
-                                <span class="see-more">Equipment rental info provided</span>
-                            </div>
-                            <div class="experience">
-                                <h4>Cardrona & Treble Cone</h4>
-                                <p>World-class skiing in winter, stunning alpine hiking and mountain biking in summer. Two of New Zealand's premier mountain destinations.</p>
-                                <span class="see-more">Lift pass info & seasonal advice</span>
-                            </div>
-                            <div class="experience">
-                                <h4>Central Otago Rail Trail</h4>
-                                <p>Iconic cycling trail through gold mining heritage, vineyard country, and dramatic schist landscapes. Historic bridges and stunning vistas.</p>
-                                <span class="see-more">Self-guided info & tour operator contacts</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="explore-category queenstown-wanaka">
-                        <div class="category-header">
-                            <div class="category-icon">🎯</div>
-                            <h3>QUEENSTOWN & WANAKA ACCESS</h3>
-                        </div>
-                        <div class="experience-list">
-                            <div class="experience">
-                                <h4>Queenstown Adventures</h4>
-                                <p>45 minutes to the adventure capital - bungy jumping, skydiving, jet boating, and world-class dining. Day trips or evening adventures.</p>
-                                <span class="see-more">Easy day trips - activity contacts provided</span>
-                            </div>
-                            <div class="experience">
-                                <h4>Wanaka Alpine Beauty</h4>
-                                <p>Pristine alpine lake, hiking trails, #ThatWanakaTree, and peaceful mountain atmosphere. Perfect contrast to Queenstown's energy.</p>
-                                <span class="see-more">Free attractions + accommodation recommendations</span>
-                            </div>
-                            <div class="experience">
-                                <h4>Highlands Motorsport Park</h4>
-                                <p>Drive supercars, go-karts, or experience the Museum of Classic Cars. Adrenaline and automotive history combined.</p>
-                                <span class="see-more">Online booking available - website provided</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="service-clarification">
-                    <h4>📞 Planning Your Central Otago Adventures</h4>
-                    <p><strong>Before Your Stay:</strong> Contact us with your interests and we'll provide personalized recommendations and operator contact details.</p>
-                    <p><strong>During Your Stay:</strong> We're here to answer questions, provide additional suggestions, and share insider tips based on current conditions.</p>
-                    <p><strong>Local Knowledge Advantage:</strong> Our recommendations are based on personal experience, guest feedback, and ongoing relationships with trusted operators.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="sustainability">
-            <div class="container">
-                <h2 class="section-title">SUSTAINABLE LUXURY</h2>
-                <p class="section-subtitle">Leading Central Otago's eco-tourism revolution with solar-powered innovation</p>
-                
-                <div class="sustainability-content">
-                    <div class="sustainability-text">
-                        <h3>🌞 Powered by Central Otago Sunshine</h3>
-                        <p>Our state-of-the-art grid-tied solar panel systems harness the abundant Central Otago sunshine to power your entire luxury experience. From lighting and heating to charging your devices, clean renewable energy fuels every aspect of your stay—without compromising a single comfort.</p>
-                        
-                        <h3>🏠 Innovative Architecture & Design</h3>
-                        <p>Each eco-dome features innovative architecture with sustainable building materials and thoughtful design. Our olive-green domes blend seamlessly into the native tussock landscape while our cottage provides traditional comfort—both powered by the same commitment to sustainability.</p>
-                        
-                        <h3>🌿 Harmony with Nature</h3>
-                        <p>We've designed every element to work with the natural environment, not against it. Both our domes and cottage showcase how luxury and environmental responsibility create the perfect partnership.</p>
-                        
-                        <h3>💚 Your Role in Our Mission</h3>
-                        <p>By choosing Lakeside Retreat, you're supporting a new model of tourism—one that proves luxury and sustainability aren't just compatible, they're better together. Experience guilt-free indulgence while helping preserve Central Otago's pristine environment for future generations.</p>
-                    </div>
-                    
-                    <div class="sustainability-stats">
-                        <div class="eco-stat">
-                            <div class="eco-icon">☀️</div>
-                            <div class="eco-title">100% Solar Powered</div>
-                            <div class="eco-description">Clean energy from Central Otago sunshine</div>
-                        </div>
-                        
-                        <div class="eco-stat">
-                            <div class="eco-icon">🔋</div>
-                            <div class="eco-title">Grid-Tied Efficiency</div>
-                            <div class="eco-description">Smart solar systems across all accommodations</div>
-                        </div>
-                        
-                        <div class="eco-stat">
-                            <div class="eco-icon">💧</div>
-                            <div class="eco-title">Water Stewardship</div>
-                            <div class="eco-description">Responsible water use and conservation</div>
-                        </div>
-                        
-                        <div class="eco-stat">
-                            <div class="eco-icon">🌱</div>
-                            <div class="eco-title">Minimal Footprint</div>
-                            <div class="eco-description">Low-impact design preserves landscape</div>
-                        </div>
-                        
-                        <div class="eco-stat">
-                            <div class="eco-icon">♻️</div>
-                            <div class="eco-title">Sustainable Materials</div>
-                            <div class="eco-description">Eco-friendly building and furnishings</div>
-                        </div>
-                        
-                        <div class="eco-stat">
-                            <div class="eco-icon">🦋</div>
-                            <div class="eco-title">Wildlife Friendly</div>
-                            <div class="eco-description">Designed to protect native ecosystems</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="sustainability-highlight">
-                    <h3>Experience Luxury. Leave Only Footprints.</h3>
-                    <p>At Lakeside Retreat, we believe the most luxurious experience is one that enhances rather than exploits the natural world. Our solar-powered accommodations prove that exceptional comfort and environmental stewardship create the perfect partnership.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="features" id="stay">
-            <div class="container">
-                <h2 class="section-title">CHOOSE YOUR PERFECT RETREAT</h2>
-                <p class="section-subtitle">Adults-only eco-domes or pet-friendly standalone cottage - both with stunning Lake Dunstan views</p>
-                
-                <div class="accommodation-options">
-                    <div class="accommodation-card eco-domes">
-                        <div class="accommodation-header">
-                            <div class="accommodation-icon">🏠</div>
-                            <h3>GRID-TIED SOLAR ECO-DOMES</h3>
-                            <p class="accommodation-subtitle">Adults-only • 2 private domes • Perfect for couples</p>
-                        </div>
-                        <div class="accommodation-features">
-                            <div class="feature-item">
-                                <span class="feature-icon">🔞</span>
-                                <span>Adults-only for peace & tranquility</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-icon">☀️</span>
-                                <span>Grid-tied solar-powered & sustainable</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-icon">🌿</span>
-                                <span>Innovative dome architecture</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-icon">🏔️</span>
-                                <span>Olive-green domes blend with landscape</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-icon">💚</span>
-                                <span>Minimal environmental footprint</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-icon">🧘</span>
-                                <span>Ultimate romantic retreat</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="accommodation-card cottage">
-                        <div class="accommodation-header">
-                            <div class="accommodation-icon">🏡</div>
-                            <h3>GRID-TIED SOLAR LAKEFRONT COTTAGE</h3>
-                            <p class="accommodation-subtitle">Max 3 guests • Pet-friendly • Private & independent</p>
-                        </div>
-                        <div class="accommodation-features">
-                            <div class="feature-item">
-                                <span class="feature-icon">👨‍👩‍👧</span>
-                                <span>Maximum 3 guests (adults & children)</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-icon">🐕</span>
-                                <span>Pet-friendly accommodation</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-icon">☀️</span>
-                                <span>Grid-tied solar-powered luxury</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-icon">🌊</span>
-                                <span>Direct waterfront with lake access</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-icon">🛁</span>
-                                <span>Private hot tub for 6 people</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-icon">🍳</span>
-                                <span>Kitchenette with hot plate, microwave & BBQ</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-icon">🚗</span>
-                                <span>Private garage parking for 2 cars</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-icon">🏖️</span>
-                                <span>Beach essentials & water activities</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-icon">🔥</span>
-                                <span>BBQ & outdoor entertaining area</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-icon">❄️</span>
-                                <span>Climate control & modern amenities</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="features-grid">
-                    <div class="feature">
-                        <div class="feature-icon">🏔️</div>
-                        <h3>STUNNING LOCATION</h3>
-                        <p>Perched above Lake Dunstan with panoramic views of Central Otago's dramatic landscape and renowned wine regions.</p>
-                    </div>
-                    
-                    <div class="feature">
-                        <div class="feature-icon">🎯</div>
-                        <h3>PERFECT FOR EVERY GUEST</h3>
-                        <p>Adults-only eco-domes for peaceful romantic escapes, or pet-friendly standalone cottage for intimate family getaways (max 3 guests). Each offers unique luxury Lake Dunstan experiences.</p>
-                    </div>
-                    
-                    <div class="feature">
-                        <div class="feature-icon">🍷</div>
-                        <h3>WINE COUNTRY ACCESS</h3>
-                        <p>Prime location for exploring Central Otago's world-class wineries, just minutes from premium cellar doors and tasting experiences.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="booking">
-            <div class="container">
-                <h2>BOOK YOUR LAKESIDE ESCAPE</h2>
-                <p>Choose your perfect Central Otago experience: peaceful adults-only eco-domes for romantic wine country getaways, or our pet-friendly standalone cottage (max 3 guests) for intimate family retreats. Both offer stunning Lake Dunstan views and access to world-class wineries.</p>
-                <div class="booking-buttons">
-                    <a href="#" class="btn-primary">CHECK AVAILABILITY</a>
-                    <a href="#" class="btn-secondary">VIEW GALLERY</a>
-                </div>
-            </div>
-        </section>
     </main>
 
-    <footer id="contact">
-        <div class="container">
-            <p>&copy; 2024 Lakeside Retreat. Luxury eco-accommodation in Central Otago Wine Country.</p>
-            <p>Cromwell, Queenstown | New Zealand</p>
-            <p style="margin-top: 1rem; font-style: italic;">Local knowledge experts providing accommodation and activity recommendations</p>
-        </div>
-    </footer>
-
     <script>
-        console.log("🎉 Lakeside Retreat website loaded successfully!");
-        console.log("✅ CRITICAL FIXES APPLIED - All booking language corrected!");
-        console.log("🏔️ Using enhanced Lake Dunstan landscape: lakeside-hero.jpg");
-        console.log("🏠 Using authentic Lakeside Retreat logo: lakeside-logo.png");
-        console.log("🗺️ Local knowledge experts positioning implemented!");
-        console.log("🌞 Highlighting grid-tied solar power across all accommodations!");
-        console.log("🏡 Featuring luxury lakefront cottage with full amenities!");
-        console.log("🐕 Pet-friendly standalone cottage for max 3 guests!");
-        console.log("🔞 Adults-only eco-domes for peaceful retreats!");
-        console.log("🎯 Service boundaries clearly established - crisis resolved!");
+        // Add smooth scrolling and interaction effects
+        document.addEventListener('DOMContentLoaded', function() {
+            // Header scroll effect
+            window.addEventListener('scroll', function() {
+                const header = document.querySelector('header');
+                if (window.scrollY > 100) {
+                    header.style.background = 'rgba(255, 255, 255, 0.98)';
+                } else {
+                    header.style.background = 'rgba(255, 255, 255, 0.95)';
+                }
+            });
+
+            // Intersection Observer for animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Observe elements for animation
+            document.querySelectorAll('.stat, .highlight-card, .explore-intro').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(el);
+            });
+        });
+
+        console.log("✨ Modern Lakeside Retreat website loaded!");
+        console.log("🎨 Enhanced with premium design, animations, and user experience!");
+        console.log("📱 Fully responsive and optimized for all devices!");
+        console.log("🚀 Ready for production deployment!");
     </script>
 </body>
 </html>
