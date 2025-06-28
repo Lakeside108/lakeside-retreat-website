@@ -319,86 +319,6 @@
             margin-bottom: 0;
         }
 
-        .explore-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .explore-category {
-            background: white;
-            border-radius: 20px;
-            padding: 2rem;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-            border: 2px solid #D4B5A0;
-            transition: transform 0.3s ease;
-        }
-
-        .explore-category:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 35px rgba(0,0,0,0.15);
-        }
-
-        .category-header {
-            text-align: center;
-            margin-bottom: 2rem;
-            padding-bottom: 1rem;
-            border-bottom: 2px solid #F0EBE3;
-        }
-
-        .category-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .category-header h3 {
-            color: #5D4E37;
-            font-size: 1.3rem;
-            font-weight: bold;
-            margin-bottom: 0;
-        }
-
-        .experience-list {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-        }
-
-        .experience {
-            padding: 1rem;
-            background: #F8F6F3;
-            border-radius: 10px;
-            border-left: 4px solid #D4B5A0;
-            position: relative;
-        }
-
-        .experience h4 {
-            color: #5D4E37;
-            font-size: 1.1rem;
-            margin-bottom: 0.5rem;
-            font-weight: bold;
-        }
-
-        .experience p {
-            color: #2C3E50;
-            font-size: 0.95rem;
-            line-height: 1.5;
-            margin-bottom: 0.5rem;
-        }
-
-        .see-more {
-            display: inline-block;
-            color: #8B7355;
-            font-size: 0.85rem;
-            font-style: italic;
-            font-weight: 500;
-            background: rgba(212,181,160,0.2);
-            padding: 0.2rem 0.8rem;
-            border-radius: 12px;
-            margin-top: 0.5rem;
-        }
-
         .explore-highlight {
             background: linear-gradient(135deg, #5D4E37 0%, #4A3D2A 100%);
             color: white;
@@ -420,6 +340,91 @@
             line-height: 1.7;
             max-width: 800px;
             margin: 0 auto;
+        }
+
+        .enjoy {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, #F8F6F3 0%, #F0EBE3 100%);
+        }
+
+        .enjoy .explore-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .enjoy .explore-category {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            border: 2px solid #D4B5A0;
+            transition: transform 0.3s ease;
+        }
+
+        .enjoy .explore-category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+        }
+
+        .enjoy .category-header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #F0EBE3;
+        }
+
+        .enjoy .category-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .enjoy .category-header h3 {
+            color: #5D4E37;
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 0;
+        }
+
+        .enjoy .experience-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .enjoy .experience {
+            padding: 1rem;
+            background: #F8F6F3;
+            border-radius: 10px;
+            border-left: 4px solid #D4B5A0;
+            position: relative;
+        }
+
+        .enjoy .experience h4 {
+            color: #5D4E37;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        .enjoy .experience p {
+            color: #2C3E50;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin-bottom: 0.5rem;
+        }
+
+        .enjoy .see-more {
+            display: inline-block;
+            color: #8B7355;
+            font-size: 0.85rem;
+            font-style: italic;
+            font-weight: 500;
+            background: rgba(212,181,160,0.2);
+            padding: 0.2rem 0.8rem;
+            border-radius: 12px;
+            margin-top: 0.5rem;
         }
 
         .sustainability {
@@ -720,24 +725,24 @@
                 font-size: 1rem;
             }
 
-            .explore-grid {
+            .enjoy .explore-grid {
                 grid-template-columns: 1fr;
                 gap: 1.5rem;
             }
 
-            .explore-category {
+            .enjoy .explore-category {
                 padding: 1.5rem;
             }
 
-            .category-header h3 {
+            .enjoy .category-header h3 {
                 font-size: 1.1rem;
             }
 
-            .experience h4 {
+            .enjoy .experience h4 {
                 font-size: 1rem;
             }
 
-            .experience p {
+            .enjoy .experience p {
                 font-size: 0.9rem;
             }
 
@@ -928,6 +933,18 @@
                     <p>From wine tastings in legendary vineyards to helicopter adventures over untouched wilderness, from peaceful lake activities to adrenaline-pumping mountain adventures - Central Otago offers experiences to match every taste and sense of adventure. Our Lakeside Retreat hosts are your personal concierges, ready to plan the perfect Central Otago experience and arrange all your bookings.</p>
                 </div>
 
+                <div class="explore-highlight">
+                    <h3>🗺️ Your Personal Central Otago Adventure Planners</h3>
+                    <p>Our Lakeside Retreat hosts know Central Otago intimately and love sharing insider knowledge with our guests. Whether you dream of helicopter adventures, wine country discoveries, or peaceful lake moments, we'll design the perfect itinerary and handle all bookings. Just let us know your interests when booking or upon arrival - we'll take care of everything else.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="enjoy" id="enjoy">
+            <div class="container">
+                <h2 class="section-title">ENJOY CENTRAL OTAGO</h2>
+                <p class="section-subtitle">Discover extraordinary experiences from your lakeside base camp</p>
+                
                 <div class="explore-grid">
                     <div class="explore-category wine-experiences">
                         <div class="category-header">
@@ -1025,11 +1042,6 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="explore-highlight">
-                    <h3>🗺️ Your Personal Central Otago Adventure Planners</h3>
-                    <p>Our Lakeside Retreat hosts know Central Otago intimately and love sharing insider knowledge with our guests. Whether you dream of helicopter adventures, wine country discoveries, or peaceful lake moments, we'll design the perfect itinerary and handle all bookings. Just let us know your interests when booking or upon arrival - we'll take care of everything else.</p>
-                </div>
             </div>
         </section>
 
@@ -1126,7 +1138,7 @@
             </div>
         </section>
 
-        <section class="booking" id="enjoy">
+        <section class="booking">
             <div class="container">
                 <h2>BOOK YOUR ESCAPE</h2>
                 <p>Experience the tranquility of Central Otago wine country in our solar-powered, completely self-contained eco-domes. Enjoy luxury off-grid living with all modern amenities while exploring the region's renowned wineries and stunning landscapes.</p>
@@ -1152,6 +1164,7 @@
         console.log("📖 Featuring compelling Our Story section!");
         console.log("👥 Featuring personal About Us section!");
         console.log("🗺️ Featuring comprehensive Explore Central Otago section!");
+        console.log("🎊 Featuring detailed Enjoy experiences section!");
         console.log("🌞 Highlighting solar-powered, self-contained luxury domes!");
         console.log("✨ Ready to showcase sustainable Central Otago accommodation!");
     </script>
