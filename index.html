@@ -674,6 +674,37 @@
             opacity: 0.95;
         }
 
+        .accommodation-options {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .accommodation-option {
+            padding: 1.5rem;
+            background: rgba(255,255,255,0.1);
+            border-radius: 16px;
+            backdrop-filter: blur(10px);
+            border-left: 4px solid var(--accent-gold);
+        }
+
+        .accommodation-option h4 {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+
+        .accommodation-option p {
+            font-size: 1rem;
+            margin-bottom: 0;
+            opacity: 0.9;
+        }
+
+        .booking-feature span:last-child {
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
         .booking-features {
             display: flex;
             flex-direction: column;
@@ -693,11 +724,6 @@
         .booking-feature .feature-icon {
             font-size: 1.5rem;
             min-width: 2rem;
-        }
-
-        .booking-feature span:last-child {
-            font-size: 1rem;
-            font-weight: 500;
         }
 
         .booking-cta {
@@ -778,6 +804,16 @@
             opacity: 0.8;
             font-style: italic;
             margin-bottom: 0 !important;
+            margin-top: 2rem !important;
+        }
+
+        /* Uplisting Widget Styling */
+        .uplisting-widget {
+            margin: 2rem 0;
+            padding: 2rem;
+            background: rgba(255,255,255,0.15);
+            border-radius: 16px;
+            backdrop-filter: blur(10px);
         }
 
         /* Footer */
@@ -951,6 +987,14 @@
                 padding: 2rem;
             }
 
+            .accommodation-options {
+                gap: 1rem;
+            }
+
+            .accommodation-option {
+                padding: 1.25rem;
+            }
+
             .booking-buttons {
                 flex-direction: column;
                 align-items: center;
@@ -980,7 +1024,7 @@
                     <li><a href="#explore">EXPLORE</a></li>
                     <li><a href="#enjoy">ENJOY</a></li>
                     <li><a href="#contact">CONTACT</a></li>
-                    <li><button class="cta-button" onclick="window.open('https://uplistinging.com/lakeside-retreat', '_blank')">BOOK NOW</button></li>
+                    <li><button class="cta-button" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">BOOK NOW</button></li>
                 </ul>
             </nav>
         </div>
@@ -992,7 +1036,7 @@
                 <h1>A HAVEN OF SERENITY IN CROMWELL, QUEENSTOWN</h1>
                 <p class="tagline">TRANQUIL. AUTHENTIC. TIMELESS</p>
                 <p class="subtitle">Adults-only eco-domes or pet-friendly cottage</p>
-                <button class="cta-button" onclick="window.open('https://uplistinging.com/lakeside-retreat', '_blank')">BOOK NOW</button>
+                <button class="cta-button" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">BOOK NOW</button>
             </div>
         </section>
 
@@ -1236,40 +1280,32 @@
                 
                 <div class="booking-content">
                     <div class="booking-info">
-                        <h3>Seamless Booking Experience</h3>
-                        <p>We've partnered with Uplistinging, our trusted communications manager, to provide you with a seamless booking experience. From your initial inquiry to your arrival, Uplistinging handles all booking communications and ensures every detail is perfectly arranged for your Central Otago getaway.</p>
+                        <h3>Three Unique Accommodation Options</h3>
+                        <p>Choose from our carefully curated selection of luxury accommodations, each offering a unique perspective on Central Otago's stunning landscape and wine country experience.</p>
                         
-                        <div class="booking-features">
-                            <div class="booking-feature">
-                                <span class="feature-icon">📅</span>
-                                <span>Real-time availability checking</span>
+                        <div class="accommodation-options">
+                            <div class="accommodation-option">
+                                <h4>🍷 Dome Pinot</h4>
+                                <p>Adults-only eco-dome perfect for wine lovers, featuring sustainable luxury and vineyard views.</p>
                             </div>
-                            <div class="booking-feature">
-                                <span class="feature-icon">💬</span>
-                                <span>Professional communication management</span>
+                            <div class="accommodation-option">
+                                <h4>🌹 Dome Rosé</h4>
+                                <p>Romantic eco-dome designed for couples seeking tranquility and stunning lake vistas.</p>
                             </div>
-                            <div class="booking-feature">
-                                <span class="feature-icon">✨</span>
-                                <span>Personalized service from inquiry to arrival</span>
-                            </div>
-                            <div class="booking-feature">
-                                <span class="feature-icon">🎯</span>
-                                <span>Expert local recommendations and planning</span>
+                            <div class="accommodation-option">
+                                <h4>🏡 Lakeside Cottage</h4>
+                                <p>Pet-friendly vineyard cottage (max 3 guests) with hot tub and direct lake access.</p>
                             </div>
                         </div>
                     </div>
                     
                     <div class="booking-cta">
                         <h3>Ready to Experience Central Otago?</h3>
-                        <p>Book directly through our communications partner for the best rates and personalized service.</p>
-                        <div class="booking-buttons">
-                            <button class="btn-primary" onclick="window.open('https://uplistinging.com/lakeside-retreat', '_blank')">
-                                BOOK YOUR STAY
-                            </button>
-                            <button class="btn-secondary" onclick="window.open('https://uplistinging.com/lakeside-retreat/gallery', '_blank')">
-                                VIEW GALLERY
-                            </button>
-                        </div>
+                        <p>Check availability and book directly for the best rates and personalized service.</p>
+                        
+                        <!-- Uplisting Booking Widget -->
+                        <div class="uplisting-widget"></div>
+                        
                         <p class="booking-note">Managed by Uplistinging - Your trusted booking partner</p>
                     </div>
                 </div>
@@ -1287,7 +1323,7 @@
                     <div class="footer-booking">
                         <h4>BOOKINGS</h4>
                         <p>Managed by Uplistinging</p>
-                        <button class="footer-book-btn" onclick="window.open('https://uplistinging.com/lakeside-retreat', '_blank')">
+                        <button class="footer-book-btn" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
                             BOOK NOW
                         </button>
                     </div>
@@ -1341,6 +1377,24 @@
         console.log("📱 Fully responsive and optimized for all devices!");
         console.log("📞 Integrated with Uplistinging for seamless booking management!");
         console.log("🚀 Ready for production deployment!");
+    </script>
+
+    <!-- Uplisting Booking Widget -->
+    <script type="text/javascript" src="https://d2n64sniz4ei2k.cloudfront.net/property-search-795f5869.js"></script>
+    <script type="text/javascript">
+      window.uplistingSearchWidget.init({
+        baseUrl: 'https://book.lakesideretreat.co.nz/',
+        showLocation: true,
+        locationText: 'All locations',
+        locations: ['Lake Dunstan', 'Cromwell', 'Otago'],
+        color: '#1e3a8a',
+        insertAt: '.uplisting-widget',
+        guestsMin: 1,
+        guestsMax: 6,
+        textColor: '#ffffff',
+        backgroundColor: '#0f766e',
+        buttonText: 'Check Availability',
+      });
     </script>
 </body>
 </html>
