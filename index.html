@@ -160,7 +160,7 @@
         /* Hero Section */
         .hero {
             background: linear-gradient(rgba(30, 58, 138, 0.4), rgba(15, 118, 110, 0.4)), 
-                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><defs><linearGradient id="sunset" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style="stop-color:%23ff6b6b;stop-opacity:1" /><stop offset="30%" style="stop-color:%23ff8e53;stop-opacity:1" /><stop offset="60%" style="stop-color:%23ffa726;stop-opacity:1" /><stop offset="100%" style="stop-color:%23ffb74d;stop-opacity:1" /></linearGradient></defs><rect width="1200" height="300" fill="url(%23sunset)"/><path d="M0,300 Q200,250 400,280 T800,260 T1200,280 L1200,450 Q900,400 600,420 T0,400 Z" fill="%23433a36"/><path d="M0,450 Q300,380 600,410 T1200,400 L1200,600 Q800,580 400,590 T0,580 Z" fill="%235d4e37"/><ellipse cx="300" cy="520" rx="150" ry="20" fill="%234a90e2" opacity="0.7"/><ellipse cx="800" cy="530" rx="200" ry="15" fill="%234a90e2" opacity="0.7"/></svg>') center/cover no-repeat;
+                        url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') center/cover no-repeat;
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -361,7 +361,264 @@
             line-height: 1.4;
         }
 
-        /* About Section */
+        /* Photo Gallery Styles */
+        .photo-gallery {
+            margin: 2rem 0;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-large);
+        }
+
+        .main-photo {
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+        }
+
+        .main-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .main-photo:hover img {
+            transform: scale(1.05);
+        }
+
+        .photo-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            color: white;
+            padding: 2rem 1.5rem 1rem;
+            font-size: 1.125rem;
+            font-weight: 500;
+        }
+
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0;
+        }
+
+        .gallery-thumb {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .gallery-thumb:hover {
+            transform: scale(1.02);
+            z-index: 2;
+            box-shadow: var(--shadow-large);
+        }
+
+        .gallery-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.3s ease;
+        }
+
+        .gallery-thumb:hover img {
+            filter: brightness(1.1);
+        }
+
+        .thumb-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            color: white;
+            padding: 1.5rem 1rem 0.75rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-thumb:hover .thumb-caption {
+            transform: translateY(0);
+        }
+
+        /* Accommodations Grid Styles */
+        .accommodations-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 4rem;
+            margin-top: 4rem;
+        }
+
+        .accommodation-showcase {
+            background: var(--gradient-warm);
+            border-radius: 24px;
+            padding: 3rem;
+            box-shadow: var(--shadow-medium);
+            border: 1px solid rgba(30, 58, 138, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .accommodation-showcase:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-large);
+        }
+
+        .accommodation-showcase.featured {
+            border: 2px solid var(--accent-gold);
+            background: linear-gradient(135deg, #fef7ed 0%, #f3f1ee 100%);
+        }
+
+        .accommodation-header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px solid rgba(30, 58, 138, 0.1);
+        }
+
+        .accommodation-badge {
+            display: inline-block;
+            background: var(--gradient-primary);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 1rem;
+        }
+
+        .accommodation-showcase.featured .accommodation-badge {
+            background: var(--accent-gold);
+        }
+
+        .accommodation-header h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-blue);
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .accommodation-tagline {
+            color: var(--soft-gray);
+            font-size: 1.125rem;
+            font-style: italic;
+            margin-bottom: 0;
+        }
+
+        .details-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+            padding: 2rem;
+            background: white;
+            border-radius: 16px;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .detail-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem;
+            background: var(--light-sand);
+            border-radius: 12px;
+            font-weight: 500;
+        }
+
+        .detail-icon {
+            font-size: 1.25rem;
+            min-width: 1.5rem;
+        }
+
+        .accommodation-description {
+            margin: 2rem 0;
+        }
+
+        .accommodation-description p {
+            font-size: 1.125rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            color: var(--dark-slate);
+        }
+
+        .premium-features {
+            background: white;
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: var(--shadow-soft);
+            margin-top: 2rem;
+        }
+
+        .premium-features h4 {
+            color: var(--primary-teal);
+            font-size: 1.375rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1rem;
+            background: var(--light-sand);
+            border-radius: 12px;
+            border-left: 4px solid var(--accent-gold);
+            transition: all 0.3s ease;
+        }
+
+        .feature-item:hover {
+            transform: translateX(5px);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .feature-icon {
+            font-size: 1.25rem;
+            min-width: 1.5rem;
+        }
+
+        .vineyard-location {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 3rem;
+            border-radius: 24px;
+            text-align: center;
+            margin-top: 4rem;
+            box-shadow: var(--shadow-large);
+        }
+
+        .vineyard-location h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+        }
+
+        .vineyard-location p {
+            font-size: 1.125rem;
+            line-height: 1.8;
+            max-width: 900px;
+            margin: 0 auto;
+            opacity: 0.95;
+        }
+
+        /* About Us Section */
         .about-us {
             padding: 6rem 0;
             background: white;
@@ -742,32 +999,6 @@
             backdrop-filter: blur(5px);
         }
 
-        .booking-feature span:last-child {
-            font-size: 1rem;
-            font-weight: 500;
-        }
-
-        .booking-features {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .booking-feature {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            padding: 1rem;
-            background: rgba(255,255,255,0.1);
-            border-radius: 12px;
-            backdrop-filter: blur(10px);
-        }
-
-        .booking-feature .feature-icon {
-            font-size: 1.5rem;
-            min-width: 2rem;
-        }
-
         .booking-cta {
             text-align: center;
             background: rgba(255,255,255,0.1);
@@ -847,15 +1078,6 @@
             font-style: italic;
             margin-bottom: 0 !important;
             margin-top: 2rem !important;
-        }
-
-        /* Uplisting Widget Styling */
-        .uplisting-widget {
-            margin: 2rem 0;
-            padding: 2rem;
-            background: rgba(255,255,255,0.15);
-            border-radius: 16px;
-            backdrop-filter: blur(10px);
         }
 
         /* Footer */
@@ -1047,6 +1269,46 @@
                 gap: 2rem;
                 text-align: center;
             }
+
+            /* Photo Gallery Mobile Styles */
+            .main-photo {
+                height: 250px;
+            }
+
+            .photo-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-thumb {
+                height: 150px;
+            }
+
+            .photo-caption {
+                padding: 1.5rem 1rem 0.75rem;
+                font-size: 1rem;
+            }
+
+            .thumb-caption {
+                padding: 1rem 0.75rem 0.5rem;
+                font-size: 0.8125rem;
+            }
+
+            .accommodation-showcase {
+                padding: 2rem;
+            }
+
+            .details-grid {
+                grid-template-columns: 1fr;
+                padding: 1.5rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .vineyard-location {
+                padding: 2rem;
+            }
         }
     </style>
 </head>
@@ -1066,7 +1328,7 @@
                     <li><a href="#explore">EXPLORE</a></li>
                     <li><a href="#enjoy">ENJOY</a></li>
                     <li><a href="#contact">CONTACT</a></li>
-                    <li><button class="cta-button" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">BOOK NOW</button></li>
+                    <li><button class="cta-button" onclick="window.open('https://book.lakesideretreat.co.nz/', '_blank')">BOOK NOW</button></li>
                 </ul>
             </nav>
         </div>
@@ -1078,7 +1340,7 @@
                 <h1>A HAVEN OF SERENITY IN CROMWELL, QUEENSTOWN</h1>
                 <p class="tagline">TRANQUIL. AUTHENTIC. TIMELESS</p>
                 <p class="subtitle">Adults-only eco-domes or pet-friendly cottage</p>
-                <button class="cta-button" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">BOOK NOW</button>
+                <button class="cta-button" onclick="window.open('https://book.lakesideretreat.co.nz/', '_blank')">BOOK NOW</button>
             </div>
         </section>
 
@@ -1328,6 +1590,28 @@
                             <p class="accommodation-tagline">Luxury vineyard glamping with stargazing skylight</p>
                         </div>
                         
+                        <!-- Photo Gallery for Dome Pinot -->
+                        <div class="photo-gallery">
+                            <div class="main-photo">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 400'%3E%3Crect width='800' height='400' fill='%23e5e7eb'/%3E%3Ctext x='50%25' y='45%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial, sans-serif' font-size='16' fill='%23374151'%3EDome Pinot Living Area%3C/text%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial, sans-serif' font-size='12' fill='%236b7280'%3EReplace with your actual photo%3C/text%3E%3C/svg%3E" alt="Dome Pinot Living Area" class="gallery-image">
+                                <div class="photo-caption">Luxury living area with panoramic lake views</div>
+                            </div>
+                            <div class="photo-grid">
+                                <div class="gallery-thumb">
+                                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 200'%3E%3Crect width='400' height='200' fill='%23f3f4f6'/%3E%3Ctext x='50%25' y='45%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial, sans-serif' font-size='14' fill='%23374151'%3EBedroom%3C/text%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial, sans-serif' font-size='10' fill='%236b7280'%3EStargazing Skylight%3C/text%3E%3C/svg%3E" alt="Bedroom with Stargazing Skylight" class="gallery-image">
+                                    <div class="thumb-caption">Master bedroom with stargazing skylight</div>
+                                </div>
+                                <div class="gallery-thumb">
+                                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 200'%3E%3Crect width='400' height='200' fill='%23f3f4f6'/%3E%3Ctext x='50%25' y='45%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial, sans-serif' font-size='14' fill='%23374151'%3EKitchen%3C/text%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial, sans-serif' font-size='10' fill='%236b7280'%3EHanging Egg Chair%3C/text%3E%3C/svg%3E" alt="Kitchen with Lake Views" class="gallery-image">
+                                    <div class="thumb-caption">Gourmet kitchen with hanging egg chair</div>
+                                </div>
+                                <div class="gallery-thumb">
+                                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 200'%3E%3Crect width='400' height='200' fill='%23f3f4f6'/%3E%3Ctext x='50%25' y='45%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial, sans-serif' font-size='14' fill='%23374151'%3ESpa%3C/text%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial, sans-serif' font-size='10' fill='%236b7280'%3ESaltwater Hot Tub%3C/text%3E%3C/svg%3E" alt="Private Hot Tub with Lake Views" class="gallery-image">
+                                    <div class="thumb-caption">Private saltwater spa overlooking the lake</div>
+                                </div>
+                            </div>
+                        </div>
+                        
                         <div class="accommodation-details">
                             <div class="details-grid">
                                 <div class="detail-item">
@@ -1336,7 +1620,7 @@
                                 </div>
                                 <div class="detail-item">
                                     <span class="detail-icon">🛏️</span>
-                                    <span>Super King bed</span>
+                                    <span>Super King size bed</span>
                                 </div>
                                 <div class="detail-item">
                                     <span class="detail-icon">👥</span>
@@ -1349,7 +1633,7 @@
                             </div>
                             
                             <div class="accommodation-description">
-                                <p>Experience luxury glamping in our 50sqm dome featuring a unique stargazing skylight above your super king bed. Enjoy modern amenities including a full kitchen with Nespresso machine, 65" OLED TV, and a relaxing swing chair overlooking the vineyard.</p>
+                                <p>Experience luxury glamping in our 50sqm dome featuring a unique stargazing skylight above your super king size bed. Enjoy modern amenities including a full kitchen with Nespresso machine, 65" OLED TV, and a relaxing swing chair overlooking the vineyard.</p>
                                 
                                 <p>Step outside to your private deck with BBQ facilities and unwind in your very own fresh saltwater spa with jet lounge. Continental breakfast for two is included in your stay.</p>
                             </div>
@@ -1394,24 +1678,90 @@
                         </div>
                         
                         <div class="accommodation-details">
-                            <div class="accommodation-description">
-                                <p>Our second glamping dome designed specifically for romantic getaways. Featuring sustainable eco-luxury with panoramic views of Lake Dunstan and the surrounding Central Otago landscape.</p>
-                                
-                                <p>Perfect for couples seeking tranquility and an authentic connection with nature while enjoying modern comforts in our boutique vineyard setting.</p>
+                            <div class="details-grid">
+                                <div class="detail-item">
+                                    <span class="detail-icon">🏠</span>
+                                    <span>1 bedroom luxury dome</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-icon">🛏️</span>
+                                    <span>Super King size bed</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-icon">👥</span>
+                                    <span>2 guests maximum</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-icon">🛁</span>
+                                    <span>1 bathroom + private spa</span>
+                                </div>
                             </div>
                             
-                            <div class="key-highlights">
-                                <div class="highlight-item">
-                                    <span class="highlight-icon">💕</span>
-                                    <span>Adults-only romantic retreat</span>
+                            <div class="accommodation-description">
+                                <p>Welcome to Lakeside Glamping, where we offer a luxury glamping dome experience in our boutique vineyard with superb views of lake and mountains. The purposely built glamping dome combines the serenity of nature with the luxurious comforts of five-star accommodation.</p>
+                                
+                                <p>Dome Rosé offers a unique and unforgettable experience for adventurous souls seeking romantic tranquility. Perfect for couples wanting an authentic connection with Central Otago's stunning landscape while enjoying modern luxury amenities.</p>
+                            </div>
+                            
+                            <div class="premium-features">
+                                <h4>Inclusions & Amenities</h4>
+                                <div class="features-grid">
+                                    <div class="feature-item">
+                                        <span class="feature-icon">🥐</span>
+                                        <span>Continental breakfast for two</span>
+                                    </div>
+                                    <div class="feature-item">
+                                        <span class="feature-icon">🛀</span>
+                                        <span>Your own private spa</span>
+                                    </div>
+                                    <div class="feature-item">
+                                        <span class="feature-icon">🍳</span>
+                                        <span>Full kitchen facilities</span>
+                                    </div>
+                                    <div class="feature-item">
+                                        <span class="feature-icon">🔥</span>
+                                        <span>BBQ facilities</span>
+                                    </div>
+                                    <div class="feature-item">
+                                        <span class="feature-icon">📺</span>
+                                        <span>Television & WiFi</span>
+                                    </div>
+                                    <div class="feature-item">
+                                        <span class="feature-icon">🅿️</span>
+                                        <span>Free parking on premises</span>
+                                    </div>
                                 </div>
-                                <div class="highlight-item">
-                                    <span class="highlight-icon">🌿</span>
-                                    <span>Sustainable eco-luxury design</span>
+                                
+                                <div style="margin-top: 2rem; padding: 1.5rem; background: var(--light-sand); border-radius: 12px;">
+                                    <h5 style="color: var(--primary-teal); margin-bottom: 1rem; font-size: 1.125rem;">Complete Amenities List</h5>
+                                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.5rem; font-size: 0.9375rem; line-height: 1.6;">
+                                        <div>✓ Microwave & Toaster</div>
+                                        <div>✓ Coffee Maker</div>
+                                        <div>✓ Dishes & Utensils</div>
+                                        <div>✓ Dishwasher</div>
+                                        <div>✓ Pantry Items</div>
+                                        <div>✓ Refrigerator & Stove</div>
+                                        <div>✓ Air Conditioning</div>
+                                        <div>✓ Heating</div>
+                                        <div>✓ Linens & Towels Provided</div>
+                                        <div>✓ Hair Dryer</div>
+                                        <div>✓ Iron & Board</div>
+                                        <div>✓ Lawn & Garden Access</div>
+                                        <div>✓ Cleaned with Disinfectant</div>
+                                        <div>✓ Fire Extinguisher</div>
+                                        <div>✓ Smoke Detector</div>
+                                        <div>✓ Safety Standards</div>
+                                    </div>
                                 </div>
-                                <div class="highlight-item">
-                                    <span class="highlight-icon">🏔️</span>
-                                    <span>Panoramic lake & mountain views</span>
+                            </div>
+                            
+                            <div class="check-in-details">
+                                <div style="background: white; padding: 1.5rem; border-radius: 12px; margin-top: 1rem; border-left: 4px solid var(--primary-teal);">
+                                    <h4 style="color: var(--primary-teal); margin-bottom: 1rem;">Check-in Details</h4>
+                                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                                        <div><strong>Check-in:</strong> 3:00 PM</div>
+                                        <div><strong>Check-out:</strong> 10:00 AM</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1421,32 +1771,111 @@
                         <div class="accommodation-header">
                             <div class="accommodation-badge">FAMILY FRIENDLY</div>
                             <h3>Lakeside Cottage</h3>
-                            <p class="accommodation-tagline">Pet-friendly vineyard cottage with hot tub</p>
+                            <p class="accommodation-tagline">Pet-friendly vineyard cottage with wood fired hot tub</p>
                         </div>
                         
                         <div class="accommodation-details">
-                            <div class="accommodation-description">
-                                <p>Charming cottage accommodation perfect for intimate family getaways. Located directly on the vineyard with stunning lake access and a private hot tub for relaxation after days exploring Central Otago.</p>
-                                
-                                <p>Pet-friendly and designed for up to 3 guests, this cottage combines comfort with the authentic vineyard experience, complete with modern amenities and outdoor entertaining areas.</p>
+                            <div class="details-grid">
+                                <div class="detail-item">
+                                    <span class="detail-icon">🏠</span>
+                                    <span>1 bedroom cottage</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-icon">🛏️</span>
+                                    <span>Queen bed + sofa bed</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-icon">👥</span>
+                                    <span>3 guests maximum</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-icon">🛁</span>
+                                    <span>1 bathroom + wood fired hot tub</span>
+                                </div>
                             </div>
                             
-                            <div class="key-highlights">
-                                <div class="highlight-item">
-                                    <span class="highlight-icon">🐕</span>
-                                    <span>Pet-friendly accommodation</span>
+                            <div class="accommodation-description">
+                                <p>Welcome to Lakeside Retreat! Your luxurious Central Otago experience starts here staying at our stunning cottage with simply breath-taking panoramic views over Lake Dunstan and an epic backdrop of Mt Pisa. We are conveniently located in a boutique vineyard on the shores of Lake Dunstan, Cromwell.</p>
+                                
+                                <p>You are staying at a cozy one bedroom self-contained cottage with private/secure area in our boutique vineyard. The cottage has its own private entry and outdoor living with breath-taking views over patio and lawn area. Your very own wood fired hot tub is available during your stay.</p>
+                                
+                                <p>This stunning retreat offers complete peace, tranquillity and privacy unrivalled in the region. Located in the heart of award-winning wineries, olive farms, and Lake Dunstan cycle trail right on your doorstep (300 meters).</p>
+                            </div>
+                            
+                            <div class="premium-features">
+                                <h4>Cottage Features & Inclusions</h4>
+                                <div class="features-grid">
+                                    <div class="feature-item">
+                                        <span class="feature-icon">🔥</span>
+                                        <span>Wood fired hot tub</span>
+                                    </div>
+                                    <div class="feature-item">
+                                        <span class="feature-icon">🐕</span>
+                                        <span>Pet-friendly (our dogs welcome you!)</span>
+                                    </div>
+                                    <div class="feature-item">
+                                        <span class="feature-icon">🚗</span>
+                                        <span>Secure double garage + boat parking</span>
+                                    </div>
+                                    <div class="feature-item">
+                                        <span class="feature-icon">🍳</span>
+                                        <span>Fully equipped kitchenette</span>
+                                    </div>
+                                    <div class="feature-item">
+                                        <span class="feature-icon">🌊</span>
+                                        <span>Kayak/Canoe included</span>
+                                    </div>
+                                    <div class="feature-item">
+                                        <span class="feature-icon">🎯</span>
+                                        <span>Weber BBQ & outdoor living</span>
+                                    </div>
                                 </div>
-                                <div class="highlight-item">
-                                    <span class="highlight-icon">🛁</span>
-                                    <span>Private hot tub for 6 people</span>
+                                
+                                <div style="margin-top: 2rem; padding: 1.5rem; background: var(--light-sand); border-radius: 12px;">
+                                    <h5 style="color: var(--primary-teal); margin-bottom: 1rem; font-size: 1.125rem;">Complete Cottage Setup</h5>
+                                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.5rem; font-size: 0.9375rem; line-height: 1.6;">
+                                        <div>✓ Queen size bed</div>
+                                        <div>✓ High-end sofa bed</div>
+                                        <div>✓ Coffee & dining table sets</div>
+                                        <div>✓ TV with heating & aircon</div>
+                                        <div>✓ Coffee machine & NutriBullet</div>
+                                        <div>✓ Microwave & hot plate</div>
+                                        <div>✓ Dishwasher & full kitchen</div>
+                                        <div>✓ Washing machine & dryer</div>
+                                        <div>✓ Large bathroom with shower</div>
+                                        <div>✓ Premium linen & towels</div>
+                                        <div>✓ Hair dryer & iron</div>
+                                        <div>✓ Games & entertainment</div>
+                                        <div>✓ Free WiFi & parking</div>
+                                        <div>✓ Cleaned with disinfectant</div>
+                                        <div>✓ Fire safety equipment</div>
+                                        <div>✓ Private lawn & garden access</div>
+                                    </div>
                                 </div>
-                                <div class="highlight-item">
-                                    <span class="highlight-icon">🌊</span>
-                                    <span>Direct lake access</span>
+                            </div>
+                            
+                            <div class="location-benefits">
+                                <div style="background: white; padding: 2rem; border-radius: 12px; margin-top: 1.5rem; border-left: 4px solid var(--primary-teal);">
+                                    <h4 style="color: var(--primary-teal); margin-bottom: 1.5rem;">Perfect Location</h4>
+                                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-bottom: 1.5rem;">
+                                        <div><strong>🏘️ Cromwell:</strong> 10 minutes drive</div>
+                                        <div><strong>🏔️ Wanaka:</strong> 30 minutes drive</div>
+                                        <div><strong>🎢 Queenstown:</strong> 55 minutes drive</div>
+                                        <div><strong>🚴‍♂️ Cycle Trail:</strong> 300 meters away</div>
+                                    </div>
+                                    <p style="margin-bottom: 1rem;"><strong>Summer Activities:</strong> Swimming, fishing, boating, water sports on Lake Dunstan</p>
+                                    <p style="margin-bottom: 1rem;"><strong>Winter Activities:</strong> 5 fantastic ski fields within comfortable driving distance</p>
+                                    <p style="margin-bottom: 0;"><strong>Highland's Motorsport Park:</strong> Just a short drive away</p>
                                 </div>
-                                <div class="highlight-item">
-                                    <span class="highlight-icon">👨‍👩‍👧</span>
-                                    <span>Maximum 3 guests</span>
+                            </div>
+                            
+                            <div class="check-in-details">
+                                <div style="background: white; padding: 1.5rem; border-radius: 12px; margin-top: 1rem; border-left: 4px solid var(--accent-gold);">
+                                    <h4 style="color: var(--accent-gold); margin-bottom: 1rem;">Check-in Details</h4>
+                                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                                        <div><strong>Check-in:</strong> 3:00 PM</div>
+                                        <div><strong>Check-out:</strong> 10:00 AM</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1455,7 +1884,7 @@
                 
                 <div class="vineyard-location">
                     <h3>🍇 Boutique Vineyard Setting</h3>
-                    <p>All accommodations are nestled within our working boutique vineyard, offering unrivaled privacy and tranquility. Located at 96 Smiths Way, Mount Pisa, you're perfectly positioned in the heart of Central Otago's award-winning wine region with the Cromwell to Clyde cycle trail right at your doorstep.</p>
+                    <p>All accommodations are nestled within our working boutique vineyard at 96 Smiths Way, Mount Pisa, offering unrivaled privacy and tranquility. You're perfectly positioned in the heart of Central Otago's award-winning wine region with superb views of lake and mountains, and the Cromwell to Clyde cycle trail right at your doorstep.</p>
                 </div>
             </div>
         </section>
@@ -1468,13 +1897,13 @@
                 <div class="booking-content">
                     <div class="booking-info">
                         <h3>Three Luxury Vineyard Experiences</h3>
-                        <p>Choose from our carefully curated selection of luxury glamping domes and lakeside cottage, each nestled in our boutique vineyard with breathtaking views of Lake Dunstan and the surrounding mountains.</p>
+                        <p>Choose from our carefully curated selection of luxury glamping domes and lakeside cottage, each nestled in our boutique vineyard with breathtaking views of Lake Dunstan and the surrounding mountains. From romantic eco-domes to family-friendly cottage retreats.</p>
                         
                         <div class="accommodation-options">
                             <div class="accommodation-option featured">
                                 <h4>🍷 Dome Pinot - Premium Glamping</h4>
                                 <div class="property-details">
-                                    <span class="property-specs">50sqm • Super King Bed • 2 Guests • Couples Only</span>
+                                    <span class="property-specs">50sqm • Super King Size Bed • 2 Guests • Couples Only</span>
                                     <p>Luxury glamping dome with stargazing skylight, full kitchen, 65" OLED TV, swing chair, and private saltwater spa. Includes continental breakfast for two. The ultimate romantic vineyard getaway.</p>
                                     <div class="key-features">
                                         <span class="feature-tag">🌟 Stargazing Skylight</span>
@@ -1487,15 +1916,27 @@
                             <div class="accommodation-option">
                                 <h4>🌹 Dome Rosé - Romantic Retreat</h4>
                                 <div class="property-details">
-                                    <span class="property-specs">Adults Only • Eco-Dome • Lake Views</span>
-                                    <p>Romantic eco-dome designed for couples seeking tranquility and stunning lake vistas in our sustainable glamping experience.</p>
+                                    <span class="property-specs">1 Bedroom • Super King Size Bed • 2 Guests • 1 Bathroom</span>
+                                    <p>Luxury glamping dome in boutique vineyard with superb lake and mountain views. Combines nature's serenity with five-star comfort. Includes continental breakfast for two and private spa.</p>
+                                    <div class="key-features">
+                                        <span class="feature-tag">🥐 Breakfast Included</span>
+                                        <span class="feature-tag">🛀 Private Spa</span>
+                                        <span class="feature-tag">🍳 Full Kitchen</span>
+                                        <span class="feature-tag">🔥 BBQ Facilities</span>
+                                    </div>
                                 </div>
                             </div>
                             <div class="accommodation-option">
                                 <h4>🏡 Lakeside Cottage - Family Friendly</h4>
                                 <div class="property-details">
-                                    <span class="property-specs">Max 3 Guests • Pet-Friendly • Hot Tub • Lake Access</span>
-                                    <p>Charming vineyard cottage with private hot tub, direct lake access, and modern amenities. Perfect for intimate family getaways with your furry friends welcome.</p>
+                                    <span class="property-specs">1 Bedroom • Queen Bed + Sofa Bed • 3 Guests • Pet-Friendly</span>
+                                    <p>Stunning cottage with breath-taking panoramic views over Lake Dunstan and Mt Pisa backdrop. Features wood fired hot tub, secure double garage, private entry, and complete peace & tranquillity. Kayak/canoe included.</p>
+                                    <div class="key-features">
+                                        <span class="feature-tag">🔥 Wood Fired Hot Tub</span>
+                                        <span class="feature-tag">🐕 Pet Friendly</span>
+                                        <span class="feature-tag">🚗 Secure Garage</span>
+                                        <span class="feature-tag">🌊 Kayak Included</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1505,8 +1946,10 @@
                         <h3>Ready to Experience Central Otago?</h3>
                         <p>Check availability and book directly for the best rates and personalized service.</p>
                         
-                        <!-- Uplisting Booking Widget -->
-                        <div class="uplisting-widget"></div>
+                        <div class="booking-buttons">
+                            <a href="https://book.lakesideretreat.co.nz/" target="_blank" class="btn-primary">CHECK AVAILABILITY</a>
+                            <a href="mailto:info@lakesideretreat.co.nz" class="btn-secondary">GET IN TOUCH</a>
+                        </div>
                         
                         <p class="booking-note">Managed by Uplistinging - Your trusted booking partner</p>
                     </div>
@@ -1520,12 +1963,14 @@
                     <div class="footer-info">
                         <h4>LAKESIDE RETREAT</h4>
                         <p>Luxury eco-accommodation in Central Otago Wine Country</p>
+                        <p>96 Smiths Way, Mount Pisa</p>
                         <p>Cromwell, Queenstown | New Zealand</p>
+                        <p>Email: info@lakesideretreat.co.nz</p>
                     </div>
                     <div class="footer-booking">
                         <h4>BOOKINGS</h4>
                         <p>Managed by Uplistinging</p>
-                        <button class="footer-book-btn" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+                        <button class="footer-book-btn" onclick="window.open('https://book.lakesideretreat.co.nz/', '_blank')">
                             BOOK NOW
                         </button>
                     </div>
@@ -1550,6 +1995,28 @@
                 }
             });
 
+            // Photo gallery interactions
+            const mainPhoto = document.querySelector('.main-photo img');
+            const thumbs = document.querySelectorAll('.gallery-thumb img');
+            
+            if (mainPhoto && thumbs.length > 0) {
+                thumbs.forEach(thumb => {
+                    thumb.addEventListener('click', function() {
+                        const mainSrc = mainPhoto.src;
+                        const thumbSrc = this.src;
+                        const mainCaption = document.querySelector('.photo-caption');
+                        const thumbCaption = this.nextElementSibling.textContent;
+                        
+                        // Swap images
+                        mainPhoto.src = thumbSrc;
+                        this.src = mainSrc;
+                        
+                        // Update caption
+                        mainCaption.textContent = thumbCaption;
+                    });
+                });
+            }
+
             // Intersection Observer for animations
             const observerOptions = {
                 threshold: 0.1,
@@ -1566,7 +2033,7 @@
             }, observerOptions);
 
             // Observe elements for animation
-            document.querySelectorAll('.stat, .highlight-card, .explore-intro').forEach(el => {
+            document.querySelectorAll('.stat, .highlight-card, .explore-intro, .accommodation-showcase, .photo-gallery').forEach(el => {
                 el.style.opacity = '0';
                 el.style.transform = 'translateY(30px)';
                 el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
@@ -1574,29 +2041,10 @@
             });
         });
 
-        console.log("✨ Modern Lakeside Retreat website loaded!");
-        console.log("🎨 Enhanced with premium design, animations, and user experience!");
-        console.log("📱 Fully responsive and optimized for all devices!");
-        console.log("📞 Integrated with Uplistinging for seamless booking management!");
+        console.log("✨ Complete Lakeside Retreat website loaded!");
+        console.log("🖼️ Interactive photo gallery with hover effects and image swapping!");
+        console.log("📱 Fully responsive design optimized for all devices!");
         console.log("🚀 Ready for production deployment!");
-    </script>
-
-    <!-- Uplisting Booking Widget -->
-    <script type="text/javascript" src="https://d2n64sniz4ei2k.cloudfront.net/property-search-795f5869.js"></script>
-    <script type="text/javascript">
-      window.uplistingSearchWidget.init({
-        baseUrl: 'https://book.lakesideretreat.co.nz/',
-        showLocation: true,
-        locationText: 'Lake Dunstan',
-        locations: ['Lake Dunstan'],
-        color: '#1e3a8a',
-        insertAt: '.uplisting-widget',
-        guestsMin: 1,
-        guestsMax: 6,
-        textColor: '#ffffff',
-        backgroundColor: '#0f766e',
-        buttonText: 'Check Availability',
-      });
     </script>
 </body>
 </html>
