@@ -533,6 +533,91 @@
             background: #F5F3F0;
         }
 
+        .accommodation-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 3rem;
+            margin: 3rem 0 4rem 0;
+        }
+
+        .accommodation-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border: 3px solid #D4B5A0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .accommodation-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .accommodation-card.eco-domes {
+            background: linear-gradient(135deg, #F8F6F3 0%, #F0EBE3 100%);
+        }
+
+        .accommodation-card.cottage {
+            background: linear-gradient(135deg, #F0F8FF 0%, #E6F3FF 100%);
+        }
+
+        .accommodation-header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px solid rgba(93,78,55,0.2);
+        }
+
+        .accommodation-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .accommodation-header h3 {
+            color: #5D4E37;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .accommodation-subtitle {
+            color: #8B7355;
+            font-size: 1rem;
+            font-style: italic;
+            margin-bottom: 0;
+        }
+
+        .accommodation-features {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 0.8rem;
+            background: rgba(255,255,255,0.7);
+            border-radius: 10px;
+            border-left: 3px solid #D4B5A0;
+        }
+
+        .feature-icon {
+            font-size: 1.2rem;
+            min-width: 1.5rem;
+            text-align: center;
+        }
+
+        .feature-item span:last-child {
+            color: #2C3E50;
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -763,6 +848,28 @@
                 gap: 2rem;
             }
 
+            .accommodation-options {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                margin: 2rem 0 3rem 0;
+            }
+
+            .accommodation-card {
+                padding: 2rem;
+            }
+
+            .accommodation-header h3 {
+                font-size: 1.3rem;
+            }
+
+            .feature-item {
+                padding: 0.6rem;
+            }
+
+            .feature-item span:last-child {
+                font-size: 0.9rem;
+            }
+
             .sustainability-text h3 {
                 font-size: 1.3rem;
             }
@@ -822,6 +929,7 @@
             <div class="hero-content">
                 <h1>A HAVEN OF SERENITY IN CROMWELL, QUEENSTOWN</h1>
                 <p>TRANQUIL. AUTHENTIC. TIMELESS</p>
+                <p style="font-size: 1rem; margin-bottom: 2rem; opacity: 0.9;">Adults-only eco-domes or pet-friendly cottage</p>
                 <button class="cta-button">BOOK NOW</button>
             </div>
         </section>
@@ -834,11 +942,11 @@
                         <h3>Where Lake Dunstan Meets Wine Country Magic</h3>
                         <p>High above the pristine waters of Lake Dunstan, where ancient schist mountains meet rolling vineyard hills, lies a sanctuary that captures the very essence of Central Otago. Lakeside Retreat was born from a simple dream: to create a place where luxury meets sustainability, where modern comfort embraces timeless landscape.</p>
                         
-                        <p>Our solar-powered eco-luxury domes, painted in the soft olive of native tussock grass, seem to emerge naturally from the hillside. Each completely self-contained unit operates primarily on clean solar energy, offering you the rare luxury of off-grid comfort without compromise. Each morning, you'll wake to mist rising from the lake below, while golden light dances across both the surrounding peaks and your private solar panels quietly powering your sustainable sanctuary.</p>
+                        <p>Our accommodation offerings reflect this philosophy perfectly. Choose from our innovative solar-powered eco-domes, painted in the soft olive of native tussock grass and operating completely off-grid, or our luxury waterfront cottage with every modern amenity. Each morning, whether you wake in sustainable dome luxury or cottage comfort, you'll witness mist rising from the lake below while golden light dances across the surrounding peaks.</p>
                         
                         <p>Just minutes from your door, world-renowned wineries invite you to taste the terroir that makes Central Otago Pinot Noir legendary. Yet at day's end, you'll return to your private haven, where the only sounds are lapping lake waters and the whisper of mountain winds through tussock land.</p>
                         
-                        <p class="story-highlight">This is where your Central Otago story begins—solar-powered, self-contained luxury that's authentic, sustainable, unforgettable.</p>
+                        <p class="story-highlight">This is where your Central Otago story begins—choose sustainable dome luxury or full-service cottage comfort, both authentic, unforgettable, and perfectly positioned above Lake Dunstan.</p>
                     </div>
                     <div class="story-stats">
                         <div class="stat">
@@ -1113,9 +1221,95 @@
 
         <section class="features" id="stay">
             <div class="container">
-                <h2 class="section-title">LUXURY ECO-ACCOMMODATION</h2>
-                <p class="section-subtitle">Solar-powered, self-contained luxury in Central Otago's wine country</p>
+                <h2 class="section-title">CHOOSE YOUR PERFECT RETREAT</h2>
+                <p class="section-subtitle">Adults-only eco-domes or pet-friendly standalone cottage - both with stunning Lake Dunstan views</p>
                 
+                <div class="accommodation-options">
+                    <div class="accommodation-card eco-domes">
+                        <div class="accommodation-header">
+                            <div class="accommodation-icon">🏠</div>
+                            <h3>SOLAR-POWERED ECO-DOMES</h3>
+                            <p class="accommodation-subtitle">Adults-only • 2 private domes • Perfect for couples</p>
+                        </div>
+                        <div class="accommodation-features">
+                            <div class="feature-item">
+                                <span class="feature-icon">🔞</span>
+                                <span>Adults-only for peace & tranquility</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">☀️</span>
+                                <span>100% solar-powered & self-contained</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">🌿</span>
+                                <span>Eco-luxury off-grid experience</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">🏔️</span>
+                                <span>Olive-green domes blend with landscape</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">💚</span>
+                                <span>Minimal environmental footprint</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">🧘</span>
+                                <span>Ultimate romantic retreat</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accommodation-card cottage">
+                        <div class="accommodation-header">
+                            <div class="accommodation-icon">🏡</div>
+                            <h3>STANDALONE LAKEFRONT COTTAGE</h3>
+                            <p class="accommodation-subtitle">Max 3 guests • Pet-friendly • Private & independent</p>
+                        </div>
+                        <div class="accommodation-features">
+                            <div class="feature-item">
+                                <span class="feature-icon">👨‍👩‍👧</span>
+                                <span>Maximum 3 guests (adults & children)</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">🐕</span>
+                                <span>Pet-friendly accommodation</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">🏠</span>
+                                <span>Standalone cottage - complete privacy</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">🌊</span>
+                                <span>Direct waterfront with lake access</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">🛁</span>
+                                <span>Private hot tub for 6 people</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">🍳</span>
+                                <span>Kitchenette with hot plate, microwave & BBQ</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">🚗</span>
+                                <span>Private garage parking for 2 cars</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">🏖️</span>
+                                <span>Beach essentials & water activities</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">🔥</span>
+                                <span>BBQ & outdoor entertaining area</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">❄️</span>
+                                <span>Climate control & modern amenities</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="features-grid">
                     <div class="feature">
                         <div class="feature-icon">🏔️</div>
@@ -1124,9 +1318,9 @@
                     </div>
                     
                     <div class="feature">
-                        <div class="feature-icon">🏠</div>
-                        <h3>SOLAR-POWERED ECO-DOMES</h3>
-                        <p>Completely self-contained olive-green eco-domes powered primarily by solar energy. Experience luxury off-grid living with modern amenities, private facilities, and sustainable design in perfect harmony with nature.</p>
+                        <div class="feature-icon">🎯</div>
+                        <h3>PERFECT FOR EVERY GUEST</h3>
+                        <p>Adults-only eco-domes for peaceful romantic escapes, or pet-friendly standalone cottage for intimate family getaways (max 3 guests). Each offers unique luxury Lake Dunstan experiences.</p>
                     </div>
                     
                     <div class="feature">
@@ -1140,8 +1334,8 @@
 
         <section class="booking">
             <div class="container">
-                <h2>BOOK YOUR ESCAPE</h2>
-                <p>Experience the tranquility of Central Otago wine country in our solar-powered, completely self-contained eco-domes. Enjoy luxury off-grid living with all modern amenities while exploring the region's renowned wineries and stunning landscapes.</p>
+                <h2>BOOK YOUR LAKESIDE ESCAPE</h2>
+                <p>Choose your perfect Central Otago experience: peaceful adults-only eco-domes for romantic wine country getaways, or our pet-friendly standalone cottage (max 3 guests) for intimate family retreats. Both offer stunning Lake Dunstan views and access to world-class wineries.</p>
                 <div class="booking-buttons">
                     <a href="#" class="btn-primary">CHECK AVAILABILITY</a>
                     <a href="#" class="btn-secondary">VIEW GALLERY</a>
@@ -1165,8 +1359,11 @@
         console.log("👥 Featuring personal About Us section!");
         console.log("🗺️ Featuring comprehensive Explore Central Otago section!");
         console.log("🎊 Featuring detailed Enjoy experiences section!");
-        console.log("🌞 Highlighting solar-powered, self-contained luxury domes!");
-        console.log("✨ Ready to showcase sustainable Central Otago accommodation!");
+        console.log("🌞 Highlighting solar-powered eco-domes!");
+        console.log("🏡 Featuring luxury lakefront cottage with full amenities!");
+        console.log("🐕 Pet-friendly standalone cottage for max 3 guests!");
+        console.log("🔞 Adults-only eco-domes for peaceful retreats!");
+        console.log("✨ Ready to showcase dual accommodation options!");
     </script>
 </body>
 </html>
