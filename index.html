@@ -502,87 +502,7 @@
             font-style: italic;
         }
 
-        /* Photo Gallery */
-        .photo-gallery {
-            margin: 2rem 0;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-        }
-
-        .main-photo {
-            position: relative;
-            height: 300px;
-            overflow: hidden;
-        }
-
-        .main-photo img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-
-        .main-photo:hover img {
-            transform: scale(1.05);
-        }
-
-        .photo-caption {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(transparent, rgba(0,0,0,0.7));
-            color: white;
-            padding: 2rem 1.5rem 1rem;
-            font-size: 1rem;
-            font-weight: 500;
-        }
-
-        .photo-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 0;
-        }
-
-        .gallery-thumb {
-            position: relative;
-            height: 150px;
-            overflow: hidden;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .gallery-thumb:hover {
-            transform: scale(1.02);
-            z-index: 2;
-        }
-
-        .gallery-thumb img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: var(--transition);
-        }
-
-        .thumb-caption {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(transparent, rgba(0,0,0,0.7));
-            color: white;
-            padding: 1rem 0.75rem 0.5rem;
-            font-size: 0.8rem;
-            font-weight: 500;
-            transform: translateY(100%);
-            transition: transform 0.3s ease;
-        }
-
-        .gallery-thumb:hover .thumb-caption {
-            transform: translateY(0);
-        }
-
+        /* Details Grid */
         .details-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -658,415 +578,6 @@
             font-size: 1.1rem;
             min-width: 1.2rem;
             color: var(--primary-teal);
-        }
-
-        /* Photo Gallery Page */
-        .photo-gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
-            margin: 2rem 0;
-        }
-
-        .photo-item {
-            position: relative;
-            overflow: hidden;
-            border-radius: 12px;
-            cursor: pointer;
-            height: 200px;
-            transition: var(--transition);
-        }
-
-        .photo-item:hover {
-            transform: scale(1.03);
-        }
-
-        .photo-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .photo-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.7));
-            display: flex;
-            align-items: flex-end;
-            padding: 1rem;
-            color: white;
-            opacity: 0;
-            transition: var(--transition);
-        }
-
-        .photo-item:hover .photo-overlay {
-            opacity: 1;
-        }
-
-        /* Lightbox */
-        .lightbox {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.9);
-            display: none;
-            align-items: center;
-            justify-content: center;
-            z-index: 2000;
-        }
-
-        .lightbox.active {
-            display: flex;
-        }
-
-        .lightbox img {
-            max-width: 90%;
-            max-height: 90%;
-            border-radius: 8px;
-        }
-
-        .lightbox-close {
-            position: absolute;
-            top: 2rem;
-            right: 2rem;
-            background: none;
-            border: none;
-            color: white;
-            font-size: 2rem;
-            cursor: pointer;
-        }
-
-        /* Reviews Section */
-        .reviews {
-            padding: 5rem 0;
-            background: var(--light-gray);
-        }
-
-        .rating-overview {
-            background: var(--white);
-            padding: 2.5rem;
-            border-radius: 16px;
-            box-shadow: var(--shadow);
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 3rem;
-            align-items: center;
-            margin: 3rem auto;
-            max-width: 800px;
-        }
-
-        .overall-rating {
-            text-align: center;
-        }
-
-        .rating-number {
-            font-size: 3rem;
-            font-weight: 700;
-            color: var(--primary-teal);
-            line-height: 1;
-        }
-
-        .rating-stars {
-            margin: 1rem 0;
-        }
-
-        .star {
-            color: #fbbf24;
-            font-size: 1.5rem;
-            margin: 0 0.1rem;
-        }
-
-        .rating-text {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: var(--text-dark);
-        }
-
-        .rating-platforms {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1.5rem;
-        }
-
-        .platform-rating {
-            text-align: center;
-            padding: 1.5rem;
-            background: var(--light-gray);
-            border-radius: 12px;
-            transition: var(--transition);
-        }
-
-        .platform-rating:hover {
-            transform: translateY(-2px);
-        }
-
-        .platform-logo {
-            width: 80px;
-            height: 24px;
-            margin-bottom: 1rem;
-            border-radius: 4px;
-        }
-
-        .platform-score {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: var(--primary-teal);
-            margin-bottom: 0.5rem;
-        }
-
-        .platform-reviews {
-            font-size: 0.8rem;
-            color: var(--text-light);
-        }
-
-        .reviews-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 1.5rem;
-            margin-top: 3rem;
-        }
-
-        .review-card {
-            background: var(--white);
-            padding: 1.5rem;
-            border-radius: 12px;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-        }
-
-        .review-card:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .review-card.featured {
-            border: 2px solid var(--accent-orange);
-            grid-column: span 2;
-        }
-
-        .review-card.featured::before {
-            content: "⭐ FEATURED";
-            position: absolute;
-            top: -10px;
-            left: 1.5rem;
-            background: var(--accent-orange);
-            color: white;
-            padding: 0.25rem 0.75rem;
-            border-radius: 12px;
-            font-size: 0.7rem;
-            font-weight: 600;
-            text-transform: uppercase;
-        }
-
-        .review-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 1rem;
-        }
-
-        .reviewer-info {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .reviewer-avatar {
-            width: 40px;
-            height: 40px;
-            background: var(--primary-teal);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: 700;
-            font-size: 1rem;
-        }
-
-        .reviewer-name {
-            font-weight: 600;
-            color: var(--text-dark);
-            margin-bottom: 0.25rem;
-            font-size: 0.95rem;
-        }
-
-        .reviewer-location {
-            font-size: 0.8rem;
-            color: var(--text-light);
-        }
-
-        .review-rating {
-            text-align: right;
-        }
-
-        .stars {
-            color: #fbbf24;
-            font-size: 1rem;
-            margin-bottom: 0.25rem;
-        }
-
-        .platform {
-            font-size: 0.7rem;
-            color: var(--text-light);
-            font-weight: 500;
-            text-transform: uppercase;
-        }
-
-        .review-content p {
-            font-size: 0.95rem;
-            line-height: 1.6;
-            color: var(--text-dark);
-            font-style: italic;
-            margin-bottom: 1rem;
-        }
-
-        .review-date {
-            font-size: 0.8rem;
-            color: var(--text-light);
-            font-weight: 500;
-        }
-
-        /* Testimonials System */
-        .testimonials-system {
-            padding: 5rem 0;
-            background: var(--white);
-        }
-
-        .testimonial-submission {
-            background: var(--light-gray);
-            padding: 3rem;
-            border-radius: 16px;
-            margin-bottom: 3rem;
-            box-shadow: var(--shadow);
-        }
-
-        .submission-header {
-            text-align: center;
-            margin-bottom: 2.5rem;
-        }
-
-        .submission-header h3 {
-            font-size: 2rem;
-            color: var(--text-dark);
-            margin-bottom: 1rem;
-            font-weight: 700;
-        }
-
-        .submission-header p {
-            font-size: 1rem;
-            color: var(--text-light);
-            margin-bottom: 2rem;
-        }
-
-        .incentive-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.75rem;
-            background: var(--accent-orange);
-            color: white;
-            padding: 1rem 2rem;
-            border-radius: 25px;
-            font-weight: 600;
-            box-shadow: var(--shadow);
-        }
-
-        .testimonial-form {
-            background: var(--white);
-            padding: 2.5rem;
-            border-radius: 12px;
-            box-shadow: var(--shadow);
-        }
-
-        .form-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2.5rem;
-            margin-bottom: 2rem;
-        }
-
-        .form-section h4 {
-            color: var(--text-dark);
-            font-size: 1.1rem;
-            margin-bottom: 1.5rem;
-            font-weight: 600;
-        }
-
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-            margin-bottom: 1rem;
-        }
-
-        .form-row input,
-        .form-row select {
-            padding: 0.75rem;
-            border: 1px solid var(--border-light);
-            border-radius: 8px;
-            font-size: 0.9rem;
-            transition: border-color 0.3s ease;
-        }
-
-        .form-row input:focus,
-        .form-row select:focus {
-            outline: none;
-            border-color: var(--primary-teal);
-        }
-
-        .rating-section {
-            margin: 2.5rem 0;
-            padding: 2rem;
-            background: var(--light-gray);
-            border-radius: 12px;
-        }
-
-        .rating-section h4 {
-            color: var(--text-dark);
-            margin-bottom: 1.5rem;
-            text-align: center;
-            font-weight: 600;
-        }
-
-        .rating-categories {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .rating-item {
-            text-align: center;
-        }
-
-        .rating-item label {
-            display: block;
-            font-weight: 500;
-            margin-bottom: 0.5rem;
-            color: var(--text-dark);
-            font-size: 0.9rem;
-        }
-
-        .star-rating {
-            display: flex;
-            justify-content: center;
-            gap: 0.2rem;
-        }
-
-        .star-rating .star {
-            font-size: 1.25rem;
-            color: #d1d5db;
-            cursor: pointer;
-            transition: color 0.2s ease;
-        }
-
-        .star-rating .star:hover,
-        .star-rating .star.active {
-            color: #fbbf24;
         }
 
         /* Contact Bar */
@@ -1173,38 +684,12 @@
                 padding: 0 1rem;
             }
 
-            .form-grid {
+            .details-grid {
                 grid-template-columns: 1fr;
-                gap: 2rem;
+                padding: 1.5rem;
             }
 
-            .form-row {
-                grid-template-columns: 1fr;
-            }
-
-            .rating-categories {
-                grid-template-columns: 1fr;
-                gap: 1rem;
-            }
-
-            .reviews-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .review-card.featured {
-                grid-column: span 1;
-            }
-
-            .rating-overview {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .rating-platforms {
-                grid-template-columns: 1fr;
-            }
-
-            .photo-grid {
+            .features-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -1244,15 +729,6 @@
             .accommodation-showcase {
                 padding: 2rem;
             }
-
-            .details-grid {
-                grid-template-columns: 1fr;
-                padding: 1.5rem;
-            }
-
-            .features-grid {
-                grid-template-columns: 1fr;
-            }
         }
     </style>
 </head>
@@ -1279,11 +755,6 @@
             <nav class="main-nav">
                 <a href="#" onclick="showPage('home')" class="nav-link active">Home</a>
                 <a href="#" onclick="showPage('accommodations')" class="nav-link">Stay</a>
-                <a href="#" onclick="showPage('gallery')" class="nav-link">Gallery</a>
-                <a href="#" onclick="showPage('reviews')" class="nav-link">Reviews</a>
-                <a href="#" onclick="showPage('explore')" class="nav-link">Explore</a>
-                <a href="#" onclick="showPage('testimonials')" class="nav-link">Testimonials</a>
-                <a href="#" onclick="showPage('contact')" class="nav-link">Contact</a>
                 <a href="https://book.lakesideretreat.co.nz/" target="_blank" class="header-book-btn">Book Now</a>
             </nav>
 
@@ -1297,11 +768,6 @@
             <ul>
                 <li><a href="#" onclick="showPage('home')">Home</a></li>
                 <li><a href="#" onclick="showPage('accommodations')">Stay</a></li>
-                <li><a href="#" onclick="showPage('gallery')">Gallery</a></li>
-                <li><a href="#" onclick="showPage('reviews')">Reviews</a></li>
-                <li><a href="#" onclick="showPage('explore')">Explore</a></li>
-                <li><a href="#" onclick="showPage('testimonials')">Testimonials</a></li>
-                <li><a href="#" onclick="showPage('contact')">Contact</a></li>
                 <li><a href="https://book.lakesideretreat.co.nz/" target="_blank">Book Now</a></li>
             </ul>
         </nav>
@@ -1330,10 +796,10 @@
                             <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem; color: var(--text-dark); font-weight: 600;">Where Lake Dunstan Meets Wine Country Magic</h3>
                             <p style="margin-bottom: 1.5rem;">High above the pristine waters of Lake Dunstan, where ancient schist mountains meet rolling vineyard hills, lies a sanctuary that captures the very essence of Central Otago. Lakeside Retreat was born from a simple dream: to create a place where luxury meets sustainability, where modern comfort embraces timeless landscape.</p>
                             
-                            <p style="margin-bottom: 1.5rem;">Our accommodation offerings reflect this philosophy perfectly. Choose from our innovative grid-tied solar-powered eco-domes, painted in the soft olive of native tussock grass, or our luxury waterfront cottage with every modern amenity.</p>
+                            <p style="margin-bottom: 1.5rem;">Our accommodation offerings reflect this philosophy perfectly. Choose from our innovative grid-tied solar-powered eco-domes positioned within the vineyard and painted in the soft olive of native tussock grass, or our luxury waterfront cottage with panoramic lake views and every modern amenity.</p>
                             
                             <div style="background: var(--light-gray); padding: 2rem; border-radius: 12px; border-left: 4px solid var(--accent-orange); margin-top: 1.5rem;">
-                                <p style="color: var(--primary-teal); font-weight: 600; font-style: italic; margin-bottom: 0;">This is where your Central Otago story begins—choose sustainable dome luxury or full-service cottage comfort, both authentic, unforgettable, and perfectly positioned above Lake Dunstan.</p>
+                                <p style="color: var(--primary-teal); font-weight: 600; font-style: italic; margin-bottom: 0;">This is where your Central Otago story begins—choose sustainable dome luxury within our vineyard or full-service cottage comfort with lake views, both authentic, unforgettable, and perfectly positioned above Lake Dunstan.</p>
                             </div>
                         </div>
                         <div class="grid" style="gap: 1.5rem;">
@@ -1357,25 +823,25 @@
             <section class="section" style="background: var(--light-gray);">
                 <div class="container">
                     <h2 class="section-title">Featured Accommodations</h2>
-                    <p class="section-subtitle">Three distinct luxury experiences in our boutique vineyard</p>
+                    <p class="section-subtitle">Three distinct luxury experiences on our boutique vineyard property</p>
                     
                     <div class="grid grid-3">
                         <div class="card">
                             <div style="background: var(--primary-teal); color: white; padding: 0.4rem 1rem; border-radius: 15px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; margin-bottom: 1rem; display: inline-block;">PREMIUM GLAMPING</div>
                             <h3>🍷 Dome Pinot</h3>
-                            <p>Luxury glamping dome with stargazing skylight, full kitchen, 65" OLED TV, and private saltwater spa. Includes breakfast for two.</p>
+                            <p>Luxury glamping dome within our vineyard with stargazing skylight, full kitchen, 65" OLED TV, and private saltwater spa. Includes breakfast for two.</p>
                             <a href="#" onclick="showPage('accommodations')" class="btn btn-primary" style="margin-top: 1rem; padding: 0.75rem 1.5rem; font-size: 0.85rem;">View Details</a>
                         </div>
                         <div class="card">
                             <div style="background: var(--primary-teal); color: white; padding: 0.4rem 1rem; border-radius: 15px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; margin-bottom: 1rem; display: inline-block;">ROMANTIC</div>
                             <h3>🌹 Dome Rosé</h3>
-                            <p>Intimate eco-dome with stunning lake views. Combines nature's serenity with five-star comfort. Includes breakfast and private spa.</p>
+                            <p>Intimate eco-dome positioned within our vineyard with stunning lake views. Combines nature's serenity with five-star comfort. Includes breakfast and private spa.</p>
                             <a href="#" onclick="showPage('accommodations')" class="btn btn-primary" style="margin-top: 1rem; padding: 0.75rem 1.5rem; font-size: 0.85rem;">View Details</a>
                         </div>
                         <div class="card">
                             <div style="background: var(--primary-teal); color: white; padding: 0.4rem 1rem; border-radius: 15px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; margin-bottom: 1rem; display: inline-block;">FAMILY FRIENDLY</div>
                             <h3>🏡 Lakeside Cottage</h3>
-                            <p>Pet-friendly cottage with wood-fired hot tub, secure garage, and kayak included. Perfect for intimate family retreats.</p>
+                            <p>Pet-friendly cottage with panoramic lake views, wood-fired hot tub, secure garage, and kayak included. Perfect for intimate family retreats.</p>
                             <a href="#" onclick="showPage('accommodations')" class="btn btn-primary" style="margin-top: 1rem; padding: 0.75rem 1.5rem; font-size: 0.85rem;">View Details</a>
                         </div>
                     </div>
@@ -1414,10 +880,6 @@
                             <p style="font-style: italic; font-size: 0.95rem;">"The Lakeside Cottage exceeded all expectations! Kids loved the wood-fired hot tub and our dog was warmly welcomed. Location is unbeatable!"</p>
                         </div>
                     </div>
-                    
-                    <div style="text-align: center; margin-top: 2.5rem;">
-                        <a href="#" onclick="showPage('reviews')" class="btn btn-primary">Read All Reviews</a>
-                    </div>
                 </div>
             </section>
         </div>
@@ -1427,7 +889,7 @@
             <section class="hero" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') center/cover no-repeat; height: 60vh;">
                 <div class="hero-content">
                     <h1>LUXURY VINEYARD ACCOMMODATIONS</h1>
-                    <p class="hero-subtitle">Three distinct experiences nestled in our boutique vineyard above Lake Dunstan</p>
+                    <p class="hero-subtitle">Three distinct experiences on our boutique vineyard property above Lake Dunstan</p>
                 </div>
             </section>
 
@@ -1440,28 +902,6 @@
                                 <div class="accommodation-badge">PREMIUM GLAMPING</div>
                                 <h3>Dome Pinot</h3>
                                 <p class="accommodation-tagline">Luxury vineyard glamping with stargazing skylight</p>
-                            </div>
-                            
-                            <!-- Photo Gallery for Dome Pinot -->
-                            <div class="photo-gallery">
-                                <div class="main-photo">
-                                    <img src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Dome Pinot Living Area" class="gallery-image">
-                                    <div class="photo-caption">Luxury living area with panoramic lake views</div>
-                                </div>
-                                <div class="photo-grid">
-                                    <div class="gallery-thumb">
-                                        <img src="https://images.unsplash.com/photo-1586375300773-8384e3e4916f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Bedroom with Stargazing Skylight" class="gallery-image">
-                                        <div class="thumb-caption">Master bedroom with stargazing skylight</div>
-                                    </div>
-                                    <div class="gallery-thumb">
-                                        <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Kitchen with Lake Views" class="gallery-image">
-                                        <div class="thumb-caption">Gourmet kitchen with hanging egg chair</div>
-                                    </div>
-                                    <div class="gallery-thumb">
-                                        <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Private Hot Tub with Lake Views" class="gallery-image">
-                                        <div class="thumb-caption">Private saltwater spa overlooking the lake</div>
-                                    </div>
-                                </div>
                             </div>
                             
                             <div class="details-grid">
@@ -1484,7 +924,7 @@
                             </div>
                             
                             <div class="accommodation-description">
-                                <p>Experience luxury glamping in our 50sqm dome featuring a unique stargazing skylight above your super king size bed. Enjoy modern amenities including a full kitchen with Nespresso machine, 65" OLED TV, and a relaxing swing chair overlooking the vineyard.</p>
+                                <p>Experience luxury glamping in our 50sqm dome featuring a unique stargazing skylight above your super king size bed. Positioned within our working vineyard, enjoy modern amenities including a full kitchen with Nespresso machine, 65" OLED TV, and a relaxing swing chair overlooking the vineyard.</p>
                                 
                                 <p>Step outside to your private deck with BBQ facilities and unwind in your very own fresh saltwater spa with jet lounge. Continental breakfast for two is included in your stay.</p>
                             </div>
@@ -1548,7 +988,7 @@
                             </div>
                             
                             <div class="accommodation-description">
-                                <p>Welcome to Lakeside Glamping, where we offer a luxury glamping dome experience in our boutique vineyard with superb views of lake and mountains. The purposely built glamping dome combines the serenity of nature with the luxurious comforts of five-star accommodation.</p>
+                                <p>Welcome to Lakeside Glamping, where we offer a luxury glamping dome experience positioned within our boutique vineyard with superb views of lake and mountains. The purposely built glamping dome combines the serenity of nature with the luxurious comforts of five-star accommodation.</p>
                                 
                                 <p>Dome Rosé offers a unique and unforgettable experience for adventurous souls seeking romantic tranquility. Perfect for couples wanting an authentic connection with Central Otago's stunning landscape while enjoying modern luxury amenities.</p>
                             </div>
@@ -1597,7 +1037,7 @@
                             <div class="accommodation-header">
                                 <div class="accommodation-badge">FAMILY FRIENDLY</div>
                                 <h3>Lakeside Cottage</h3>
-                                <p class="accommodation-tagline">Pet-friendly vineyard cottage with wood fired hot tub</p>
+                                <p class="accommodation-tagline">Pet-friendly cottage with panoramic lake views and wood fired hot tub</p>
                             </div>
                             
                             <div class="details-grid">
@@ -1620,9 +1060,9 @@
                             </div>
                             
                             <div class="accommodation-description">
-                                <p>Welcome to Lakeside Retreat! Your luxurious Central Otago experience starts here staying at our stunning cottage with simply breath-taking panoramic views over Lake Dunstan and an epic backdrop of Mt Pisa. We are conveniently located in a boutique vineyard on the shores of Lake Dunstan, Cromwell.</p>
+                                <p>Welcome to Lakeside Retreat! Your luxurious Central Otago experience starts here staying at our stunning cottage with simply breath-taking panoramic views over Lake Dunstan and an epic backdrop of Mt Pisa. We are conveniently located on the shores of Lake Dunstan, Cromwell, within our boutique vineyard property.</p>
                                 
-                                <p>You are staying at a cozy one bedroom self-contained cottage with private/secure area in our boutique vineyard. The cottage has its own private entry and outdoor living with breath-taking views over patio and lawn area. Your very own wood fired hot tub is available during your stay.</p>
+                                <p>You are staying at a cozy one bedroom self-contained cottage with private/secure area on our vineyard property. The cottage has its own private entry and outdoor living with breath-taking views over patio and lawn area. Your very own wood fired hot tub is available during your stay.</p>
                                 
                                 <p>This stunning retreat offers complete peace, tranquillity and privacy unrivalled in the region. Located in the heart of award-winning wineries, olive farms, and Lake Dunstan cycle trail right on your doorstep (300 meters).</p>
                             </div>
@@ -1681,668 +1121,8 @@
                     </div>
                     
                     <div style="background: var(--primary-teal); color: white; padding: 3rem; border-radius: 16px; text-align: center; margin-top: 3rem; box-shadow: var(--shadow-lg);">
-                        <h3 style="font-size: 1.75rem; margin-bottom: 1.5rem; font-weight: 600;">🍇 Boutique Vineyard Setting</h3>
-                        <p style="font-size: 1rem; line-height: 1.7; max-width: 800px; margin: 0 auto; opacity: 0.95;">All accommodations are nestled within our working boutique vineyard at 96 Smiths Way, Mount Pisa, offering unrivaled privacy and tranquility. You're perfectly positioned in the heart of Central Otago's award-winning wine region with superb views of lake and mountains, and the Cromwell to Clyde cycle trail right at your doorstep.</p>
-                    </div>
-                </div>
-            </section>
-        </div>
-
-        <!-- GALLERY PAGE -->
-        <div class="page-container" id="gallery-page">
-            <section class="hero" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') center/cover no-repeat; height: 60vh;">
-                <div class="hero-content">
-                    <h1>PHOTO GALLERY</h1>
-                    <p class="hero-subtitle">Stunning views and luxury accommodations captured in every season</p>
-                </div>
-            </section>
-
-            <section class="section">
-                <div class="container">
-                    <div class="photo-gallery-grid">
-                        <div class="photo-item" onclick="openLightbox('https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80')">
-                            <img src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Dome Pinot Interior">
-                            <div class="photo-overlay">
-                                <p>Dome Pinot - Luxury Interior</p>
-                            </div>
-                        </div>
-                        
-                        <div class="photo-item" onclick="openLightbox('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80')">
-                            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Lake Dunstan Views">
-                            <div class="photo-overlay">
-                                <p>Pristine Lake Dunstan Views</p>
-                            </div>
-                        </div>
-                        
-                        <div class="photo-item" onclick="openLightbox('https://images.unsplash.com/photo-1586375300773-8384e3e4916f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80')">
-                            <img src="https://images.unsplash.com/photo-1586375300773-8384e3e4916f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Mountain Views">
-                            <div class="photo-overlay">
-                                <p>Mountain & Vineyard Views</p>
-                            </div>
-                        </div>
-                        
-                        <div class="photo-item" onclick="openLightbox('https://images.unsplash.com/photo-1566754425906-0c5dd8c88c72?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80')">
-                            <img src="https://images.unsplash.com/photo-1566754425906-0c5dd8c88c72?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Wine Tasting">
-                            <div class="photo-overlay">
-                                <p>Central Otago Wine Experience</p>
-                            </div>
-                        </div>
-                        
-                        <div class="photo-item" onclick="openLightbox('https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80')">
-                            <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Hiking Trails">
-                            <div class="photo-overlay">
-                                <p>Scenic Hiking Trails</p>
-                            </div>
-                        </div>
-                        
-                        <div class="photo-item" onclick="openLightbox('https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80')">
-                            <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cottage Exterior">
-                            <div class="photo-overlay">
-                                <p>Lakeside Cottage</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-
-        <!-- REVIEWS PAGE -->
-        <div class="page-container" id="reviews-page">
-            <section class="hero" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') center/cover no-repeat; height: 60vh;">
-                <div class="hero-content">
-                    <h1>GUEST REVIEWS</h1>
-                    <p class="hero-subtitle">What our guests say about their Lakeside Retreat experience</p>
-                </div>
-            </section>
-
-            <section class="reviews">
-                <div class="container">
-                    <div class="rating-overview">
-                        <div class="overall-rating">
-                            <div class="rating-number">4.9</div>
-                            <div class="rating-stars">
-                                <span class="star">★</span>
-                                <span class="star">★</span>
-                                <span class="star">★</span>
-                                <span class="star">★</span>
-                                <span class="star">★</span>
-                            </div>
-                            <div class="rating-text">Exceptional</div>
-                        </div>
-                        <div class="rating-platforms">
-                            <div class="platform-rating">
-                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 30'%3E%3Crect width='100' height='30' fill='%23FF5A5F'/%3E%3Ctext x='50' y='20' text-anchor='middle' fill='white' font-size='12' font-weight='bold'%3EAirbnb%3C/text%3E%3C/svg%3E" alt="Airbnb" class="platform-logo">
-                                <div class="platform-score">4.9/5</div>
-                                <div class="platform-reviews">125 reviews</div>
-                            </div>
-                            <div class="platform-rating">
-                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 30'%3E%3Crect width='100' height='30' fill='%23003580'/%3E%3Ctext x='50' y='20' text-anchor='middle' fill='white' font-size='10' font-weight='bold'%3EBooking.com%3C/text%3E%3C/svg%3E" alt="Booking.com" class="platform-logo">
-                                <div class="platform-score">9.6/10</div>
-                                <div class="platform-reviews">89 reviews</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="reviews-grid">
-                        <!-- Featured Review -->
-                        <div class="review-card featured" style="position: relative;">
-                            <div class="review-header">
-                                <div class="reviewer-info">
-                                    <div class="reviewer-avatar">S</div>
-                                    <div class="reviewer-details">
-                                        <div class="reviewer-name">Sarah & James</div>
-                                        <div class="reviewer-location">Auckland, New Zealand</div>
-                                    </div>
-                                </div>
-                                <div class="review-rating">
-                                    <div class="stars">★★★★★</div>
-                                    <div class="platform">Airbnb</div>
-                                </div>
-                            </div>
-                            <div class="review-content">
-                                <p>"Absolutely magical experience at Dome Pinot! The stargazing skylight above the bed was incredible - we fell asleep watching the stars. The saltwater spa overlooking Lake Dunstan at sunset was pure bliss. Hosts were wonderful with local wine recommendations. Perfect romantic getaway in Central Otago!"</p>
-                            </div>
-                            <div class="review-date">January 2024</div>
-                        </div>
-
-                        <!-- Review 2 -->
-                        <div class="review-card">
-                            <div class="review-header">
-                                <div class="reviewer-info">
-                                    <div class="reviewer-avatar">M</div>
-                                    <div class="reviewer-details">
-                                        <div class="reviewer-name">Michael & Family</div>
-                                        <div class="reviewer-location">Melbourne, Australia</div>
-                                    </div>
-                                </div>
-                                <div class="review-rating">
-                                    <div class="stars">★★★★★</div>
-                                    <div class="platform">Booking.com</div>
-                                </div>
-                            </div>
-                            <div class="review-content">
-                                <p>"The Lakeside Cottage exceeded all expectations! Kids loved the wood-fired hot tub and our dog was warmly welcomed. The hosts' local knowledge was invaluable - they recommended perfect wineries and activities. Location is unbeatable with cycle trail at the doorstep."</p>
-                            </div>
-                            <div class="review-date">December 2023</div>
-                        </div>
-
-                        <!-- Review 3 -->
-                        <div class="review-card">
-                            <div class="review-header">
-                                <div class="reviewer-info">
-                                    <div class="reviewer-avatar">L</div>
-                                    <div class="reviewer-details">
-                                        <div class="reviewer-name">Lisa & Tom</div>
-                                        <div class="reviewer-location">Sydney, Australia</div>
-                                    </div>
-                                </div>
-                                <div class="review-rating">
-                                    <div class="stars">★★★★★</div>
-                                    <div class="platform">Airbnb</div>
-                                </div>
-                            </div>
-                            <div class="review-content">
-                                <p>"Dome Rosé was perfect for our anniversary trip. The vineyard setting is stunning and waking up to Lake Dunstan views every day was magical. Breakfast included was a lovely touch. Hosts went above and beyond with restaurant recommendations. Highly recommend!"</p>
-                            </div>
-                            <div class="review-date">November 2023</div>
-                        </div>
-
-                        <!-- Review 4 -->
-                        <div class="review-card">
-                            <div class="review-header">
-                                <div class="reviewer-info">
-                                    <div class="reviewer-avatar">D</div>
-                                    <div class="reviewer-details">
-                                        <div class="reviewer-name">David & Emma</div>
-                                        <div class="reviewer-location">Wellington, New Zealand</div>
-                                    </div>
-                                </div>
-                                <div class="review-rating">
-                                    <div class="stars">★★★★★</div>
-                                    <div class="platform">Booking.com</div>
-                                </div>
-                            </div>
-                            <div class="review-content">
-                                <p>"Exceptional accommodation in the heart of Central Otago wine country. The dome experience is unique and luxurious. Private spa was incredible after days exploring wineries. Hosts are true local experts - their recommendations made our trip unforgettable."</p>
-                            </div>
-                            <div class="review-date">October 2023</div>
-                        </div>
-
-                        <!-- Review 5 -->
-                        <div class="review-card">
-                            <div class="review-header">
-                                <div class="reviewer-info">
-                                    <div class="reviewer-avatar">R</div>
-                                    <div class="reviewer-details">
-                                        <div class="reviewer-name">Rachel & Mark</div>
-                                        <div class="reviewer-location">Christchurch, New Zealand</div>
-                                    </div>
-                                </div>
-                                <div class="review-rating">
-                                    <div class="stars">★★★★★</div>
-                                    <div class="platform">Airbnb</div>
-                                </div>
-                            </div>
-                            <div class="review-content">
-                                <p>"Perfect base for exploring Central Otago! The cottage is immaculate with everything you need. Wood-fired hot tub under the stars was magical. Location is ideal - close to amazing wineries and easy access to Queenstown and Wanaka. Will definitely return!"</p>
-                            </div>
-                            <div class="review-date">September 2023</div>
-                        </div>
-
-                        <!-- Review 6 -->
-                        <div class="review-card">
-                            <div class="review-header">
-                                <div class="reviewer-info">
-                                    <div class="reviewer-avatar">C</div>
-                                    <div class="reviewer-details">
-                                        <div class="reviewer-name">Chris & Amy</div>
-                                        <div class="reviewer-location">Brisbane, Australia</div>
-                                    </div>
-                                </div>
-                                <div class="review-rating">
-                                    <div class="stars">★★★★★</div>
-                                    <div class="platform">Booking.com</div>
-                                </div>
-                            </div>
-                            <div class="review-content">
-                                <p>"Extraordinary glamping experience! The dome design is brilliant and the stargazing skylight is a genius feature. Hosts are passionate about the region and provided incredible insider tips. Sustainable luxury at its finest. Exceeded all expectations!"</p>
-                            </div>
-                            <div class="review-date">August 2023</div>
-                        </div>
-                    </div>
-
-                    <div style="background: var(--primary-teal); color: white; padding: 3rem; border-radius: 16px; margin-top: 3rem; box-shadow: var(--shadow-lg); text-align: center;">
-                        <h3 style="font-size: 1.75rem; margin-bottom: 1rem; font-weight: 600;">Ready to Create Your Own Amazing Experience?</h3>
-                        <p style="font-size: 1rem; margin-bottom: 2rem; opacity: 0.95;">Join hundreds of satisfied guests who've discovered the magic of Lakeside Retreat</p>
-                        <a href="https://book.lakesideretreat.co.nz/" target="_blank" class="btn btn-primary">BOOK YOUR STAY</a>
-                    </div>
-                </div>
-            </section>
-        </div>
-
-        <!-- EXPLORE PAGE -->
-        <div class="page-container" id="explore-page">
-            <section class="hero" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') center/cover no-repeat; height: 60vh;">
-                <div class="hero-content">
-                    <h1>EXPLORE CENTRAL OTAGO</h1>
-                    <p class="hero-subtitle">Your perfect base camp for discovering New Zealand's most iconic wine and adventure region</p>
-                </div>
-            </section>
-
-            <section class="section" style="background: var(--light-gray);">
-                <div class="container">
-                    <div style="max-width: 900px; margin: 3rem auto; text-align: center; background: var(--white); padding: 3rem; border-radius: 16px; box-shadow: var(--shadow);">
-                        <h3 style="font-size: 1.75rem; color: var(--text-dark); margin-bottom: 1.5rem; font-weight: 600;">🗺️ Your Local Knowledge Experts</h3>
-                        <p style="color: var(--text-dark); font-size: 1rem; line-height: 1.7; margin-bottom: 0;">Our Lakeside Retreat hosts know Central Otago intimately and love sharing insider knowledge with our guests. We provide detailed recommendations and local tips to help you plan and book your perfect itinerary directly with activity providers. Just let us know your interests when booking or upon arrival - we'll share our expertise and connections to help you create unforgettable experiences.</p>
-                    </div>
-
-                    <!-- Featured: Clyde Bike Trail Access -->
-                    <div style="background: var(--primary-teal); color: white; padding: 3rem; border-radius: 16px; margin: 3rem auto; text-align: center; box-shadow: var(--shadow-lg);">
-                        <h3 style="font-size: 1.75rem; margin-bottom: 1.5rem; font-weight: 600;">🚴‍♂️ Clyde Bike Trail - Right at Your Doorstep!</h3>
-                        <p style="font-size: 1rem; margin-bottom: 2rem; opacity: 0.95;">The famous Cromwell to Clyde cycle trail starts just 300 meters from Lakeside Retreat! No transport needed - step out your door and onto one of New Zealand's most scenic cycling experiences.</p>
-                        
-                        <div class="grid grid-3" style="gap: 1.5rem; max-width: 700px; margin: 0 auto;">
-                            <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 12px; backdrop-filter: blur(10px);">
-                                <h4 style="margin-bottom: 1rem; font-weight: 600;">🚲 Bike Hire</h4>
-                                <p style="font-size: 0.85rem; margin-bottom: 0.75rem;"><strong>Cycle Surgery Cromwell</strong><br>+64 3 445 4052<br>cyclesurgery.co.nz</p>
-                                <p style="font-size: 0.85rem; margin-bottom: 0.75rem;"><strong>Contact Cycles Central</strong><br>+64 3 445 4140<br>contactcycles.co.nz</p>
-                                <p style="font-size: 0.8rem; opacity: 0.9;">E-bikes available. Delivery to accommodation possible.</p>
-                            </div>
-                            <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 12px; backdrop-filter: blur(10px);">
-                                <h4 style="margin-bottom: 1rem; font-weight: 600;">📍 Trail Details</h4>
-                                <p style="font-size: 0.85rem; margin-bottom: 0.5rem;"><strong>Distance:</strong> 25km one-way</p>
-                                <p style="font-size: 0.85rem; margin-bottom: 0.5rem;"><strong>Duration:</strong> 2-4 hours</p>
-                                <p style="font-size: 0.85rem; margin-bottom: 0.5rem;"><strong>Difficulty:</strong> Easy - flat, sealed</p>
-                                <p style="font-size: 0.8rem; opacity: 0.9;">Stunning lake views, historic bridges, vineyards</p>
-                            </div>
-                            <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 12px; backdrop-filter: blur(10px);">
-                                <h4 style="margin-bottom: 1rem; font-weight: 600;">🌟 Best Times</h4>
-                                <p style="font-size: 0.85rem; margin-bottom: 0.5rem;"><strong>Year-round:</strong> Always accessible</p>
-                                <p style="font-size: 0.85rem; margin-bottom: 0.5rem;"><strong>Best:</strong> Early morning or late afternoon</p>
-                                <p style="font-size: 0.85rem; margin-bottom: 0.5rem;"><strong>Autumn:</strong> Golden vineyard colors</p>
-                                <p style="font-size: 0.8rem; opacity: 0.9;">We can arrange pickup from Clyde!</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="grid grid-2" style="gap: 2rem;">
-                        <!-- Wine Country Experiences -->
-                        <div class="card" style="padding: 2rem;">
-                            <div style="font-size: 2.5rem; text-align: center; margin-bottom: 1.5rem;">🍷</div>
-                            <h3 style="text-align: center; margin-bottom: 1.5rem; font-weight: 600;">WINE COUNTRY EXPERIENCES</h3>
-                            
-                            <div style="margin-bottom: 1.5rem;">
-                                <h4 style="color: var(--primary-teal); margin-bottom: 1rem; font-weight: 600; font-size: 1rem;">Premium Wineries (10-20 mins)</h4>
-                                <div style="background: var(--light-gray); padding: 1rem; border-radius: 8px; margin-bottom: 0.75rem;">
-                                    <p style="font-weight: 600; margin-bottom: 0.5rem; font-size: 0.9rem;">Gibbston Valley Winery</p>
-                                    <p style="font-size: 0.8rem; margin-bottom: 0.5rem; color: var(--text-light);">+64 3 442 6910 | gibbstonvalley.com</p>
-                                    <p style="font-size: 0.8rem; margin-bottom: 0;">Tastings $15-25, tours $35. Famous for Pinot Noir & underground cave.</p>
-                                </div>
-                                <div style="background: var(--light-gray); padding: 1rem; border-radius: 8px; margin-bottom: 0.75rem;">
-                                    <p style="font-weight: 600; margin-bottom: 0.5rem; font-size: 0.9rem;">Chard Farm</p>
-                                    <p style="font-size: 0.8rem; margin-bottom: 0.5rem; color: var(--text-light);">+64 3 442 6110 | chardfarm.co.nz</p>
-                                    <p style="font-size: 0.8rem; margin-bottom: 0;">Dramatic cliff-top setting. Tastings $10. Best views in Central Otago.</p>
-                                </div>
-                                <div style="background: var(--light-gray); padding: 1rem; border-radius: 8px; margin-bottom: 0.75rem;">
-                                    <p style="font-weight: 600; margin-bottom: 0.5rem; font-size: 0.9rem;">Peregrine Wines</p>
-                                    <p style="font-size: 0.8rem; margin-bottom: 0.5rem; color: var(--text-light);">+64 3 442 4000 | peregrinewines.co.nz</p>
-                                    <p style="font-size: 0.8rem; margin-bottom: 0;">Iconic architecture. Tastings $20, private tours available.</p>
-                                </div>
-                            </div>
-
-                            <div>
-                                <h4 style="color: var(--primary-teal); margin-bottom: 1rem; font-weight: 600; font-size: 1rem;">Wine Tours</h4>
-                                <div style="background: var(--light-gray); padding: 1rem; border-radius: 8px;">
-                                    <p style="font-weight: 600; margin-bottom: 0.5rem; font-size: 0.9rem;">Appellation Wine Tours</p>
-                                    <p style="font-size: 0.8rem; margin-bottom: 0.5rem; color: var(--text-light);">+64 3 442 7799 | appellationwinetours.co.nz</p>
-                                    <p style="font-size: 0.8rem; margin-bottom: 0;">Half/full day tours from $165. Small groups, local guides.</p>
-                                </div>
-                            </div>
-
-                            <p style="margin-top: 1.5rem; font-size: 0.8rem; color: var(--text-light); font-style: italic;">🍂 Autumn (Mar-May): Harvest season, stunning colors<br>🌞 Summer (Dec-Feb): Perfect weather, all cellar doors open<br>❄️ Winter (Jun-Aug): Cozy tastings, fewer crowds</p>
-                        </div>
-
-                        <!-- Helicopter Adventures -->
-                        <div class="card" style="padding: 2rem;">
-                            <div style="font-size: 2.5rem; text-align: center; margin-bottom: 1.5rem;">🚁</div>
-                            <h3 style="text-align: center; margin-bottom: 1.5rem; font-weight: 600;">HELICOPTER ADVENTURES</h3>
-                            
-                            <div style="margin-bottom: 1.5rem;">
-                                <h4 style="color: var(--primary-teal); margin-bottom: 1rem; font-weight: 600; font-size: 1rem;">Scenic Flights</h4>
-                                <div style="background: var(--light-gray); padding: 1rem; border-radius: 8px; margin-bottom: 0.75rem;">
-                                    <p style="font-weight: 600; margin-bottom: 0.5rem; font-size: 0.9rem;">Over The Top Helicopters</p>
-                                    <p style="font-size: 0.8rem; margin-bottom: 0.5rem; color: var(--text-light);">+64 3 442 2233 | flynz.co.nz</p>
-                                    <p style="font-size: 0.8rem; margin-bottom: 0;">Milford Sound day trips from $795. Scenic flights from $325.</p>
-                                </div>
-                                <div style="background: var(--light-gray); padding: 1rem; border-radius: 8px; margin-bottom: 0.75rem;">
-                                    <p style="font-weight: 600; margin-bottom: 0.5rem; font-size: 0.9rem;">Helicopter Line</p>
-                                    <p style="font-size: 0.8rem; margin-bottom: 0.5rem; color: var(--text-light);">+64 3 442 3034 | helicopter.co.nz</p>
-                                    <p style="font-size: 0.8rem; margin-bottom: 0;">Glacier landings from $549. Photography tours, wine tours available.</p>
-                                </div>
-                            </div>
-
-                            <div>
-                                <h4 style="color: var(--primary-teal); margin-bottom: 1rem; font-weight: 600; font-size: 1rem;">Popular Routes</h4>
-                                <div style="background: var(--light-gray); padding: 1rem; border-radius: 8px;">
-                                    <p style="font-weight: 600; margin-bottom: 0.5rem; font-size: 0.9rem;">Milford Sound Day Trip</p>
-                                    <p style="font-size: 0.8rem; margin-bottom: 0.5rem;">Flight + cruise + flight back. 7-8 hours total.</p>
-                                    <p style="font-weight: 600; margin-bottom: 0.5rem; font-size: 0.9rem;">Southern Alps Scenic</p>
-                                    <p style="font-size: 0.8rem; margin-bottom: 0;">45-60 min flights with glacier landings.</p>
-                                </div>
-                            </div>
-
-                            <p style="margin-top: 1.5rem; font-size: 0.8rem; color: var(--text-light); font-style: italic;">🌤️ Weather dependent - book flexible dates<br>🌞 Best: Oct-Apr (clear skies)<br>📧 Book 2-7 days ahead for best availability</p>
-                        </div>
-
-                        <!-- Lake & Mountain Adventures -->
-                        <div class="card" style="padding: 2rem;">
-                            <div style="font-size: 2.5rem; text-align: center; margin-bottom: 1.5rem;">🏔️</div>
-                            <h3 style="text-align: center; margin-bottom: 1.5rem; font-weight: 600;">LAKE & MOUNTAIN ADVENTURES</h3>
-                            
-                            <div style="margin-bottom: 1.5rem;">
-                                <h4 style="color: var(--primary-teal); margin-bottom: 1rem; font-weight: 600; font-size: 1rem;">Lake Dunstan Activities</h4>
-                                <div style="background: var(--light-gray); padding: 1rem; border-radius: 8px; margin-bottom: 0.75rem;">
-                                    <p style="font-weight: 600; margin-bottom: 0.5rem; font-size: 0.9rem;">Central Otago Jet Boat Tours</p>
-                                    <p style="font-size: 0.8rem; margin-bottom: 0.5rem; color: var(--text-light);">+64 27 434 7386 | centraljet.co.nz</p>
-                                    <p style="font-size: 0.8rem; margin-bottom: 0;">Lake cruises from $89. Departs nearby Cromwell.</p>
-                                </div>
-                                <div style="background: var(--light-gray); padding: 1rem; border-radius: 8px; margin-bottom: 0.75rem;">
-                                    <p style="font-weight: 600; margin-bottom: 0.5rem; font-size: 0.9rem;">Kayak & SUP Hire</p>
-                                    <p style="font-size: 0.8rem; margin-bottom: 0.5rem; color: var(--text-light);">Pioneer Park, Cromwell | +64 3 445 0886</p>
-                                    <p style="font-size: 0.8rem; margin-bottom: 0;">Hourly/daily hire. Delivered to accommodation on request.</p>
-                                </div>
-                            </div>
-
-                            <div>
-                                <h4 style="color: var(--primary-teal); margin-bottom: 1rem; font-weight: 600; font-size: 1rem;">Mountain Adventures</h4>
-                                <div style="background: var(--light-gray); padding: 1rem; border-radius: 8px;">
-                                    <p style="font-weight: 600; margin-bottom: 0.5rem; font-size: 0.9rem;">Summer: Hiking & Biking</p>
-                                    <p style="font-size: 0.8rem; margin-bottom: 0.5rem;">Ben Lomond track (6hrs), Kawarau Gorge trails</p>
-                                    <p style="font-weight: 600; margin-bottom: 0.5rem; font-size: 0.9rem;">Winter: Skiing (Jun-Sep)</p>
-                                    <p style="font-size: 0.8rem; margin-bottom: 0;">Cardrona (45min), Treble Cone (50min), Coronet Peak (60min)</p>
-                                </div>
-                            </div>
-
-                            <p style="margin-top: 1.5rem; font-size: 0.8rem; color: var(--text-light); font-style: italic;">🌞 Summer: Perfect for water sports & hiking<br>❄️ Winter: World-class skiing nearby<br>🎣 Fishing: Lake trout year-round (license required)</p>
-                        </div>
-
-                        <!-- Queenstown & Wanaka Access -->
-                        <div class="card" style="padding: 2rem;">
-                            <div style="font-size: 2.5rem; text-align: center; margin-bottom: 1.5rem;">🎯</div>
-                            <h3 style="text-align: center; margin-bottom: 1.5rem; font-weight: 600;">QUEENSTOWN & WANAKA ACCESS</h3>
-                            
-                            <div style="margin-bottom: 1.5rem;">
-                                <h4 style="color: var(--primary-teal); margin-bottom: 1rem; font-weight: 600; font-size: 1rem;">Queenstown (45 minutes)</h4>
-                                <div style="background: var(--light-gray); padding: 1rem; border-radius: 8px; margin-bottom: 0.75rem;">
-                                    <p style="font-weight: 600; margin-bottom: 0.5rem; font-size: 0.9rem;">AJ Hackett Bungy</p>
-                                    <p style="font-size: 0.8rem; margin-bottom: 0.5rem; color: var(--text-light);">+64 3 442 4007 | ajhackett.com</p>
-                                    <p style="font-size: 0.8rem; margin-bottom: 0;">Kawarau Bridge $235, Ledge $255, Nevis $335.</p>
-                                </div>
-                                <div style="background: var(--light-gray); padding: 1rem; border-radius: 8px; margin-bottom: 0.75rem;">
-                                    <p style="font-weight: 600; margin-bottom: 0.5rem; font-size: 0.9rem;">Shotover Jet</p>
-                                    <p style="font-size: 0.8rem; margin-bottom: 0.5rem; color: var(--text-light);">+64 3 442 8570 | shotoverjet.com</p>
-                                    <p style="font-size: 0.8rem; margin-bottom: 0;">Famous 360° spins. Adults $149, combo packages available.</p>
-                                </div>
-                            </div>
-
-                            <div>
-                                <h4 style="color: var(--primary-teal); margin-bottom: 1rem; font-weight: 600; font-size: 1rem;">Wanaka (30 minutes)</h4>
-                                <div style="background: var(--light-gray); padding: 1rem; border-radius: 8px;">
-                                    <p style="font-weight: 600; margin-bottom: 0.5rem; font-size: 0.9rem;">#ThatWanakaTree & Lake</p>
-                                    <p style="font-size: 0.8rem; margin-bottom: 0.5rem;">FREE - Famous Instagram spot, lakefront walks</p>
-                                    <p style="font-weight: 600; margin-bottom: 0.5rem; font-size: 0.9rem;">Puzzling World</p>
-                                    <p style="font-size: 0.8rem; margin-bottom: 0;">+64 3 443 7489 | puzzlingworld.co.nz | Adults $22</p>
-                                </div>
-                            </div>
-
-                            <p style="margin-top: 1.5rem; font-size: 0.8rem; color: var(--text-light); font-style: italic;">🚗 Easy day trips from Lakeside Retreat<br>🌟 Queenstown: Adventure capital activities<br>🏞️ Wanaka: Relaxed alpine town atmosphere</p>
-                        </div>
-                    </div>
-
-                    <div style="background: var(--white); border: 2px solid var(--primary-teal); padding: 2.5rem; border-radius: 16px; margin: 3rem auto; max-width: 800px; text-align: center; box-shadow: var(--shadow);">
-                        <h4 style="color: var(--primary-teal); font-size: 1.25rem; margin-bottom: 1.5rem; font-weight: 600;">📞 How We Help You Explore</h4>
-                        <p style="color: var(--text-dark); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem;"><strong>As Your Local Knowledge Experts:</strong> We share insider recommendations and offer timing tips based on years of Central Otago experience.</p>
-                        <p style="color: var(--text-dark); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem;"><strong>Direct Booking Benefits:</strong> You book activities directly with operators for the best rates, flexible scheduling, and direct communication about your specific needs.</p>
-                        <p style="color: var(--text-dark); font-size: 0.95rem; line-height: 1.6; margin-bottom: 0;"><strong>Our Expertise + Your Control:</strong> The perfect combination of local knowledge and booking flexibility.</p>
-                    </div>
-                </div>
-            </section>
-        </div>
-
-        <!-- TESTIMONIALS PAGE -->
-        <div class="page-container" id="testimonials-page">
-            <section class="hero" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') center/cover no-repeat; height: 60vh;">
-                <div class="hero-content">
-                    <h1>GUEST TESTIMONIALS</h1>
-                    <p class="hero-subtitle">Share your Lakeside Retreat experience and inspire future guests</p>
-                </div>
-            </section>
-
-            <section class="testimonials-system">
-                <div class="container">
-                    <!-- Testimonial Submission Form -->
-                    <div class="testimonial-submission">
-                        <div class="submission-header">
-                            <h3>Share Your Lakeside Story</h3>
-                            <p>Help fellow travelers discover the magic of Central Otago through your experience</p>
-                            <div class="incentive-badge">
-                                <span class="incentive-icon">🎁</span>
-                                <span>Submit a review and receive 10% off your next stay!</span>
-                            </div>
-                        </div>
-                        
-                        <form class="testimonial-form" id="testimonialForm">
-                            <div class="form-grid">
-                                <!-- Guest Information -->
-                                <div class="form-section">
-                                    <h4>About You</h4>
-                                    <div class="form-row">
-                                        <input type="text" name="guestName" placeholder="Your Name *" required>
-                                        <input type="email" name="guestEmail" placeholder="Email (private) *" required>
-                                    </div>
-                                    <div class="form-row">
-                                        <input type="text" name="guestLocation" placeholder="Your Location (e.g., Sydney, Australia)">
-                                        <select name="guestType">
-                                            <option value="">Travel Type</option>
-                                            <option value="couple">Romantic Getaway</option>
-                                            <option value="family">Family Trip</option>
-                                            <option value="friends">Friends Getaway</option>
-                                            <option value="solo">Solo Travel</option>
-                                            <option value="business">Business Trip</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                
-                                <!-- Stay Details -->
-                                <div class="form-section">
-                                    <h4>Your Stay</h4>
-                                    <div class="form-row">
-                                        <select name="accommodation" required>
-                                            <option value="">Which accommodation? *</option>
-                                            <option value="dome-pinot">Dome Pinot - Premium Glamping</option>
-                                            <option value="dome-rose">Dome Rosé - Romantic Retreat</option>
-                                            <option value="lakeside-cottage">Lakeside Cottage - Family Friendly</option>
-                                        </select>
-                                        <input type="month" name="stayDate" placeholder="Month/Year of Stay">
-                                    </div>
-                                    <div class="form-row">
-                                        <input type="number" name="nights" placeholder="Nights Stayed" min="1" max="30">
-                                        <select name="season">
-                                            <option value="">Season</option>
-                                            <option value="summer">Summer</option>
-                                            <option value="autumn">Autumn</option>
-                                            <option value="winter">Winter</option>
-                                            <option value="spring">Spring</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Rating System -->
-                            <div class="rating-section">
-                                <h4>Rate Your Experience</h4>
-                                <div class="rating-categories">
-                                    <div class="rating-item">
-                                        <label>Overall Experience</label>
-                                        <div class="star-rating" data-rating="overall">
-                                            <span class="star" data-value="1">★</span>
-                                            <span class="star" data-value="2">★</span>
-                                            <span class="star" data-value="3">★</span>
-                                            <span class="star" data-value="4">★</span>
-                                            <span class="star" data-value="5">★</span>
-                                        </div>
-                                    </div>
-                                    <div class="rating-item">
-                                        <label>Accommodation Quality</label>
-                                        <div class="star-rating" data-rating="accommodation">
-                                            <span class="star" data-value="1">★</span>
-                                            <span class="star" data-value="2">★</span>
-                                            <span class="star" data-value="3">★</span>
-                                            <span class="star" data-value="4">★</span>
-                                            <span class="star" data-value="5">★</span>
-                                        </div>
-                                    </div>
-                                    <div class="rating-item">
-                                        <label>Host Service</label>
-                                        <div class="star-rating" data-rating="service">
-                                            <span class="star" data-value="1">★</span>
-                                            <span class="star" data-value="2">★</span>
-                                            <span class="star" data-value="3">★</span>
-                                            <span class="star" data-value="4">★</span>
-                                            <span class="star" data-value="5">★</span>
-                                        </div>
-                                    </div>
-                                    <div class="rating-item">
-                                        <label>Location & Views</label>
-                                        <div class="star-rating" data-rating="location">
-                                            <span class="star" data-value="1">★</span>
-                                            <span class="star" data-value="2">★</span>
-                                            <span class="star" data-value="3">★</span>
-                                            <span class="star" data-value="4">★</span>
-                                            <span class="star" data-value="5">★</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Review Content -->
-                            <div style="margin: 2.5rem 0;">
-                                <h4 style="color: var(--text-dark); margin-bottom: 1rem; font-weight: 600;">Tell Your Story</h4>
-                                <textarea name="reviewText" placeholder="Share your experience at Lakeside Retreat... What made your stay special? Which features did you love most? How did our local recommendations enhance your trip?" rows="6" required style="width: 100%; padding: 1rem; border: 1px solid var(--border-light); border-radius: 8px; font-size: 0.9rem; font-family: inherit; resize: vertical; transition: border-color 0.3s ease;"></textarea>
-                                
-                                <div style="margin-top: 1.5rem;">
-                                    <h5 style="color: var(--text-light); margin-bottom: 1rem; font-size: 0.85rem;">Need inspiration? Tell us about:</h5>
-                                    <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
-                                        <span class="prompt-tag" style="background: var(--white); padding: 0.4rem 0.8rem; border-radius: 15px; font-size: 0.8rem; border: 1px solid var(--border-light); color: var(--text-dark); cursor: pointer; transition: var(--transition);">🌟 Favorite unique feature</span>
-                                        <span class="prompt-tag" style="background: var(--white); padding: 0.4rem 0.8rem; border-radius: 15px; font-size: 0.8rem; border: 1px solid var(--border-light); color: var(--text-dark); cursor: pointer; transition: var(--transition);">🍷 Wine recommendations we provided</span>
-                                        <span class="prompt-tag" style="background: var(--white); padding: 0.4rem 0.8rem; border-radius: 15px; font-size: 0.8rem; border: 1px solid var(--border-light); color: var(--text-dark); cursor: pointer; transition: var(--transition);">🏔️ Views and landscape</span>
-                                        <span class="prompt-tag" style="background: var(--white); padding: 0.4rem 0.8rem; border-radius: 15px; font-size: 0.8rem; border: 1px solid var(--border-light); color: var(--text-dark); cursor: pointer; transition: var(--transition);">🛁 Hot tub/spa experience</span>
-                                        <span class="prompt-tag" style="background: var(--white); padding: 0.4rem 0.8rem; border-radius: 15px; font-size: 0.8rem; border: 1px solid var(--border-light); color: var(--text-dark); cursor: pointer; transition: var(--transition);">🏡 Accommodation comfort</span>
-                                        <span class="prompt-tag" style="background: var(--white); padding: 0.4rem 0.8rem; border-radius: 15px; font-size: 0.8rem; border: 1px solid var(--border-light); color: var(--text-dark); cursor: pointer; transition: var(--transition);">📍 Local activities you enjoyed</span>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Permissions -->
-                            <div style="margin: 2.5rem 0;">
-                                <div style="display: flex; flex-direction: column; gap: 1rem;">
-                                    <label style="display: flex; align-items: flex-start; gap: 1rem; cursor: pointer;">
-                                        <input type="checkbox" name="websitePermission" required style="margin-top: 2px;">
-                                        <span style="font-size: 0.9rem;">I consent to sharing this review on your website and marketing materials *</span>
-                                    </label>
-                                    <label style="display: flex; align-items: flex-start; gap: 1rem; cursor: pointer;">
-                                        <input type="checkbox" name="emailUpdates" style="margin-top: 2px;">
-                                        <span style="font-size: 0.9rem;">Send me occasional updates about Lakeside Retreat and Central Otago</span>
-                                    </label>
-                                    <label style="display: flex; align-items: flex-start; gap: 1rem; cursor: pointer;">
-                                        <input type="checkbox" name="futureOffers" style="margin-top: 2px;">
-                                        <span style="font-size: 0.9rem;">I'd like to receive my 10% off discount code for future stays</span>
-                                    </label>
-                                </div>
-                            </div>
-                            
-                            <button type="submit" style="background: var(--primary-teal); color: white; padding: 1.25rem 2.5rem; border: none; border-radius: 25px; font-size: 1rem; font-weight: 600; cursor: pointer; transition: var(--transition); display: flex; align-items: center; gap: 1rem; margin: 2rem auto 0; text-transform: uppercase; letter-spacing: 0.5px;">
-                                <span>Submit My Review</span>
-                                <span>✨</span>
-                            </button>
-                        </form>
-                    </div>
-                    
-                    <!-- Success Message (Hidden by default) -->
-                    <div id="submissionSuccess" style="display: none; background: var(--primary-teal); color: white; padding: 3rem; border-radius: 16px; text-align: center; margin: 3rem 0; box-shadow: var(--shadow-lg);">
-                        <div style="font-size: 3rem; margin-bottom: 1rem;">🎉</div>
-                        <h3 style="font-size: 1.75rem; margin: 1rem 0; font-weight: 600;">Thank You for Sharing!</h3>
-                        <p style="margin-bottom: 2rem;">Your testimonial has been submitted and will appear on our website after review. We've sent your 10% discount code to your email!</p>
-                        <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.2);">
-                            <p style="margin-bottom: 1rem;">Don't forget to tag us on social media:</p>
-                            <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
-                                <span style="background: rgba(255,255,255,0.2); padding: 0.5rem 1rem; border-radius: 15px; font-family: monospace; font-size: 0.85rem;">@lakesideretreat</span>
-                                <span style="background: rgba(255,255,255,0.2); padding: 0.5rem 1rem; border-radius: 15px; font-family: monospace; font-size: 0.85rem;">#lakesideretreat</span>
-                                <span style="background: rgba(255,255,255,0.2); padding: 0.5rem 1rem; border-radius: 15px; font-family: monospace; font-size: 0.85rem;">#centralotagowine</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-
-        <!-- CONTACT PAGE -->
-        <div class="page-container" id="contact-page">
-            <section class="hero" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') center/cover no-repeat; height: 60vh;">
-                <div class="hero-content">
-                    <h1>CONTACT US</h1>
-                    <p class="hero-subtitle">Get in touch to plan your perfect Central Otago experience</p>
-                </div>
-            </section>
-
-            <section class="section">
-                <div class="container">
-                    <div class="grid grid-2">
-                        <div class="card">
-                            <h3>Get in Touch</h3>
-                            <div style="margin: 2rem 0;">
-                                <div style="display: flex; align-items: center; margin-bottom: 1rem;">
-                                    <i class="fas fa-envelope" style="color: var(--accent-orange); margin-right: 1rem; width: 20px;"></i>
-                                    <span>info@lakesideretreat.co.nz</span>
-                                </div>
-                                <div style="display: flex; align-items: center; margin-bottom: 1rem;">
-                                    <i class="fas fa-map-marker-alt" style="color: var(--accent-orange); margin-right: 1rem; width: 20px;"></i>
-                                    <span>96 Smiths Way, Mount Pisa<br>Cromwell, New Zealand</span>
-                                </div>
-                                <div style="display: flex; align-items: center; margin-bottom: 1rem;">
-                                    <i class="fas fa-clock" style="color: var(--accent-orange); margin-right: 1rem; width: 20px;"></i>
-                                    <span>Check-in: 3:00 PM<br>Check-out: 10:00 AM / 11:00 AM</span>
-                                </div>
-                            </div>
-                            
-                            <h4>Booking Information</h4>
-                            <p style="margin-bottom: 1rem;">All bookings are managed by Uplistinging for the best rates and personalized service.</p>
-                            <a href="https://book.lakesideretreat.co.nz/" target="_blank" class="btn btn-primary" style="margin-top: 1rem;">Check Availability</a>
-                        </div>
-                        
-                        <div class="card">
-                            <h3>Send Us a Message</h3>
-                            <form style="margin-top: 2rem;">
-                                <div style="margin-bottom: 1rem;">
-                                    <input type="text" placeholder="Your Name" style="width: 100%; padding: 0.75rem; border: 1px solid var(--border-light); border-radius: 8px; font-size: 0.9rem;">
-                                </div>
-                                <div style="margin-bottom: 1rem;">
-                                    <input type="email" placeholder="Your Email" style="width: 100%; padding: 0.75rem; border: 1px solid var(--border-light); border-radius: 8px; font-size: 0.9rem;">
-                                </div>
-                                <div style="margin-bottom: 1rem;">
-                                    <select style="width: 100%; padding: 0.75rem; border: 1px solid var(--border-light); border-radius: 8px; font-size: 0.9rem;">
-                                        <option>Select Accommodation</option>
-                                        <option>Dome Pinot - Premium Glamping</option>
-                                        <option>Dome Rosé - Romantic Retreat</option>
-                                        <option>Lakeside Cottage - Family Friendly</option>
-                                    </select>
-                                </div>
-                                <div style="margin-bottom: 1rem;">
-                                    <textarea placeholder="Your Message" rows="5" style="width: 100%; padding: 0.75rem; border: 1px solid var(--border-light); border-radius: 8px; resize: vertical; font-size: 0.9rem;"></textarea>
-                                </div>
-                                <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
-                            </form>
-                        </div>
+                        <h3 style="font-size: 1.75rem; margin-bottom: 1.5rem; font-weight: 600;">🍇 Boutique Vineyard Property</h3>
+                        <p style="font-size: 1rem; line-height: 1.7; max-width: 800px; margin: 0 auto; opacity: 0.95;">Our luxury accommodations are located on our boutique vineyard property at 96 Smiths Way, Mount Pisa, offering unrivaled privacy and tranquility. The eco-domes are positioned within the vineyard itself, while our cottage sits separately on the property with panoramic lake views. You're perfectly positioned in the heart of Central Otago's award-winning wine region with superb views of lake and mountains, and the Cromwell to Clyde cycle trail right at your doorstep.</p>
                     </div>
                 </div>
             </section>
@@ -2353,7 +1133,6 @@
     <div class="contact-bar">
         <i class="fas fa-envelope"></i> info@lakesideretreat.co.nz
         <a href="https://book.lakesideretreat.co.nz/" target="_blank"><i class="fas fa-calendar"></i> Book Now</a>
-        <a href="#" onclick="showPage('contact')"><i class="fas fa-info-circle"></i> Contact Us</a>
     </div>
 
     <!-- Footer -->
@@ -2373,13 +1152,6 @@
                 <a href="#" onclick="showPage('accommodations')">Lakeside Cottage - Family Friendly</a>
             </div>
             <div class="footer-section">
-                <h3>EXPERIENCES</h3>
-                <a href="#" onclick="showPage('explore')">Wine Tours</a>
-                <a href="#" onclick="showPage('explore')">Adventure Activities</a>
-                <a href="#" onclick="showPage('explore')">Helicopter Tours</a>
-                <a href="#" onclick="showPage('explore')">Local Recommendations</a>
-            </div>
-            <div class="footer-section">
                 <h3>BOOKINGS</h3>
                 <p>Managed by Uplistinging</p>
                 <a href="https://book.lakesideretreat.co.nz/" target="_blank" class="btn btn-primary" style="padding: 0.75rem 1.5rem; font-size: 0.85rem; margin-top: 1rem; display: inline-block;">BOOK NOW</a>
@@ -2389,12 +1161,6 @@
             <p>&copy; 2024 Lakeside Retreat. Local knowledge experts providing accommodation and activity recommendations.</p>
         </div>
     </footer>
-
-    <!-- Lightbox -->
-    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
-        <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
-        <img id="lightboxImage" src="" alt="">
-    </div>
 
     <script>
         // Global Variables
@@ -2444,19 +1210,6 @@
             mobileNav.classList.toggle('active');
         }
 
-        // Lightbox Functions
-        function openLightbox(imageSrc) {
-            const lightbox = document.getElementById('lightbox');
-            const lightboxImage = document.getElementById('lightboxImage');
-            lightboxImage.src = imageSrc;
-            lightbox.classList.add('active');
-        }
-
-        function closeLightbox() {
-            const lightbox = document.getElementById('lightbox');
-            lightbox.classList.remove('active');
-        }
-
         // Initialize page functionality
         document.addEventListener('DOMContentLoaded', function() {
             // Header scroll effect
@@ -2469,31 +1222,6 @@
                 }
             });
 
-            // Photo gallery interactions
-            const mainPhoto = document.querySelector('.main-photo img');
-            const thumbs = document.querySelectorAll('.gallery-thumb img');
-            
-            if (mainPhoto && thumbs.length > 0) {
-                thumbs.forEach(thumb => {
-                    thumb.addEventListener('click', function() {
-                        const mainSrc = mainPhoto.src;
-                        const thumbSrc = this.src;
-                        const mainCaption = document.querySelector('.photo-caption');
-                        const thumbCaption = this.nextElementSibling.textContent;
-                        
-                        // Swap images
-                        mainPhoto.src = thumbSrc;
-                        this.src = mainSrc;
-                        
-                        // Update caption
-                        mainCaption.textContent = thumbCaption;
-                    });
-                });
-            }
-
-            // Testimonials System Functionality
-            initTestimonialsSystem();
-
             // Close mobile menu when clicking outside
             document.addEventListener('click', function(e) {
                 const mobileNav = document.getElementById('mobileNav');
@@ -2503,133 +1231,7 @@
                     mobileNav.classList.remove('active');
                 }
             });
-
-            // Form submission handling
-            const forms = document.querySelectorAll('form');
-            forms.forEach(form => {
-                if (form.id !== 'testimonialForm') {
-                    form.addEventListener('submit', function(e) {
-                        e.preventDefault();
-                        alert('Thank you for your message! We\'ll get back to you soon.');
-                    });
-                }
-            });
         });
-
-        // Testimonials System Functions
-        function initTestimonialsSystem() {
-            // Star Rating Interactions
-            initStarRatings();
-            
-            // Form Submission
-            initFormSubmission();
-            
-            // Prompt Tag Interactions
-            initPromptTags();
-        }
-
-        function initStarRatings() {
-            const starRatings = document.querySelectorAll('.star-rating');
-            
-            starRatings.forEach(rating => {
-                const stars = rating.querySelectorAll('.star');
-                let currentRating = 0;
-                
-                stars.forEach((star, index) => {
-                    star.addEventListener('click', () => {
-                        currentRating = index + 1;
-                        updateStarDisplay(stars, currentRating);
-                        
-                        // Store rating value
-                        rating.setAttribute('data-value', currentRating);
-                    });
-                    
-                    star.addEventListener('mouseover', () => {
-                        updateStarDisplay(stars, index + 1);
-                    });
-                });
-                
-                rating.addEventListener('mouseleave', () => {
-                    updateStarDisplay(stars, currentRating);
-                });
-            });
-        }
-
-        function updateStarDisplay(stars, rating) {
-            stars.forEach((star, index) => {
-                if (index < rating) {
-                    star.classList.add('active');
-                } else {
-                    star.classList.remove('active');
-                }
-            });
-        }
-
-        function initFormSubmission() {
-            const form = document.getElementById('testimonialForm');
-            const successMessage = document.getElementById('submissionSuccess');
-            
-            if (!form) return;
-            
-            form.addEventListener('submit', (e) => {
-                e.preventDefault();
-                
-                // Collect form data
-                const formData = new FormData(form);
-                const ratings = {};
-                
-                // Collect star ratings
-                document.querySelectorAll('.star-rating').forEach(rating => {
-                    const category = rating.getAttribute('data-rating');
-                    const value = rating.getAttribute('data-value') || 0;
-                    ratings[category] = value;
-                });
-                
-                // Simulate form submission
-                setTimeout(() => {
-                    form.style.display = 'none';
-                    successMessage.style.display = 'block';
-                    
-                    // Send automated email (in real implementation)
-                    console.log('📧 Sending thank you email with discount code...');
-                    
-                    // Add to moderation queue (in real implementation)
-                    console.log('📝 Adding testimonial to moderation queue...', { formData, ratings });
-                    
-                    // Scroll to success message
-                    successMessage.scrollIntoView({ behavior: 'smooth' });
-                }, 1000);
-            });
-        }
-
-        function initPromptTags() {
-            const promptTags = document.querySelectorAll('.prompt-tag');
-            const textarea = document.querySelector('textarea[name="reviewText"]');
-            
-            promptTags.forEach(tag => {
-                tag.addEventListener('click', () => {
-                    const prompt = tag.textContent.replace(/^[🌟🍷🏔️🛁🏡📍]\s/, '');
-                    if (textarea) {
-                        const currentText = textarea.value;
-                        const addition = currentText ? ` ${prompt}` : prompt;
-                        textarea.value = currentText + addition;
-                        textarea.focus();
-                    }
-                });
-
-                tag.addEventListener('mouseover', () => {
-                    tag.style.background = 'var(--primary-teal)';
-                    tag.style.color = 'white';
-                    tag.style.borderColor = 'var(--primary-teal)';
-                });
-
-                tag.addEventListener('mouseout', () => {
-                    tag.style.background = 'var(--white)';
-                    tag.style.color = 'var(--text-dark)';
-                    tag.style.borderColor = 'var(--border-light)';
-                });
-            });
-        }
 
         // Animation on Scroll
         const observerOptions = {
@@ -2647,7 +1249,7 @@
 
         // Observe elements for animation when page loads
         setTimeout(() => {
-            document.querySelectorAll('.card, .accommodation-showcase, .photo-gallery, .review-card').forEach(el => {
+            document.querySelectorAll('.card, .accommodation-showcase').forEach(el => {
                 el.style.opacity = '0';
                 el.style.transform = 'translateY(20px)';
                 el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
@@ -2655,11 +1257,9 @@
             });
         }, 100);
 
-        console.log("✨ Lakeside Retreat website loaded successfully!");
-        console.log("🎨 Professional design matching your screenshot!");
-        console.log("📱 Multi-page functionality with smooth transitions!");
-        console.log("🏡 2 Glamping Domes + 1 Cottage setup complete!");
-        console.log("🚀 Ready for production!");
+        console.log("✨ Lakeside Retreat website loaded with corrected property layout!");
+        console.log("🏡 Cottage positioning corrected based on aerial view!");
+        console.log("🍇 Domes positioned within vineyard, cottage separate with lake views!");
     </script>
 </body>
 </html>
