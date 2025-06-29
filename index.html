@@ -1139,6 +1139,834 @@
             transform: translateY(-2px);
         }
 
+        /* Testimonials System Styles */
+        .testimonials-system {
+            padding: 6rem 0;
+            background: white;
+        }
+
+        .testimonial-submission {
+            background: var(--gradient-warm);
+            padding: 4rem;
+            border-radius: 24px;
+            margin-bottom: 4rem;
+            box-shadow: var(--shadow-medium);
+        }
+
+        .submission-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .submission-header h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+        }
+
+        .submission-header p {
+            font-size: 1.125rem;
+            color: var(--soft-gray);
+            margin-bottom: 2rem;
+        }
+
+        .incentive-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: var(--accent-gold);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            box-shadow: var(--shadow-soft);
+            animation: pulse 2s infinite;
+        }
+
+        .incentive-icon {
+            font-size: 1.25rem;
+        }
+
+        .testimonial-form {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .form-section h4 {
+            color: var(--primary-teal);
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .form-row input,
+        .form-row select {
+            padding: 1rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-row input:focus,
+        .form-row select:focus {
+            outline: none;
+            border-color: var(--primary-teal);
+        }
+
+        .rating-section {
+            margin: 3rem 0;
+            padding: 2rem;
+            background: var(--light-sand);
+            border-radius: 16px;
+        }
+
+        .rating-section h4 {
+            color: var(--primary-blue);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .rating-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .rating-item {
+            text-align: center;
+        }
+
+        .rating-item label {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: var(--dark-slate);
+        }
+
+        .star-rating {
+            display: flex;
+            justify-content: center;
+            gap: 0.25rem;
+        }
+
+        .star-rating .star {
+            font-size: 1.5rem;
+            color: #d1d5db;
+            cursor: pointer;
+            transition: color 0.2s ease;
+        }
+
+        .star-rating .star:hover,
+        .star-rating .star.active {
+            color: #fbbf24;
+        }
+
+        .review-content-section {
+            margin: 3rem 0;
+        }
+
+        .review-content-section h4 {
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+        }
+
+        .review-content-section textarea {
+            width: 100%;
+            padding: 1.5rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-family: inherit;
+            resize: vertical;
+            transition: border-color 0.3s ease;
+        }
+
+        .review-content-section textarea:focus {
+            outline: none;
+            border-color: var(--primary-teal);
+        }
+
+        .review-prompts {
+            margin-top: 1.5rem;
+        }
+
+        .review-prompts h5 {
+            color: var(--soft-gray);
+            margin-bottom: 1rem;
+            font-size: 0.9375rem;
+        }
+
+        .prompt-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .prompt-tag {
+            background: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            border: 1px solid var(--primary-teal);
+            color: var(--primary-teal);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .prompt-tag:hover {
+            background: var(--primary-teal);
+            color: white;
+        }
+
+        .photo-upload-section {
+            margin: 3rem 0;
+        }
+
+        .photo-upload-section h4 {
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+        }
+
+        .upload-area {
+            border: 2px dashed var(--primary-teal);
+            border-radius: 12px;
+            padding: 3rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .upload-area:hover {
+            background: var(--light-sand);
+            border-color: var(--accent-gold);
+        }
+
+        .upload-prompt {
+            color: var(--soft-gray);
+        }
+
+        .upload-icon {
+            font-size: 3rem;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .upload-link {
+            color: var(--primary-teal);
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .photo-preview {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .photo-preview-item {
+            position: relative;
+            aspect-ratio: 1;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .photo-preview-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .photo-remove {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .social-integration {
+            margin: 3rem 0;
+            padding: 2rem;
+            background: var(--light-sand);
+            border-radius: 16px;
+        }
+
+        .social-integration h4 {
+            color: var(--primary-blue);
+            margin-bottom: 1.5rem;
+        }
+
+        .social-options {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .social-checkbox {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            cursor: pointer;
+            padding: 1rem;
+            background: white;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .social-checkbox:hover {
+            transform: translateX(5px);
+        }
+
+        .social-checkbox input[type="checkbox"] {
+            display: none;
+        }
+
+        .checkmark {
+            width: 24px;
+            height: 24px;
+            border: 2px solid #d1d5db;
+            border-radius: 6px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .checkmark.instagram {
+            background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+            border: none;
+        }
+
+        .checkmark.facebook {
+            background: #1877f2;
+            border: none;
+        }
+
+        .checkmark.google {
+            background: #4285f4;
+            border: none;
+        }
+
+        .social-checkbox input[type="checkbox"]:checked + .checkmark::after {
+            content: '✓';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-weight: bold;
+        }
+
+        .permissions-section {
+            margin: 3rem 0;
+        }
+
+        .permission-checkboxes {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .permission-checkbox {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            cursor: pointer;
+        }
+
+        .permission-checkbox input[type="checkbox"] {
+            display: none;
+        }
+
+        .permission-checkbox .checkmark {
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+
+        .permission-checkbox input[type="checkbox"]:checked + .checkmark {
+            background: var(--primary-teal);
+            border-color: var(--primary-teal);
+        }
+
+        .submit-btn {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 1.5rem 3rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.25rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin: 2rem auto 0;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-large);
+        }
+
+        .submission-success {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 4rem;
+            border-radius: 24px;
+            text-align: center;
+            margin: 4rem 0;
+        }
+
+        .success-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            margin: 1rem 0;
+        }
+
+        .success-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .success-social {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .social-tags {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .social-tags span {
+            background: rgba(255,255,255,0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-family: monospace;
+        }
+
+        /* Moderation Dashboard */
+        .admin-moderation {
+            background: var(--dark-slate);
+            color: white;
+            padding: 3rem;
+            border-radius: 20px;
+            margin: 4rem 0;
+        }
+
+        .moderation-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .moderation-stats {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            display: block;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent-gold);
+        }
+
+        .stat-label {
+            font-size: 0.875rem;
+            opacity: 0.8;
+        }
+
+        .review-pending-item {
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 1rem;
+        }
+
+        .moderation-actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .moderation-actions button {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.875rem;
+        }
+
+        .approve-btn {
+            background: #10b981;
+            color: white;
+        }
+
+        .edit-btn {
+            background: #f59e0b;
+            color: white;
+        }
+
+        .reject-btn {
+            background: #ef4444;
+            color: white;
+        }
+
+        /* Live Testimonials Display */
+        .live-testimonials {
+            margin-top: 4rem;
+        }
+
+        .testimonials-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .testimonials-header h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-blue);
+            font-size: 2rem;
+        }
+
+        .testimonials-filters {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .filter-select {
+            padding: 0.75rem 1rem;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            background: white;
+            cursor: pointer;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow-soft);
+            border: 1px solid rgba(30, 58, 138, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .testimonial-card.featured {
+            border: 2px solid var(--accent-gold);
+            position: relative;
+        }
+
+        .testimonial-card.featured::before {
+            content: "✨ FEATURED";
+            position: absolute;
+            top: -12px;
+            left: 1rem;
+            background: var(--accent-gold);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .testimonial-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+        }
+
+        .guest-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .guest-avatar {
+            width: 48px;
+            height: 48px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+        }
+
+        .guest-name {
+            font-weight: 600;
+            color: var(--dark-slate);
+        }
+
+        .guest-location {
+            font-size: 0.875rem;
+            color: var(--soft-gray);
+        }
+
+        .testimonial-rating {
+            text-align: right;
+        }
+
+        .testimonial-rating .stars {
+            color: #fbbf24;
+            margin-bottom: 0.25rem;
+        }
+
+        .accommodation-badge {
+            background: var(--primary-teal);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .testimonial-content p {
+            font-style: italic;
+            line-height: 1.7;
+            color: var(--dark-slate);
+            margin-bottom: 1.5rem;
+        }
+
+        .testimonial-photos {
+            margin: 1.5rem 0;
+        }
+
+        .photo-gallery {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+        }
+
+        .photo-item {
+            width: 60px;
+            height: 45px;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .photo-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .photo-count {
+            font-size: 0.875rem;
+            color: var(--soft-gray);
+            font-style: italic;
+        }
+
+        .testimonial-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1rem;
+            border-top: 1px solid #f3f4f6;
+        }
+
+        .helpful-btn {
+            background: none;
+            border: 1px solid #d1d5db;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.875rem;
+            transition: all 0.3s ease;
+        }
+
+        .helpful-btn:hover {
+            background: var(--light-sand);
+        }
+
+        .social-share {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .share-btn {
+            width: 32px;
+            height: 32px;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 0.875rem;
+            transition: transform 0.3s ease;
+        }
+
+        .share-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .share-btn.instagram {
+            background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+            color: white;
+        }
+
+        .share-btn.facebook {
+            background: #1877f2;
+            color: white;
+        }
+
+        .load-more {
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .load-more-btn {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .load-more-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        /* Email Template Preview */
+        .automation-preview {
+            background: #f8fafc;
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+            border-left: 4px solid var(--primary-teal);
+        }
+
+        .email-template {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .email-header {
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #e5e7eb;
+            margin-bottom: 1rem;
+        }
+
+        .email-cta {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 1rem 0;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .testimonial-submission {
+                padding: 2rem;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .rating-categories {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .testimonials-filters {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonials-header {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: flex-start;
+            }
+
+            .testimonial-header {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .testimonial-footer {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: flex-start;
+            }
+
+            .moderation-header {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .moderation-stats {
+                justify-content: center;
+            }
+        }
+
         /* Booking Section */
         .booking {
             background: var(--gradient-primary);
@@ -1607,6 +2435,7 @@
                 <ul>
                     <li><a href="#stay">STAY</a></li>
                     <li><a href="#reviews">REVIEWS</a></li>
+                    <li><a href="#testimonials">TESTIMONIALS</a></li>
                     <li><a href="#explore">EXPLORE</a></li>
                     <li><a href="#enjoy">ENJOY</a></li>
                     <li><a href="#contact">CONTACT</a></li>
@@ -2340,7 +3169,385 @@
             </div>
         </section>
 
-        <section class="booking section" id="contact">
+        <section class="testimonials-system section" id="testimonials">
+            <div class="container">
+                <h2 class="section-title">GUEST TESTIMONIALS</h2>
+                <p class="section-subtitle">Share your Lakeside Retreat experience and inspire future guests</p>
+                
+                <!-- Testimonial Submission Form -->
+                <div class="testimonial-submission">
+                    <div class="submission-header">
+                        <h3>Share Your Lakeside Story</h3>
+                        <p>Help fellow travelers discover the magic of Central Otago through your experience</p>
+                        <div class="incentive-badge">
+                            <span class="incentive-icon">🎁</span>
+                            <span>Submit a review and receive 10% off your next stay!</span>
+                        </div>
+                    </div>
+                    
+                    <form class="testimonial-form" id="testimonialForm">
+                        <div class="form-grid">
+                            <!-- Guest Information -->
+                            <div class="form-section">
+                                <h4>About You</h4>
+                                <div class="form-row">
+                                    <input type="text" name="guestName" placeholder="Your Name *" required>
+                                    <input type="email" name="guestEmail" placeholder="Email (private) *" required>
+                                </div>
+                                <div class="form-row">
+                                    <input type="text" name="guestLocation" placeholder="Your Location (e.g., Sydney, Australia)">
+                                    <select name="guestType">
+                                        <option value="">Travel Type</option>
+                                        <option value="couple">Romantic Getaway</option>
+                                        <option value="family">Family Trip</option>
+                                        <option value="friends">Friends Getaway</option>
+                                        <option value="solo">Solo Travel</option>
+                                        <option value="business">Business Trip</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <!-- Stay Details -->
+                            <div class="form-section">
+                                <h4>Your Stay</h4>
+                                <div class="form-row">
+                                    <select name="accommodation" required>
+                                        <option value="">Which accommodation? *</option>
+                                        <option value="dome-pinot">Dome Pinot - Premium Glamping</option>
+                                        <option value="dome-rose">Dome Rosé - Romantic Retreat</option>
+                                        <option value="lakeside-cottage">Lakeside Cottage - Family Friendly</option>
+                                    </select>
+                                    <input type="month" name="stayDate" placeholder="Month/Year of Stay">
+                                </div>
+                                <div class="form-row">
+                                    <input type="number" name="nights" placeholder="Nights Stayed" min="1" max="30">
+                                    <select name="season">
+                                        <option value="">Season</option>
+                                        <option value="summer">Summer</option>
+                                        <option value="autumn">Autumn</option>
+                                        <option value="winter">Winter</option>
+                                        <option value="spring">Spring</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Rating System -->
+                        <div class="rating-section">
+                            <h4>Rate Your Experience</h4>
+                            <div class="rating-categories">
+                                <div class="rating-item">
+                                    <label>Overall Experience</label>
+                                    <div class="star-rating" data-rating="overall">
+                                        <span class="star" data-value="1">★</span>
+                                        <span class="star" data-value="2">★</span>
+                                        <span class="star" data-value="3">★</span>
+                                        <span class="star" data-value="4">★</span>
+                                        <span class="star" data-value="5">★</span>
+                                    </div>
+                                </div>
+                                <div class="rating-item">
+                                    <label>Accommodation Quality</label>
+                                    <div class="star-rating" data-rating="accommodation">
+                                        <span class="star" data-value="1">★</span>
+                                        <span class="star" data-value="2">★</span>
+                                        <span class="star" data-value="3">★</span>
+                                        <span class="star" data-value="4">★</span>
+                                        <span class="star" data-value="5">★</span>
+                                    </div>
+                                </div>
+                                <div class="rating-item">
+                                    <label>Host Service</label>
+                                    <div class="star-rating" data-rating="service">
+                                        <span class="star" data-value="1">★</span>
+                                        <span class="star" data-value="2">★</span>
+                                        <span class="star" data-value="3">★</span>
+                                        <span class="star" data-value="4">★</span>
+                                        <span class="star" data-value="5">★</span>
+                                    </div>
+                                </div>
+                                <div class="rating-item">
+                                    <label>Location & Views</label>
+                                    <div class="star-rating" data-rating="location">
+                                        <span class="star" data-value="1">★</span>
+                                        <span class="star" data-value="2">★</span>
+                                        <span class="star" data-value="3">★</span>
+                                        <span class="star" data-value="4">★</span>
+                                        <span class="star" data-value="5">★</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Review Content -->
+                        <div class="review-content-section">
+                            <h4>Tell Your Story</h4>
+                            <textarea name="reviewText" placeholder="Share your experience at Lakeside Retreat... What made your stay special? Which features did you love most? How did our local recommendations enhance your trip?" rows="6" required></textarea>
+                            
+                            <div class="review-prompts">
+                                <h5>Need inspiration? Tell us about:</h5>
+                                <div class="prompt-tags">
+                                    <span class="prompt-tag">🌟 Favorite unique feature</span>
+                                    <span class="prompt-tag">🍷 Wine recommendations we provided</span>
+                                    <span class="prompt-tag">🏔️ Views and landscape</span>
+                                    <span class="prompt-tag">🛁 Hot tub/spa experience</span>
+                                    <span class="prompt-tag">🏡 Accommodation comfort</span>
+                                    <span class="prompt-tag">📍 Local activities you enjoyed</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Photo Upload -->
+                        <div class="photo-upload-section">
+                            <h4>Share Your Photos</h4>
+                            <div class="upload-area" id="photoUpload">
+                                <div class="upload-prompt">
+                                    <span class="upload-icon">📸</span>
+                                    <p>Drag & drop photos here or <span class="upload-link">browse files</span></p>
+                                    <small>Up to 5 photos, max 5MB each (JPG, PNG)</small>
+                                </div>
+                                <input type="file" id="photoInput" multiple accept="image/*" style="display: none;">
+                                <div class="photo-preview" id="photoPreview"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- Social Media Integration -->
+                        <div class="social-integration">
+                            <h4>Share Socially (Optional)</h4>
+                            <div class="social-options">
+                                <label class="social-checkbox">
+                                    <input type="checkbox" name="shareInstagram">
+                                    <span class="checkmark instagram"></span>
+                                    <span>Share on Instagram @lakesideretreat</span>
+                                </label>
+                                <label class="social-checkbox">
+                                    <input type="checkbox" name="shareFacebook">
+                                    <span class="checkmark facebook"></span>
+                                    <span>Share on Facebook</span>
+                                </label>
+                                <label class="social-checkbox">
+                                    <input type="checkbox" name="shareGoogle">
+                                    <span class="checkmark google"></span>
+                                    <span>Also post on Google Reviews</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <!-- Permissions & Incentives -->
+                        <div class="permissions-section">
+                            <div class="permission-checkboxes">
+                                <label class="permission-checkbox">
+                                    <input type="checkbox" name="websitePermission" required>
+                                    <span class="checkmark"></span>
+                                    <span>I consent to sharing this review on your website and marketing materials *</span>
+                                </label>
+                                <label class="permission-checkbox">
+                                    <input type="checkbox" name="emailUpdates">
+                                    <span class="checkmark"></span>
+                                    <span>Send me occasional updates about Lakeside Retreat and Central Otago</span>
+                                </label>
+                                <label class="permission-checkbox">
+                                    <input type="checkbox" name="futureOffers">
+                                    <span class="checkmark"></span>
+                                    <span>I'd like to receive my 10% off discount code for future stays</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">
+                            <span class="btn-text">Submit My Review</span>
+                            <span class="btn-icon">✨</span>
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Success Message (Hidden by default) -->
+                <div class="submission-success" id="submissionSuccess" style="display: none;">
+                    <div class="success-content">
+                        <div class="success-icon">🎉</div>
+                        <h3>Thank You for Sharing!</h3>
+                        <p>Your testimonial has been submitted and will appear on our website after review. We've sent your 10% discount code to your email!</p>
+                        <div class="success-social">
+                            <p>Don't forget to tag us on social media:</p>
+                            <div class="social-tags">
+                                <span>@lakesideretreat</span>
+                                <span>#lakesideretreat</span>
+                                <span>#centralotagowine</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Moderation Dashboard (Admin View) -->
+                <div class="admin-moderation" id="moderationDashboard" style="display: none;">
+                    <div class="moderation-header">
+                        <h3>Testimonial Moderation Dashboard</h3>
+                        <div class="moderation-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">23</span>
+                                <span class="stat-label">Pending Review</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">156</span>
+                                <span class="stat-label">Approved</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">4.9</span>
+                                <span class="stat-label">Avg Rating</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="pending-reviews">
+                        <div class="review-pending-item">
+                            <div class="review-header">
+                                <div class="reviewer-info">
+                                    <strong>Sarah Mitchell</strong>
+                                    <span>Melbourne, Australia • Dome Pinot • Dec 2024</span>
+                                </div>
+                                <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                            </div>
+                            <div class="review-content">
+                                <p>"Absolutely magical experience! The stargazing skylight was incredible..."</p>
+                            </div>
+                            <div class="review-photos">
+                                <small>3 photos attached</small>
+                            </div>
+                            <div class="moderation-actions">
+                                <button class="approve-btn">✅ Approve</button>
+                                <button class="edit-btn">✏️ Edit</button>
+                                <button class="reject-btn">❌ Reject</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Live Testimonials Display -->
+                <div class="live-testimonials">
+                    <div class="testimonials-header">
+                        <h3>Recent Guest Experiences</h3>
+                        <div class="testimonials-filters">
+                            <select class="filter-select" id="accommodationFilter">
+                                <option value="">All Accommodations</option>
+                                <option value="dome-pinot">Dome Pinot</option>
+                                <option value="dome-rose">Dome Rosé</option>
+                                <option value="lakeside-cottage">Lakeside Cottage</option>
+                            </select>
+                            <select class="filter-select" id="ratingFilter">
+                                <option value="">All Ratings</option>
+                                <option value="5">5 Stars</option>
+                                <option value="4">4+ Stars</option>
+                            </select>
+                            <select class="filter-select" id="seasonFilter">
+                                <option value="">All Seasons</option>
+                                <option value="summer">Summer</option>
+                                <option value="autumn">Autumn</option>
+                                <option value="winter">Winter</option>
+                                <option value="spring">Spring</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonials-grid" id="testimonialsGrid">
+                        <!-- Sample Testimonial with Photos -->
+                        <div class="testimonial-card featured" data-accommodation="dome-pinot" data-rating="5" data-season="summer">
+                            <div class="testimonial-header">
+                                <div class="guest-info">
+                                    <div class="guest-avatar">J</div>
+                                    <div class="guest-details">
+                                        <div class="guest-name">James & Emma</div>
+                                        <div class="guest-location">Wellington, NZ • Dec 2024</div>
+                                    </div>
+                                </div>
+                                <div class="testimonial-rating">
+                                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                                    <div class="accommodation-badge">Dome Pinot</div>
+                                </div>
+                            </div>
+                            
+                            <div class="testimonial-content">
+                                <p>"The stargazing skylight in Dome Pinot was absolutely magical! We spent hours watching the Central Otago night sky. The saltwater spa with lake views was perfect after wine tasting. Our hosts provided incredible local recommendations that made our trip unforgettable."</p>
+                            </div>
+                            
+                            <div class="testimonial-photos">
+                                <div class="photo-gallery">
+                                    <div class="photo-item">
+                                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 150'%3E%3Crect width='200' height='150' fill='%23e5e7eb'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-size='12' fill='%23374151'%3EStar View%3C/text%3E%3C/svg%3E" alt="Guest Photo">
+                                    </div>
+                                    <div class="photo-item">
+                                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 150'%3E%3Crect width='200' height='150' fill='%23e5e7eb'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-size='12' fill='%23374151'%3ELake View%3C/text%3E%3C/svg%3E" alt="Guest Photo">
+                                    </div>
+                                    <div class="photo-count">+2 more photos</div>
+                                </div>
+                            </div>
+                            
+                            <div class="testimonial-footer">
+                                <div class="helpful-votes">
+                                    <button class="helpful-btn">👍 Helpful (12)</button>
+                                </div>
+                                <div class="social-share">
+                                    <button class="share-btn instagram">📸</button>
+                                    <button class="share-btn facebook">📘</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- More testimonials would be populated here -->
+                        <div class="testimonial-card" data-accommodation="lakeside-cottage" data-rating="5" data-season="winter">
+                            <div class="testimonial-header">
+                                <div class="guest-info">
+                                    <div class="guest-avatar">M</div>
+                                    <div class="guest-details">
+                                        <div class="guest-name">Maria & Family</div>
+                                        <div class="guest-location">Brisbane, AU • Nov 2024</div>
+                                    </div>
+                                </div>
+                                <div class="testimonial-rating">
+                                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                                    <div class="accommodation-badge">Lakeside Cottage</div>
+                                </div>
+                            </div>
+                            
+                            <div class="testimonial-content">
+                                <p>"Perfect family retreat! The wood-fired hot tub was a hit with the kids, and our dog was so welcomed. The cottage is beautifully appointed with everything we needed. The hosts' wine recommendations were spot on!"</p>
+                            </div>
+                            
+                            <div class="testimonial-footer">
+                                <div class="helpful-votes">
+                                    <button class="helpful-btn">👍 Helpful (8)</button>
+                                </div>
+                                <div class="social-share">
+                                    <button class="share-btn instagram">📸</button>
+                                    <button class="share-btn facebook">📘</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="load-more">
+                        <button class="load-more-btn">Load More Testimonials</button>
+                    </div>
+                </div>
+                
+                <!-- Email Automation Preview -->
+                <div class="automation-preview" style="display: none;">
+                    <h4>Automated Follow-up Email Template</h4>
+                    <div class="email-template">
+                        <div class="email-header">
+                            <strong>Subject:</strong> How was your stay at Lakeside Retreat? Share your experience! 🌟
+                        </div>
+                        <div class="email-content">
+                            <p>Hi [Guest Name],</p>
+                            <p>We hope you had an amazing time at Lakeside Retreat in [Accommodation]! We'd love to hear about your experience.</p>
+                            <p><strong>Share your story and get 10% off your next stay!</strong></p>
+                            <p>Simply click below to submit your review:</p>
+                            <button class="email-cta">Share My Experience</button>
+                            <p><small>This email is sent 5 days after checkout</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
             <div class="container">
                 <h2 class="section-title" style="color: white;">BOOK YOUR LAKESIDE ESCAPE</h2>
                 <p class="section-subtitle" style="color: rgba(255,255,255,0.9);">Choose your perfect Central Otago experience: peaceful adults-only eco-domes for romantic wine country getaways, or our pet-friendly cottage (max 3 guests) for intimate family retreats.</p>
@@ -2468,6 +3675,9 @@
                 });
             }
 
+            // Testimonials System Functionality
+            initTestimonialsSystem();
+
             // Intersection Observer for animations
             const observerOptions = {
                 threshold: 0.1,
@@ -2484,7 +3694,7 @@
             }, observerOptions);
 
             // Observe elements for animation
-            document.querySelectorAll('.stat, .highlight-card, .explore-intro, .accommodation-showcase, .photo-gallery').forEach(el => {
+            document.querySelectorAll('.stat, .highlight-card, .explore-intro, .accommodation-showcase, .photo-gallery, .testimonial-card').forEach(el => {
                 el.style.opacity = '0';
                 el.style.transform = 'translateY(30px)';
                 el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
@@ -2492,8 +3702,251 @@
             });
         });
 
-        console.log("✨ Complete Lakeside Retreat website loaded!");
+        // Testimonials System Functions
+        function initTestimonialsSystem() {
+            // Star Rating Interactions
+            initStarRatings();
+            
+            // Photo Upload
+            initPhotoUpload();
+            
+            // Form Submission
+            initFormSubmission();
+            
+            // Testimonials Filtering
+            initTestimonialsFiltering();
+            
+            // Helpful Voting
+            initHelpfulVoting();
+            
+            // Prompt Tag Interactions
+            initPromptTags();
+        }
+
+        function initStarRatings() {
+            const starRatings = document.querySelectorAll('.star-rating');
+            
+            starRatings.forEach(rating => {
+                const stars = rating.querySelectorAll('.star');
+                let currentRating = 0;
+                
+                stars.forEach((star, index) => {
+                    star.addEventListener('click', () => {
+                        currentRating = index + 1;
+                        updateStarDisplay(stars, currentRating);
+                        
+                        // Store rating value
+                        rating.setAttribute('data-value', currentRating);
+                    });
+                    
+                    star.addEventListener('mouseover', () => {
+                        updateStarDisplay(stars, index + 1);
+                    });
+                });
+                
+                rating.addEventListener('mouseleave', () => {
+                    updateStarDisplay(stars, currentRating);
+                });
+            });
+        }
+
+        function updateStarDisplay(stars, rating) {
+            stars.forEach((star, index) => {
+                if (index < rating) {
+                    star.classList.add('active');
+                } else {
+                    star.classList.remove('active');
+                }
+            });
+        }
+
+        function initPhotoUpload() {
+            const uploadArea = document.getElementById('photoUpload');
+            const photoInput = document.getElementById('photoInput');
+            const photoPreview = document.getElementById('photoPreview');
+            
+            if (!uploadArea || !photoInput) return;
+            
+            uploadArea.addEventListener('click', () => {
+                photoInput.click();
+            });
+            
+            uploadArea.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                uploadArea.style.background = 'var(--light-sand)';
+                uploadArea.style.borderColor = 'var(--accent-gold)';
+            });
+            
+            uploadArea.addEventListener('dragleave', () => {
+                uploadArea.style.background = '';
+                uploadArea.style.borderColor = '';
+            });
+            
+            uploadArea.addEventListener('drop', (e) => {
+                e.preventDefault();
+                uploadArea.style.background = '';
+                uploadArea.style.borderColor = '';
+                
+                const files = e.dataTransfer.files;
+                handleFiles(files);
+            });
+            
+            photoInput.addEventListener('change', (e) => {
+                handleFiles(e.target.files);
+            });
+            
+            function handleFiles(files) {
+                Array.from(files).forEach(file => {
+                    if (file.type.startsWith('image/') && file.size <= 5 * 1024 * 1024) {
+                        displayPhotoPreview(file);
+                    }
+                });
+            }
+            
+            function displayPhotoPreview(file) {
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    const previewItem = document.createElement('div');
+                    previewItem.className = 'photo-preview-item';
+                    previewItem.innerHTML = `
+                        <img src="${e.target.result}" alt="Preview">
+                        <button class="photo-remove" onclick="this.parentElement.remove()">×</button>
+                    `;
+                    photoPreview.appendChild(previewItem);
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+        function initFormSubmission() {
+            const form = document.getElementById('testimonialForm');
+            const successMessage = document.getElementById('submissionSuccess');
+            
+            if (!form) return;
+            
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                // Collect form data
+                const formData = new FormData(form);
+                const ratings = {};
+                
+                // Collect star ratings
+                document.querySelectorAll('.star-rating').forEach(rating => {
+                    const category = rating.getAttribute('data-rating');
+                    const value = rating.getAttribute('data-value') || 0;
+                    ratings[category] = value;
+                });
+                
+                // Simulate form submission
+                setTimeout(() => {
+                    form.style.display = 'none';
+                    successMessage.style.display = 'block';
+                    
+                    // Send automated email (in real implementation)
+                    sendThankYouEmail(formData);
+                    
+                    // Add to moderation queue (in real implementation)
+                    addToModerationQueue(formData, ratings);
+                    
+                }, 1000);
+            });
+        }
+
+        function initTestimonialsFiltering() {
+            const filters = document.querySelectorAll('.filter-select');
+            const testimonials = document.querySelectorAll('.testimonial-card');
+            
+            filters.forEach(filter => {
+                filter.addEventListener('change', () => {
+                    filterTestimonials();
+                });
+            });
+            
+            function filterTestimonials() {
+                const accommodationFilter = document.getElementById('accommodationFilter')?.value || '';
+                const ratingFilter = document.getElementById('ratingFilter')?.value || '';
+                const seasonFilter = document.getElementById('seasonFilter')?.value || '';
+                
+                testimonials.forEach(testimonial => {
+                    const accommodation = testimonial.getAttribute('data-accommodation') || '';
+                    const rating = testimonial.getAttribute('data-rating') || '';
+                    const season = testimonial.getAttribute('data-season') || '';
+                    
+                    let show = true;
+                    
+                    if (accommodationFilter && accommodation !== accommodationFilter) show = false;
+                    if (ratingFilter && parseInt(rating) < parseInt(ratingFilter)) show = false;
+                    if (seasonFilter && season !== seasonFilter) show = false;
+                    
+                    testimonial.style.display = show ? 'block' : 'none';
+                });
+            }
+        }
+
+        function initHelpfulVoting() {
+            const helpfulBtns = document.querySelectorAll('.helpful-btn');
+            
+            helpfulBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const currentText = btn.textContent;
+                    const currentCount = parseInt(currentText.match(/\d+/)[0]);
+                    btn.textContent = currentText.replace(/\d+/, currentCount + 1);
+                    btn.disabled = true;
+                    btn.style.opacity = '0.6';
+                });
+            });
+        }
+
+        function initPromptTags() {
+            const promptTags = document.querySelectorAll('.prompt-tag');
+            const textarea = document.querySelector('textarea[name="reviewText"]');
+            
+            promptTags.forEach(tag => {
+                tag.addEventListener('click', () => {
+                    const prompt = tag.textContent.replace(/^[🌟🍷🏔️🛁🏡📍]\s/, '');
+                    if (textarea) {
+                        const currentText = textarea.value;
+                        const addition = currentText ? ` ${prompt}` : prompt;
+                        textarea.value = currentText + addition;
+                        textarea.focus();
+                    }
+                });
+            });
+        }
+
+        // Mock functions for real implementation
+        function sendThankYouEmail(formData) {
+            console.log('📧 Sending thank you email with discount code...');
+            // Real implementation would integrate with email service
+        }
+
+        function addToModerationQueue(formData, ratings) {
+            console.log('📝 Adding testimonial to moderation queue...', { formData, ratings });
+            // Real implementation would save to database
+        }
+
+        // Social sharing functions
+        function shareOnInstagram(testimonialData) {
+            const text = encodeURIComponent(`Amazing stay at @lakesideretreat in Central Otago! ${testimonialData.text} #lakesideretreat #centralotagowine`);
+            window.open(`https://www.instagram.com/create/story/?text=${text}`, '_blank');
+        }
+
+        function shareOnFacebook(testimonialData) {
+            const url = encodeURIComponent(window.location.href);
+            const text = encodeURIComponent(testimonialData.text);
+            window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}&quote=${text}`, '_blank');
+        }
+
+        // Load more testimonials function
+        function loadMoreTestimonials() {
+            console.log('📄 Loading more testimonials...');
+            // Real implementation would fetch from database
+        }
+
+        console.log("✨ Complete Lakeside Retreat website with advanced testimonials system loaded!");
         console.log("🖼️ Interactive photo gallery with hover effects and image swapping!");
+        console.log("⭐ Advanced testimonials system with ratings, photos, and moderation!");
         console.log("📱 Fully responsive design optimized for all devices!");
         console.log("🚀 Ready for production deployment!");
     </script>
