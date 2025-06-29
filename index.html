@@ -301,6 +301,7 @@
         .mobile-nav.active li:nth-child(7) { animation-delay: 0.7s; }
         .mobile-nav.active li:nth-child(8) { animation-delay: 0.8s; }
         .mobile-nav.active li:nth-child(9) { animation-delay: 0.9s; }
+        .mobile-nav.active li:nth-child(10) { animation-delay: 1.0s; }
 
         @keyframes slideInRight {
             to {
@@ -1288,6 +1289,7 @@
                 <li><a href="#" onclick="showPage('explore')">Explore</a></li>
                 <li><a href="#" onclick="showPage('contact')">Contact</a></li>
                 <li><a href="#" onclick="showPage('privacy')">Privacy Policy</a></li>
+                <li><a href="#" onclick="showPage('terms')">Terms & Conditions</a></li>
                 <li><a href="https://book.lakesideretreat.co.nz/" target="_blank">Book Now</a></li>
             </ul>
         </nav>
@@ -1850,6 +1852,549 @@
             </section>
         </div>
 
+        <!-- BOOKING POLICY PAGE -->
+        <div class="page-container" id="booking-page">
+            <section class="hero" style="background: linear-gradient(var(--gradient-hero), var(--gradient-hero)), url('https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') center/cover no-repeat; height: 60vh;">
+                <div class="hero-content">
+                    <h1>BOOKING POLICY</h1>
+                    <p class="hero-subtitle">Everything you need to know about reserving your Central Otago escape</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="container">
+                    <div style="max-width: 800px; margin: 0 auto;">
+                        <div style="background: var(--white); padding: 3rem; border-radius: var(--border-radius-lg); box-shadow: var(--shadow); line-height: 1.7;">
+                            <p style="font-size: 1.1rem; color: var(--text-light); margin-bottom: 2rem;"><em>Last updated: January 2024</em></p>
+                            
+                            <p style="margin-bottom: 2rem;">Our booking policy is designed to provide clarity and ensure a smooth reservation process for your stay at Lakeside Retreat. Please read this policy carefully before making your booking.</p>
+
+                            <div style="background: var(--gradient-primary); color: white; padding: 2rem; border-radius: var(--border-radius); margin-bottom: 2.5rem; text-align: center;">
+                                <h3 style="margin-bottom: 1rem; font-family: 'Playfair Display', serif;">Quick Booking Summary</h3>
+                                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; text-align: center;">
+                                    <div>
+                                        <strong>Check-in:</strong> 3:00 PM<br>
+                                        <strong>Check-out:</strong> 10:00 AM
+                                    </div>
+                                    <div>
+                                        <strong>Min Stay:</strong> 2 nights<br>
+                                        <strong>Peak:</strong> 3 nights
+                                    </div>
+                                    <div>
+                                        <strong>Booking:</strong> 18+ years<br>
+                                        <strong>ID Required:</strong> All guests
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 style="color: var(--primary-teal); margin-top: 2.5rem; margin-bottom: 1rem; font-family: 'Playfair Display', serif; font-size: 1.5rem;">1. How to Book</h3>
+                            
+                            <h4 style="color: var(--text-dark); margin-top: 2rem; margin-bottom: 1rem; font-weight: 600;">1.1 Booking Channels</h4>
+                            <ul style="margin: 1rem 0; padding-left: 2rem;">
+                                <li><strong>Direct Booking:</strong> Through our website at lakesideretreat.co.nz (best rates guaranteed)</li>
+                                <li><strong>Booking Platforms:</strong> Airbnb, Booking.com, and other authorized platforms</li>
+                                <li><strong>Email Enquiries:</strong> info@lakesideretreat.co.nz for special requests or group bookings</li>
+                                <li><strong>Phone:</strong> For assistance or complex booking requirements</li>
+                            </ul>
+
+                            <h4 style="color: var(--text-dark); margin-top: 2rem; margin-bottom: 1rem; font-weight: 600;">1.2 Booking Requirements</h4>
+                            <ul style="margin: 1rem 0; padding-left: 2rem;">
+                                <li>Must be 18 years or older to make a booking</li>
+                                <li>Valid credit card required to secure reservation</li>
+                                <li>Photo identification required for all guests at check-in</li>
+                                <li>Accurate guest count and contact information must be provided</li>
+                            </ul>
+
+                            <h4 style="color: var(--text-dark); margin-top: 2rem; margin-bottom: 1rem; font-weight: 600;">1.3 Booking Confirmation</h4>
+                            <ul style="margin: 1rem 0; padding-left: 2rem;">
+                                <li>Booking confirmation email sent within 2 hours of reservation</li>
+                                <li>Check-in instructions provided 24 hours before arrival</li>
+                                <li>Contact us immediately if booking details are incorrect</li>
+                                <li>No booking is confirmed until payment is processed successfully</li>
+                            </ul>
+
+                            <h3 style="color: var(--primary-teal); margin-top: 2.5rem; margin-bottom: 1rem; font-family: 'Playfair Display', serif; font-size: 1.5rem;">2. Accommodation Capacity</h3>
+                            
+                            <div style="display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin: 2rem 0;">
+                                <div style="background: var(--light-gray); padding: 2rem; border-radius: var(--border-radius); border-left: 4px solid var(--primary-teal);">
+                                    <h4 style="color: var(--primary-teal); margin-bottom: 1rem;">🍷 Dome Pinot (Premium Glamping)</h4>
+                                    <ul style="margin: 0; padding-left: 1.5rem;">
+                                        <li><strong>Maximum:</strong> 2 adults (couples only)</li>
+                                        <li><strong>Bed:</strong> 1 x Super King</li>
+                                        <li><strong>Suitable for:</strong> Romantic getaways, anniversaries</li>
+                                        <li><strong>Not suitable for:</strong> Children, groups, friends sharing</li>
+                                    </ul>
+                                </div>
+                                
+                                <div style="background: var(--light-gray); padding: 2rem; border-radius: var(--border-radius); border-left: 4px solid var(--primary-teal);">
+                                    <h4 style="color: var(--primary-teal); margin-bottom: 1rem;">🌹 Dome Rosé (Romantic Retreat)</h4>
+                                    <ul style="margin: 0; padding-left: 1.5rem;">
+                                        <li><strong>Maximum:</strong> 2 adults</li>
+                                        <li><strong>Bed:</strong> 1 x Super King</li>
+                                        <li><strong>Suitable for:</strong> Couples, romantic occasions</li>
+                                        <li><strong>Not suitable for:</strong> Children, additional guests</li>
+                                    </ul>
+                                </div>
+                                
+                                <div style="background: var(--light-gray); padding: 2rem; border-radius: var(--border-radius); border-left: 4px solid var(--accent-orange);">
+                                    <h4 style="color: var(--accent-orange); margin-bottom: 1rem;">🏡 Lakeside Cottage (Family Luxury)</h4>
+                                    <ul style="margin: 0; padding-left: 1.5rem;">
+                                        <li><strong>Maximum:</strong> 3 guests + pets</li>
+                                        <li><strong>Beds:</strong> 1 x Queen + 1 x Sofa bed</li>
+                                        <li><strong>Suitable for:</strong> Families, couples with pets, small groups</li>
+                                        <li><strong>Pet-friendly:</strong> Well-behaved dogs welcome (advance notice required)</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div style="background: var(--gradient-sunset); color: white; padding: 1.5rem; border-radius: var(--border-radius); margin-top: 1rem;">
+                                <p style="margin: 0; font-weight: 600; text-align: center;"><strong>Important:</strong> Exceeding maximum occupancy will result in booking termination without refund. Additional guests cannot be accommodated under any circumstances.</p>
+                            </div>
+
+                            <h3 style="color: var(--primary-teal); margin-top: 2.5rem; margin-bottom: 1rem; font-family: 'Playfair Display', serif; font-size: 1.5rem;">3. Stay Requirements</h3>
+                            
+                            <h4 style="color: var(--text-dark); margin-top: 2rem; margin-bottom: 1rem; font-weight: 600;">3.1 Minimum Stay</h4>
+                            <ul style="margin: 1rem 0; padding-left: 2rem;">
+                                <li><strong>Standard Period:</strong> 2 nights minimum</li>
+                                <li><strong>Peak Season:</strong> 3 nights minimum (December 20 - January 10, Easter weekend)</li>
+                                <li><strong>Special Events:</strong> Minimum stay may be extended during local events</li>
+                                <li><strong>Long Weekends:</strong> 3 nights minimum for NZ public holiday weekends</li>
+                            </ul>
+
+                            <h4 style="color: var(--text-dark); margin-top: 2rem; margin-bottom: 1rem; font-weight: 600;">3.2 Age Restrictions</h4>
+                            <ul style="margin: 1rem 0; padding-left: 2rem;">
+                                <li><strong>Dome Pinot:</strong> Adults only (18+) - designed for couples</li>
+                                <li><strong>Dome Rosé:</strong> Adults only (18+) - romantic accommodation</li>
+                                <li><strong>Lakeside Cottage:</strong> Family-friendly - children welcome</li>
+                                <li>All bookings must be made by someone 18 years or older</li>
+                            </ul>
+
+                            <h3 style="color: var(--primary-teal); margin-top: 2.5rem; margin-bottom: 1rem; font-family: 'Playfair Display', serif; font-size: 1.5rem;">4. Payment Policy</h3>
+                            
+                            <h4 style="color: var(--text-dark); margin-top: 2rem; margin-bottom: 1rem; font-weight: 600;">4.1 Payment Schedule</h4>
+                            <div style="background: var(--light-gray); padding: 2rem; border-radius: var(--border-radius); margin: 1rem 0;">
+                                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; text-align: center;">
+                                    <div>
+                                        <h5 style="color: var(--primary-teal); margin-bottom: 1rem;">Bookings within 30 days</h5>
+                                        <p style="font-size: 1.5rem; font-weight: 700; color: var(--text-dark); margin-bottom: 0.5rem;">100%</p>
+                                        <p style="font-size: 0.9rem; margin: 0;">Full payment due at booking</p>
+                                    </div>
+                                    <div>
+                                        <h5 style="color: var(--primary-teal); margin-bottom: 1rem;">Bookings over 30 days</h5>
+                                        <p style="font-size: 1.5rem; font-weight: 700; color: var(--text-dark); margin-bottom: 0.5rem;">50% + 50%</p>
+                                        <p style="font-size: 0.9rem; margin: 0;">Deposit now, balance 30 days before arrival</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h4 style="color: var(--text-dark); margin-top: 2rem; margin-bottom: 1rem; font-weight: 600;">4.2 Accepted Payment Methods</h4>
+                            <ul style="margin: 1rem 0; padding-left: 2rem;">
+                                <li>Credit cards: Visa, Mastercard, American Express</li>
+                                <li>Debit cards (with sufficient funds)</li>
+                                <li>Bank transfer (for advance bookings by arrangement)</li>
+                                <li>All prices in New Zealand Dollars (NZD) including GST</li>
+                            </ul>
+
+                            <h4 style="color: var(--text-dark); margin-top: 2rem; margin-bottom: 1rem; font-weight: 600;">4.3 Additional Charges</h4>
+                            <ul style="margin: 1rem 0; padding-left: 2rem;">
+                                <li>Security deposit may be pre-authorized on your card</li>
+                                <li>Damage charges will be billed separately if applicable</li>
+                                <li>Late checkout fees (if arranged and applicable)</li>
+                                <li>Pet cleaning fee may apply to cottage bookings</li>
+                            </ul>
+
+                            <h3 style="color: var(--primary-teal); margin-top: 2.5rem; margin-bottom: 1rem; font-family: 'Playfair Display', serif; font-size: 1.5rem;">5. Cancellation & Modification Policy</h3>
+                            
+                            <h4 style="color: var(--text-dark); margin-top: 2rem; margin-bottom: 1rem; font-weight: 600;">5.1 Cancellation Timeline</h4>
+                            <div style="background: var(--white); border: 2px solid var(--primary-teal); border-radius: var(--border-radius); padding: 2rem; margin: 1rem 0;">
+                                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; text-align: center;">
+                                    <div>
+                                        <div style="background: var(--primary-teal); color: white; padding: 1rem; border-radius: var(--border-radius); margin-bottom: 1rem;">
+                                            <strong>30+ Days</strong>
+                                        </div>
+                                        <p style="margin: 0; font-weight: 600; color: var(--text-dark);">95% Refund</p>
+                                        <p style="font-size: 0.8rem; margin: 0.5rem 0 0 0; color: var(--text-light);">5% processing fee</p>
+                                    </div>
+                                    <div>
+                                        <div style="background: var(--accent-orange); color: white; padding: 1rem; border-radius: var(--border-radius); margin-bottom: 1rem;">
+                                            <strong>14-29 Days</strong>
+                                        </div>
+                                        <p style="margin: 0; font-weight: 600; color: var(--text-dark);">50% Refund</p>
+                                        <p style="font-size: 0.8rem; margin: 0.5rem 0 0 0; color: var(--text-light);">50% retained</p>
+                                    </div>
+                                    <div>
+                                        <div style="background: #dc2626; color: white; padding: 1rem; border-radius: var(--border-radius); margin-bottom: 1rem;">
+                                            <strong>7-13 Days</strong>
+                                        </div>
+                                        <p style="margin: 0; font-weight: 600; color: var(--text-dark);">25% Refund</p>
+                                        <p style="font-size: 0.8rem; margin: 0.5rem 0 0 0; color: var(--text-light);">75% retained</p>
+                                    </div>
+                                    <div>
+                                        <div style="background: #7f1d1d; color: white; padding: 1rem; border-radius: var(--border-radius); margin-bottom: 1rem;">
+                                            <strong>Under 7 Days</strong>
+                                        </div>
+                                        <p style="margin: 0; font-weight: 600; color: var(--text-dark);">No Refund</p>
+                                        <p style="font-size: 0.8rem; margin: 0.5rem 0 0 0; color: var(--text-light);">100% retained</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h4 style="color: var(--text-dark); margin-top: 2rem; margin-bottom: 1rem; font-weight: 600;">5.2 Booking Modifications</h4>
+                            <ul style="margin: 1rem 0; padding-left: 2rem;">
+                                <li><strong>Date Changes:</strong> Subject to availability and rate differences</li>
+                                <li><strong>Guest Count Changes:</strong> Must not exceed accommodation limits</li>
+                                <li><strong>Accommodation Changes:</strong> Available if alternative accommodation is available</li>
+                                <li><strong>Modification Deadline:</strong> Changes must be requested at least 14 days before arrival</li>
+                                <li><strong>Processing Fee:</strong> $25 fee applies to all modifications</li>
+                            </ul>
+
+                            <h4 style="color: var(--text-dark); margin-top: 2rem; margin-bottom: 1rem; font-weight: 600;">5.3 Cancellation Process</h4>
+                            <ul style="margin: 1rem 0; padding-left: 2rem;">
+                                <li>All cancellations must be submitted in writing to info@lakesideretreat.co.nz</li>
+                                <li>Include booking reference number and reason for cancellation</li>
+                                <li>Cancellation is effective from the date we receive your written notice</li>
+                                <li>Refunds processed within 5-10 business days to original payment method</li>
+                            </ul>
+
+                            <h3 style="color: var(--primary-teal); margin-top: 2.5rem; margin-bottom: 1rem; font-family: 'Playfair Display', serif; font-size: 1.5rem;">6. Special Circumstances</h3>
+                            
+                            <h4 style="color: var(--text-dark); margin-top: 2rem; margin-bottom: 1rem; font-weight: 600;">6.1 Weather & Natural Events</h4>
+                            <ul style="margin: 1rem 0; padding-left: 2rem;">
+                                <li>Weather conditions do not qualify for refunds (part of the outdoor experience)</li>
+                                <li>Severe weather warnings may result in flexible rebooking options</li>
+                                <li>Natural disasters or government restrictions may qualify for full refunds</li>
+                                <li>Road closures affecting property access will be handled case-by-case</li>
+                            </ul>
+
+                            <h4 style="color: var(--text-dark); margin-top: 2rem; margin-bottom: 1rem; font-weight: 600;">6.2 Travel Insurance</h4>
+                            <div style="background: var(--light-gray); padding: 1.5rem; border-radius: var(--border-radius); margin: 1rem 0;">
+                                <p style="margin: 0; font-weight: 600; color: var(--text-dark);">We strongly recommend comprehensive travel insurance to protect your booking investment against unforeseen circumstances including illness, travel disruptions, or personal emergencies.</p>
+                            </div>
+
+                            <h4 style="color: var(--text-dark); margin-top: 2rem; margin-bottom: 1rem; font-weight: 600;">6.3 No-Shows</h4>
+                            <ul style="margin: 1rem 0; padding-left: 2rem;">
+                                <li>Guests who fail to arrive without notice will be charged the full booking amount</li>
+                                <li>Contact us if you will be delayed or unable to arrive as scheduled</li>
+                                <li>Late arrivals must be communicated in advance to arrange access</li>
+                                <li>No-show bookings are not eligible for any refund</li>
+                            </ul>
+
+                            <h3 style="color: var(--primary-teal); margin-top: 2.5rem; margin-bottom: 1rem; font-family: 'Playfair Display', serif; font-size: 1.5rem;">7. Special Requests & Add-ons</h3>
+                            
+                            <h4 style="color: var(--text-dark); margin-top: 2rem; margin-bottom: 1rem; font-weight: 600;">7.1 Available Services</h4>
+                            <ul style="margin: 1rem 0; padding-left: 2rem;">
+                                <li><strong>Early Check-in:</strong> Subject to availability (may incur additional charges)</li>
+                                <li><strong>Late Check-out:</strong> By arrangement (additional fees apply)</li>
+                                <li><strong>Local Recommendations:</strong> Complimentary concierge advice included</li>
+                                <li><strong>Special Occasions:</strong> We can arrange for celebrations (advance notice required)</li>
+                            </ul>
+
+                            <h4 style="color: var(--text-dark); margin-top: 2rem; margin-bottom: 1rem; font-weight: 600;">7.2 Pet Policy (Cottage Only)</h4>
+                            <ul style="margin: 1rem 0; padding-left: 2rem;">
+                                <li>Well-behaved dogs welcome at Lakeside Cottage only</li>
+                                <li>Must be declared at time of booking - no surprise pets</li>
+                                <li>Additional cleaning fee may apply: $50-100 depending on pet size/stay length</li>
+                                <li>Pets must be supervised at all times and not left alone in accommodation</li>
+                                <li>Damage caused by pets is the owner's responsibility</li>
+                            </ul>
+
+                            <h3 style="color: var(--primary-teal); margin-top: 2.5rem; margin-bottom: 1rem; font-family: 'Playfair Display', serif; font-size: 1.5rem;">8. Group & Corporate Bookings</h3>
+                            
+                            <ul style="margin: 1rem 0; padding-left: 2rem;">
+                                <li><strong>Multiple Accommodations:</strong> Contact us directly for booking multiple units</li>
+                                <li><strong>Corporate Rates:</strong> Available for business travel (minimum 3 bookings annually)</li>
+                                <li><strong>Wedding Groups:</strong> Special packages available for wedding parties</li>
+                                <li><strong>Extended Stays:</strong> Weekly and monthly rates available by arrangement</li>
+                                <li>All group bookings require written confirmation and may have different payment terms</li>
+                            </ul>
+
+                            <h3 style="color: var(--primary-teal); margin-top: 2.5rem; margin-bottom: 1rem; font-family: 'Playfair Display', serif; font-size: 1.5rem;">9. Contact & Support</h3>
+                            
+                            <div style="background: var(--gradient-primary); color: white; padding: 2rem; border-radius: var(--border-radius); margin-top: 1.5rem;">
+                                <h4 style="margin-bottom: 1.5rem; font-family: 'Playfair Display', serif; text-align: center;">Need Assistance?</h4>
+                                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
+                                    <div style="text-align: center;">
+                                        <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">📧</div>
+                                        <strong>Email</strong><br>
+                                        info@lakesideretreat.co.nz
+                                    </div>
+                                    <div style="text-align: center;">
+                                        <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">🌐</div>
+                                        <strong>Website</strong><br>
+                                        lakesideretreat.co.nz
+                                    </div>
+                                    <div style="text-align: center;">
+                                        <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">⏰</div>
+                                        <strong>Response Time</strong><br>
+                                        Within 24 hours
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div style="background: var(--light-gray); padding: 2rem; border-radius: var(--border-radius); margin-top: 2rem; text-align: center;">
+                                <h4 style="color: var(--text-dark); margin-bottom: 1rem;">Ready to Book Your Central Otago Experience?</h4>
+                                <p style="margin-bottom: 1.5rem;">Choose your perfect accommodation and secure your dates today</p>
+                                <a href="https://book.lakesideretreat.co.nz/" target="_blank" class="btn btn-primary" style="padding: 1rem 2rem; margin-right: 1rem;">BOOK NOW</a>
+                                <a href="#" onclick="showPage('contact')" class="btn" style="background: var(--text-dark); color: white; padding: 1rem 2rem;">ASK A QUESTION</a>
+                            </div>
+
+                            <p style="margin-top: 2rem; font-size: 0.9rem; color: var(--text-light); text-align: center;"><em>This booking policy is subject to our Terms & Conditions. For complete terms, please review our Terms & Conditions page.</em></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- TERMS AND CONDITIONS PAGE -->
+        <div class="page-container" id="terms-page">
+            <section class="hero" style="background: linear-gradient(var(--gradient-hero), var(--gradient-hero)), url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') center/cover no-repeat; height: 60vh;">
+                <div class="hero-content">
+                    <h1>TERMS & CONDITIONS</h1>
+                    <p class="hero-subtitle">Booking terms and conditions for your Lakeside Retreat experience</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="container">
+                    <div style="max-width: 800px; margin: 0 auto;">
+                        <div style="background: var(--white); padding: 3rem; border-radius: var(--border-radius-lg); box-shadow: var(--shadow); line-height: 1.7;">
+                            <p style="font-size: 1.1rem; color: var(--text-light); margin-bottom: 2rem;"><em>Last updated: January 2024</em></p>
+                            
+                            <p style="margin-bottom: 2rem;">These Terms and Conditions ("Terms") govern your booking and stay at Lakeside Retreat. By making a booking, you agree to be bound by these Terms. Please read them carefully before booking.</p>
+
+                            <h3 style="color: var(--primary-teal); margin-top: 2.5rem; margin-bottom: 1rem; font-family: 'Playfair Display', serif; font-size: 1.5rem;">1. About Lakeside Retreat</h3>
+                            <p><strong>Property Owner:</strong> Lakeside Retreat<br>
+                            <strong>Property Address:</strong> 96 Smiths Way, Mount Pisa, Cromwell, Central Otago, New Zealand<br>
+                            <strong>Contact:</strong> info@lakesideretreat.co.nz<br>
+                            <strong>Website:</strong> lakesideretreat.co.nz</p>
+                            
+                            <p style="margin-top: 1rem;">We operate luxury eco-accommodation comprising solar-powered glamping domes and a pet-friendly cottage on our boutique vineyard property in Central Otago.</p>
+
+                            <h3 style="color: var(--primary-teal); margin-top: 2.5rem; margin-bottom: 1rem; font-family: 'Playfair Display', serif; font-size: 1.5rem;">2. Bookings and Reservations</h3>
+                            
+                            <h4 style="color: var(--text-dark); margin-top: 2rem; margin-bottom: 1rem; font-weight: 600;">2.1 Booking Process</h4>
+                            <ul style="margin: 1rem 0; padding-left: 2rem;">
+                                <li>All bookings must be made through our authorized booking platforms or directly with us</li>
+                                <li>A booking is confirmed only upon receipt of full payment or approved payment schedule</li>
+                                <li>You must be at least 18 years old to make a booking</li>
+                                <li>The person making the booking is responsible for the entire group's compliance with these Terms</li>
+                            </ul>
+
+                            <h4 style="color: var(--text-dark); margin-top: 2rem; margin-bottom: 1rem; font-weight: 600;">2.2 Booking Confirmation</h4>
+                            <ul style="margin: 1rem 0; padding-left: 2rem;">
+                                <li>You will receive a booking confirmation email with check-in details</li>
+                                <li>Please check all details are correct and contact us immediately if any corrections are needed</li>
+                                <li>Booking confirmations constitute your agreement to these Terms</li>
+                            </ul>
+
+                            <h4 style="color: var(--text-dark); margin-top: 2rem; margin-bottom: 1rem; font-weight: 600;">2.3 Maximum Occupancy</h4>
+                            <ul style="margin: 1rem 0; padding-left: 2rem;">
+                                <li><strong>Dome Pinot:</strong> 2 adults maximum (couples only)</li>
+                                <li><strong>Dome Rosé:</strong> 2 adults maximum</li>
+                                <li><strong>Lakeside Cottage:</strong> 3 guests maximum (1 bedroom + sofa bed)</li>
+                                <li>Exceeding maximum occupancy may result in immediate booking termination without refund</li>
+                            </ul>
+
+                            <h3 style="color: var(--primary-teal); margin-top: 2.5rem; margin-bottom: 1rem; font-family: 'Playfair Display', serif; font-size: 1.5rem;">3. Payment Terms</h3>
+                            
+                            <h4 style="color: var(--text-dark); margin-top: 2rem; margin-bottom: 1rem; font-weight: 600;">3.1 Payment Schedule</h4>
+                            <ul style="margin: 1rem 0; padding-left: 2rem;">
+                                <li><strong>Bookings within 30 days:</strong> Full payment required at time of booking</li>
+                                <li><strong>Bookings over 30 days:</strong> 50% deposit required, balance due 30 days before arrival</li>
+                                <li>All prices are in New Zealand Dollars (NZD) and include GST where applicable</li>
+                                <li>Payment processing fees may apply depending on payment method</li>
+                            </ul>
+
+                            <h4 style="color: var(--text-dark); margin-top: 2rem; margin-bottom: 1rem; font-weight: 600;">3.2 Pricing</h4>
+                            <ul style="margin: 1rem 0; padding-left: 2rem;">
+                                <li>Prices may vary based on season, demand, and length of stay</li>
+                                <li>Additional charges may apply for extra services, damages, or excessive cleaning</li>
+                                <li>Prices are subject to change until booking is confirmed with payment</li>
+                            </ul>
+
+                            <h3 style="color: var(--primary-teal); margin-top: 2.5rem; margin-bottom: 1rem; font-family: 'Playfair Display', serif; font-size: 1.5rem;">4. Cancellation and Refund Policy</h3>
+                            
+                            <h4 style="color: var(--text-dark); margin-top: 2rem; margin-bottom: 1rem; font-weight: 600;">4.1 Guest Cancellations</h4>
+                            <ul style="margin: 1rem 0; padding-left: 2rem;">
+                                <li><strong>30+ days before arrival:</strong> Full refund minus 5% processing fee</li>
+                                <li><strong>14-29 days before arrival:</strong> 50% refund</li>
+                                <li><strong>7-13 days before arrival:</strong> 25% refund</li>
+                                <li><strong>Less than 7 days:</strong> No refund</li>
+                                <li>Cancellations must be made in writing to info@lakesideretreat.co.nz</li>
+                            </ul>
+
+                            <h4 style="color: var(--text-dark); margin-top: 2rem; margin-bottom: 1rem; font-weight: 600;">4.2 Our Cancellations</h4>
+                            <ul style="margin: 1rem 0; padding-left: 2rem;">
+                                <li>We may cancel bookings due to force majeure events, property damage, or safety concerns</li>
+                                <li>In such cases, we will provide full refund or offer alternative dates</li>
+                                <li>Our liability is limited to the amount paid for accommodation</li>
+                            </ul>
+
+                            <h4 style="color: var(--text-dark); margin-top: 2rem; margin-bottom: 1rem; font-weight: 600;">4.3 No-Shows and Early Departure</h4>
+                            <ul style="margin: 1rem 0; padding-left: 2rem;">
+                                <li>No-shows will be charged the full booking amount</li>
+                                <li>Early departures do not qualify for partial refunds</li>
+                                <li>Late arrivals must be communicated in advance</li>
+                            </ul>
+
+                            <h3 style="color: var(--primary-teal); margin-top: 2.5rem; margin-bottom: 1rem; font-family: 'Playfair Display', serif; font-size: 1.5rem;">5. Check-in and Check-out</h3>
+                            
+                            <h4 style="color: var(--text-dark); margin-top: 2rem; margin-bottom: 1rem; font-weight: 600;">5.1 Check-in Times</h4>
+                            <ul style="margin: 1rem 0; padding-left: 2rem;">
+                                <li><strong>Standard check-in:</strong> 3:00 PM</li>
+                                <li><strong>Early check-in:</strong> Available by arrangement (subject to availability)</li>
+                                <li>Check-in instructions will be provided 24 hours before arrival</li>
+                                <li>Valid photo identification required for all guests</li>
+                            </ul>
+
+                            <h4 style="color: var(--text-dark); margin-top: 2rem; margin-bottom: 1rem; font-weight: 600;">5.2 Check-out Times</h4>
+                            <ul style="margin: 1rem 0; padding-left: 2rem;">
+                                <li><strong>All accommodations:</strong> 10:00 AM</li>
+                                <li><strong>Late check-out:</strong> Available by arrangement (additional fees may apply)</li>
+                                <li>Please ensure accommodation is left in reasonable condition</li>
+                            </ul>
+
+                            <h3 style="color: var(--primary-teal); margin-top: 2.5rem; margin-bottom: 1rem; font-family: 'Playfair Display', serif; font-size: 1.5rem;">6. Property Rules and Guest Conduct</h3>
+                            
+                            <h4 style="color: var(--text-dark); margin-top: 2rem; margin-bottom: 1rem; font-weight: 600;">6.1 General Conduct</h4>
+                            <ul style="margin: 1rem 0; padding-left: 2rem;">
+                                <li>Respect for other guests, neighbors, and property is required at all times</li>
+                                <li>Quiet hours: 9:00 PM to 8:00 AM (no loud music or excessive noise)</li>
+                                <li>Maximum noise levels must be maintained throughout the stay</li>
+                                <li>No parties, events, or gatherings beyond registered guests</li>
+                                <li>No smoking inside any accommodation (outdoor designated areas only)</li>
+                            </ul>
+
+                            <h4 style="color: var(--text-dark); margin-top: 2rem; margin-bottom: 1rem; font-weight: 600;">6.2 Safety and Security</h4>
+                            <ul style="margin: 1rem 0; padding-left: 2rem;">
+                                <li>Guests are responsible for their own safety and security</li>
+                                <li>Report any accidents, damages, or security concerns immediately</li>
+                                <li>Follow all safety instructions and signage</li>
+                                <li>Do not tamper with smoke alarms, solar systems, or safety equipment</li>
+                            </ul>
+
+                            <h4 style="color: var(--text-dark); margin-top: 2rem; margin-bottom: 1rem; font-weight: 600;">6.3 Pets (Lakeside Cottage Only)</h4>
+                            <ul style="margin: 1rem 0; padding-left: 2rem;">
+                                <li>Well-behaved dogs are welcome at the Lakeside Cottage</li>
+                                <li>Pets must be declared at time of booking</li>
+                                <li>Owners are fully responsible for pet behavior and any damages</li>
+                                <li>Pets must not be left unattended on the property</li>
+                                <li>Additional cleaning fees may apply for pet-related cleaning</li>
+                            </ul>
+
+                            <h3 style="color: var(--primary-teal); margin-top: 2.5rem; margin-bottom: 1rem; font-family: 'Playfair Display', serif; font-size: 1.5rem;">7. Damage and Additional Charges</h3>
+                            
+                            <h4 style="color: var(--text-dark); margin-top: 2rem; margin-bottom: 1rem; font-weight: 600;">7.1 Guest Responsibility</h4>
+                            <ul style="margin: 1rem 0; padding-left: 2rem;">
+                                <li>Guests are liable for any damage to property, furnishings, or equipment</li>
+                                <li>Normal wear and tear is expected and not chargeable</li>
+                                <li>Report any pre-existing damage within 2 hours of check-in</li>
+                                <li>Lost keys or key cards incur replacement charges</li>
+                            </ul>
+
+                            <h4 style="color: var(--text-dark); margin-top: 2rem; margin-bottom: 1rem; font-weight: 600;">7.2 Additional Fees</h4>
+                            <ul style="margin: 1rem 0; padding-left: 2rem;">
+                                <li><strong>Excessive cleaning:</strong> $100 - $300 depending on extent</li>
+                                <li><strong>Smoking indoors:</strong> $500 plus additional cleaning costs</li>
+                                <li><strong>Damage repairs:</strong> Cost of repair/replacement plus 20% admin fee</li>
+                                <li><strong>Lost property search/return:</strong> $50 plus postal costs</li>
+                            </ul>
+
+                            <h3 style="color: var(--primary-teal); margin-top: 2.5rem; margin-bottom: 1rem; font-family: 'Playfair Display', serif; font-size: 1.5rem;">8. Our Responsibilities and Limitations</h3>
+                            
+                            <h4 style="color: var(--text-dark); margin-top: 2rem; margin-bottom: 1rem; font-weight: 600;">8.1 What We Provide</h4>
+                            <ul style="margin: 1rem 0; padding-left: 2rem;">
+                                <li>Clean, comfortable accommodation as described</li>
+                                <li>Functional amenities and appliances</li>
+                                <li>Reasonable assistance with local recommendations</li>
+                                <li>Response to maintenance issues during reasonable hours</li>
+                            </ul>
+
+                            <h4 style="color: var(--text-dark); margin-top: 2rem; margin-bottom: 1rem; font-weight: 600;">8.2 Limitations</h4>
+                            <ul style="margin: 1rem 0; padding-left: 2rem;">
+                                <li>We are not liable for personal injury except where required by law</li>
+                                <li>Not responsible for loss, theft, or damage to personal belongings</li>
+                                <li>No liability for weather conditions affecting your stay or activities</li>
+                                <li>Solar power systems may have limitations during extended cloudy periods</li>
+                                <li>Internet connectivity cannot be guaranteed due to rural location</li>
+                            </ul>
+
+                            <h3 style="color: var(--primary-teal); margin-top: 2.5rem; margin-bottom: 1rem; font-family: 'Playfair Display', serif; font-size: 1.5rem;">9. Force Majeure</h3>
+                            <p>Neither party shall be liable for any failure to perform due to events beyond reasonable control, including but not limited to:</p>
+                            <ul style="margin: 1rem 0; padding-left: 2rem;">
+                                <li>Natural disasters, severe weather events</li>
+                                <li>Government orders, travel restrictions, pandemics</li>
+                                <li>Infrastructure failures (power, internet, water, roads)</li>
+                                <li>Acts of terrorism, war, or civil unrest</li>
+                            </ul>
+                            <p>In such cases, we will work with guests to find suitable alternatives or provide appropriate refunds.</p>
+
+                            <h3 style="color: var(--primary-teal); margin-top: 2.5rem; margin-bottom: 1rem; font-family: 'Playfair Display', serif; font-size: 1.5rem;">10. Privacy and Data Protection</h3>
+                            <p>Your personal information is collected, used, and protected in accordance with our Privacy Policy and the New Zealand Privacy Act 2020. By booking, you consent to the collection and use of your personal information as outlined in our Privacy Policy.</p>
+
+                            <h3 style="color: var(--primary-teal); margin-top: 2.5rem; margin-bottom: 1rem; font-family: 'Playfair Display', serif; font-size: 1.5rem;">11. Intellectual Property</h3>
+                            <ul style="margin: 1rem 0; padding-left: 2rem;">
+                                <li>All content on our website and materials is our intellectual property</li>
+                                <li>Guests may take photos for personal use but not for commercial purposes</li>
+                                <li>We may use images of the property (not including guests) for marketing</li>
+                                <li>Respect any copyright notices on artwork, books, or other materials</li>
+                            </ul>
+
+                            <h3 style="color: var(--primary-teal); margin-top: 2.5rem; margin-bottom: 1rem; font-family: 'Playfair Display', serif; font-size: 1.5rem;">12. Complaints and Dispute Resolution</h3>
+                            
+                            <h4 style="color: var(--text-dark); margin-top: 2rem; margin-bottom: 1rem; font-weight: 600;">12.1 Complaint Process</h4>
+                            <ul style="margin: 1rem 0; padding-left: 2rem;">
+                                <li>Report any issues during your stay immediately for prompt resolution</li>
+                                <li>Post-stay complaints must be lodged within 7 days of departure</li>
+                                <li>All complaints should be sent in writing to info@lakesideretreat.co.nz</li>
+                                <li>We aim to respond to all complaints within 48 hours</li>
+                            </ul>
+
+                            <h4 style="color: var(--text-dark); margin-top: 2rem; margin-bottom: 1rem; font-weight: 600;">12.2 Dispute Resolution</h4>
+                            <ul style="margin: 1rem 0; padding-left: 2rem;">
+                                <li>Disputes will first be addressed through good faith negotiation</li>
+                                <li>If required, disputes may be referred to mediation</li>
+                                <li>Any legal proceedings must be brought in New Zealand courts</li>
+                                <li>New Zealand law governs these Terms and any disputes</li>
+                            </ul>
+
+                            <h3 style="color: var(--primary-teal); margin-top: 2.5rem; margin-bottom: 1rem; font-family: 'Playfair Display', serif; font-size: 1.5rem;">13. General Terms</h3>
+                            
+                            <h4 style="color: var(--text-dark); margin-top: 2rem; margin-bottom: 1rem; font-weight: 600;">13.1 Governing Law</h4>
+                            <p>These Terms are governed by New Zealand law. The New Zealand courts have exclusive jurisdiction over any disputes.</p>
+
+                            <h4 style="color: var(--text-dark); margin-top: 2rem; margin-bottom: 1rem; font-weight: 600;">13.2 Consumer Guarantees Act</h4>
+                            <p>Nothing in these Terms excludes, restricts, or modifies any guarantee, warranty, term, or condition implied by the Consumer Guarantees Act 1993 or any other law that cannot be excluded, restricted, or modified.</p>
+
+                            <h4 style="color: var(--text-dark); margin-top: 2rem; margin-bottom: 1rem; font-weight: 600;">13.3 Changes to Terms</h4>
+                            <ul style="margin: 1rem 0; padding-left: 2rem;">
+                                <li>We may update these Terms from time to time</li>
+                                <li>Updated Terms will be posted on our website</li>
+                                <li>Existing bookings remain subject to Terms in effect at time of booking</li>
+                                <li>Continued use of our services constitutes acceptance of updated Terms</li>
+                            </ul>
+
+                            <h4 style="color: var(--text-dark); margin-top: 2rem; margin-bottom: 1rem; font-weight: 600;">13.4 Severability</h4>
+                            <p>If any provision of these Terms is found to be invalid or unenforceable, the remaining provisions will continue in full force and effect.</p>
+
+                            <h3 style="color: var(--primary-teal); margin-top: 2.5rem; margin-bottom: 1rem; font-family: 'Playfair Display', serif; font-size: 1.5rem;">14. Contact Information</h3>
+                            <p>For questions about these Terms and Conditions, please contact us:</p>
+                            <div style="background: var(--light-gray); padding: 2rem; border-radius: var(--border-radius); margin-top: 1.5rem;">
+                                <p><strong>Lakeside Retreat</strong><br>
+                                Email: info@lakesideretreat.co.nz<br>
+                                Address: 96 Smiths Way, Mount Pisa, Cromwell, Central Otago, New Zealand</p>
+                            </div>
+
+                            <div style="background: var(--gradient-primary); color: white; padding: 2rem; border-radius: var(--border-radius); margin-top: 2.5rem; text-align: center;">
+                                <h4 style="margin-bottom: 1rem; font-family: 'Playfair Display', serif;">Agreement</h4>
+                                <p style="margin-bottom: 0; font-size: 0.9rem;">By making a booking with Lakeside Retreat, you acknowledge that you have read, understood, and agree to be bound by these Terms and Conditions.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
         <!-- PRIVACY POLICY PAGE -->
         <div class="page-container" id="privacy-page">
             <section class="hero" style="background: linear-gradient(var(--gradient-hero), var(--gradient-hero)), url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') center/cover no-repeat; height: 60vh;">
@@ -2067,7 +2612,7 @@
                                 </div>
                                 <div style="display: flex; align-items: center; margin-bottom: 1.5rem;">
                                     <i class="fas fa-clock" style="color: var(--accent-orange); margin-right: 1rem; width: 20px; font-size: 1.1rem;"></i>
-                                    <span style="font-size: 1rem;">Check-in: 3:00 PM<br>Check-out: 10:00 AM / 11:00 AM</span>
+                                    <span style="font-size: 1rem;">Check-in: 3:00 PM<br>Check-out: 10:00 AM</span>
                                 </div>
                             </div>
                             
@@ -2144,11 +2689,12 @@
                 <a href="#" onclick="showPage('contact')">Contact Us</a>
                 <a href="#" onclick="showPage('blog')">Central Otago Guide</a>
                 <a href="#" onclick="showPage('privacy')">Privacy Policy</a>
+                <a href="#" onclick="showPage('terms')">Terms & Conditions</a>
                 <a href="https://book.lakesideretreat.co.nz/" target="_blank" class="btn btn-primary" style="padding: 0.75rem 1.5rem; font-size: 0.85rem; margin-top: 1rem; display: inline-block; text-decoration: none;">BOOK NOW</a>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 Lakeside Retreat. Sustainable luxury accommodation in Central Otago wine country. • <a href="#" onclick="showPage('privacy')" style="color: rgba(255,255,255,0.8); text-decoration: underline;">Privacy Policy</a></p>
+            <p>&copy; 2024 Lakeside Retreat. Sustainable luxury accommodation in Central Otago wine country. • <a href="#" onclick="showPage('privacy')" style="color: rgba(255,255,255,0.8); text-decoration: underline;">Privacy Policy</a> • <a href="#" onclick="showPage('terms')" style="color: rgba(255,255,255,0.8); text-decoration: underline;">Terms & Conditions</a></p>
         </div>
     </footer>
 
@@ -2652,7 +3198,7 @@
             console.log("🍇 Positioned in Central Otago wine country");
             console.log("🚴‍♂️ 300m to Cromwell-Clyde cycle trail");
             console.log("📱 Full responsive design with premium features");
-            console.log("🔒 NZ Privacy Act 2020 compliant privacy policy included");
+            console.log("🔒 Complete legal compliance: Privacy Policy & Terms & Conditions");
         });
     </script>
 </body>
