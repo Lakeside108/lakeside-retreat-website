@@ -302,6 +302,8 @@
         .mobile-nav.active li:nth-child(8) { animation-delay: 0.8s; }
         .mobile-nav.active li:nth-child(9) { animation-delay: 0.9s; }
         .mobile-nav.active li:nth-child(10) { animation-delay: 1.0s; }
+        .mobile-nav.active li:nth-child(11) { animation-delay: 1.1s; }
+        .mobile-nav.active li:nth-child(12) { animation-delay: 1.2s; }
 
         @keyframes slideInRight {
             to {
@@ -1281,15 +1283,16 @@
         <!-- Mobile Navigation -->
         <nav class="mobile-nav" id="mobileNav">
             <ul>
-                <li><a href="#" onclick="showPage('home')">Home</a></li>
-                <li><a href="#" onclick="showPage('accommodations')">Stay</a></li>
-                <li><a href="#" onclick="showPage('gallery')">Gallery</a></li>
-                <li><a href="#" onclick="showPage('blog')">Blog</a></li>
-                <li><a href="#" onclick="showPage('reviews')">Reviews</a></li>
-                <li><a href="#" onclick="showPage('explore')">Explore</a></li>
-                <li><a href="#" onclick="showPage('contact')">Contact</a></li>
-                <li><a href="#" onclick="showPage('privacy')">Privacy Policy</a></li>
-                <li><a href="#" onclick="showPage('terms')">Terms & Conditions</a></li>
+                <li><a href="#" onclick="showPage('home'); toggleMobileMenu();">Home</a></li>
+                <li><a href="#" onclick="showPage('accommodations'); toggleMobileMenu();">Stay</a></li>
+                <li><a href="#" onclick="showPage('gallery'); toggleMobileMenu();">Gallery</a></li>
+                <li><a href="#" onclick="showPage('blog'); toggleMobileMenu();">Blog</a></li>
+                <li><a href="#" onclick="showPage('reviews'); toggleMobileMenu();">Reviews</a></li>
+                <li><a href="#" onclick="showPage('explore'); toggleMobileMenu();">Explore</a></li>
+                <li><a href="#" onclick="showPage('contact'); toggleMobileMenu();">Contact</a></li>
+                <li><a href="#" onclick="showPage('booking'); toggleMobileMenu();">Booking Policy</a></li>
+                <li><a href="#" onclick="showPage('privacy'); toggleMobileMenu();">Privacy Policy</a></li>
+                <li><a href="#" onclick="showPage('terms'); toggleMobileMenu();">Terms & Conditions</a></li>
                 <li><a href="https://book.lakesideretreat.co.nz/" target="_blank">Book Now</a></li>
             </ul>
         </nav>
@@ -2617,7 +2620,8 @@
                             </div>
                             
                             <h4 style="margin-top: 2rem; margin-bottom: 1rem;">Booking Information</h4>
-                            <p style="margin-bottom: 1.5rem;">All bookings are managed through our secure booking system for the best rates and personalized service.</p>
+                            <p style="margin-bottom: 1rem;">All bookings are managed through our secure booking system for the best rates and personalized service.</p>
+                            <p style="margin-bottom: 1.5rem;">📋 <a href="#" onclick="showPage('booking')" style="color: var(--primary-teal); text-decoration: underline; font-weight: 600;">View our complete Booking Policy</a> for cancellation terms, payment schedules, and accommodation guidelines.</p>
                             <a href="https://book.lakesideretreat.co.nz/" target="_blank" class="btn btn-primary" style="margin-top: 1rem; width: 100%; text-align: center;">Check Availability & Book</a>
                         </div>
                         
@@ -2688,13 +2692,14 @@
                 <a href="https://book.lakesideretreat.co.nz/" target="_blank">Check Availability</a>
                 <a href="#" onclick="showPage('contact')">Contact Us</a>
                 <a href="#" onclick="showPage('blog')">Central Otago Guide</a>
+                <a href="#" onclick="showPage('booking')">Booking Policy</a>
                 <a href="#" onclick="showPage('privacy')">Privacy Policy</a>
                 <a href="#" onclick="showPage('terms')">Terms & Conditions</a>
                 <a href="https://book.lakesideretreat.co.nz/" target="_blank" class="btn btn-primary" style="padding: 0.75rem 1.5rem; font-size: 0.85rem; margin-top: 1rem; display: inline-block; text-decoration: none;">BOOK NOW</a>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 Lakeside Retreat. Sustainable luxury accommodation in Central Otago wine country. • <a href="#" onclick="showPage('privacy')" style="color: rgba(255,255,255,0.8); text-decoration: underline;">Privacy Policy</a> • <a href="#" onclick="showPage('terms')" style="color: rgba(255,255,255,0.8); text-decoration: underline;">Terms & Conditions</a></p>
+            <p>&copy; 2024 Lakeside Retreat. Sustainable luxury accommodation in Central Otago wine country. • <a href="#" onclick="showPage('booking')" style="color: rgba(255,255,255,0.8); text-decoration: underline;">Booking Policy</a> • <a href="#" onclick="showPage('privacy')" style="color: rgba(255,255,255,0.8); text-decoration: underline;">Privacy Policy</a> • <a href="#" onclick="showPage('terms')" style="color: rgba(255,255,255,0.8); text-decoration: underline;">Terms & Conditions</a></p>
         </div>
     </footer>
 
@@ -3198,7 +3203,7 @@
             console.log("🍇 Positioned in Central Otago wine country");
             console.log("🚴‍♂️ 300m to Cromwell-Clyde cycle trail");
             console.log("📱 Full responsive design with premium features");
-            console.log("🔒 Complete legal compliance: Privacy Policy & Terms & Conditions");
+            console.log("📋 Complete legal framework: Booking Policy, Privacy Policy & Terms & Conditions");
         });
     </script>
 </body>
