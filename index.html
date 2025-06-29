@@ -15,37 +15,34 @@
         }
 
         :root {
-            --primary-blue: #1e3a8a;
-            --primary-teal: #0f766e;
-            --accent-gold: #d97706;
-            --warm-beige: #f3f1ee;
-            --soft-gray: #6b7280;
-            --dark-slate: #1e293b;
-            --light-sand: #fef7ed;
-            --gradient-primary: linear-gradient(135deg, #1e3a8a 0%, #0f766e 100%);
-            --gradient-warm: linear-gradient(135deg, #fef7ed 0%, #f3f1ee 100%);
-            --shadow-soft: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            --shadow-medium: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-            --shadow-large: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            --primary-teal: #1e6b7b;
+            --accent-orange: #d97706;
+            --text-dark: #2d3748;
+            --text-light: #718096;
+            --white: #ffffff;
+            --light-gray: #f7fafc;
+            --border-light: #e2e8f0;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
             --transition: all 0.3s ease;
         }
 
         body {
             font-family: 'Inter', sans-serif;
-            line-height: 1.7;
-            color: var(--dark-slate);
+            line-height: 1.6;
+            color: var(--text-dark);
             scroll-behavior: smooth;
             overflow-x: hidden;
         }
 
-        /* Page Transition Overlay */
+        /* Page Transition */
         .page-transition {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: var(--gradient-primary);
+            background: linear-gradient(135deg, var(--primary-teal), var(--accent-orange));
             z-index: 9999;
             display: flex;
             align-items: center;
@@ -80,23 +77,21 @@
             100% { transform: rotate(360deg); }
         }
 
-        /* Header Styles */
+        /* Header */
         header {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 1rem 0;
+            background: var(--white);
+            box-shadow: var(--shadow);
             position: fixed;
             top: 0;
             width: 100%;
             z-index: 1000;
-            box-shadow: var(--shadow-soft);
             transition: var(--transition);
         }
 
-        .header-content {
-            max-width: 1400px;
+        .header-container {
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 0 2rem;
+            padding: 1rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -106,44 +101,34 @@
             display: flex;
             align-items: center;
             text-decoration: none;
-            color: var(--dark-slate);
-            transition: transform 0.3s ease;
-        }
-
-        .logo:hover {
-            transform: translateY(-2px);
+            color: var(--text-dark);
         }
 
         .logo-icon {
-            width: 48px;
-            height: 48px;
-            background: var(--gradient-primary);
-            border-radius: 12px;
-            margin-right: 16px;
+            width: 44px;
+            height: 44px;
+            background: var(--primary-teal);
+            border-radius: 8px;
+            margin-right: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
             font-weight: 700;
-            font-size: 1.25rem;
-            box-shadow: var(--shadow-soft);
+            font-size: 1.1rem;
         }
 
         .logo-text {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.75rem;
-            font-weight: 600;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary-teal);
             line-height: 1.2;
-            background: var(--gradient-primary);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
         }
 
         .logo-subtitle {
-            font-size: 0.875rem;
-            color: var(--soft-gray);
-            font-weight: 500;
+            font-size: 0.75rem;
+            color: var(--text-light);
+            font-weight: 400;
             margin-top: 2px;
         }
 
@@ -156,13 +141,14 @@
 
         .main-nav a {
             text-decoration: none;
-            color: var(--dark-slate);
+            color: var(--text-dark);
             font-weight: 500;
-            font-size: 1rem;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
             transition: var(--transition);
+            padding: 0.5rem 0;
             position: relative;
-            padding: 0.5rem 1rem;
-            border-radius: 25px;
         }
 
         .main-nav a::after {
@@ -170,43 +156,41 @@
             position: absolute;
             width: 0;
             height: 2px;
-            bottom: 6px;
-            left: 50%;
-            background: var(--gradient-primary);
+            bottom: 0;
+            left: 0;
+            background: var(--primary-teal);
             transition: var(--transition);
-            transform: translateX(-50%);
         }
 
         .main-nav a:hover::after,
         .main-nav a.active::after {
-            width: 80%;
+            width: 100%;
         }
 
         .main-nav a:hover,
         .main-nav a.active {
-            color: var(--primary-blue);
+            color: var(--primary-teal);
         }
 
-        .cta-button {
-            background: var(--gradient-primary);
+        .header-book-btn {
+            background: var(--primary-teal);
             color: white;
-            padding: 0.875rem 2rem;
+            padding: 0.75rem 1.5rem;
             border: none;
-            border-radius: 50px;
-            font-size: 1rem;
+            border-radius: 25px;
+            font-size: 0.85rem;
             font-weight: 600;
-            cursor: pointer;
-            transition: var(--transition);
-            box-shadow: var(--shadow-soft);
             text-transform: uppercase;
             letter-spacing: 0.5px;
+            cursor: pointer;
+            transition: var(--transition);
             text-decoration: none;
             display: inline-block;
         }
 
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-large);
+        .header-book-btn:hover {
+            background: #1a5a68;
+            transform: translateY(-1px);
         }
 
         /* Mobile Menu */
@@ -214,7 +198,7 @@
             display: none;
             background: none;
             border: none;
-            color: var(--dark-slate);
+            color: var(--text-dark);
             font-size: 1.5rem;
             cursor: pointer;
         }
@@ -225,10 +209,11 @@
             right: -100%;
             width: 280px;
             height: calc(100vh - 80px);
-            background: var(--primary-blue);
+            background: var(--white);
             padding: 2rem;
             transition: var(--transition);
-            box-shadow: -5px 0 15px rgba(0,0,0,0.2);
+            box-shadow: var(--shadow-lg);
+            border-left: 1px solid var(--border-light);
         }
 
         .mobile-nav.active {
@@ -243,16 +228,21 @@
         }
 
         .mobile-nav a {
-            color: white;
+            color: var(--text-dark);
             text-decoration: none;
             padding: 1rem;
             border-radius: 8px;
             transition: var(--transition);
             display: block;
+            font-weight: 500;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
         }
 
         .mobile-nav a:hover {
-            background: rgba(255,255,255,0.1);
+            background: var(--light-gray);
+            color: var(--primary-teal);
         }
 
         /* Page Container */
@@ -270,40 +260,27 @@
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(30, 58, 138, 0.4), rgba(15, 118, 110, 0.4)), 
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
                         url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') center/cover no-repeat;
-            min-height: 80vh;
             display: flex;
             align-items: center;
             justify-content: center;
             position: relative;
             color: white;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at center, transparent 0%, rgba(0,0,0,0.1) 100%);
         }
 
         .hero-content {
-            position: relative;
-            z-index: 2;
             text-align: center;
-            max-width: 900px;
-            padding: 3rem;
+            max-width: 800px;
+            padding: 0 2rem;
             animation: fadeInUp 1s ease 0.5s both;
         }
 
         @keyframes fadeInUp {
             from {
                 opacity: 0;
-                transform: translateY(50px);
+                transform: translateY(30px);
             }
             to {
                 opacity: 1;
@@ -312,26 +289,26 @@
         }
 
         .hero h1 {
-            font-family: 'Playfair Display', serif;
             font-size: clamp(2.5rem, 5vw, 4rem);
             font-weight: 600;
-            margin-bottom: 1.5rem;
-            text-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            margin-bottom: 2rem;
             line-height: 1.1;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
         }
 
-        .hero .tagline {
-            font-size: 1.375rem;
-            margin-bottom: 1rem;
-            letter-spacing: 4px;
-            font-weight: 300;
+        .hero-tagline {
+            font-size: 1.1rem;
+            font-weight: 500;
+            letter-spacing: 3px;
             text-transform: uppercase;
+            margin-bottom: 1rem;
+            opacity: 0.9;
         }
 
-        .hero .subtitle {
-            font-size: 1.125rem;
+        .hero-subtitle {
+            font-size: 1.1rem;
             margin-bottom: 3rem;
-            opacity: 0.95;
+            opacity: 0.9;
             font-weight: 400;
         }
 
@@ -343,22 +320,28 @@
         }
 
         .btn {
-            padding: 1.25rem 2.5rem;
+            padding: 1rem 2.5rem;
             border: none;
-            border-radius: 50px;
-            font-size: 1.125rem;
+            border-radius: 30px;
+            font-size: 1rem;
             font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
             cursor: pointer;
             transition: var(--transition);
             text-decoration: none;
             display: inline-block;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
         }
 
         .btn-primary {
-            background: var(--accent-gold);
+            background: var(--accent-orange);
             color: white;
+        }
+
+        .btn-primary:hover {
+            background: #b45309;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
         }
 
         .btn-secondary {
@@ -367,60 +350,37 @@
             border: 2px solid white;
         }
 
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-large);
-        }
-
-        .btn-primary:hover {
-            background: #b45309;
-        }
-
         .btn-secondary:hover {
             background: white;
-            color: var(--primary-blue);
+            color: var(--text-dark);
+            transform: translateY(-2px);
         }
 
         /* Section Styles */
         .section {
-            padding: 6rem 0;
+            padding: 5rem 0;
         }
 
         .container {
-            max-width: 1400px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 2rem;
         }
 
         .section-title {
-            font-family: 'Playfair Display', serif;
             text-align: center;
-            font-size: clamp(2.5rem, 4vw, 3.5rem);
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-            color: var(--dark-slate);
-            position: relative;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -12px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background: var(--gradient-primary);
-            border-radius: 2px;
+            font-size: clamp(2rem, 4vw, 2.5rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
         }
 
         .section-subtitle {
             text-align: center;
-            font-size: 1.25rem;
-            color: var(--soft-gray);
-            margin-bottom: 4rem;
-            font-weight: 400;
-            max-width: 700px;
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 3rem;
+            max-width: 600px;
             margin-left: auto;
             margin-right: auto;
         }
@@ -445,80 +405,80 @@
 
         /* Cards */
         .card {
-            background: white;
-            border-radius: 20px;
+            background: var(--white);
+            border-radius: 12px;
             padding: 2rem;
-            box-shadow: var(--shadow-soft);
+            box-shadow: var(--shadow);
             transition: var(--transition);
-            border: 1px solid rgba(30, 58, 138, 0.1);
+            border: 1px solid var(--border-light);
         }
 
         .card:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-large);
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
         }
 
         .card img {
             width: 100%;
             height: 200px;
             object-fit: cover;
-            border-radius: 15px;
+            border-radius: 8px;
             margin-bottom: 1rem;
         }
 
         .card h3 {
-            color: var(--primary-blue);
+            color: var(--text-dark);
             margin-bottom: 1rem;
-            font-size: 1.3rem;
+            font-size: 1.25rem;
             font-weight: 600;
         }
 
         .card p {
-            color: var(--soft-gray);
+            color: var(--text-light);
             line-height: 1.6;
+            margin-bottom: 1rem;
         }
 
-        /* Accommodation Showcase Styles */
+        /* Accommodation Showcase */
         .accommodations-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 4rem;
-            margin-top: 4rem;
+            gap: 3rem;
+            margin-top: 3rem;
         }
 
         .accommodation-showcase {
-            background: var(--gradient-warm);
-            border-radius: 24px;
-            padding: 3rem;
-            box-shadow: var(--shadow-medium);
-            border: 1px solid rgba(30, 58, 138, 0.1);
+            background: var(--white);
+            border-radius: 16px;
+            padding: 2.5rem;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border-light);
             transition: var(--transition);
         }
 
         .accommodation-showcase:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-large);
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
         }
 
         .accommodation-showcase.featured {
-            border: 2px solid var(--accent-gold);
-            background: linear-gradient(135deg, #fef7ed 0%, #f3f1ee 100%);
+            border: 2px solid var(--accent-orange);
         }
 
         .accommodation-header {
             text-align: center;
             margin-bottom: 2rem;
             padding-bottom: 1.5rem;
-            border-bottom: 2px solid rgba(30, 58, 138, 0.1);
+            border-bottom: 1px solid var(--border-light);
         }
 
         .accommodation-badge {
             display: inline-block;
-            background: var(--gradient-primary);
+            background: var(--primary-teal);
             color: white;
-            padding: 0.5rem 1.5rem;
-            border-radius: 20px;
-            font-size: 0.875rem;
+            padding: 0.4rem 1rem;
+            border-radius: 15px;
+            font-size: 0.75rem;
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 0.5px;
@@ -526,35 +486,33 @@
         }
 
         .accommodation-showcase.featured .accommodation-badge {
-            background: var(--accent-gold);
+            background: var(--accent-orange);
         }
 
         .accommodation-header h3 {
-            font-family: 'Playfair Display', serif;
-            color: var(--primary-blue);
-            font-size: 2rem;
+            font-size: 1.75rem;
             margin-bottom: 0.5rem;
-            font-weight: 600;
+            font-weight: 700;
+            color: var(--text-dark);
         }
 
         .accommodation-tagline {
-            color: var(--soft-gray);
-            font-size: 1.125rem;
+            color: var(--text-light);
+            font-size: 1rem;
             font-style: italic;
-            margin-bottom: 0;
         }
 
-        /* Photo Gallery Styles */
+        /* Photo Gallery */
         .photo-gallery {
             margin: 2rem 0;
-            border-radius: 20px;
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: var(--shadow-large);
+            box-shadow: var(--shadow);
         }
 
         .main-photo {
             position: relative;
-            height: 400px;
+            height: 300px;
             overflow: hidden;
         }
 
@@ -574,10 +532,10 @@
             bottom: 0;
             left: 0;
             right: 0;
-            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            background: linear-gradient(transparent, rgba(0,0,0,0.7));
             color: white;
             padding: 2rem 1.5rem 1rem;
-            font-size: 1.125rem;
+            font-size: 1rem;
             font-weight: 500;
         }
 
@@ -589,7 +547,7 @@
 
         .gallery-thumb {
             position: relative;
-            height: 200px;
+            height: 150px;
             overflow: hidden;
             cursor: pointer;
             transition: var(--transition);
@@ -598,7 +556,6 @@
         .gallery-thumb:hover {
             transform: scale(1.02);
             z-index: 2;
-            box-shadow: var(--shadow-large);
         }
 
         .gallery-thumb img {
@@ -608,19 +565,15 @@
             transition: var(--transition);
         }
 
-        .gallery-thumb:hover img {
-            filter: brightness(1.1);
-        }
-
         .thumb-caption {
             position: absolute;
             bottom: 0;
             left: 0;
             right: 0;
-            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            background: linear-gradient(transparent, rgba(0,0,0,0.7));
             color: white;
-            padding: 1.5rem 1rem 0.75rem;
-            font-size: 0.875rem;
+            padding: 1rem 0.75rem 0.5rem;
+            font-size: 0.8rem;
             font-weight: 500;
             transform: translateY(100%);
             transition: transform 0.3s ease;
@@ -632,13 +585,12 @@
 
         .details-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
             gap: 1rem;
             margin: 2rem 0;
-            padding: 2rem;
-            background: white;
-            border-radius: 16px;
-            box-shadow: var(--shadow-soft);
+            padding: 1.5rem;
+            background: var(--light-gray);
+            border-radius: 12px;
         }
 
         .detail-item {
@@ -646,38 +598,35 @@
             align-items: center;
             gap: 0.75rem;
             padding: 0.75rem;
-            background: var(--light-sand);
-            border-radius: 12px;
+            background: var(--white);
+            border-radius: 8px;
             font-weight: 500;
+            font-size: 0.9rem;
         }
 
         .detail-icon {
-            font-size: 1.25rem;
-            min-width: 1.5rem;
-        }
-
-        .accommodation-description {
-            margin: 2rem 0;
+            font-size: 1.1rem;
+            min-width: 1.2rem;
+            color: var(--primary-teal);
         }
 
         .accommodation-description p {
-            font-size: 1.125rem;
-            line-height: 1.8;
+            font-size: 1rem;
+            line-height: 1.7;
             margin-bottom: 1.5rem;
-            color: var(--dark-slate);
+            color: var(--text-dark);
         }
 
         .premium-features {
-            background: white;
-            padding: 2rem;
-            border-radius: 16px;
-            box-shadow: var(--shadow-soft);
+            background: var(--light-gray);
+            padding: 1.5rem;
+            border-radius: 12px;
             margin-top: 2rem;
         }
 
         .premium-features h4 {
-            color: var(--primary-teal);
-            font-size: 1.375rem;
+            color: var(--text-dark);
+            font-size: 1.1rem;
             margin-bottom: 1.5rem;
             font-weight: 600;
             text-align: center;
@@ -685,7 +634,7 @@
 
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 1rem;
         }
 
@@ -694,23 +643,24 @@
             align-items: center;
             gap: 0.75rem;
             padding: 1rem;
-            background: var(--light-sand);
-            border-radius: 12px;
-            border-left: 4px solid var(--accent-gold);
+            background: var(--white);
+            border-radius: 8px;
+            border-left: 3px solid var(--primary-teal);
             transition: var(--transition);
+            font-size: 0.9rem;
         }
 
         .feature-item:hover {
-            transform: translateX(5px);
-            box-shadow: var(--shadow-soft);
+            transform: translateX(3px);
         }
 
         .feature-icon {
-            font-size: 1.25rem;
-            min-width: 1.5rem;
+            font-size: 1.1rem;
+            min-width: 1.2rem;
+            color: var(--primary-teal);
         }
 
-        /* Photo Gallery on Gallery Page */
+        /* Photo Gallery Page */
         .photo-gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -721,21 +671,20 @@
         .photo-item {
             position: relative;
             overflow: hidden;
-            border-radius: 15px;
+            border-radius: 12px;
             cursor: pointer;
             height: 200px;
             transition: var(--transition);
         }
 
         .photo-item:hover {
-            transform: scale(1.05);
+            transform: scale(1.03);
         }
 
         .photo-item img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: var(--transition);
         }
 
         .photo-overlay {
@@ -778,7 +727,7 @@
         .lightbox img {
             max-width: 90%;
             max-height: 90%;
-            border-radius: 10px;
+            border-radius: 8px;
         }
 
         .lightbox-close {
@@ -792,35 +741,226 @@
             cursor: pointer;
         }
 
-        /* Testimonials System Styles */
+        /* Reviews Section */
+        .reviews {
+            padding: 5rem 0;
+            background: var(--light-gray);
+        }
+
+        .rating-overview {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            align-items: center;
+            margin: 3rem auto;
+            max-width: 800px;
+        }
+
+        .overall-rating {
+            text-align: center;
+        }
+
+        .rating-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-teal);
+            line-height: 1;
+        }
+
+        .rating-stars {
+            margin: 1rem 0;
+        }
+
+        .star {
+            color: #fbbf24;
+            font-size: 1.5rem;
+            margin: 0 0.1rem;
+        }
+
+        .rating-text {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .rating-platforms {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .platform-rating {
+            text-align: center;
+            padding: 1.5rem;
+            background: var(--light-gray);
+            border-radius: 12px;
+            transition: var(--transition);
+        }
+
+        .platform-rating:hover {
+            transform: translateY(-2px);
+        }
+
+        .platform-logo {
+            width: 80px;
+            height: 24px;
+            margin-bottom: 1rem;
+            border-radius: 4px;
+        }
+
+        .platform-score {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary-teal);
+            margin-bottom: 0.5rem;
+        }
+
+        .platform-reviews {
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .review-card {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .review-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .review-card.featured {
+            border: 2px solid var(--accent-orange);
+            grid-column: span 2;
+        }
+
+        .review-card.featured::before {
+            content: "⭐ FEATURED";
+            position: absolute;
+            top: -10px;
+            left: 1.5rem;
+            background: var(--accent-orange);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+
+        .reviewer-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .reviewer-avatar {
+            width: 40px;
+            height: 40px;
+            background: var(--primary-teal);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        .reviewer-name {
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 0.25rem;
+            font-size: 0.95rem;
+        }
+
+        .reviewer-location {
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        .review-rating {
+            text-align: right;
+        }
+
+        .stars {
+            color: #fbbf24;
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .platform {
+            font-size: 0.7rem;
+            color: var(--text-light);
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+
+        .review-content p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: var(--text-dark);
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+
+        .review-date {
+            font-size: 0.8rem;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        /* Testimonials System */
         .testimonials-system {
-            padding: 6rem 0;
-            background: white;
+            padding: 5rem 0;
+            background: var(--white);
         }
 
         .testimonial-submission {
-            background: var(--gradient-warm);
-            padding: 4rem;
-            border-radius: 24px;
-            margin-bottom: 4rem;
-            box-shadow: var(--shadow-medium);
+            background: var(--light-gray);
+            padding: 3rem;
+            border-radius: 16px;
+            margin-bottom: 3rem;
+            box-shadow: var(--shadow);
         }
 
         .submission-header {
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 2.5rem;
         }
 
         .submission-header h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            color: var(--primary-blue);
+            font-size: 2rem;
+            color: var(--text-dark);
             margin-bottom: 1rem;
+            font-weight: 700;
         }
 
         .submission-header p {
-            font-size: 1.125rem;
-            color: var(--soft-gray);
+            font-size: 1rem;
+            color: var(--text-light);
             margin-bottom: 2rem;
         }
 
@@ -828,36 +968,31 @@
             display: inline-flex;
             align-items: center;
             gap: 0.75rem;
-            background: var(--accent-gold);
+            background: var(--accent-orange);
             color: white;
             padding: 1rem 2rem;
-            border-radius: 50px;
+            border-radius: 25px;
             font-weight: 600;
-            box-shadow: var(--shadow-soft);
-            animation: pulse 2s infinite;
-        }
-
-        .incentive-icon {
-            font-size: 1.25rem;
+            box-shadow: var(--shadow);
         }
 
         .testimonial-form {
-            background: white;
-            padding: 3rem;
-            border-radius: 20px;
-            box-shadow: var(--shadow-soft);
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
         }
 
         .form-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 3rem;
+            gap: 2.5rem;
             margin-bottom: 2rem;
         }
 
         .form-section h4 {
-            color: var(--primary-teal);
-            font-size: 1.25rem;
+            color: var(--text-dark);
+            font-size: 1.1rem;
             margin-bottom: 1.5rem;
             font-weight: 600;
         }
@@ -871,10 +1006,10 @@
 
         .form-row input,
         .form-row select {
-            padding: 1rem;
-            border: 2px solid #e5e7eb;
-            border-radius: 12px;
-            font-size: 1rem;
+            padding: 0.75rem;
+            border: 1px solid var(--border-light);
+            border-radius: 8px;
+            font-size: 0.9rem;
             transition: border-color 0.3s ease;
         }
 
@@ -885,21 +1020,22 @@
         }
 
         .rating-section {
-            margin: 3rem 0;
+            margin: 2.5rem 0;
             padding: 2rem;
-            background: var(--light-sand);
-            border-radius: 16px;
+            background: var(--light-gray);
+            border-radius: 12px;
         }
 
         .rating-section h4 {
-            color: var(--primary-blue);
-            margin-bottom: 2rem;
+            color: var(--text-dark);
+            margin-bottom: 1.5rem;
             text-align: center;
+            font-weight: 600;
         }
 
         .rating-categories {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
             gap: 1.5rem;
         }
 
@@ -911,17 +1047,18 @@
             display: block;
             font-weight: 500;
             margin-bottom: 0.5rem;
-            color: var(--dark-slate);
+            color: var(--text-dark);
+            font-size: 0.9rem;
         }
 
         .star-rating {
             display: flex;
             justify-content: center;
-            gap: 0.25rem;
+            gap: 0.2rem;
         }
 
         .star-rating .star {
-            font-size: 1.5rem;
+            font-size: 1.25rem;
             color: #d1d5db;
             cursor: pointer;
             transition: color 0.2s ease;
@@ -932,222 +1069,17 @@
             color: #fbbf24;
         }
 
-        /* Reviews Section */
-        .reviews {
-            padding: 6rem 0;
-            background: var(--gradient-warm);
-        }
-
-        .reviews-summary {
-            text-align: center;
-            margin: 4rem auto;
-            max-width: 800px;
-        }
-
-        .rating-overview {
-            background: white;
-            padding: 3rem;
-            border-radius: 24px;
-            box-shadow: var(--shadow-medium);
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 3rem;
-            align-items: center;
-        }
-
-        .overall-rating {
-            text-align: center;
-        }
-
-        .rating-number {
-            font-family: 'Playfair Display', serif;
-            font-size: 4rem;
-            font-weight: 700;
-            background: var(--gradient-primary);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            line-height: 1;
-        }
-
-        .rating-stars {
-            margin: 1rem 0;
-        }
-
-        .star {
-            color: #fbbf24;
-            font-size: 2rem;
-            margin: 0 0.125rem;
-        }
-
-        .rating-text {
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: var(--primary-teal);
-        }
-
-        .rating-platforms {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-        }
-
-        .platform-rating {
-            text-align: center;
-            padding: 1.5rem;
-            background: var(--light-sand);
-            border-radius: 16px;
-            transition: transform 0.3s ease;
-        }
-
-        .platform-rating:hover {
-            transform: translateY(-5px);
-        }
-
-        .platform-logo {
-            width: 100px;
-            height: 30px;
-            margin-bottom: 1rem;
-            border-radius: 6px;
-        }
-
-        .platform-score {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary-blue);
-            margin-bottom: 0.5rem;
-        }
-
-        .platform-reviews {
-            font-size: 0.875rem;
-            color: var(--soft-gray);
-        }
-
-        .reviews-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 2rem;
-            margin-top: 4rem;
-        }
-
-        .review-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 20px;
-            box-shadow: var(--shadow-soft);
-            border: 1px solid rgba(30, 58, 138, 0.1);
-            transition: var(--transition);
-            position: relative;
-        }
-
-        .review-card:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-large);
-        }
-
-        .review-card.featured {
-            border: 2px solid var(--accent-gold);
-            grid-column: span 2;
-        }
-
-        .review-card.featured::before {
-            content: "⭐ FEATURED REVIEW";
-            position: absolute;
-            top: -12px;
-            left: 2rem;
-            background: var(--accent-gold);
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .review-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 1.5rem;
-        }
-
-        .reviewer-info {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .reviewer-avatar {
-            width: 50px;
-            height: 50px;
-            background: var(--gradient-primary);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: 700;
-            font-size: 1.25rem;
-        }
-
-        .reviewer-name {
-            font-weight: 600;
-            color: var(--dark-slate);
-            margin-bottom: 0.25rem;
-        }
-
-        .reviewer-location {
-            font-size: 0.875rem;
-            color: var(--soft-gray);
-        }
-
-        .review-rating {
-            text-align: right;
-        }
-
-        .stars {
-            color: #fbbf24;
-            font-size: 1.25rem;
-            margin-bottom: 0.25rem;
-        }
-
-        .platform {
-            font-size: 0.75rem;
-            color: var(--soft-gray);
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .review-content {
-            margin-bottom: 1.5rem;
-        }
-
-        .review-content p {
-            font-size: 1rem;
-            line-height: 1.7;
-            color: var(--dark-slate);
-            font-style: italic;
-        }
-
-        .review-date {
-            font-size: 0.875rem;
-            color: var(--soft-gray);
-            font-weight: 500;
-        }
-
         /* Contact Bar */
         .contact-bar {
-            background: var(--accent-gold);
+            background: var(--primary-teal);
             color: white;
             padding: 1rem 2rem;
             text-align: center;
-            font-weight: 600;
+            font-weight: 500;
             position: sticky;
             bottom: 0;
             z-index: 100;
-            box-shadow: 0 -4px 6px rgba(0,0,0,0.1);
+            font-size: 0.9rem;
         }
 
         .contact-bar a {
@@ -1165,7 +1097,7 @@
 
         /* Footer */
         footer {
-            background: var(--dark-slate);
+            background: var(--text-dark);
             color: white;
             padding: 3rem 0 1rem;
         }
@@ -1176,14 +1108,14 @@
             padding: 0 2rem;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
+            gap: 2.5rem;
             margin-bottom: 2rem;
         }
 
         .footer-section h3 {
-            color: var(--accent-gold);
+            color: var(--accent-orange);
             margin-bottom: 1rem;
-            font-family: 'Playfair Display', serif;
+            font-weight: 600;
         }
 
         .footer-section a {
@@ -1192,10 +1124,11 @@
             display: block;
             margin-bottom: 0.5rem;
             transition: var(--transition);
+            font-size: 0.9rem;
         }
 
         .footer-section a:hover {
-            color: var(--accent-gold);
+            color: var(--accent-orange);
         }
 
         .footer-bottom {
@@ -1204,6 +1137,7 @@
             padding-top: 1rem;
             text-align: center;
             opacity: 0.8;
+            font-size: 0.85rem;
         }
 
         /* Responsive Design */
@@ -1223,10 +1157,16 @@
             .hero-buttons {
                 flex-direction: column;
                 align-items: center;
+                gap: 0.75rem;
+            }
+
+            .btn {
+                padding: 0.875rem 2rem;
+                font-size: 0.9rem;
             }
 
             .section {
-                padding: 4rem 0;
+                padding: 3rem 0;
             }
 
             .container {
@@ -1269,7 +1209,7 @@
             }
 
             .contact-bar {
-                font-size: 0.9rem;
+                font-size: 0.8rem;
                 text-align: left;
             }
 
@@ -1285,25 +1225,20 @@
         }
 
         @media (max-width: 480px) {
-            .header-content {
+            .header-container {
                 padding: 0.75rem 1rem;
             }
 
             .logo-text {
-                font-size: 1.5rem;
+                font-size: 1.1rem;
             }
 
             .hero {
-                min-height: 70vh;
+                height: 80vh;
             }
 
             .hero h1 {
                 font-size: 2rem;
-            }
-
-            .btn {
-                padding: 1rem 2rem;
-                font-size: 1rem;
             }
 
             .accommodation-showcase {
@@ -1332,7 +1267,7 @@
 
     <!-- Header -->
     <header>
-        <div class="header-content">
+        <div class="header-container">
             <a href="#" class="logo" onclick="showPage('home')">
                 <div class="logo-icon">LR</div>
                 <div>
@@ -1342,14 +1277,14 @@
             </a>
             
             <nav class="main-nav">
-                <a href="#" onclick="showPage('home')" class="nav-link active">HOME</a>
-                <a href="#" onclick="showPage('accommodations')" class="nav-link">STAY</a>
-                <a href="#" onclick="showPage('gallery')" class="nav-link">GALLERY</a>
-                <a href="#" onclick="showPage('reviews')" class="nav-link">REVIEWS</a>
-                <a href="#" onclick="showPage('explore')" class="nav-link">EXPLORE</a>
-                <a href="#" onclick="showPage('testimonials')" class="nav-link">TESTIMONIALS</a>
-                <a href="#" onclick="showPage('contact')" class="nav-link">CONTACT</a>
-                <a href="https://book.lakesideretreat.co.nz/" target="_blank" class="cta-button">BOOK NOW</a>
+                <a href="#" onclick="showPage('home')" class="nav-link active">Home</a>
+                <a href="#" onclick="showPage('accommodations')" class="nav-link">Stay</a>
+                <a href="#" onclick="showPage('gallery')" class="nav-link">Gallery</a>
+                <a href="#" onclick="showPage('reviews')" class="nav-link">Reviews</a>
+                <a href="#" onclick="showPage('explore')" class="nav-link">Explore</a>
+                <a href="#" onclick="showPage('testimonials')" class="nav-link">Testimonials</a>
+                <a href="#" onclick="showPage('contact')" class="nav-link">Contact</a>
+                <a href="https://book.lakesideretreat.co.nz/" target="_blank" class="header-book-btn">Book Now</a>
             </nav>
 
             <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
@@ -1378,8 +1313,8 @@
             <section class="hero">
                 <div class="hero-content">
                     <h1>A HAVEN OF SERENITY IN CROMWELL, QUEENSTOWN</h1>
-                    <p class="tagline">TRANQUIL. AUTHENTIC. TIMELESS</p>
-                    <p class="subtitle">Adults-only eco-domes or pet-friendly cottage</p>
+                    <p class="hero-tagline">TRANQUIL. AUTHENTIC. TIMELESS</p>
+                    <p class="hero-subtitle">Adults-only eco-domes or pet-friendly cottage</p>
                     <div class="hero-buttons">
                         <a href="https://book.lakesideretreat.co.nz/" target="_blank" class="btn btn-primary">BOOK NOW</a>
                         <a href="#" onclick="showPage('accommodations')" class="btn btn-secondary">EXPLORE STAYS</a>
@@ -1389,59 +1324,59 @@
 
             <section class="section">
                 <div class="container">
-                    <h2 class="section-title">OUR STORY</h2>
-                    <div class="grid grid-2" style="align-items: center; gap: 4rem;">
+                    <h2 class="section-title">Our Story</h2>
+                    <div class="grid grid-2" style="align-items: center; gap: 3rem;">
                         <div>
-                            <h3 style="font-family: 'Playfair Display', serif; color: var(--primary-blue); font-size: 2rem; margin-bottom: 2rem;">Where Lake Dunstan Meets Wine Country Magic</h3>
-                            <p style="font-size: 1.125rem; line-height: 1.8; margin-bottom: 1.75rem;">High above the pristine waters of Lake Dunstan, where ancient schist mountains meet rolling vineyard hills, lies a sanctuary that captures the very essence of Central Otago. Lakeside Retreat was born from a simple dream: to create a place where luxury meets sustainability, where modern comfort embraces timeless landscape.</p>
+                            <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem; color: var(--text-dark); font-weight: 600;">Where Lake Dunstan Meets Wine Country Magic</h3>
+                            <p style="margin-bottom: 1.5rem;">High above the pristine waters of Lake Dunstan, where ancient schist mountains meet rolling vineyard hills, lies a sanctuary that captures the very essence of Central Otago. Lakeside Retreat was born from a simple dream: to create a place where luxury meets sustainability, where modern comfort embraces timeless landscape.</p>
                             
-                            <p style="font-size: 1.125rem; line-height: 1.8; margin-bottom: 1.75rem;">Our accommodation offerings reflect this philosophy perfectly. Choose from our innovative grid-tied solar-powered eco-domes, painted in the soft olive of native tussock grass, or our luxury waterfront cottage with every modern amenity.</p>
+                            <p style="margin-bottom: 1.5rem;">Our accommodation offerings reflect this philosophy perfectly. Choose from our innovative grid-tied solar-powered eco-domes, painted in the soft olive of native tussock grass, or our luxury waterfront cottage with every modern amenity.</p>
                             
-                            <div style="background: var(--light-sand); padding: 2.5rem; border-radius: 20px; border-left: 6px solid var(--accent-gold); margin-top: 2rem; box-shadow: var(--shadow-soft);">
-                                <p style="color: var(--primary-teal); font-size: 1.375rem; font-weight: 600; font-style: italic; margin-bottom: 0;">This is where your Central Otago story begins—choose sustainable dome luxury or full-service cottage comfort, both authentic, unforgettable, and perfectly positioned above Lake Dunstan.</p>
+                            <div style="background: var(--light-gray); padding: 2rem; border-radius: 12px; border-left: 4px solid var(--accent-orange); margin-top: 1.5rem;">
+                                <p style="color: var(--primary-teal); font-weight: 600; font-style: italic; margin-bottom: 0;">This is where your Central Otago story begins—choose sustainable dome luxury or full-service cottage comfort, both authentic, unforgettable, and perfectly positioned above Lake Dunstan.</p>
                             </div>
                         </div>
                         <div class="grid" style="gap: 1.5rem;">
-                            <div class="card" style="text-align: center; padding: 2.5rem;">
-                                <div style="font-family: 'Playfair Display', serif; font-size: 3rem; font-weight: 700; background: var(--gradient-primary); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 0.75rem;">15+</div>
-                                <div style="font-size: 1rem; color: var(--soft-gray); font-weight: 500;">World-class wineries within 20 minutes</div>
+                            <div class="card" style="text-align: center;">
+                                <div style="font-size: 2.5rem; font-weight: 700; color: var(--primary-teal); margin-bottom: 0.5rem;">15+</div>
+                                <div style="font-size: 0.9rem; color: var(--text-light);">World-class wineries within 20 minutes</div>
                             </div>
-                            <div class="card" style="text-align: center; padding: 2.5rem;">
-                                <div style="font-family: 'Playfair Display', serif; font-size: 3rem; font-weight: 700; background: var(--gradient-primary); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 0.75rem;">360°</div>
-                                <div style="font-size: 1rem; color: var(--soft-gray); font-weight: 500;">Panoramic mountain & lake views</div>
+                            <div class="card" style="text-align: center;">
+                                <div style="font-size: 2.5rem; font-weight: 700; color: var(--primary-teal); margin-bottom: 0.5rem;">360°</div>
+                                <div style="font-size: 0.9rem; color: var(--text-light);">Panoramic mountain & lake views</div>
                             </div>
-                            <div class="card" style="text-align: center; padding: 2.5rem;">
-                                <div style="font-family: 'Playfair Display', serif; font-size: 3rem; font-weight: 700; background: var(--gradient-primary); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 0.75rem;">SOLAR</div>
-                                <div style="font-size: 1rem; color: var(--soft-gray); font-weight: 500;">Powered self-contained luxury domes</div>
+                            <div class="card" style="text-align: center;">
+                                <div style="font-size: 2.5rem; font-weight: 700; color: var(--primary-teal); margin-bottom: 0.5rem;">SOLAR</div>
+                                <div style="font-size: 0.9rem; color: var(--text-light);">Powered self-contained luxury domes</div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section class="section" style="background: var(--gradient-warm);">
+            <section class="section" style="background: var(--light-gray);">
                 <div class="container">
                     <h2 class="section-title">Featured Accommodations</h2>
                     <p class="section-subtitle">Three distinct luxury experiences in our boutique vineyard</p>
                     
                     <div class="grid grid-3">
                         <div class="card">
-                            <div style="background: var(--gradient-primary); color: white; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.875rem; font-weight: 600; text-transform: uppercase; margin-bottom: 1rem; display: inline-block;">PREMIUM GLAMPING</div>
+                            <div style="background: var(--primary-teal); color: white; padding: 0.4rem 1rem; border-radius: 15px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; margin-bottom: 1rem; display: inline-block;">PREMIUM GLAMPING</div>
                             <h3>🍷 Dome Pinot</h3>
                             <p>Luxury glamping dome with stargazing skylight, full kitchen, 65" OLED TV, and private saltwater spa. Includes breakfast for two.</p>
-                            <a href="#" onclick="showPage('accommodations')" class="btn btn-primary" style="margin-top: 1rem; padding: 0.75rem 1.5rem; font-size: 0.9rem;">View Details</a>
+                            <a href="#" onclick="showPage('accommodations')" class="btn btn-primary" style="margin-top: 1rem; padding: 0.75rem 1.5rem; font-size: 0.85rem;">View Details</a>
                         </div>
                         <div class="card">
-                            <div style="background: var(--gradient-primary); color: white; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.875rem; font-weight: 600; text-transform: uppercase; margin-bottom: 1rem; display: inline-block;">ROMANTIC</div>
+                            <div style="background: var(--primary-teal); color: white; padding: 0.4rem 1rem; border-radius: 15px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; margin-bottom: 1rem; display: inline-block;">ROMANTIC</div>
                             <h3>🌹 Dome Rosé</h3>
                             <p>Intimate eco-dome with stunning lake views. Combines nature's serenity with five-star comfort. Includes breakfast and private spa.</p>
-                            <a href="#" onclick="showPage('accommodations')" class="btn btn-primary" style="margin-top: 1rem; padding: 0.75rem 1.5rem; font-size: 0.9rem;">View Details</a>
+                            <a href="#" onclick="showPage('accommodations')" class="btn btn-primary" style="margin-top: 1rem; padding: 0.75rem 1.5rem; font-size: 0.85rem;">View Details</a>
                         </div>
                         <div class="card">
-                            <div style="background: var(--gradient-primary); color: white; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.875rem; font-weight: 600; text-transform: uppercase; margin-bottom: 1rem; display: inline-block;">FAMILY FRIENDLY</div>
+                            <div style="background: var(--primary-teal); color: white; padding: 0.4rem 1rem; border-radius: 15px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; margin-bottom: 1rem; display: inline-block;">FAMILY FRIENDLY</div>
                             <h3>🏡 Lakeside Cottage</h3>
                             <p>Pet-friendly cottage with wood-fired hot tub, secure garage, and kayak included. Perfect for intimate family retreats.</p>
-                            <a href="#" onclick="showPage('accommodations')" class="btn btn-primary" style="margin-top: 1rem; padding: 0.75rem 1.5rem; font-size: 0.9rem;">View Details</a>
+                            <a href="#" onclick="showPage('accommodations')" class="btn btn-primary" style="margin-top: 1rem; padding: 0.75rem 1.5rem; font-size: 0.85rem;">View Details</a>
                         </div>
                     </div>
                 </div>
@@ -1450,37 +1385,37 @@
             <section class="section">
                 <div class="container">
                     <h2 class="section-title">What Our Guests Say</h2>
-                    <div style="text-align: center; margin-bottom: 3rem;">
-                        <div style="font-size: 1.125rem; color: var(--soft-gray);">★★★★★ 4.9/5 based on 214 reviews</div>
+                    <div style="text-align: center; margin-bottom: 2.5rem;">
+                        <div style="font-size: 1rem; color: var(--text-light);">★★★★★ 4.9/5 based on 214 reviews</div>
                     </div>
                     
                     <div class="grid grid-2">
                         <div class="card">
                             <div style="display: flex; align-items: center; margin-bottom: 1rem;">
-                                <div style="width: 50px; height: 50px; background: var(--gradient-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; margin-right: 1rem;">S</div>
+                                <div style="width: 40px; height: 40px; background: var(--primary-teal); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; margin-right: 1rem; font-size: 1rem;">S</div>
                                 <div>
-                                    <div style="font-weight: 600; color: var(--dark-slate);">Sarah & James</div>
-                                    <div style="font-size: 0.875rem; color: var(--soft-gray);">Auckland, New Zealand</div>
+                                    <div style="font-weight: 600; color: var(--text-dark);">Sarah & James</div>
+                                    <div style="font-size: 0.8rem; color: var(--text-light);">Auckland, New Zealand</div>
                                 </div>
                             </div>
-                            <div style="color: #fbbf24; margin-bottom: 1rem;">★★★★★</div>
-                            <p style="font-style: italic;">"Absolutely magical experience at Dome Pinot! The stargazing skylight above the bed was incredible - we fell asleep watching the stars. Perfect romantic getaway in Central Otago!"</p>
+                            <div style="color: #fbbf24; margin-bottom: 1rem; font-size: 1rem;">★★★★★</div>
+                            <p style="font-style: italic; font-size: 0.95rem;">"Absolutely magical experience at Dome Pinot! The stargazing skylight above the bed was incredible - we fell asleep watching the stars. Perfect romantic getaway in Central Otago!"</p>
                         </div>
                         
                         <div class="card">
                             <div style="display: flex; align-items: center; margin-bottom: 1rem;">
-                                <div style="width: 50px; height: 50px; background: var(--gradient-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; margin-right: 1rem;">M</div>
+                                <div style="width: 40px; height: 40px; background: var(--primary-teal); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; margin-right: 1rem; font-size: 1rem;">M</div>
                                 <div>
-                                    <div style="font-weight: 600; color: var(--dark-slate);">Michael & Family</div>
-                                    <div style="font-size: 0.875rem; color: var(--soft-gray);">Melbourne, Australia</div>
+                                    <div style="font-weight: 600; color: var(--text-dark);">Michael & Family</div>
+                                    <div style="font-size: 0.8rem; color: var(--text-light);">Melbourne, Australia</div>
                                 </div>
                             </div>
-                            <div style="color: #fbbf24; margin-bottom: 1rem;">★★★★★</div>
-                            <p style="font-style: italic;">"The Lakeside Cottage exceeded all expectations! Kids loved the wood-fired hot tub and our dog was warmly welcomed. Location is unbeatable!"</p>
+                            <div style="color: #fbbf24; margin-bottom: 1rem; font-size: 1rem;">★★★★★</div>
+                            <p style="font-style: italic; font-size: 0.95rem;">"The Lakeside Cottage exceeded all expectations! Kids loved the wood-fired hot tub and our dog was warmly welcomed. Location is unbeatable!"</p>
                         </div>
                     </div>
                     
-                    <div style="text-align: center; margin-top: 3rem;">
+                    <div style="text-align: center; margin-top: 2.5rem;">
                         <a href="#" onclick="showPage('reviews')" class="btn btn-primary">Read All Reviews</a>
                     </div>
                 </div>
@@ -1489,10 +1424,10 @@
 
         <!-- ACCOMMODATIONS PAGE -->
         <div class="page-container" id="accommodations-page">
-            <section class="hero" style="background: linear-gradient(rgba(30, 58, 138, 0.4), rgba(15, 118, 110, 0.4)), url('https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') center/cover no-repeat; min-height: 60vh;">
+            <section class="hero" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') center/cover no-repeat; height: 60vh;">
                 <div class="hero-content">
                     <h1>LUXURY VINEYARD ACCOMMODATIONS</h1>
-                    <p class="subtitle">Three distinct experiences nestled in our boutique vineyard above Lake Dunstan</p>
+                    <p class="hero-subtitle">Three distinct experiences nestled in our boutique vineyard above Lake Dunstan</p>
                 </div>
             </section>
 
@@ -1648,8 +1583,8 @@
                                 </div>
                             </div>
 
-                            <div style="background: white; padding: 1.5rem; border-radius: 12px; margin-top: 1rem; border-left: 4px solid var(--primary-teal);">
-                                <h4 style="color: var(--primary-teal); margin-bottom: 1rem;">Check-in Details</h4>
+                            <div style="background: var(--light-gray); padding: 1.5rem; border-radius: 12px; margin-top: 1.5rem; border-left: 4px solid var(--primary-teal);">
+                                <h4 style="color: var(--primary-teal); margin-bottom: 1rem; font-weight: 600;">Check-in Details</h4>
                                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
                                     <div><strong>Check-in:</strong> 3:00 PM</div>
                                     <div><strong>Check-out:</strong> 10:00 AM</div>
@@ -1722,9 +1657,9 @@
                                 </div>
                             </div>
 
-                            <div style="background: white; padding: 2rem; border-radius: 12px; margin-top: 1.5rem; border-left: 4px solid var(--primary-teal);">
-                                <h4 style="color: var(--primary-teal); margin-bottom: 1.5rem;">Perfect Location</h4>
-                                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-bottom: 1.5rem;">
+                            <div style="background: var(--light-gray); padding: 2rem; border-radius: 12px; margin-top: 1.5rem; border-left: 4px solid var(--primary-teal);">
+                                <h4 style="color: var(--primary-teal); margin-bottom: 1.5rem; font-weight: 600;">Perfect Location</h4>
+                                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 1.5rem;">
                                     <div><strong>🏘️ Cromwell:</strong> 10 minutes drive</div>
                                     <div><strong>🏔️ Wanaka:</strong> 30 minutes drive</div>
                                     <div><strong>🎢 Queenstown:</strong> 55 minutes drive</div>
@@ -1735,8 +1670,8 @@
                                 <p style="margin-bottom: 0;"><strong>Highland's Motorsport Park:</strong> Just a short drive away</p>
                             </div>
 
-                            <div style="background: white; padding: 1.5rem; border-radius: 12px; margin-top: 1rem; border-left: 4px solid var(--accent-gold);">
-                                <h4 style="color: var(--accent-gold); margin-bottom: 1rem;">Check-in Details</h4>
+                            <div style="background: var(--light-gray); padding: 1.5rem; border-radius: 12px; margin-top: 1rem; border-left: 4px solid var(--accent-orange);">
+                                <h4 style="color: var(--accent-orange); margin-bottom: 1rem; font-weight: 600;">Check-in Details</h4>
                                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
                                     <div><strong>Check-in:</strong> 3:00 PM</div>
                                     <div><strong>Check-out:</strong> 10:00 AM</div>
@@ -1745,9 +1680,9 @@
                         </div>
                     </div>
                     
-                    <div style="background: var(--gradient-primary); color: white; padding: 3rem; border-radius: 24px; text-align: center; margin-top: 4rem; box-shadow: var(--shadow-large);">
-                        <h3 style="font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 1.5rem;">🍇 Boutique Vineyard Setting</h3>
-                        <p style="font-size: 1.125rem; line-height: 1.8; max-width: 900px; margin: 0 auto; opacity: 0.95;">All accommodations are nestled within our working boutique vineyard at 96 Smiths Way, Mount Pisa, offering unrivaled privacy and tranquility. You're perfectly positioned in the heart of Central Otago's award-winning wine region with superb views of lake and mountains, and the Cromwell to Clyde cycle trail right at your doorstep.</p>
+                    <div style="background: var(--primary-teal); color: white; padding: 3rem; border-radius: 16px; text-align: center; margin-top: 3rem; box-shadow: var(--shadow-lg);">
+                        <h3 style="font-size: 1.75rem; margin-bottom: 1.5rem; font-weight: 600;">🍇 Boutique Vineyard Setting</h3>
+                        <p style="font-size: 1rem; line-height: 1.7; max-width: 800px; margin: 0 auto; opacity: 0.95;">All accommodations are nestled within our working boutique vineyard at 96 Smiths Way, Mount Pisa, offering unrivaled privacy and tranquility. You're perfectly positioned in the heart of Central Otago's award-winning wine region with superb views of lake and mountains, and the Cromwell to Clyde cycle trail right at your doorstep.</p>
                     </div>
                 </div>
             </section>
@@ -1755,10 +1690,10 @@
 
         <!-- GALLERY PAGE -->
         <div class="page-container" id="gallery-page">
-            <section class="hero" style="background: linear-gradient(rgba(30, 58, 138, 0.4), rgba(15, 118, 110, 0.4)), url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') center/cover no-repeat; min-height: 60vh;">
+            <section class="hero" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') center/cover no-repeat; height: 60vh;">
                 <div class="hero-content">
                     <h1>PHOTO GALLERY</h1>
-                    <p class="subtitle">Stunning views and luxury accommodations captured in every season</p>
+                    <p class="hero-subtitle">Stunning views and luxury accommodations captured in every season</p>
                 </div>
             </section>
 
@@ -1813,46 +1748,44 @@
 
         <!-- REVIEWS PAGE -->
         <div class="page-container" id="reviews-page">
-            <section class="hero" style="background: linear-gradient(rgba(30, 58, 138, 0.4), rgba(15, 118, 110, 0.4)), url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') center/cover no-repeat; min-height: 60vh;">
+            <section class="hero" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') center/cover no-repeat; height: 60vh;">
                 <div class="hero-content">
                     <h1>GUEST REVIEWS</h1>
-                    <p class="subtitle">What our guests say about their Lakeside Retreat experience</p>
+                    <p class="hero-subtitle">What our guests say about their Lakeside Retreat experience</p>
                 </div>
             </section>
 
-            <section class="reviews section">
+            <section class="reviews">
                 <div class="container">
-                    <div class="reviews-summary">
-                        <div class="rating-overview">
-                            <div class="overall-rating">
-                                <div class="rating-number">4.9</div>
-                                <div class="rating-stars">
-                                    <span class="star">★</span>
-                                    <span class="star">★</span>
-                                    <span class="star">★</span>
-                                    <span class="star">★</span>
-                                    <span class="star">★</span>
-                                </div>
-                                <div class="rating-text">Exceptional</div>
+                    <div class="rating-overview">
+                        <div class="overall-rating">
+                            <div class="rating-number">4.9</div>
+                            <div class="rating-stars">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
                             </div>
-                            <div class="rating-platforms">
-                                <div class="platform-rating">
-                                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 30'%3E%3Crect width='100' height='30' fill='%23FF5A5F'/%3E%3Ctext x='50' y='20' text-anchor='middle' fill='white' font-size='12' font-weight='bold'%3EAirbnb%3C/text%3E%3C/svg%3E" alt="Airbnb" class="platform-logo">
-                                    <div class="platform-score">4.9/5</div>
-                                    <div class="platform-reviews">125 reviews</div>
-                                </div>
-                                <div class="platform-rating">
-                                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 30'%3E%3Crect width='100' height='30' fill='%23003580'/%3E%3Ctext x='50' y='20' text-anchor='middle' fill='white' font-size='10' font-weight='bold'%3EBooking.com%3C/text%3E%3C/svg%3E" alt="Booking.com" class="platform-logo">
-                                    <div class="platform-score">9.6/10</div>
-                                    <div class="platform-reviews">89 reviews</div>
-                                </div>
+                            <div class="rating-text">Exceptional</div>
+                        </div>
+                        <div class="rating-platforms">
+                            <div class="platform-rating">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 30'%3E%3Crect width='100' height='30' fill='%23FF5A5F'/%3E%3Ctext x='50' y='20' text-anchor='middle' fill='white' font-size='12' font-weight='bold'%3EAirbnb%3C/text%3E%3C/svg%3E" alt="Airbnb" class="platform-logo">
+                                <div class="platform-score">4.9/5</div>
+                                <div class="platform-reviews">125 reviews</div>
+                            </div>
+                            <div class="platform-rating">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 30'%3E%3Crect width='100' height='30' fill='%23003580'/%3E%3Ctext x='50' y='20' text-anchor='middle' fill='white' font-size='10' font-weight='bold'%3EBooking.com%3C/text%3E%3C/svg%3E" alt="Booking.com" class="platform-logo">
+                                <div class="platform-score">9.6/10</div>
+                                <div class="platform-reviews">89 reviews</div>
                             </div>
                         </div>
                     </div>
 
                     <div class="reviews-grid">
                         <!-- Featured Review -->
-                        <div class="review-card featured">
+                        <div class="review-card featured" style="position: relative;">
                             <div class="review-header">
                                 <div class="reviewer-info">
                                     <div class="reviewer-avatar">S</div>
@@ -1978,10 +1911,199 @@
                         </div>
                     </div>
 
-                    <div style="background: var(--gradient-primary); color: white; padding: 4rem; border-radius: 24px; margin-top: 4rem; box-shadow: var(--shadow-large); text-align: center;">
-                        <h3 style="font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 1rem;">Ready to Create Your Own Amazing Experience?</h3>
-                        <p style="font-size: 1.125rem; margin-bottom: 2rem; opacity: 0.95;">Join hundreds of satisfied guests who've discovered the magic of Lakeside Retreat</p>
-                        <a href="https://book.lakesideretreat.co.nz/" target="_blank" class="cta-button" style="background: white; color: var(--primary-blue);">BOOK YOUR STAY</a>
+                    <div style="background: var(--primary-teal); color: white; padding: 3rem; border-radius: 16px; margin-top: 3rem; box-shadow: var(--shadow-lg); text-align: center;">
+                        <h3 style="font-size: 1.75rem; margin-bottom: 1rem; font-weight: 600;">Ready to Create Your Own Amazing Experience?</h3>
+                        <p style="font-size: 1rem; margin-bottom: 2rem; opacity: 0.95;">Join hundreds of satisfied guests who've discovered the magic of Lakeside Retreat</p>
+                        <a href="https://book.lakesideretreat.co.nz/" target="_blank" class="btn btn-primary">BOOK YOUR STAY</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- EXPLORE PAGE -->
+        <div class="page-container" id="explore-page">
+            <section class="hero" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') center/cover no-repeat; height: 60vh;">
+                <div class="hero-content">
+                    <h1>EXPLORE CENTRAL OTAGO</h1>
+                    <p class="hero-subtitle">Your perfect base camp for discovering New Zealand's most iconic wine and adventure region</p>
+                </div>
+            </section>
+
+            <section class="section" style="background: var(--light-gray);">
+                <div class="container">
+                    <div style="max-width: 900px; margin: 3rem auto; text-align: center; background: var(--white); padding: 3rem; border-radius: 16px; box-shadow: var(--shadow);">
+                        <h3 style="font-size: 1.75rem; color: var(--text-dark); margin-bottom: 1.5rem; font-weight: 600;">🗺️ Your Local Knowledge Experts</h3>
+                        <p style="color: var(--text-dark); font-size: 1rem; line-height: 1.7; margin-bottom: 0;">Our Lakeside Retreat hosts know Central Otago intimately and love sharing insider knowledge with our guests. We provide detailed recommendations and local tips to help you plan and book your perfect itinerary directly with activity providers. Just let us know your interests when booking or upon arrival - we'll share our expertise and connections to help you create unforgettable experiences.</p>
+                    </div>
+
+                    <!-- Featured: Clyde Bike Trail Access -->
+                    <div style="background: var(--primary-teal); color: white; padding: 3rem; border-radius: 16px; margin: 3rem auto; text-align: center; box-shadow: var(--shadow-lg);">
+                        <h3 style="font-size: 1.75rem; margin-bottom: 1.5rem; font-weight: 600;">🚴‍♂️ Clyde Bike Trail - Right at Your Doorstep!</h3>
+                        <p style="font-size: 1rem; margin-bottom: 2rem; opacity: 0.95;">The famous Cromwell to Clyde cycle trail starts just 300 meters from Lakeside Retreat! No transport needed - step out your door and onto one of New Zealand's most scenic cycling experiences.</p>
+                        
+                        <div class="grid grid-3" style="gap: 1.5rem; max-width: 700px; margin: 0 auto;">
+                            <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 12px; backdrop-filter: blur(10px);">
+                                <h4 style="margin-bottom: 1rem; font-weight: 600;">🚲 Bike Hire</h4>
+                                <p style="font-size: 0.85rem; margin-bottom: 0.75rem;"><strong>Cycle Surgery Cromwell</strong><br>+64 3 445 4052<br>cyclesurgery.co.nz</p>
+                                <p style="font-size: 0.85rem; margin-bottom: 0.75rem;"><strong>Contact Cycles Central</strong><br>+64 3 445 4140<br>contactcycles.co.nz</p>
+                                <p style="font-size: 0.8rem; opacity: 0.9;">E-bikes available. Delivery to accommodation possible.</p>
+                            </div>
+                            <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 12px; backdrop-filter: blur(10px);">
+                                <h4 style="margin-bottom: 1rem; font-weight: 600;">📍 Trail Details</h4>
+                                <p style="font-size: 0.85rem; margin-bottom: 0.5rem;"><strong>Distance:</strong> 25km one-way</p>
+                                <p style="font-size: 0.85rem; margin-bottom: 0.5rem;"><strong>Duration:</strong> 2-4 hours</p>
+                                <p style="font-size: 0.85rem; margin-bottom: 0.5rem;"><strong>Difficulty:</strong> Easy - flat, sealed</p>
+                                <p style="font-size: 0.8rem; opacity: 0.9;">Stunning lake views, historic bridges, vineyards</p>
+                            </div>
+                            <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 12px; backdrop-filter: blur(10px);">
+                                <h4 style="margin-bottom: 1rem; font-weight: 600;">🌟 Best Times</h4>
+                                <p style="font-size: 0.85rem; margin-bottom: 0.5rem;"><strong>Year-round:</strong> Always accessible</p>
+                                <p style="font-size: 0.85rem; margin-bottom: 0.5rem;"><strong>Best:</strong> Early morning or late afternoon</p>
+                                <p style="font-size: 0.85rem; margin-bottom: 0.5rem;"><strong>Autumn:</strong> Golden vineyard colors</p>
+                                <p style="font-size: 0.8rem; opacity: 0.9;">We can arrange pickup from Clyde!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-2" style="gap: 2rem;">
+                        <!-- Wine Country Experiences -->
+                        <div class="card" style="padding: 2rem;">
+                            <div style="font-size: 2.5rem; text-align: center; margin-bottom: 1.5rem;">🍷</div>
+                            <h3 style="text-align: center; margin-bottom: 1.5rem; font-weight: 600;">WINE COUNTRY EXPERIENCES</h3>
+                            
+                            <div style="margin-bottom: 1.5rem;">
+                                <h4 style="color: var(--primary-teal); margin-bottom: 1rem; font-weight: 600; font-size: 1rem;">Premium Wineries (10-20 mins)</h4>
+                                <div style="background: var(--light-gray); padding: 1rem; border-radius: 8px; margin-bottom: 0.75rem;">
+                                    <p style="font-weight: 600; margin-bottom: 0.5rem; font-size: 0.9rem;">Gibbston Valley Winery</p>
+                                    <p style="font-size: 0.8rem; margin-bottom: 0.5rem; color: var(--text-light);">+64 3 442 6910 | gibbstonvalley.com</p>
+                                    <p style="font-size: 0.8rem; margin-bottom: 0;">Tastings $15-25, tours $35. Famous for Pinot Noir & underground cave.</p>
+                                </div>
+                                <div style="background: var(--light-gray); padding: 1rem; border-radius: 8px; margin-bottom: 0.75rem;">
+                                    <p style="font-weight: 600; margin-bottom: 0.5rem; font-size: 0.9rem;">Chard Farm</p>
+                                    <p style="font-size: 0.8rem; margin-bottom: 0.5rem; color: var(--text-light);">+64 3 442 6110 | chardfarm.co.nz</p>
+                                    <p style="font-size: 0.8rem; margin-bottom: 0;">Dramatic cliff-top setting. Tastings $10. Best views in Central Otago.</p>
+                                </div>
+                                <div style="background: var(--light-gray); padding: 1rem; border-radius: 8px; margin-bottom: 0.75rem;">
+                                    <p style="font-weight: 600; margin-bottom: 0.5rem; font-size: 0.9rem;">Peregrine Wines</p>
+                                    <p style="font-size: 0.8rem; margin-bottom: 0.5rem; color: var(--text-light);">+64 3 442 4000 | peregrinewines.co.nz</p>
+                                    <p style="font-size: 0.8rem; margin-bottom: 0;">Iconic architecture. Tastings $20, private tours available.</p>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h4 style="color: var(--primary-teal); margin-bottom: 1rem; font-weight: 600; font-size: 1rem;">Wine Tours</h4>
+                                <div style="background: var(--light-gray); padding: 1rem; border-radius: 8px;">
+                                    <p style="font-weight: 600; margin-bottom: 0.5rem; font-size: 0.9rem;">Appellation Wine Tours</p>
+                                    <p style="font-size: 0.8rem; margin-bottom: 0.5rem; color: var(--text-light);">+64 3 442 7799 | appellationwinetours.co.nz</p>
+                                    <p style="font-size: 0.8rem; margin-bottom: 0;">Half/full day tours from $165. Small groups, local guides.</p>
+                                </div>
+                            </div>
+
+                            <p style="margin-top: 1.5rem; font-size: 0.8rem; color: var(--text-light); font-style: italic;">🍂 Autumn (Mar-May): Harvest season, stunning colors<br>🌞 Summer (Dec-Feb): Perfect weather, all cellar doors open<br>❄️ Winter (Jun-Aug): Cozy tastings, fewer crowds</p>
+                        </div>
+
+                        <!-- Helicopter Adventures -->
+                        <div class="card" style="padding: 2rem;">
+                            <div style="font-size: 2.5rem; text-align: center; margin-bottom: 1.5rem;">🚁</div>
+                            <h3 style="text-align: center; margin-bottom: 1.5rem; font-weight: 600;">HELICOPTER ADVENTURES</h3>
+                            
+                            <div style="margin-bottom: 1.5rem;">
+                                <h4 style="color: var(--primary-teal); margin-bottom: 1rem; font-weight: 600; font-size: 1rem;">Scenic Flights</h4>
+                                <div style="background: var(--light-gray); padding: 1rem; border-radius: 8px; margin-bottom: 0.75rem;">
+                                    <p style="font-weight: 600; margin-bottom: 0.5rem; font-size: 0.9rem;">Over The Top Helicopters</p>
+                                    <p style="font-size: 0.8rem; margin-bottom: 0.5rem; color: var(--text-light);">+64 3 442 2233 | flynz.co.nz</p>
+                                    <p style="font-size: 0.8rem; margin-bottom: 0;">Milford Sound day trips from $795. Scenic flights from $325.</p>
+                                </div>
+                                <div style="background: var(--light-gray); padding: 1rem; border-radius: 8px; margin-bottom: 0.75rem;">
+                                    <p style="font-weight: 600; margin-bottom: 0.5rem; font-size: 0.9rem;">Helicopter Line</p>
+                                    <p style="font-size: 0.8rem; margin-bottom: 0.5rem; color: var(--text-light);">+64 3 442 3034 | helicopter.co.nz</p>
+                                    <p style="font-size: 0.8rem; margin-bottom: 0;">Glacier landings from $549. Photography tours, wine tours available.</p>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h4 style="color: var(--primary-teal); margin-bottom: 1rem; font-weight: 600; font-size: 1rem;">Popular Routes</h4>
+                                <div style="background: var(--light-gray); padding: 1rem; border-radius: 8px;">
+                                    <p style="font-weight: 600; margin-bottom: 0.5rem; font-size: 0.9rem;">Milford Sound Day Trip</p>
+                                    <p style="font-size: 0.8rem; margin-bottom: 0.5rem;">Flight + cruise + flight back. 7-8 hours total.</p>
+                                    <p style="font-weight: 600; margin-bottom: 0.5rem; font-size: 0.9rem;">Southern Alps Scenic</p>
+                                    <p style="font-size: 0.8rem; margin-bottom: 0;">45-60 min flights with glacier landings.</p>
+                                </div>
+                            </div>
+
+                            <p style="margin-top: 1.5rem; font-size: 0.8rem; color: var(--text-light); font-style: italic;">🌤️ Weather dependent - book flexible dates<br>🌞 Best: Oct-Apr (clear skies)<br>📧 Book 2-7 days ahead for best availability</p>
+                        </div>
+
+                        <!-- Lake & Mountain Adventures -->
+                        <div class="card" style="padding: 2rem;">
+                            <div style="font-size: 2.5rem; text-align: center; margin-bottom: 1.5rem;">🏔️</div>
+                            <h3 style="text-align: center; margin-bottom: 1.5rem; font-weight: 600;">LAKE & MOUNTAIN ADVENTURES</h3>
+                            
+                            <div style="margin-bottom: 1.5rem;">
+                                <h4 style="color: var(--primary-teal); margin-bottom: 1rem; font-weight: 600; font-size: 1rem;">Lake Dunstan Activities</h4>
+                                <div style="background: var(--light-gray); padding: 1rem; border-radius: 8px; margin-bottom: 0.75rem;">
+                                    <p style="font-weight: 600; margin-bottom: 0.5rem; font-size: 0.9rem;">Central Otago Jet Boat Tours</p>
+                                    <p style="font-size: 0.8rem; margin-bottom: 0.5rem; color: var(--text-light);">+64 27 434 7386 | centraljet.co.nz</p>
+                                    <p style="font-size: 0.8rem; margin-bottom: 0;">Lake cruises from $89. Departs nearby Cromwell.</p>
+                                </div>
+                                <div style="background: var(--light-gray); padding: 1rem; border-radius: 8px; margin-bottom: 0.75rem;">
+                                    <p style="font-weight: 600; margin-bottom: 0.5rem; font-size: 0.9rem;">Kayak & SUP Hire</p>
+                                    <p style="font-size: 0.8rem; margin-bottom: 0.5rem; color: var(--text-light);">Pioneer Park, Cromwell | +64 3 445 0886</p>
+                                    <p style="font-size: 0.8rem; margin-bottom: 0;">Hourly/daily hire. Delivered to accommodation on request.</p>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h4 style="color: var(--primary-teal); margin-bottom: 1rem; font-weight: 600; font-size: 1rem;">Mountain Adventures</h4>
+                                <div style="background: var(--light-gray); padding: 1rem; border-radius: 8px;">
+                                    <p style="font-weight: 600; margin-bottom: 0.5rem; font-size: 0.9rem;">Summer: Hiking & Biking</p>
+                                    <p style="font-size: 0.8rem; margin-bottom: 0.5rem;">Ben Lomond track (6hrs), Kawarau Gorge trails</p>
+                                    <p style="font-weight: 600; margin-bottom: 0.5rem; font-size: 0.9rem;">Winter: Skiing (Jun-Sep)</p>
+                                    <p style="font-size: 0.8rem; margin-bottom: 0;">Cardrona (45min), Treble Cone (50min), Coronet Peak (60min)</p>
+                                </div>
+                            </div>
+
+                            <p style="margin-top: 1.5rem; font-size: 0.8rem; color: var(--text-light); font-style: italic;">🌞 Summer: Perfect for water sports & hiking<br>❄️ Winter: World-class skiing nearby<br>🎣 Fishing: Lake trout year-round (license required)</p>
+                        </div>
+
+                        <!-- Queenstown & Wanaka Access -->
+                        <div class="card" style="padding: 2rem;">
+                            <div style="font-size: 2.5rem; text-align: center; margin-bottom: 1.5rem;">🎯</div>
+                            <h3 style="text-align: center; margin-bottom: 1.5rem; font-weight: 600;">QUEENSTOWN & WANAKA ACCESS</h3>
+                            
+                            <div style="margin-bottom: 1.5rem;">
+                                <h4 style="color: var(--primary-teal); margin-bottom: 1rem; font-weight: 600; font-size: 1rem;">Queenstown (45 minutes)</h4>
+                                <div style="background: var(--light-gray); padding: 1rem; border-radius: 8px; margin-bottom: 0.75rem;">
+                                    <p style="font-weight: 600; margin-bottom: 0.5rem; font-size: 0.9rem;">AJ Hackett Bungy</p>
+                                    <p style="font-size: 0.8rem; margin-bottom: 0.5rem; color: var(--text-light);">+64 3 442 4007 | ajhackett.com</p>
+                                    <p style="font-size: 0.8rem; margin-bottom: 0;">Kawarau Bridge $235, Ledge $255, Nevis $335.</p>
+                                </div>
+                                <div style="background: var(--light-gray); padding: 1rem; border-radius: 8px; margin-bottom: 0.75rem;">
+                                    <p style="font-weight: 600; margin-bottom: 0.5rem; font-size: 0.9rem;">Shotover Jet</p>
+                                    <p style="font-size: 0.8rem; margin-bottom: 0.5rem; color: var(--text-light);">+64 3 442 8570 | shotoverjet.com</p>
+                                    <p style="font-size: 0.8rem; margin-bottom: 0;">Famous 360° spins. Adults $149, combo packages available.</p>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h4 style="color: var(--primary-teal); margin-bottom: 1rem; font-weight: 600; font-size: 1rem;">Wanaka (30 minutes)</h4>
+                                <div style="background: var(--light-gray); padding: 1rem; border-radius: 8px;">
+                                    <p style="font-weight: 600; margin-bottom: 0.5rem; font-size: 0.9rem;">#ThatWanakaTree & Lake</p>
+                                    <p style="font-size: 0.8rem; margin-bottom: 0.5rem;">FREE - Famous Instagram spot, lakefront walks</p>
+                                    <p style="font-weight: 600; margin-bottom: 0.5rem; font-size: 0.9rem;">Puzzling World</p>
+                                    <p style="font-size: 0.8rem; margin-bottom: 0;">+64 3 443 7489 | puzzlingworld.co.nz | Adults $22</p>
+                                </div>
+                            </div>
+
+                            <p style="margin-top: 1.5rem; font-size: 0.8rem; color: var(--text-light); font-style: italic;">🚗 Easy day trips from Lakeside Retreat<br>🌟 Queenstown: Adventure capital activities<br>🏞️ Wanaka: Relaxed alpine town atmosphere</p>
+                        </div>
+                    </div>
+
+                    <div style="background: var(--white); border: 2px solid var(--primary-teal); padding: 2.5rem; border-radius: 16px; margin: 3rem auto; max-width: 800px; text-align: center; box-shadow: var(--shadow);">
+                        <h4 style="color: var(--primary-teal); font-size: 1.25rem; margin-bottom: 1.5rem; font-weight: 600;">📞 How We Help You Explore</h4>
+                        <p style="color: var(--text-dark); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem;"><strong>As Your Local Knowledge Experts:</strong> We share insider recommendations and offer timing tips based on years of Central Otago experience.</p>
+                        <p style="color: var(--text-dark); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem;"><strong>Direct Booking Benefits:</strong> You book activities directly with operators for the best rates, flexible scheduling, and direct communication about your specific needs.</p>
+                        <p style="color: var(--text-dark); font-size: 0.95rem; line-height: 1.6; margin-bottom: 0;"><strong>Our Expertise + Your Control:</strong> The perfect combination of local knowledge and booking flexibility.</p>
                     </div>
                 </div>
             </section>
@@ -1989,14 +2111,14 @@
 
         <!-- TESTIMONIALS PAGE -->
         <div class="page-container" id="testimonials-page">
-            <section class="hero" style="background: linear-gradient(rgba(30, 58, 138, 0.4), rgba(15, 118, 110, 0.4)), url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') center/cover no-repeat; min-height: 60vh;">
+            <section class="hero" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') center/cover no-repeat; height: 60vh;">
                 <div class="hero-content">
                     <h1>GUEST TESTIMONIALS</h1>
-                    <p class="subtitle">Share your Lakeside Retreat experience and inspire future guests</p>
+                    <p class="hero-subtitle">Share your Lakeside Retreat experience and inspire future guests</p>
                 </div>
             </section>
 
-            <section class="testimonials-system section">
+            <section class="testimonials-system">
                 <div class="container">
                     <!-- Testimonial Submission Form -->
                     <div class="testimonial-submission">
@@ -2104,42 +2226,42 @@
                             </div>
                             
                             <!-- Review Content -->
-                            <div style="margin: 3rem 0;">
-                                <h4 style="color: var(--primary-blue); margin-bottom: 1rem;">Tell Your Story</h4>
-                                <textarea name="reviewText" placeholder="Share your experience at Lakeside Retreat... What made your stay special? Which features did you love most? How did our local recommendations enhance your trip?" rows="6" required style="width: 100%; padding: 1.5rem; border: 2px solid #e5e7eb; border-radius: 12px; font-size: 1rem; font-family: inherit; resize: vertical; transition: border-color 0.3s ease;"></textarea>
+                            <div style="margin: 2.5rem 0;">
+                                <h4 style="color: var(--text-dark); margin-bottom: 1rem; font-weight: 600;">Tell Your Story</h4>
+                                <textarea name="reviewText" placeholder="Share your experience at Lakeside Retreat... What made your stay special? Which features did you love most? How did our local recommendations enhance your trip?" rows="6" required style="width: 100%; padding: 1rem; border: 1px solid var(--border-light); border-radius: 8px; font-size: 0.9rem; font-family: inherit; resize: vertical; transition: border-color 0.3s ease;"></textarea>
                                 
                                 <div style="margin-top: 1.5rem;">
-                                    <h5 style="color: var(--soft-gray); margin-bottom: 1rem; font-size: 0.9375rem;">Need inspiration? Tell us about:</h5>
+                                    <h5 style="color: var(--text-light); margin-bottom: 1rem; font-size: 0.85rem;">Need inspiration? Tell us about:</h5>
                                     <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
-                                        <span class="prompt-tag" style="background: white; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.875rem; border: 1px solid var(--primary-teal); color: var(--primary-teal); cursor: pointer; transition: var(--transition);">🌟 Favorite unique feature</span>
-                                        <span class="prompt-tag" style="background: white; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.875rem; border: 1px solid var(--primary-teal); color: var(--primary-teal); cursor: pointer; transition: var(--transition);">🍷 Wine recommendations we provided</span>
-                                        <span class="prompt-tag" style="background: white; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.875rem; border: 1px solid var(--primary-teal); color: var(--primary-teal); cursor: pointer; transition: var(--transition);">🏔️ Views and landscape</span>
-                                        <span class="prompt-tag" style="background: white; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.875rem; border: 1px solid var(--primary-teal); color: var(--primary-teal); cursor: pointer; transition: var(--transition);">🛁 Hot tub/spa experience</span>
-                                        <span class="prompt-tag" style="background: white; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.875rem; border: 1px solid var(--primary-teal); color: var(--primary-teal); cursor: pointer; transition: var(--transition);">🏡 Accommodation comfort</span>
-                                        <span class="prompt-tag" style="background: white; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.875rem; border: 1px solid var(--primary-teal); color: var(--primary-teal); cursor: pointer; transition: var(--transition);">📍 Local activities you enjoyed</span>
+                                        <span class="prompt-tag" style="background: var(--white); padding: 0.4rem 0.8rem; border-radius: 15px; font-size: 0.8rem; border: 1px solid var(--border-light); color: var(--text-dark); cursor: pointer; transition: var(--transition);">🌟 Favorite unique feature</span>
+                                        <span class="prompt-tag" style="background: var(--white); padding: 0.4rem 0.8rem; border-radius: 15px; font-size: 0.8rem; border: 1px solid var(--border-light); color: var(--text-dark); cursor: pointer; transition: var(--transition);">🍷 Wine recommendations we provided</span>
+                                        <span class="prompt-tag" style="background: var(--white); padding: 0.4rem 0.8rem; border-radius: 15px; font-size: 0.8rem; border: 1px solid var(--border-light); color: var(--text-dark); cursor: pointer; transition: var(--transition);">🏔️ Views and landscape</span>
+                                        <span class="prompt-tag" style="background: var(--white); padding: 0.4rem 0.8rem; border-radius: 15px; font-size: 0.8rem; border: 1px solid var(--border-light); color: var(--text-dark); cursor: pointer; transition: var(--transition);">🛁 Hot tub/spa experience</span>
+                                        <span class="prompt-tag" style="background: var(--white); padding: 0.4rem 0.8rem; border-radius: 15px; font-size: 0.8rem; border: 1px solid var(--border-light); color: var(--text-dark); cursor: pointer; transition: var(--transition);">🏡 Accommodation comfort</span>
+                                        <span class="prompt-tag" style="background: var(--white); padding: 0.4rem 0.8rem; border-radius: 15px; font-size: 0.8rem; border: 1px solid var(--border-light); color: var(--text-dark); cursor: pointer; transition: var(--transition);">📍 Local activities you enjoyed</span>
                                     </div>
                                 </div>
                             </div>
                             
                             <!-- Permissions -->
-                            <div style="margin: 3rem 0;">
+                            <div style="margin: 2.5rem 0;">
                                 <div style="display: flex; flex-direction: column; gap: 1rem;">
                                     <label style="display: flex; align-items: flex-start; gap: 1rem; cursor: pointer;">
                                         <input type="checkbox" name="websitePermission" required style="margin-top: 2px;">
-                                        <span>I consent to sharing this review on your website and marketing materials *</span>
+                                        <span style="font-size: 0.9rem;">I consent to sharing this review on your website and marketing materials *</span>
                                     </label>
                                     <label style="display: flex; align-items: flex-start; gap: 1rem; cursor: pointer;">
                                         <input type="checkbox" name="emailUpdates" style="margin-top: 2px;">
-                                        <span>Send me occasional updates about Lakeside Retreat and Central Otago</span>
+                                        <span style="font-size: 0.9rem;">Send me occasional updates about Lakeside Retreat and Central Otago</span>
                                     </label>
                                     <label style="display: flex; align-items: flex-start; gap: 1rem; cursor: pointer;">
                                         <input type="checkbox" name="futureOffers" style="margin-top: 2px;">
-                                        <span>I'd like to receive my 10% off discount code for future stays</span>
+                                        <span style="font-size: 0.9rem;">I'd like to receive my 10% off discount code for future stays</span>
                                     </label>
                                 </div>
                             </div>
                             
-                            <button type="submit" style="background: var(--gradient-primary); color: white; padding: 1.5rem 3rem; border: none; border-radius: 50px; font-size: 1.25rem; font-weight: 600; cursor: pointer; transition: var(--transition); display: flex; align-items: center; gap: 1rem; margin: 2rem auto 0; text-transform: uppercase; letter-spacing: 0.5px;">
+                            <button type="submit" style="background: var(--primary-teal); color: white; padding: 1.25rem 2.5rem; border: none; border-radius: 25px; font-size: 1rem; font-weight: 600; cursor: pointer; transition: var(--transition); display: flex; align-items: center; gap: 1rem; margin: 2rem auto 0; text-transform: uppercase; letter-spacing: 0.5px;">
                                 <span>Submit My Review</span>
                                 <span>✨</span>
                             </button>
@@ -2147,207 +2269,18 @@
                     </div>
                     
                     <!-- Success Message (Hidden by default) -->
-                    <div id="submissionSuccess" style="display: none; background: var(--gradient-primary); color: white; padding: 4rem; border-radius: 24px; text-align: center; margin: 4rem 0;">
-                        <div style="font-size: 4rem; margin-bottom: 1rem;">🎉</div>
-                        <h3 style="font-family: 'Playfair Display', serif; font-size: 2rem; margin: 1rem 0;">Thank You for Sharing!</h3>
-                        <p>Your testimonial has been submitted and will appear on our website after review. We've sent your 10% discount code to your email!</p>
+                    <div id="submissionSuccess" style="display: none; background: var(--primary-teal); color: white; padding: 3rem; border-radius: 16px; text-align: center; margin: 3rem 0; box-shadow: var(--shadow-lg);">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">🎉</div>
+                        <h3 style="font-size: 1.75rem; margin: 1rem 0; font-weight: 600;">Thank You for Sharing!</h3>
+                        <p style="margin-bottom: 2rem;">Your testimonial has been submitted and will appear on our website after review. We've sent your 10% discount code to your email!</p>
                         <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.2);">
-                            <p>Don't forget to tag us on social media:</p>
-                            <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
-                                <span style="background: rgba(255,255,255,0.2); padding: 0.5rem 1rem; border-radius: 20px; font-family: monospace;">@lakesideretreat</span>
-                                <span style="background: rgba(255,255,255,0.2); padding: 0.5rem 1rem; border-radius: 20px; font-family: monospace;">#lakesideretreat</span>
-                                <span style="background: rgba(255,255,255,0.2); padding: 0.5rem 1rem; border-radius: 20px; font-family: monospace;">#centralotagowine</span>
+                            <p style="margin-bottom: 1rem;">Don't forget to tag us on social media:</p>
+                            <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                                <span style="background: rgba(255,255,255,0.2); padding: 0.5rem 1rem; border-radius: 15px; font-family: monospace; font-size: 0.85rem;">@lakesideretreat</span>
+                                <span style="background: rgba(255,255,255,0.2); padding: 0.5rem 1rem; border-radius: 15px; font-family: monospace; font-size: 0.85rem;">#lakesideretreat</span>
+                                <span style="background: rgba(255,255,255,0.2); padding: 0.5rem 1rem; border-radius: 15px; font-family: monospace; font-size: 0.85rem;">#centralotagowine</span>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-
-        <!-- EXPLORE PAGE -->
-        <div class="page-container" id="explore-page">
-            <section class="hero" style="background: linear-gradient(rgba(30, 58, 138, 0.4), rgba(15, 118, 110, 0.4)), url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') center/cover no-repeat; min-height: 60vh;">
-                <div class="hero-content">
-                    <h1>EXPLORE CENTRAL OTAGO</h1>
-                    <p class="subtitle">Your perfect base camp for discovering New Zealand's most iconic wine and adventure region</p>
-                </div>
-            </section>
-
-            <section class="section" style="background: var(--gradient-warm);">
-                <div class="container">
-                    <div style="max-width: 1000px; margin: 4rem auto; text-align: center; background: white; padding: 4rem; border-radius: 24px; box-shadow: var(--shadow-medium);">
-                        <h3 style="font-family: 'Playfair Display', serif; color: var(--primary-blue); font-size: 2rem; margin-bottom: 2rem;">🗺️ Your Local Knowledge Experts</h3>
-                        <p style="color: var(--dark-slate); font-size: 1.125rem; line-height: 1.8; margin-bottom: 1.75rem;">Our Lakeside Retreat hosts know Central Otago intimately and love sharing insider knowledge with our guests. We provide detailed recommendations and local tips to help you plan and book your perfect itinerary directly with activity providers. Just let us know your interests when booking or upon arrival - we'll share our expertise and connections to help you create unforgettable experiences.</p>
-                    </div>
-
-                    <!-- Featured: Clyde Bike Trail Access -->
-                    <div style="background: var(--gradient-primary); color: white; padding: 3rem; border-radius: 24px; margin: 3rem auto; text-align: center; box-shadow: var(--shadow-large);">
-                        <h3 style="font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 1.5rem;">🚴‍♂️ Clyde Bike Trail - Right at Your Doorstep!</h3>
-                        <p style="font-size: 1.125rem; margin-bottom: 2rem; opacity: 0.95;">The famous Cromwell to Clyde cycle trail starts just 300 meters from Lakeside Retreat! No transport needed - step out your door and onto one of New Zealand's most scenic cycling experiences.</p>
-                        
-                        <div class="grid grid-3" style="gap: 2rem; max-width: 800px; margin: 0 auto;">
-                            <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 16px; backdrop-filter: blur(10px);">
-                                <h4 style="margin-bottom: 1rem;">🚲 Bike Hire</h4>
-                                <p style="font-size: 0.9rem; margin-bottom: 1rem;"><strong>Cycle Surgery Cromwell</strong><br>+64 3 445 4052<br>cyclesurgery.co.nz</p>
-                                <p style="font-size: 0.9rem; margin-bottom: 1rem;"><strong>Contact Cycles Central</strong><br>+64 3 445 4140<br>contactcycles.co.nz</p>
-                                <p style="font-size: 0.85rem; opacity: 0.9;">E-bikes available. Delivery to accommodation possible.</p>
-                            </div>
-                            <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 16px; backdrop-filter: blur(10px);">
-                                <h4 style="margin-bottom: 1rem;">📍 Trail Details</h4>
-                                <p style="font-size: 0.9rem; margin-bottom: 0.5rem;"><strong>Distance:</strong> 25km one-way</p>
-                                <p style="font-size: 0.9rem; margin-bottom: 0.5rem;"><strong>Duration:</strong> 2-4 hours</p>
-                                <p style="font-size: 0.9rem; margin-bottom: 0.5rem;"><strong>Difficulty:</strong> Easy - flat, sealed</p>
-                                <p style="font-size: 0.85rem; opacity: 0.9;">Stunning lake views, historic bridges, vineyards</p>
-                            </div>
-                            <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 16px; backdrop-filter: blur(10px);">
-                                <h4 style="margin-bottom: 1rem;">🌟 Best Times</h4>
-                                <p style="font-size: 0.9rem; margin-bottom: 0.5rem;"><strong>Year-round:</strong> Always accessible</p>
-                                <p style="font-size: 0.9rem; margin-bottom: 0.5rem;"><strong>Best:</strong> Early morning or late afternoon</p>
-                                <p style="font-size: 0.9rem; margin-bottom: 0.5rem;"><strong>Autumn:</strong> Golden vineyard colors</p>
-                                <p style="font-size: 0.85rem; opacity: 0.9;">We can arrange pickup from Clyde!</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="grid grid-2" style="gap: 3rem;">
-                        <!-- Wine Country Experiences -->
-                        <div class="card" style="padding: 2.5rem;">
-                            <div style="font-size: 3rem; text-align: center; margin-bottom: 1.5rem;">🍷</div>
-                            <h3 style="text-align: center; margin-bottom: 2rem;">WINE COUNTRY EXPERIENCES</h3>
-                            
-                            <div style="margin-bottom: 2rem;">
-                                <h4 style="color: var(--primary-teal); margin-bottom: 1rem;">Premium Wineries (10-20 mins)</h4>
-                                <div style="background: var(--light-sand); padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
-                                    <p style="font-weight: 600; margin-bottom: 0.5rem;">Gibbston Valley Winery</p>
-                                    <p style="font-size: 0.9rem; margin-bottom: 0.5rem;">+64 3 442 6910 | gibbstonvalley.com</p>
-                                    <p style="font-size: 0.85rem; margin-bottom: 0;">Tastings $15-25, tours $35. Famous for Pinot Noir & underground cave.</p>
-                                </div>
-                                <div style="background: var(--light-sand); padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
-                                    <p style="font-weight: 600; margin-bottom: 0.5rem;">Chard Farm</p>
-                                    <p style="font-size: 0.9rem; margin-bottom: 0.5rem;">+64 3 442 6110 | chardfarm.co.nz</p>
-                                    <p style="font-size: 0.85rem; margin-bottom: 0;">Dramatic cliff-top setting. Tastings $10. Best views in Central Otago.</p>
-                                </div>
-                                <div style="background: var(--light-sand); padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
-                                    <p style="font-weight: 600; margin-bottom: 0.5rem;">Peregrine Wines</p>
-                                    <p style="font-size: 0.9rem; margin-bottom: 0.5rem;">+64 3 442 4000 | peregrinewines.co.nz</p>
-                                    <p style="font-size: 0.85rem; margin-bottom: 0;">Iconic architecture. Tastings $20, private tours available.</p>
-                                </div>
-                            </div>
-
-                            <div>
-                                <h4 style="color: var(--primary-teal); margin-bottom: 1rem;">Wine Tours</h4>
-                                <div style="background: var(--light-sand); padding: 1rem; border-radius: 8px;">
-                                    <p style="font-weight: 600; margin-bottom: 0.5rem;">Appellation Wine Tours</p>
-                                    <p style="font-size: 0.9rem; margin-bottom: 0.5rem;">+64 3 442 7799 | appellationwinetours.co.nz</p>
-                                    <p style="font-size: 0.85rem; margin-bottom: 0;">Half/full day tours from $165. Small groups, local guides.</p>
-                                </div>
-                            </div>
-
-                            <p style="margin-top: 1.5rem; font-size: 0.9rem; color: var(--soft-gray); font-style: italic;">🍂 Autumn (Mar-May): Harvest season, stunning colors<br>🌞 Summer (Dec-Feb): Perfect weather, all cellar doors open<br>❄️ Winter (Jun-Aug): Cozy tastings, fewer crowds</p>
-                        </div>
-
-                        <!-- Helicopter Adventures -->
-                        <div class="card" style="padding: 2.5rem;">
-                            <div style="font-size: 3rem; text-align: center; margin-bottom: 1.5rem;">🚁</div>
-                            <h3 style="text-align: center; margin-bottom: 2rem;">HELICOPTER ADVENTURES</h3>
-                            
-                            <div style="margin-bottom: 2rem;">
-                                <h4 style="color: var(--primary-teal); margin-bottom: 1rem;">Scenic Flights</h4>
-                                <div style="background: var(--light-sand); padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
-                                    <p style="font-weight: 600; margin-bottom: 0.5rem;">Over The Top Helicopters</p>
-                                    <p style="font-size: 0.9rem; margin-bottom: 0.5rem;">+64 3 442 2233 | flynz.co.nz</p>
-                                    <p style="font-size: 0.85rem; margin-bottom: 0;">Milford Sound day trips from $795. Scenic flights from $325.</p>
-                                </div>
-                                <div style="background: var(--light-sand); padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
-                                    <p style="font-weight: 600; margin-bottom: 0.5rem;">Helicopter Line</p>
-                                    <p style="font-size: 0.9rem; margin-bottom: 0.5rem;">+64 3 442 3034 | helicopter.co.nz</p>
-                                    <p style="font-size: 0.85rem; margin-bottom: 0;">Glacier landings from $549. Photography tours, wine tours available.</p>
-                                </div>
-                            </div>
-
-                            <div>
-                                <h4 style="color: var(--primary-teal); margin-bottom: 1rem;">Popular Routes</h4>
-                                <div style="background: var(--light-sand); padding: 1rem; border-radius: 8px;">
-                                    <p style="font-weight: 600; margin-bottom: 0.5rem;">Milford Sound Day Trip</p>
-                                    <p style="font-size: 0.85rem; margin-bottom: 0.5rem;">Flight + cruise + flight back. 7-8 hours total.</p>
-                                    <p style="font-weight: 600; margin-bottom: 0.5rem;">Southern Alps Scenic</p>
-                                    <p style="font-size: 0.85rem; margin-bottom: 0;">45-60 min flights with glacier landings.</p>
-                                </div>
-                            </div>
-
-                            <p style="margin-top: 1.5rem; font-size: 0.9rem; color: var(--soft-gray); font-style: italic;">🌤️ Weather dependent - book flexible dates<br>🌞 Best: Oct-Apr (clear skies)<br>📧 Book 2-7 days ahead for best availability</p>
-                        </div>
-
-                        <!-- Lake & Mountain Adventures -->
-                        <div class="card" style="padding: 2.5rem;">
-                            <div style="font-size: 3rem; text-align: center; margin-bottom: 1.5rem;">🏔️</div>
-                            <h3 style="text-align: center; margin-bottom: 2rem;">LAKE & MOUNTAIN ADVENTURES</h3>
-                            
-                            <div style="margin-bottom: 2rem;">
-                                <h4 style="color: var(--primary-teal); margin-bottom: 1rem;">Lake Dunstan Activities</h4>
-                                <div style="background: var(--light-sand); padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
-                                    <p style="font-weight: 600; margin-bottom: 0.5rem;">Central Otago Jet Boat Tours</p>
-                                    <p style="font-size: 0.9rem; margin-bottom: 0.5rem;">+64 27 434 7386 | centraljet.co.nz</p>
-                                    <p style="font-size: 0.85rem; margin-bottom: 0;">Lake cruises from $89. Departs nearby Cromwell.</p>
-                                </div>
-                                <div style="background: var(--light-sand); padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
-                                    <p style="font-weight: 600; margin-bottom: 0.5rem;">Kayak & SUP Hire</p>
-                                    <p style="font-size: 0.9rem; margin-bottom: 0.5rem;">Pioneer Park, Cromwell | +64 3 445 0886</p>
-                                    <p style="font-size: 0.85rem; margin-bottom: 0;">Hourly/daily hire. Delivered to accommodation on request.</p>
-                                </div>
-                            </div>
-
-                            <div>
-                                <h4 style="color: var(--primary-teal); margin-bottom: 1rem;">Mountain Adventures</h4>
-                                <div style="background: var(--light-sand); padding: 1rem; border-radius: 8px;">
-                                    <p style="font-weight: 600; margin-bottom: 0.5rem;">Summer: Hiking & Biking</p>
-                                    <p style="font-size: 0.85rem; margin-bottom: 0.5rem;">Ben Lomond track (6hrs), Kawarau Gorge trails</p>
-                                    <p style="font-weight: 600; margin-bottom: 0.5rem;">Winter: Skiing (Jun-Sep)</p>
-                                    <p style="font-size: 0.85rem; margin-bottom: 0;">Cardrona (45min), Treble Cone (50min), Coronet Peak (60min)</p>
-                                </div>
-                            </div>
-
-                            <p style="margin-top: 1.5rem; font-size: 0.9rem; color: var(--soft-gray); font-style: italic;">🌞 Summer: Perfect for water sports & hiking<br>❄️ Winter: World-class skiing nearby<br>🎣 Fishing: Lake trout year-round (license required)</p>
-                        </div>
-
-                        <!-- Queenstown & Wanaka Access -->
-                        <div class="card" style="padding: 2.5rem;">
-                            <div style="font-size: 3rem; text-align: center; margin-bottom: 1.5rem;">🎯</div>
-                            <h3 style="text-align: center; margin-bottom: 2rem;">QUEENSTOWN & WANAKA ACCESS</h3>
-                            
-                            <div style="margin-bottom: 2rem;">
-                                <h4 style="color: var(--primary-teal); margin-bottom: 1rem;">Queenstown (45 minutes)</h4>
-                                <div style="background: var(--light-sand); padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
-                                    <p style="font-weight: 600; margin-bottom: 0.5rem;">AJ Hackett Bungy</p>
-                                    <p style="font-size: 0.9rem; margin-bottom: 0.5rem;">+64 3 442 4007 | ajhackett.com</p>
-                                    <p style="font-size: 0.85rem; margin-bottom: 0;">Kawarau Bridge $235, Ledge $255, Nevis $335.</p>
-                                </div>
-                                <div style="background: var(--light-sand); padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
-                                    <p style="font-weight: 600; margin-bottom: 0.5rem;">Shotover Jet</p>
-                                    <p style="font-size: 0.9rem; margin-bottom: 0.5rem;">+64 3 442 8570 | shotoverjet.com</p>
-                                    <p style="font-size: 0.85rem; margin-bottom: 0;">Famous 360° spins. Adults $149, combo packages available.</p>
-                                </div>
-                            </div>
-
-                            <div>
-                                <h4 style="color: var(--primary-teal); margin-bottom: 1rem;">Wanaka (30 minutes)</h4>
-                                <div style="background: var(--light-sand); padding: 1rem; border-radius: 8px;">
-                                    <p style="font-weight: 600; margin-bottom: 0.5rem;">#ThatWanakaTree & Lake</p>
-                                    <p style="font-size: 0.85rem; margin-bottom: 0.5rem;">FREE - Famous Instagram spot, lakefront walks</p>
-                                    <p style="font-weight: 600; margin-bottom: 0.5rem;">Puzzling World</p>
-                                    <p style="font-size: 0.85rem; margin-bottom: 0;">+64 3 443 7489 | puzzlingworld.co.nz | Adults $22</p>
-                                </div>
-                            </div>
-
-                            <p style="margin-top: 1.5rem; font-size: 0.9rem; color: var(--soft-gray); font-style: italic;">🚗 Easy day trips from Lakeside Retreat<br>🌟 Queenstown: Adventure capital activities<br>🏞️ Wanaka: Relaxed alpine town atmosphere</p>
-                        </div>
-                    </div>
-
-                    <div style="background: linear-gradient(135deg, #ecfdf5 0%, #f0fdf4 100%); border: 2px solid #10b981; padding: 3rem; border-radius: 20px; margin: 4rem auto; max-width: 900px; text-align: center; box-shadow: var(--shadow-soft);">
-                        <h4 style="color: #047857; font-size: 1.5rem; margin-bottom: 1.5rem; font-weight: 600;">📞 How We Help You Explore</h4>
-                        <p style="color: var(--dark-slate); font-size: 1.125rem; line-height: 1.7; margin-bottom: 1.25rem;"><strong>As Your Local Knowledge Experts:</strong> We share insider recommendations and offer timing tips based on years of Central Otago experience.</p>
-                        <p style="color: var(--dark-slate); font-size: 1.125rem; line-height: 1.7; margin-bottom: 1.25rem;"><strong>Direct Booking Benefits:</strong> You book activities directly with operators for the best rates, flexible scheduling, and direct communication about your specific needs.</p>
-                        <p style="color: var(--dark-slate); font-size: 1.125rem; line-height: 1.7; margin-bottom: 0;"><strong>Our Expertise + Your Control:</strong> The perfect combination of local knowledge and booking flexibility.</p>
                     </div>
                 </div>
             </section>
@@ -2355,10 +2288,10 @@
 
         <!-- CONTACT PAGE -->
         <div class="page-container" id="contact-page">
-            <section class="hero" style="background: linear-gradient(rgba(30, 58, 138, 0.4), rgba(15, 118, 110, 0.4)), url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') center/cover no-repeat; min-height: 60vh;">
+            <section class="hero" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') center/cover no-repeat; height: 60vh;">
                 <div class="hero-content">
                     <h1>CONTACT US</h1>
-                    <p class="subtitle">Get in touch to plan your perfect Central Otago experience</p>
+                    <p class="hero-subtitle">Get in touch to plan your perfect Central Otago experience</p>
                 </div>
             </section>
 
@@ -2369,15 +2302,15 @@
                             <h3>Get in Touch</h3>
                             <div style="margin: 2rem 0;">
                                 <div style="display: flex; align-items: center; margin-bottom: 1rem;">
-                                    <i class="fas fa-envelope" style="color: var(--accent-gold); margin-right: 1rem; width: 20px;"></i>
+                                    <i class="fas fa-envelope" style="color: var(--accent-orange); margin-right: 1rem; width: 20px;"></i>
                                     <span>info@lakesideretreat.co.nz</span>
                                 </div>
                                 <div style="display: flex; align-items: center; margin-bottom: 1rem;">
-                                    <i class="fas fa-map-marker-alt" style="color: var(--accent-gold); margin-right: 1rem; width: 20px;"></i>
+                                    <i class="fas fa-map-marker-alt" style="color: var(--accent-orange); margin-right: 1rem; width: 20px;"></i>
                                     <span>96 Smiths Way, Mount Pisa<br>Cromwell, New Zealand</span>
                                 </div>
                                 <div style="display: flex; align-items: center; margin-bottom: 1rem;">
-                                    <i class="fas fa-clock" style="color: var(--accent-gold); margin-right: 1rem; width: 20px;"></i>
+                                    <i class="fas fa-clock" style="color: var(--accent-orange); margin-right: 1rem; width: 20px;"></i>
                                     <span>Check-in: 3:00 PM<br>Check-out: 10:00 AM / 11:00 AM</span>
                                 </div>
                             </div>
@@ -2391,13 +2324,13 @@
                             <h3>Send Us a Message</h3>
                             <form style="margin-top: 2rem;">
                                 <div style="margin-bottom: 1rem;">
-                                    <input type="text" placeholder="Your Name" style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 5px;">
+                                    <input type="text" placeholder="Your Name" style="width: 100%; padding: 0.75rem; border: 1px solid var(--border-light); border-radius: 8px; font-size: 0.9rem;">
                                 </div>
                                 <div style="margin-bottom: 1rem;">
-                                    <input type="email" placeholder="Your Email" style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 5px;">
+                                    <input type="email" placeholder="Your Email" style="width: 100%; padding: 0.75rem; border: 1px solid var(--border-light); border-radius: 8px; font-size: 0.9rem;">
                                 </div>
                                 <div style="margin-bottom: 1rem;">
-                                    <select style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 5px;">
+                                    <select style="width: 100%; padding: 0.75rem; border: 1px solid var(--border-light); border-radius: 8px; font-size: 0.9rem;">
                                         <option>Select Accommodation</option>
                                         <option>Dome Pinot - Premium Glamping</option>
                                         <option>Dome Rosé - Romantic Retreat</option>
@@ -2405,7 +2338,7 @@
                                     </select>
                                 </div>
                                 <div style="margin-bottom: 1rem;">
-                                    <textarea placeholder="Your Message" rows="5" style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 5px; resize: vertical;"></textarea>
+                                    <textarea placeholder="Your Message" rows="5" style="width: 100%; padding: 0.75rem; border: 1px solid var(--border-light); border-radius: 8px; resize: vertical; font-size: 0.9rem;"></textarea>
                                 </div>
                                 <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
                             </form>
@@ -2449,7 +2382,7 @@
             <div class="footer-section">
                 <h3>BOOKINGS</h3>
                 <p>Managed by Uplistinging</p>
-                <a href="https://book.lakesideretreat.co.nz/" target="_blank" class="btn btn-primary" style="padding: 0.75rem 1.5rem; font-size: 0.9rem; margin-top: 1rem;">BOOK NOW</a>
+                <a href="https://book.lakesideretreat.co.nz/" target="_blank" class="btn btn-primary" style="padding: 0.75rem 1.5rem; font-size: 0.85rem; margin-top: 1rem; display: inline-block;">BOOK NOW</a>
             </div>
         </div>
         <div class="footer-bottom">
@@ -2530,9 +2463,9 @@
             window.addEventListener('scroll', function() {
                 const header = document.querySelector('header');
                 if (window.scrollY > 100) {
-                    header.style.background = 'rgba(255, 255, 255, 0.98)';
+                    header.style.boxShadow = '0 4px 12px rgba(0,0,0,0.15)';
                 } else {
-                    header.style.background = 'rgba(255, 255, 255, 0.95)';
+                    header.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1)';
                 }
             });
 
@@ -2574,10 +2507,12 @@
             // Form submission handling
             const forms = document.querySelectorAll('form');
             forms.forEach(form => {
-                form.addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    alert('Thank you for your message! We\'ll get back to you soon.');
-                });
+                if (form.id !== 'testimonialForm') {
+                    form.addEventListener('submit', function(e) {
+                        e.preventDefault();
+                        alert('Thank you for your message! We\'ll get back to you soon.');
+                    });
+                }
             });
         });
 
@@ -2685,11 +2620,13 @@
                 tag.addEventListener('mouseover', () => {
                     tag.style.background = 'var(--primary-teal)';
                     tag.style.color = 'white';
+                    tag.style.borderColor = 'var(--primary-teal)';
                 });
 
                 tag.addEventListener('mouseout', () => {
-                    tag.style.background = 'white';
-                    tag.style.color = 'var(--primary-teal)';
+                    tag.style.background = 'var(--white)';
+                    tag.style.color = 'var(--text-dark)';
+                    tag.style.borderColor = 'var(--border-light)';
                 });
             });
         }
@@ -2712,18 +2649,17 @@
         setTimeout(() => {
             document.querySelectorAll('.card, .accommodation-showcase, .photo-gallery, .review-card').forEach(el => {
                 el.style.opacity = '0';
-                el.style.transform = 'translateY(30px)';
+                el.style.transform = 'translateY(20px)';
                 el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
                 observer.observe(el);
             });
         }, 100);
 
-        console.log("✨ Complete Lakeside Retreat multi-page website with advanced testimonials system loaded!");
-        console.log("🖼️ Interactive photo gallery with hover effects and image swapping!");
-        console.log("⭐ Advanced testimonials system with ratings and moderation!");
-        console.log("📱 Fully responsive multi-page design optimized for all devices!");
-        console.log("🏡 2 Glamping Domes + 1 Cottage setup maintained perfectly!");
-        console.log("🚀 Ready for production deployment!");
+        console.log("✨ Lakeside Retreat website loaded successfully!");
+        console.log("🎨 Professional design matching your screenshot!");
+        console.log("📱 Multi-page functionality with smooth transitions!");
+        console.log("🏡 2 Glamping Domes + 1 Cottage setup complete!");
+        console.log("🚀 Ready for production!");
     </script>
 </body>
 </html>
